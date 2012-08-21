@@ -1,0 +1,63 @@
+body {
+    padding: 0;
+    padding-bottom: 40px;
+}
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* TABBAR Styles */
+.tabbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    height: 44px;
+    z-index: 100;
+}
+.tabbar.tabbar-badges {
+    background: none;
+    z-index: 200;
+}
+.tabbar-inner {
+    width: 320px;
+    margin: auto;
+}
+
+ .tabbar-tab {
+    color: #ccc;
+    display: block;
+    float: left;
+    height: 44px;
+    padding: 0;
+    text-align: center;
+}
+
+.tabbar-tab.active{
+    color: #11aef7;
+    background-color: #444;
+}
+
+.tabbar-inner div{
+    width: 80px;
+}
+
+.tabbar-inner.tabs-5 div{
+    width: 62px;
+}
+
+.tab-icon {
+    font-size: 1.8em;
+    line-height: 1em;
+    vertical-align: bottom;
+}
+
+.badge-1 {
+    background: url(../img/badge-1.png) 32px 0 no-repeat;
+}
+
+.badge-2 {
+    background: url(../img/badge-2.png) 32px 0 no-repeat;
+}
+
