@@ -44,9 +44,23 @@ include('./header.php');?>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="tab1">
-        <h3>The highest Mountain</h3>
-        <img data-ph="300:80:High Mountain" />
-         Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris.
+        <div class="row">
+            <span class="span4">
+                <h3>The highest Mountain</h3>
+                <img data-ph="300:80:High Mountain" />
+                 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris.
+            </span>
+            <span class="span4">
+                <h3>The deepest Sea</h3>
+                <img data-ph="300:80:Deep Sea" />
+                 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris.
+            </span>
+            <span class="span4">
+                <h3>The longest River</h3>
+                <img data-ph="300:80:Long River" />
+                 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris.
+            </span>
+        </div>
 
     </div>
     <div class="tab-pane" id="tab2">
