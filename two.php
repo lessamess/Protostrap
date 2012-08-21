@@ -41,7 +41,7 @@ include('./header.php');?>
 
 
 
-      <hr>
+      <hr />
 
 <?php // this includes the footer
 include('./footer.php');?>
