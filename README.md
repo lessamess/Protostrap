@@ -1,17 +1,20 @@
-# Protostrap - a prototyping framework based on bootstrap
+# Protostrap - a prototyping framework for designers
 
-This framework is for designers that want to get klickable and testable prototypes up fast.
+This framework is _for designers_ that want to get klickable and testable prototypes up fast. It is based on Bootstrap, so all you can do there you can do here too.
+
+With just _very_ basic knowledge of php it allows to make page elements reusable on different pages - useful for reusing navigation and recurring elements.
 
 This is, as yet, experimental. have fun but be warned.
+_Do *not* use this in a production environment._
 
-### Do *not* use this in a productive environment.
+# Requirements
+- A local webserver with any version of PHP (Designers: Macs are shipped with one)
 
-With just *very* basic knowledge of php it allows to make page elements reusable on different pages - useful for reusing navigation and recurring elements.
 
 ## Usage
 - Download Protostrap
-- put it on your local server, if you have a MAC /Library/WebServer/Documents is the Folder you're looking for
-- you can access it in the browser via: htt://localhost/protostrap assuming you have named the folder protostrap and put it into the above directory.
+- _put it on your local server, if you have a MAC /Library/WebServer/Documents is the Folder you're looking for_
+- you can access it in the browser via: http://localhost/protostrap assuming you have named the folder protostrap and put it into the above directory.
 
 ## Features
 - filesnippets for header, footer, iosTabbar easily adaptable
