@@ -8,19 +8,19 @@ This is, as yet, experimental. have fun but be warned.
 _Do *not* use this in a production environment._
 
 # Requirements
-- A local webserver with any version of PHP (Designers: Macs are shipped with one)
+- A local webserver with any version of PHP (Designers: Macs come shipped with one, it is situated under /Library/WebServer/Documents )
 
 
 ## Usage
 - Download Protostrap
 - **Put it on your local server, if you have a MAC /Library/WebServer/Documents is the folder you're looking for**
-- you can access it in the browser via: http://localhost/protostrap assuming you have named the folder protostrap and put it into the above directory.
+- you can access it in the browser via: <a href="http://localhost/protostrap">http://localhost/protostrap</a> assuming you have named the folder protostrap and put it into the above directory.
 
 ## Features
-- filesnippets for header, footer, iosTabbar easily adaptable
+- filesnippets for header, footer, iosTabbar all easily adaptable
 - iOS tabbar with styles for active and non active
-- Badges for iOS Tabbar
-- svg Placeholders
+- Badges ⓵ and ⓶ for iOS tabbar
+- svg Placeholders, responsive or fixed in width
 - Can be added to the homescreen as a native mobile-webapp when viewed on an iPhone
 
 ## Planned
