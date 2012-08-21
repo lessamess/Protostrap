@@ -26,7 +26,7 @@
 
 <!--
  ** Badges **
-    Add classes badge-1 or badge-2 the badgeboxes
+    Add or remove classes badge-1 or badge-2 to the badgeboxes
  -->
     <div class="tabbar tabbar-badges">
       <div class="tabbar-inner tabs-5">
