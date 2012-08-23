@@ -4,12 +4,20 @@ This framework is **for designers** that want to get klickable and testable prot
 
 With just **very** basic knowledge of php it allows to make page elements reusable on different pages - useful for reusing navigation and recurring elements.
 
-This is, as yet, experimental. have fun but be warned.
-_Do *not* use this in a production environment._
+This is, as yet, experimental      .
+
+This is prototyping software and therefore lacks all security features needed for production 
+### Do NOT use this in a production environment
 
 # Requirements
-- A local webserver with any version of PHP (Designers: Macs come shipped with one, it is situated under /Library/WebServer/Documents )
+- A local webserver with any version of PHP.
+**Mac Users with OS X Lion or older:** Macs come shipped with a webserver enabled by default, it is situated under /Library/WebServer/Documents.
+**Mac users with OS X Mountain Lion:** The default webserver has been disabled. Read on <a href="http://reviews.cnet.com/8301-13727_7-57481978-263/how-to-enable-web-sharing-in-os-x-mountain-lion/"> how to enable web sharing on mountain lion</a>
 
+As an alternative you might consider installing <a href="http://www.mamp.info/en/index.html">MAMP</a>
+
+**Windows Users**
+If you haven't already, get <a href="http://www.wampserver.com/en/">WAMP Server</a>.
 
 ## Usage
 - Download Protostrap
@@ -17,7 +25,7 @@ _Do *not* use this in a production environment._
 - you can access it in the browser via: <a href="http://localhost/protostrap">http://localhost/protostrap</a> assuming you have named the folder protostrap and put it into the above directory.
 
 ## Features
-- filesnippets for header, footer, iosTabbar all easily adaptable
+- File snippets for header, footer, iosTabbar all easily adaptable
 - iOS tabbar with styles for active and non active
 - Badges ⓵ and ⓶ for iOS tabbar
 - svg Placeholders, responsive or fixed in width
@@ -26,7 +34,7 @@ _Do *not* use this in a production environment._
 ## Planned
 - Navigation filesnippet including a bootstrap navigation element
 - Megamenu files
-- Forms with UX optimised Feedback 
+- Forms with UX optimized Feedback 
 - Files to fake Google search (Great for usability testing)
 - typeahead example with a better typeahead
 - files to show the "End of Prototype" situation in tests
