@@ -35,7 +35,9 @@ If you haven't already, get <a href="http://www.wampserver.com/en/">WAMP Server<
 - Navigation filesnippet including a bootstrap navigation element
 - Megamenu files
 - Forms with UX optimized Feedback 
+- Easy verification triggering for Form-Feedback
 - Files to fake Google search (Great for usability testing)
+- Fake Login Process
 - typeahead example with a better typeahead
 - files to show the "End of Prototype" situation in tests
 - "Add me to homescreen" flyout
