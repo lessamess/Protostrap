@@ -6,7 +6,7 @@ With just **very** basic knowledge of php it allows to make page elements reusab
 
 This is, as yet, experimental      .
 
-This is prototyping software and therefore lacks all security features needed for production 
+This is prototyping software and therefore lacks all security features needed for production
 ### Do NOT use this in a production environment
 
 # Requirements
@@ -30,11 +30,12 @@ If you haven't already, get <a href="http://www.wampserver.com/en/">WAMP Server<
 - Badges ⓵ and ⓶ for iOS tabbar
 - svg Placeholders, responsive or fixed in width
 - Can be added to the homescreen as a native mobile-webapp when viewed on an iPhone
+- Displays a "Add to Homescreen" hint when opened in mobile Safari, one time every 24 hours
 
 ## Planned
 - Navigation filesnippet including a bootstrap navigation element
 - Megamenu files
-- Forms with UX optimized Feedback 
+- Forms with UX optimized Feedback
 - Easy verification triggering for Form-Feedback
 - Files to fake Google search (Great for usability testing)
 - Fake Login Process
