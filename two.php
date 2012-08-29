@@ -41,7 +41,7 @@ include('./header.php');?>
 
 
 
-      <hr />
+      <hr>
 
 <?php // this includes the footer
 include('./footer.php');?>
@@ -51,10 +51,6 @@ include('./footer.php');?>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/jquery.svg.placeholder.js"></script>
-    <!-- You can add your code in this file -->
-    <script src="./assets/js/main.js"></script>
+<?php include ('protostrap_javascripts.php');?>
   </body>
 </html>
