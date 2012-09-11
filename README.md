@@ -1,8 +1,8 @@
 # Protostrap - a prototyping framework for designers
 
-This framework is **for designers** that want to get klickable and testable prototypes up fast. It is based on Bootstrap, so all you can do there you can do here too.
+Protostrap is a framework **for designers** that want to get clickable and testable prototypes up fast. It is based on Bootstrap, so all you can do there you can do here too.
 
-With just **very** basic knowledge of php it allows to make page elements reusable on different pages - useful for reusing navigation and recurring elements.
+With just **very** basic knowledge of php it allows designers to make page elements that are reusable on different pages - useful for reusing navigation and recurring elements.
 
 This is, as yet, experimental      .
 
@@ -32,6 +32,8 @@ If you haven't already, get <a href="http://www.wampserver.com/en/">WAMP Server<
 - Can be added to the homescreen as a native mobile-webapp when viewed on an iPhone
 - Displays an "Add to Homescreen" hint when opened in mobile Safari, one time every 24 hours
 - standalone app mode for ios, correctly handling all the links not to open in safari
+- Fake Login Process and logged in status, authentification error faking. 
+- missing.php file to show the "End of Prototype" situation in tests, 404 Handler that automatically redirects to missing.php
 
 ## Planned
 - Navigation filesnippet including a bootstrap navigation element
@@ -39,9 +41,7 @@ If you haven't already, get <a href="http://www.wampserver.com/en/">WAMP Server<
 - Forms with UX optimized Feedback
 - Easy verification triggering for Form-Feedback
 - Files to fake Google search (Great for usability testing)
-- Fake Login Process and logged in status
 - typeahead example with a better typeahead
-- files to show the "End of Prototype" situation in tests
 
 ## Licence
 Protostrap is Licenced under Apache Licence Version 2.0
