@@ -17,9 +17,15 @@
                     Second
                 </div>
             </a>
-            <div class="tabbar-tab <?php echo $tabClasses[2];?>" ><span class="tab-icon">❤</span><br>Third</div>
-            <div class="tabbar-tab <?php echo $tabClasses[3];?>" ><span class="tab-icon">↔</span><br>Fourth</div>
-            <div class="tabbar-tab <?php echo $tabClasses[4];?>" ><span class="tab-icon">♛</span><br>Fifth</div>
+            <a href="./three.php">
+                <div class="tabbar-tab <?php echo $tabClasses[2];?>" ><span class="tab-icon">❤</span><br>Third</div>
+            </a>
+            <a href="./four.php">
+                <div class="tabbar-tab <?php echo $tabClasses[3];?>" ><span class="tab-icon">↔</span><br>Fourth</div>
+            </a>
+            <a href="./account.php">
+                <div class="tabbar-tab <?php echo $tabClasses[4];?>" ><span class="tab-icon">♛</span><br>Account</div>
+            </a>
       </div>
     </div>
 
@@ -36,9 +42,14 @@
             <a href="./two.php">
                 <div id="badgebox-2" class="tabbar-tab " ></div>
             </a>
-            <div id="badgebox-3" class="tabbar-tab badge-1" ></div>
-            <div id="badgebox-4" class="tabbar-tab " ></div>
-            <div id="badgebox-5" class="tabbar-tab badge-2" ></div>
+            <a href="./three.php">
+                <div id="badgebox-3" class="tabbar-tab badge-1" ></div>
+            </a>
+            <a href="./four.php">
+                <div id="badgebox-4" class="tabbar-tab " ></div>
+            </a>
+            <a href="./account.php">
+                <div id="badgebox-5" class="tabbar-tab badge-2" ></div>
+            </a>
       </div>
     </div>
-
