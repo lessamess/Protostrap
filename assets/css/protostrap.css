@@ -31,6 +31,7 @@ body {
     float: left;
     height: 44px;
     padding: 0;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -60,4 +61,158 @@ body {
 .badge-2 {
     background: url(../img/badge-2.png) 32px 0 no-repeat;
 }
+ul.stacks {
+    margin: 0;
+}
+ul.stacks li{
+    padding-right: 24px;
+    padding-left: 12px;
+    background: url("../img/next.png") no-repeat scroll right center transparent;
+    display: block;
+    text-decoration: none;
+    overflow: auto;
+    min-height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #cccccc;
 
+}
+ul.stacks li:first-child{
+    border-top: 1px solid #cccccc;
+}
+
+ul.stacks li a {
+    display: block;
+    font-size: 16px;
+}
+
+.teaserRow a.teaser, .teaser, .pileMore{
+    background: url("../img/next.png") no-repeat scroll right center transparent;
+}
+
+.teaserRow a, .teaser{
+    display: block;
+    overflow: auto;
+    padding-right: 24px;
+    text-decoration: none;
+}
+.teaserRow {
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #fff;
+    display: block;
+    text-decoration: none;
+    overflow: auto;
+    padding: 4px 0 24px 8px;
+background: rgb(244,244,244),;
+background: -moz-linear-gradient(top,  rgba(244,244,244,1) 22%, rgba(231,232,233,1) 100%, rgba(208,211,212,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(22%,rgba(244,244,244,1)), color-stop(100%,rgba(231,232,233,1)), color-stop(100%,rgba(208,211,212,1)));
+background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 22%,rgba(231,232,233,1) 100%,rgba(208,211,212,1) 100%);
+background: -o-linear-gradient(top,  rgba(244,244,244,1) 22%,rgba(231,232,233,1) 100%,rgba(208,211,212,1) 100%);
+background: -ms-linear-gradient(top,  rgba(244,244,244,1) 22%,rgba(231,232,233,1) 100%,rgba(208,211,212,1) 100%);
+background: linear-gradient(to bottom,  rgba(244,244,244,1) 22%,rgba(231,232,233,1) 100%,rgba(208,211,212,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#d0d3d4',GradientType=0 );
+
+
+}
+
+.teaserRow:first-child {
+    border-top: 1px solid #ccc;
+}
+
+.tableRowTeaser, .nav-wedge li a {
+    background: url("../img/next.png") no-repeat scroll right center transparent;
+
+}
+
+.clear {
+    clear: both;
+}
+
+
+.pile200, .pile160, .pile100, .pile80, .pile60, .pile40 {
+    float: left;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.pile200 {
+    width: 200px;
+}
+
+.pile160 {
+    width: 160px;
+}
+
+.pile100 {
+    width: 100px;
+}
+
+.pile80 {
+    width: 80px;
+}
+
+.pile60 {
+    width: 60px;
+}
+
+.pile40 {
+    width: 40px;
+}
+
+.pileMore {
+    width: 32px;
+    float: right;
+    margin-left: 4px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top:30px;
+}
+
+.left {
+    text-align: left;
+}
+
+/* Fixing Bootstrap */
+tr.alert, td.alert {
+    color: #333;
+}
+
+td.success {
+    background-color: #DFF0D8;
+}
+td.alert {
+    background-color: #FCF8E3;
+}
+td.error {
+    background-color: #F2DEDE;
+}
+
+/*Toogle*/
+.btn-toggle input {
+    display: none;
+}
+​
+span.btn-group.btn-inline {
+    bottom:4px;
+}
+
+.accordion-inner {
+    border-top: 0;
+    padding: 9px 15px;
+}
+
+.accordeon-wedge .accordion-heading{
+    background: url("../img/down.png") no-repeat scroll right center transparent;
+}
+
+.accordeon-wedge .accordion-heading.accordion-up{
+    background: url("../img/down.png") no-repeat scroll right center transparent;
+}
+
+ul.nav.nav-tabs li a, .teaser li a{
+    font-size: 16px;
+}
+
+a span.success {
+    color: #009900;
+    font-size: 24px;
+}
