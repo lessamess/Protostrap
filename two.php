@@ -1,11 +1,24 @@
 <?php
-/**
-    These few lines are unique to every page.
-    Here's where you define which elements are activated, be it tabs or navigation etc
 
+/** --- B A S E F U N C T I O N S ---
+
+    This file sets up project-wide things like authentication -
+    DO NOT REMOVE
 **/
-$tabClasses = Array('','active','','',''); // Do not remove line, only add and remove elements in the brackets.
+include('protostrap.php');
 
+
+/**   --- I D I V I D U A L  A C T I V A T I O N S  ---
+
+     These few lines are unique to every page.
+     Here's where you define which elements are activated,
+     be it tabs or navigation etc
+**/
+$tabClasses = Array('','active','','',''); // Do NOT remove line, only add and remove elements in the brackets.
+
+$navbarClasses = Array('active','',''); // Do NOT remove line, only add and remove elements in the brackets.
+
+/** END OF ACTIVATIONS **/
 
 ?><!DOCTYPE html>
 <html lang="en">
