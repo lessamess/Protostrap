@@ -216,3 +216,19 @@ a span.success {
     color: #009900;
     font-size: 24px;
 }
+
+/* Landscape */
+@media screen and (orientation:landscape) {
+    /* Landscape styles */
+    .tabbar {
+        position: fixed;
+        left: 219px;
+        top: 120px;
+        -moz-transform:rotate(-90deg);
+        -webkit-transform:rotate(-90deg);
+
+    }
+    body {
+        margin-right: 49px;
+    }
+}
