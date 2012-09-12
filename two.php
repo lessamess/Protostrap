@@ -47,10 +47,35 @@ include('./header.php');?>
 
 
 
-        <h3>Page two</h3>
-        <img data-ph="300:80:High Another Placeholder" />
-         Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris.
-
+        <h3>Accordion Using uniqId</h3>
+        <div id="accordion1" class="accordion accordeon-wedge">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a href="#<?php echo getUniqid();?>" data-parent="#accordion1" data-toggle="collapse" class="accordion-toggle">
+                                     One
+                                </a>
+                            </div>
+                            <div class="accordion-body collapse" id="<?php echo $lastUniqid;?>">
+                                <div class="accordion-inner">
+                                    <b>One open</b><br>
+                                    Id: <?php echo $lastUniqid;?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a href="#<?php echo getUniqid();?>" data-parent="#accordion1" data-toggle="collapse" class="accordion-toggle">
+                                     Two
+                                </a>
+                            </div>
+                            <div class="accordion-body collapse" id="<?php echo $lastUniqid;?>">
+                                <div class="accordion-inner">
+                                    <b>Two open</b><br>
+                                    Id: <?php echo $lastUniqid;?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 

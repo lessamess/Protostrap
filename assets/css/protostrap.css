@@ -167,8 +167,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
     padding-top:30px;
 }
 
-.left {
+.left, .align-left {
     text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.btn-height {
+    line-height: 28px;
 }
 
 /* Fixing Bootstrap */
@@ -195,6 +201,10 @@ span.btn-group.btn-inline {
     bottom:4px;
 }
 
+.accordion-toggle, a:focus {
+    outline:  none;
+}
+
 .accordion-inner {
     border-top: 0;
     padding: 9px 15px;
@@ -209,7 +219,7 @@ span.btn-group.btn-inline {
 }
 
 ul.nav.nav-tabs li a, .teaser li a{
-    font-size: 16px;
+    font-size: 15px;
 }
 
 a span.success {
@@ -217,8 +227,25 @@ a span.success {
     font-size: 24px;
 }
 
+
+/* Landscape */
+@media screen and (orientation:portrait) {
+    .visible-landscape {
+        display: none;
+    }
+    .visible-portrait{
+        display: block;
+    }
+}
+
 /* Landscape */
 @media screen and (orientation:landscape) {
+    .visible-landscape {
+        display: block;
+    }
+    .visible-portrait{
+        display: none;
+    }
     /* Landscape styles */
     .tabbar {
         position: fixed;
