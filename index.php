@@ -40,7 +40,7 @@ include('./headTag.php');?>
 <?php
 
 // this includes the markup for a static top navbar
-include('./navBarStaticTop.php');
+//include('./navBarStaticTop.php');
 
 // this includes the markup for iOS a styled tabbar
 include('./iosTabbar.php');
@@ -51,7 +51,7 @@ include('./iosTabbar.php');
 
 <?php // this includes the header
 include('./header.php');?>
-
+<br>
 
 <!--
   ** TABS **

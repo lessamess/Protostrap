@@ -239,7 +239,7 @@ a span.success {
 }
 
 /* Landscape */
-@media screen and (orientation:landscape) {
+@media screen and (orientation:landscape) and (max-device-width : 480px){
     .visible-landscape {
         display: block;
     }

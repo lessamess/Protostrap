@@ -81,11 +81,11 @@ if($loggedIn){ ?>
             <?php } ?>
             <form action="" method="post">
                 <label>Email</label>
-                <input name="login" type="text" placeholder=""><br>
+                <input name="login" type="text" placeholder="type 'fail' to simulate auth-error"><br>
                 <label>Password</label>
                 <input name="pass" type="password" placeholder="">
                 <br>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Login</button>
             </form>
             <br>
             <a href="#">I forgot my Password</a>
