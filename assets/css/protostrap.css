@@ -227,6 +227,34 @@ a span.success {
     font-size: 24px;
 }
 
+/* breadcrumb */
+#breadcrumbwrapper {
+    margin: 12px 0;
+    overflow: hidden;
+    width: 100%;
+    height: 44px;
+}
+
+.scroller.breadcrumb {
+    height:44px;
+    padding:0;
+    list-style:none;
+    margin:0;
+    text-align:left;
+}
+
+.scroller.breadcrumb li {
+    display:inline-block;
+    vertical-align:middle;
+    float:left;
+    height: 44px;
+    line-height: 44px;
+}
+.scroller.breadcrumb li:last-child {
+    padding-right: 12px;
+}
+
+
 
 /* Landscape */
 @media screen and (orientation:portrait) {

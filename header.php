@@ -12,11 +12,11 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 <i class="icon-user"></i> <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu pull-right" style="right:0">
+                            <ul class="dropdown-menu pull-right needsclick" style="right:0">
                                 <li>
                                     <form action="" method="post">
                                         <input type="hidden" name="logout" value="logout">
-                                        <button type="submit" name="" class="btn btn-primary">Logout</button>
+                                        <button type="submit" name="" class="btn btn-primary ">Logout</button>
                                     </form>
                                 </li>
                             </ul>

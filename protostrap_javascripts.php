@@ -26,5 +26,6 @@
     <script src="./assets/js/jquery.svg.placeholder.js"></script>
     <script src="./assets/js/add2home.js"></script>
     <script type='application/javascript' src='./assets/js/fastclick.js'></script>
+    <script type='application/javascript' src='./assets/js/iscroll.js'></script>
     <!-- You can add your code in this file -->
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js?time=<?php time();?>"></script>

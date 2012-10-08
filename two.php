@@ -32,7 +32,6 @@ $navbarClasses = Array('active','',''); // Do NOT remove line, only add and remo
 // this includes all the markup that loads css files and similar stuff,
 // if you have to add more css, that's the place to do it.
 include('./headTag.php');?>
-
   </head>
 
   <body>
@@ -44,9 +43,14 @@ include('./iosTabbar.php');?>
 
 <?php // this includes the footer
 include('./header.php');?>
-
-
-
+            <div id="breadcrumbwrapper">
+                <ul class="scroller breadcrumb">
+                    <li><a href="index.php">Mountains</a> <span class="divider">></span></li>
+                    <li><a href="8000.php">+8'000m</a> <span class="divider">></span></li>
+                    <li><a href="himalaya.php">Himalaya</a> <span class="divider">></span></li>
+                    <li class="active">Everest</li>
+            </ul>
+        </div>
         <h3>Accordion Using uniqId</h3>
         <div id="accordion1" class="accordion accordeon-wedge">
                         <div class="accordion-group">
