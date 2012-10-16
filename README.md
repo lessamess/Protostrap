@@ -25,7 +25,8 @@ If you haven't already, get <a href="http://www.wampserver.com/en/">WAMP Server<
 - you can access it in the browser via: <a href="http://localhost/protostrap">http://localhost/protostrap</a> assuming you have named the folder protostrap and put it into the above directory.
 
 ## Features
-- File snippets for header, footer, iosTabbar all easily adaptable
+- Filesnippets for header, footer, iosTabbar all easily adaptable
+- Navigation filesnippet including a bootstrap navigation element
 - iOS tabbar with styles for active and non active
 - Badges ⓵ and ⓶ for iOS tabbar
 - svg Placeholders, responsive or fixed in width
@@ -34,9 +35,10 @@ If you haven't already, get <a href="http://www.wampserver.com/en/">WAMP Server<
 - standalone app mode for ios, correctly handling all the links not to open in safari
 - Fake Login Process and logged in status, authentification error faking. 
 - missing.php file to show the "End of Prototype" situation in tests, 404 Handler that automatically redirects to missing.php
+- Integration of iScroll Library to have scrollable breadcrumbs on mobile
 
 ## Planned
-- Navigation filesnippet including a bootstrap navigation element
+
 - Megamenu files
 - Forms with UX optimized Feedback
 - Easy verification triggering for Form-Feedback
