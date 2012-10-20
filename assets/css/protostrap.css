@@ -7,7 +7,10 @@ body {
     padding-right: 10px;
 }
 
-/* TABBAR Styles */
+/**
+ * TABBAR Styles
+ **/
+
 .tabbar {
     position: fixed;
     bottom: 0;
@@ -61,6 +64,13 @@ body {
 .badge-2 {
     background: url(../img/badge-2.png) 32px 0 no-repeat;
 }
+
+/*--------------------*/
+
+/**
+ * Stacks
+ */
+
 ul.stacks {
     margin: 0;
 }
@@ -126,7 +136,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
 .clear {
     clear: both;
 }
-
 
 .pile200, .pile160, .pile100, .pile80, .pile60, .pile40 {
     float: left;

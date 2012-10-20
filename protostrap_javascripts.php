@@ -27,5 +27,6 @@
     <script src="./assets/js/add2home.js"></script>
     <script type='application/javascript' src='./assets/js/fastclick.js'></script>
     <script type='application/javascript' src='./assets/js/iscroll.js'></script>
+    <script src="./assets/js/protostrap.js?time=<?php time();?>"></script>
     <!-- You can add your code in this file -->
     <script src="./assets/js/main.js?time=<?php time();?>"></script>

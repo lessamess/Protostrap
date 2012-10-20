@@ -2,7 +2,7 @@
 <div class="row">
             <span class="pile200 left">
                 <!-- The following generates a placeholder svg image -->
-                <img data-ph="160:60:Logo:fixedsize" />
+                <img data-ph="160:60:Protostrap:fixedsize" />
             </span>
             <span class="pile80 ">
                 <?php if (!empty($loggedIn)){ ?>

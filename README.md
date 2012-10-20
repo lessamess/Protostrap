@@ -25,17 +25,33 @@ If you haven't already, get <a href="http://www.wampserver.com/en/">WAMP Server<
 - you can access it in the browser via: <a href="http://localhost/protostrap">http://localhost/protostrap</a> assuming you have named the folder protostrap and put it into the above directory.
 
 ## Features
+### Site structure
 - Filesnippets for header, footer, iosTabbar all easily adaptable
 - Navigation filesnippet including a bootstrap navigation element
-- iOS tabbar with styles for active and non active
+- missing.php file to show the "End of Prototype" situation in tests, 404 Handler that automatically redirects to missing.php
+- Fake Login Process and logged in status, authentification error faking.
+
+### Mobile
+- iOS tabbar with styles for active and non active tabs
 - Badges ⓵ and ⓶ for iOS tabbar
-- svg Placeholders, responsive or fixed in width
 - Can be added to the homescreen as a native mobile-webapp when viewed on an iPhone
 - Displays an "Add to Homescreen" hint when opened in mobile Safari, one time every 24 hours
 - standalone app mode for ios, correctly handling all the links not to open in safari
-- Fake Login Process and logged in status, authentification error faking. 
-- missing.php file to show the "End of Prototype" situation in tests, 404 Handler that automatically redirects to missing.php
-- Integration of iScroll Library to have scrollable breadcrumbs on mobile
+
+- svg Placeholders, responsive or fixed in width
+
+
+### Ready-to-Use Examples
+- Grid
+- Accordeon with dynamic ID
+- Carousel
+- Tabs
+- Stacked Navigation
+- Breadcrumb that is horizontally scrollable on mobile.
+
+### Included Libraries
+- iScroll Library (used for the scrollable breadcrumbs on mobile)
+- fastclick library for really fast tapping experience on mobile
 
 ## Planned
 
