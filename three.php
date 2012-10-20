@@ -85,54 +85,6 @@ include('./header.php');?>
             </span>
         </div>
 
-        <h3>Stacked Navigation with Wedge</h3>
-        <ul class="nav nav-tabs nav-stacked nav-wedge">
-            <li><a>foo</a></li>
-            <li><a>bar</a></li>
-            <li><a>baz</a></li>
-        </ul>
-
-        <h3>Stacks</h3>
-        <ul class="stacks">
-            <li >
-                <a >
-                    one
-                </a>
-            </li>
-            <li>
-                <a class="">
-                    two
-                </a>
-            </li>
-        </ul>
-
-        <h3>Tabs</h3>
-        <!-- ** TABS ** -->
-        <div class="tabbable">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#tab1" data-toggle="tab">ONE</a></li>
-                <li><a href="#tab2" data-toggle="tab">TWO</a></li>
-                <li><a href="#tab3" data-toggle="tab">THREE</a></li>
-                <li><a href="#tab4" data-toggle="tab">FOUR</a></li>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane active" id="tab1">
-                    one
-                </div>
-                <div class="tab-pane " id="tab2">
-                    two
-                </div>
-                <div class="tab-pane " id="tab3">
-                    three
-                </div>
-                <div class="tab-pane " id="tab4">
-                    four
-                </div>
-            </div>
-        </div>
-        <!-- ** End of TABS **-->
-
-
       <hr>
 
 <?php // this includes the footer
