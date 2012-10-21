@@ -4,6 +4,8 @@
          *   PROTOSTRAP GOODIES - LEAVE ALONE
          */
 
+        var $window = $(window)
+
         var totalWidth = 0;
 
         // initialize fastclick
@@ -19,6 +21,7 @@
             {interval: false}
         );
 
+        // Affix if there is any
 
 
         if($('#breadcrumbwrapper').length > 0){

@@ -9,16 +9,16 @@
             </a>
 
             <!-- Be sure to leave the brand out there if you want it shown -->
-            <a class="brand" href="#">Project name</a>
+            <a class="brand" href="index.php">Protostrap</a>
 
 
             <!-- Everything you want hidden at 940px or less, place within here -->
             <div class="nav-collapse">
                 <!-- .nav, .navbar-search, .navbar-form, etc -->
                 <ul class="nav">
-                    <li class="<?php echo $navbarClasses[0];?>"><a href="#">Home</a></li>
-                    <li class="<?php echo $navbarClasses[1];?>"><a href="#">Link</a></li>
-                    <li class="<?php echo $navbarClasses[2];?>"><a href="#">Link</a></li>
+                    <li class="<?php echo $navbarClasses[0];?>"><a href="index.php">Home</a></li>
+                    <li class="<?php echo $navbarClasses[1];?>"><a href="two.php">Two</a></li>
+                    <li class="<?php echo $navbarClasses[2];?>"><a href="three.php">Three</a></li>
                 </ul>
             </div>
         </div>

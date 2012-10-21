@@ -75,8 +75,9 @@ include('./header.php');?>
                         </div>
                     </div>
                     <!-- Carousel nav -->
-                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                    <a class="left carousel-control" data-slide="prev" href="#myCarousel">‹</a>
+                    <a class="right carousel-control" data-slide="next" href="#myCarousel">›</a>
+
                 </div>
             </span>
             <span class="span6">

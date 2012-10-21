@@ -133,6 +133,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
 
 }
 
+.nav-wedge > .active > a, .nav-wedge > .active > a:hover {
+    background:  url("../img/next-white.png") no-repeat scroll right center transparent;
+    background-color: #0088CC;
+    color: #fff;
+
+}
+
+
 .clear {
     clear: both;
 }
@@ -176,7 +184,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
     padding-top:30px;
 }
 
-.left, .align-left {
+.align-left {
     text-align: left;
 }
 .align-right {
@@ -263,9 +271,11 @@ a span.success {
     padding-right: 12px;
 }
 
+.affix {
+    width: inherit;
+}
 
-
-/* Landscape */
+/* Portrait */
 @media screen and (orientation:portrait) {
     .visible-landscape {
         display: none;
@@ -295,4 +305,6 @@ a span.success {
     body {
         margin-right: 49px;
     }
+
+
 }
