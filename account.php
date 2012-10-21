@@ -71,7 +71,8 @@ if($loggedIn){ ?>
     <div class="row">
         <span class="span12">
             <h4>Login</h4>
-            You have to log in to see Your account data<br><br>
+            Type anything into the Email field and submit to log in<br><br>
+            Type 'fail' to simulate auth-error<br><br>
             <?php if(!empty($showLoginError)){ ?>
                 <div class="alert alert-error">
                     <button class="close" data-dismiss="alert" type="button">×</button>
