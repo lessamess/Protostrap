@@ -16,7 +16,7 @@ include('protostrap.php');
 **/
 $tabClasses = Array('','active','','',''); // Do NOT remove line, only add and remove elements in the brackets.
 
-$navbarClasses = Array('active','',''); // Do NOT remove line, only add and remove elements in the brackets.
+$navbarClasses = Array('','','','active','','','','',''); // Do NOT remove line, only add and remove elements in the brackets.
 
 /** END OF ACTIVATIONS **/
 
@@ -37,7 +37,7 @@ include('./headTag.php');?>
   <body data-target="#scrollspy" data-spy="scroll">
 <?php
 // this includes the markup for iOS a styled tabbar
-include('./iosTabbar.php');
+// include('./iosTabbar.php');
 
 // this includes the markup for a static top navbar
 include('./navBarStaticTop.php');?>
@@ -50,14 +50,15 @@ include('./navBarStaticTop.php');?>
             <span class="span3">&nbsp;</span>
             <span class="span9">
                 <h1> Handy Snippets</h1>
-                <h3>Scrollspy and Afix Example</h3>
+                <h3>Scrollspy and Affix Example</h3>
             </span>
         </div>
 
-
+        <!-- SCROLLSPY AFFIX -->
         <div class="row">
+
             <span class="span3" id="scrollspy">
-                &nbsp;
+                &nbsp; <!-- DO NOT REMOVE -->
                 <ul data-spy="affix" data-offset-top="120" id="affix" class=" nav nav-tabs nav-stacked nav-wedge">
                     <li class="active"><a href="#one">ONE</a></li>
                     <li><a href="#two">TWO</a></li>
@@ -86,7 +87,7 @@ include('./navBarStaticTop.php');?>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
             </span>
             <span class="span5">
 

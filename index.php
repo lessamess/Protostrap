@@ -16,7 +16,7 @@ include('protostrap.php');
 **/
 $tabClasses = Array('active','','','',''); // Do NOT remove line, only add and remove elements in the brackets.
 
-$navbarClasses = Array('active','',''); // Do NOT remove line, only add and remove elements in the brackets.
+$navbarClasses = Array('active','','','','','','','',''); // Do NOT remove line, only add and remove elements in the brackets.
 
 /** END OF ACTIVATIONS **/
 
@@ -50,7 +50,7 @@ include('./iosTabbar.php');
     <div class="container">
 
 <?php // this includes the header
-include('./header.php');?>
+//include('./header.php');?>
 <br>
 
 <!--

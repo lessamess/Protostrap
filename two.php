@@ -16,7 +16,7 @@ include('protostrap.php');
 **/
 $tabClasses = Array('','active','','',''); // Do NOT remove line, only add and remove elements in the brackets.
 
-$navbarClasses = Array('active','',''); // Do NOT remove line, only add and remove elements in the brackets.
+$navbarClasses = Array('','active','','','','',''); // Do NOT remove line, only add and remove elements in the brackets.
 
 /** END OF ACTIVATIONS **/
 
@@ -36,13 +36,16 @@ include('./headTag.php');?>
 
   <body>
 <?php
+// this includes the markup for a static top navbar
+include('./navBarStaticTop.php');
+
 // this includes the markup for iOS a styled tabbar
 include('./iosTabbar.php');?>
 
     <div class="container">
 
 <?php // this includes the footer
-include('./header.php');?>
+//include('./header.php');?>
             <div id="breadcrumbwrapper">
                 <ul class="scroller breadcrumb">
                     <li><a href="index.php">Mountains</a> <span class="divider">></span></li>
