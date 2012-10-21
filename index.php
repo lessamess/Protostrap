@@ -66,19 +66,20 @@ include('./iosTabbar.php');
     <div class="tab-pane active" id="tab1">
         <div class="row">
             <span class="span4">
-                <h3>The highest Mountain</h3>
+                <h3>Welcome to Protostrap</h3>
                 <img data-ph="300:80:High Mountain" />
-                 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris.
+                 Protostrap is a framework <strang>for designers</strang> that want to get clickable and testable prototypes up fast. It is based on Bootstrap, so all you can do there you can do here too.
             </span>
             <span class="span4">
-                <h3>The deepest Sea</h3>
+                <h3>This is what you'll get</h3>
                 <img data-ph="300:80:Deep Sea" />
-                 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris.
+                 You Are looking ate the files you will be getting with Protostrap. They are filled with complete examples ready to be used and adapted to your specific needs
             </span>
             <span class="span4">
-                <h3>The longest River</h3>
+                <h3>Get It here</h3>
                 <img data-ph="300:80:Long River" />
-                 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris.
+                 <a href="https://github.com/liip/Protostrap">Head over to Github to get it</a><br>
+                 Read more <a href="https://github.com/liip/Protostrap/blob/master/README.md">about Protostrap</a>
             </span>
         </div>
 
