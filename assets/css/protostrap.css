@@ -190,6 +190,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
 .align-right {
     text-align: right;
 }
+.align-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
 .btn-height {
     line-height: 28px;
 }
@@ -244,7 +252,28 @@ a span.success {
     font-size: 24px;
 }
 
+/* navpills */
+.nav-pills li .divider {
+    color: #CCCCCC;
+    padding: 0 5px;
+    line-height: 32px;
+    vertical-align: middle;
+    margin-top: 2px;
+}
+.nav-pills li.active {
+    line-height: 32px;
+    vertical-align: middle;
+    color: #999999;
+    padding: 0 12px;
+}
+
+
 /* breadcrumb */
+
+.breadcrumb {
+    background-color: transparent;
+}
+
 #breadcrumbwrapper {
     margin: 12px 0;
     overflow: hidden;
