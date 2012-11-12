@@ -1,6 +1,7 @@
 <?php
 // *FAKE* Login/Logout
 $loggedIn = false ;
+$username = "Peter Muster";
 
 if (!empty($_POST['login'])){
     if(strtolower($_POST['login']) == "fail") {
@@ -17,9 +18,10 @@ if (!empty($_COOKIE['loggedIn'])){
 
 
 
-if (!empty($_POST['logout'])){
+if (!empty($_POST['logout']) || !empty($_GET['logout'])){
     setcookie ("loggedIn", "", time() - 3600);
     $loggedIn = false;
+    header("Location: ".$_SERVER["HTTP_REFERER"]);
 }
 
 // Generate a unique Id that can be referenced to
