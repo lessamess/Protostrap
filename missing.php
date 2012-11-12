@@ -16,7 +16,7 @@ include('protostrap.php');
 **/
 $tabClasses = Array('','active','','',''); // Do NOT remove line, only add and remove elements in the brackets.
 
-$navbarClasses = Array('active','',''); // Do NOT remove line, only add and remove elements in the brackets.
+$navbarClasses = Array('','','','','','','','','','',''); // Do NOT remove line, only add and remove elements in the brackets.
 
 /** END OF ACTIVATIONS **/
 
@@ -44,12 +44,17 @@ include('./iosTabbar.php');?>
 
 <?php // this includes the footer
 include('./header.php');?>
+        <br>
+        <div class="well">
+            <h1>End of Prototype</h1>
+            <p>The Prototype ends here. </p>
+            <p>
+            <a href="javascript:history.back();" class="btn btn-primary btn-large">
+            Go back one step
+            </a>
+            </p>
+        </div>
 
-
-
-        <h3>End of Prototype</h3>
-        The Prototype ends here.
-        <a href="">
       <hr>
 
 <?php // this includes the footer
