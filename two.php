@@ -46,12 +46,12 @@ include('./iosTabbar.php');?>
 
 <?php // this includes the footer
 //include('./header.php');?>
-            <div id="breadcrumbwrapper">
-                <ul class="scroller breadcrumb">
-                    <li><a href="index.php">Mountains</a> <span class="divider">></span></li>
-                    <li><a href="8000.php">+8'000m</a> <span class="divider">></span></li>
-                    <li><a href="himalaya.php">Himalaya</a> <span class="divider">></span></li>
-                    <li class="active">Everest</li>
+        <div id="breadcrumbwrapper">
+            <ul class="scroller breadcrumb">
+                <li><a href="index.php">Mountains</a> <span class="divider">></span></li>
+                <li><a href="8000.php">+8'000m</a> <span class="divider">></span></li>
+                <li><a href="himalaya.php">Himalaya</a> <span class="divider">></span></li>
+                <li class="active">Everest</li>
             </ul>
         </div>
         <h1> Handy Snippets</h1>
