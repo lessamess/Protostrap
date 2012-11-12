@@ -145,7 +145,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
     clear: both;
 }
 
-.pile200, .pile160, .pile100, .pile80, .pile60, .pile40 {
+
+.pile200, .pile160, .pile180, .pile100, .pile120, .pile140, .pile80, .pile60, .pile40 {
     float: left;
     margin-right: 8px;
     text-align: center;
@@ -155,9 +156,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
     width: 200px;
 }
 
+.pile180 {
+    width: 180px;
+}
+
 .pile160 {
     width: 160px;
 }
+
+.pile140 {
+    width: 140px;
+}
+
+.pile120 {
+    width: 120px;
+}
+
 
 .pile100 {
     width: 100px;
