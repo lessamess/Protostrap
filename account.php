@@ -66,31 +66,44 @@ if($loggedIn){ ?>
     </div>
 
 <?php } else { ?>
-
-
     <div class="row">
-        <span class="span12">
-            <h4>Login</h4>
-            Type anything into the Email field and submit to log in<br><br>
+        <span class="span6">
+            <h3>Sign in</h3>
+            Type anything into the Email field and submit to sign in<br><br>
             Type 'fail' to simulate auth-error<br><br>
             <?php if(!empty($showLoginError)){ ?>
-                <div class="alert alert-error">
-                    <button class="close" data-dismiss="alert" type="button">×</button>
+                <div class='alert alert-error'>
+                    <button class='close' data-dismiss='alert' type='button'>×</button>
                     <strong>Wrong Username or password</strong><br>
                     Please re-enter your data, make sure Caps Lock is not pressed unintentionally.
                 </div>
             <?php } ?>
-            <form action="" method="post">
-                <label>Email</label>
-                <input name="login" type="text" placeholder="type 'fail' to simulate auth-error"><br>
-                <label>Password</label>
-                <input name="pass" type="password" placeholder="">
-                <br>
-                <button type="submit" class="btn btn-primary">Login</button>
-            </form>
-            <br>
-            <a href="#">I forgot my Password</a>
+            
         </span>
+        <span class="span6">
+                    
+        </span>
+    </div>
+
+    <div class="row">
+        <span class="span3">
+            <form action='' method='post'>
+                <input name='login' class='input-block-level' type='email' placeholder='Email'fail' to simulate auth-error'><br>
+                <input name='pass' class='input-block-level' type='password' placeholder='Password'>
+                <br>
+                <label class='checkbox'>
+                    <input type='checkbox' name='check' id='ckeck' value='1'>
+                    Remember me
+                </label>
+                <button type='submit' class='btn-block btn btn-primary'>Sign in</button>
+                <br>
+                            <a >I forgot my password</a>
+            
+            </form>
+            
+            
+            No Account?<br>
+            <a href='register.php'class='btn btn-block'>Sign up</a>
     </div>
 <?php } ?>
 
