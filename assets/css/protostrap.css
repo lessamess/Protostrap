@@ -339,25 +339,27 @@ a span.success {
 }
 
 /* ERROR Hints for Forms */
+.control-group.error   .help-inline{
+    margin-bottom: 0.5em;
+}
 .control-group.error   .help-inline:before {
     background:none;
     font-family: entyporegular;
-    vertical-align:middle;
+    vertical-align:bottom;
     font-style: normal;
     font-weight: normal;
-    font-size: 2em;
-    padding-right: 8px;
-    
+    font-size: 2.2em;
+    padding-right: .2em;
     content: '\26A0';
 }
 .control-group.success   .help-inline:before {
     background:none;
     font-family: entyporegular;
-    vertical-align:middle;
+    vertical-align: bottom;
     font-style: normal;
     font-weight: normal;
     font-size: 2em;
-    padding-right: 8px;
+    padding-right: .2em;
     content: '\2713';
 }
 

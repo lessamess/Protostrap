@@ -47,26 +47,57 @@ include('./navBarStaticTop.php');
 <?php // this includes the footer
 //include('./header.php');?>
 <br><br>
+
+
         <h1><i class="icon-star"></i> Entypo Icons</h1>
         Protostrap uses the <a href="http://www.entypo.com">Entypo Pictogram Suite</a> by Daniel Bruce to have rich and scalable icons.<br>
         The basic rule is: Same markup as bootstrap, different and more flexible icons.<br><br>
-        
-        <h3>Standard icons</h3>
-        <i class="icon-search"></i> <i class="icon-user"></i><br><br>
-        <pre>
+        <div class="row">
+            <span class="span6">
+                <h3>Standard icons</h3>
+                Uses the standard Boostrap Markup.<br><br>
+                <i class="icon-search"></i> <i class="icon-user"></i><br><br>
+                <pre>
 &lt;i class="icon-search">&lt;/i> &lt;i class="icon-user">&lt;/i>
-        </pre><br>
-        <h3>Buttons</h3>
-        <a class="btn"><i class="icon-search"></i></a>
-        <a class="btn btn-primary"><i class="icon-user"></i></a> 
-        <pre>
-&lt;a class="btn">&lt;i class="icon-search">&lt;/i>&lt;/a> &lt;a class="btn btn-primary">&lt;i class="icon-user">&lt;/i>&lt;/a>
-        </pre><br>
-        <h3><i class="icon-check"></i>Icons in Headings</h3>
-        <pre>
+                </pre><br>
+                <h3>Buttons</h3>
+                Again same Syntax as Bootstrap, no need to specify icon-white though.<br><br>
+                <a class="btn"><i class="icon-search"></i></a> 
+                <a class="btn btn-danger"><i class="icon-mic"></i></a> <br><br>
+                <pre>
+&lt;a class="btn">&lt;i class="icon-search">&lt;/i>&lt;/a>
+&lt;a class="btn btn-danger">&lt;i class="icon-mic">&lt;/i>&lt;/a>
+                </pre><br>
+            </span>
+            <span class="span6">
+                <h3><i class="icon-check"></i>Icons in Headings</h3>
+                <pre>
 &lt;h3>&lt;i class="icon-check">&lt;/i>Icons in Headings&lt;/h3></pre>
+                    <br>
+                <h3>Icons for Feedback</h3>
+                This will help you make your Feedback more accessible. Just use the Standard Control grup markup.<br><br>
+                    <div class="control-group error">
+                        <label class="control-label" for="tel"></label>
+                        <div class="controls">
+                            <input type="tel" class="input-medium" placeholder="Phone">
+                            <span class="help-inline">This is a required field</span>
+                        </div>
+                    </div>
+                    <pre>
+&lt;div class="control-group error">
+    &lt;label class="control-label" for="tel">&lt;/label>
+    &lt;div class="controls">
+        &lt;input type="tel" class="input-medium" placeholder="Phone">
+        &lt;span class="help-inline">This is a required field&lt;/span>
+    &lt;/div>
+&lt;/div></pre>
+                <br>
+            </span>
+        </div>
         
-<br>
+        
+        
+        
 <h3>All Icons</h3>
 <div class='row'>
     <span class='span2'><i class='icon-phone'></i> phone</span>
