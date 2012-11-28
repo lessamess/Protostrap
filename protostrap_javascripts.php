@@ -23,6 +23,7 @@
     </script>
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap-carousel.js"></script>
     <script src="./assets/js/jquery.svg.placeholder.js"></script>
     <script src="./assets/js/add2home.js"></script>
     <script type='application/javascript' src='./assets/js/fastclick.js'></script>

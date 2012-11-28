@@ -2,6 +2,7 @@
 // *FAKE* Login/Logout
 $loggedIn = false ;
 $username = "Peter Muster";
+$usermail = "peter.muster@muster.com";
 
 if (!empty($_POST['login'])){
     if(strtolower($_POST['login']) == "fail") {
@@ -27,6 +28,6 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
 // Generate a unique Id that can be referenced to
 // This is handy in constructs like collapsibles, so you dont have to worry about id juggling
 $lastUniqid = "";
-function getUniqid(){
-    return $GLOBALS["lastUniqid"] = uniqid();
+function getUniqueId(){
+    return $GLOBALS["lastUniqueId"] = uniqid();
 }

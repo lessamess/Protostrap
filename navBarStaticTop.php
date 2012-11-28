@@ -18,7 +18,7 @@
                 <ul class="nav">
                     <li class="<?php echo $navbarClasses[0];?>"><a href="index.php">Home</a></li>
                     <li class="<?php echo $navbarClasses[1];?>"><a href="two.php">Handy Snippets</a></li>
-                    <li class="<?php echo $navbarClasses[2];?>"><a href="three.php">Carousel</a></li>
+                    <li class="<?php echo $navbarClasses[2];?>"><a href="entypo.php">Icons</a></li>
                     <li class="<?php echo $navbarClasses[3];?>"><a href="scrollspy.php">Scrollspy and Affix</a></li>
                     <li class="<?php echo $navbarClasses[4];?>"><a href="account.php">Fake Login</a></li>
                 </ul>

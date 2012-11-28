@@ -80,7 +80,6 @@ include('./navBarStaticTop.php');
                     <!-- Carousel nav -->
                     <a class="left carousel-control" data-slide="prev" href="#myCarousel">‹</a>
                     <a class="right carousel-control" data-slide="next" href="#myCarousel">›</a>
-
                 </div>
             </span>
             <span class="span6">

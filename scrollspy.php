@@ -78,19 +78,32 @@ include('./navBarStaticTop.php');?>
                     <li>Adapt - if necessary - the <strong>top</strong> value in the <strong>.affix</strong> class in the file <strong>main.js</strong>. </li>
                 </ul>
 
-                <h4 id="three">THREE: Scrollspy</h4>
-                To make this work the Body Tag needs to have the attributes <strong> data-target="#scrollspy" data-spy="scroll</strong>"
-                <br>
-                The data-target Attribute has to correspond to the id of the element holding the navogation. The links have to point to id's.
-
-                <h4>Extra Lorem ipsum</h4>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                
             </span>
             <span class="span5">
 
+            </span>
+        </div>
+        <div class="row">
+            <span class="span3">
+                &nbsp;
+            </span>
+            <span class="span6">
+                <h4 id="code">Markup</h4>
+                <pre>
+&lt;body data-target="#scrollspy" data-spy="scroll">
+...
+&lt;span class="span3" id="scrollspy">
+    &nbsp; &lt;!-- DO NOT REMOVE -->
+    &lt;ul data-spy="affix" data-offset-top="120" id="affix" class=" nav nav-tabs nav-stacked nav-wedge">
+        &lt;li class="active">&lt;a href="#one">ONE&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#two">TWO&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#three">THREE&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/span></pre>
+            </span>
+            <span class="span3">
+                        
             </span>
         </div>
 

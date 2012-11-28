@@ -1,11 +1,28 @@
+@charset "utf-8";
 body {
     padding: 0;
     padding-bottom: 40px;
+    font-size:16px;
 }
 .container {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+/**
+ * Megamenu
+ */
+
+.overlayBaselayer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 888;
+    display: none;
+}
+
 
 /**
  * TABBAR Styles
@@ -172,7 +189,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
     width: 120px;
 }
 
-
 .pile100 {
     width: 100px;
 }
@@ -208,7 +224,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
     text-align: center;
 }
 
-.hidden {
+.hidden, .navbar .nav.hidden {
     display: none;
 }
 
@@ -229,6 +245,10 @@ td.alert {
 }
 td.error {
     background-color: #F2DEDE;
+}
+
+span.btn-group {
+    font-size: inherit;
 }
 
 /*Toogle*/
@@ -318,6 +338,50 @@ a span.success {
     width: inherit;
 }
 
+/* ERROR Hints for Forms */
+.control-group.error   .help-inline:before {
+    background:none;
+    font-family: entyporegular;
+    vertical-align:middle;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    padding-right: 8px;
+    
+    content: '\26A0';
+}
+.control-group.success   .help-inline:before {
+    background:none;
+    font-family: entyporegular;
+    vertical-align:middle;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    padding-right: 8px;
+    content: '\2713';
+}
+
+
+/* multistep */
+.multistep li a h2, .multistep li a h2 i{
+    vertical-align: middle;
+}
+
+/* Typeahead Hits*/
+.typeahead-hits {
+    padding: 4px 15px 4px 15px;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+/* Phone */
+@media screen and (max-device-width : 320px){
+ h1 {
+    font-size: 28px;
+ }
+}
+
 /* Portrait */
 @media screen and (orientation:portrait) {
     .visible-landscape {
@@ -350,4 +414,22 @@ a span.success {
     }
 
 
+}
+/* Print Styles*/
+@media print {
+    aside, hide-on-print { display:none; }
+    
+    .accordion-heading .accordion-toggle {
+        font-weight: bold;
+        padding: 0;
+        border: 0;
+    }
+    .accordion-body.collapse {
+        height: auto;
+    }
+    
+    .accordion-group {
+        border: 0;
+    }
+    
 }

@@ -18,12 +18,10 @@
 
         // Carousel if there is any
         $('.carousel').carousel(
-            {interval: false}
+            {interval: 0}
         );
 
         // Affix if there is any
-
-
         if($('#breadcrumbwrapper').length > 0){
             $('#breadcrumbwrapper ul li').each(function (id, element) {
                 totalWidth += $(element).outerWidth(true);
