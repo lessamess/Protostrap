@@ -13,7 +13,7 @@ include('protostrap.php');
      Here's where you define which elements are activated,
      be it tabs or navigation etc
 **/
-$navbarClasses = Array('active','',''); // Do NOT remove line, only add and remove elements in the brackets.
+$navbarClasses = Array('active','','','','','',''); // Do NOT remove line, only add and remove elements in the brackets.
 $tabClasses = Array('','','','','active'); // Do not remove line, only add and remove elements in the brackets.
 
 /** END OF ACTIVATIONS **/
@@ -38,18 +38,21 @@ include('./headTag.php');?>
   <body>
 <?php
 // this includes the markup for iOS a styled tabbar
-include('./iosTabbar.php');?>
+//include('./iosTabbar.php');
+
+include('./navBarStaticTop.php');?>
 
     <div class="container">
 
 <?php // this includes the header
-include('./header.php');?>
+// include('./header.php');?>
 
 <?php
 if($loggedIn){ ?>
     <div class="row">
         <span class="span12">
-            <h4>John Doe</h4>
+            <br><br>
+            <h3>John Doe</h3>
             <ul class="stacks">
                 <li >
                     <a >
@@ -62,6 +65,8 @@ if($loggedIn){ ?>
                     </a>
                 </li>
             </ul>
+            <br><br>
+            <a class="btn" href="?logout=true">Logout</a>
         </span>
     </div>
 

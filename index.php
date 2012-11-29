@@ -43,7 +43,7 @@ include('./headTag.php');?>
 include('./navBarStaticTop.php');
 
 // this includes the markup for iOS a styled tabbar
-include('./iosTabbar.php');
+//include('./iosTabbar.php');
 
 ?>
 
@@ -53,49 +53,29 @@ include('./iosTabbar.php');
 //include('./header.php');?>
 <br>
 
-<!--
-  ** TABS **
--->
-<div class="tabbable">
-  <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab1" data-toggle="tab">Itineraries</a></li>
-    <li><a href="#tab2" data-toggle="tab">Events</a></li>
-    <li><a href="#tab3" data-toggle="tab">Today</a></li>
-  </ul>
-  <div class="tab-content">
-    <div class="tab-pane active" id="tab1">
-        <div class="row">
-            <span class="span4">
-                <h3>Welcome to Protostrap</h3>
-                <img data-ph="300:80:High Mountain" />
-                 Protostrap is a framework <strang>for designers</strang> that want to get clickable and testable prototypes up fast. It is based on Bootstrap, so all you can do there you can do here too.
-            </span>
-            <span class="span4">
-                <h3>This is what you'll get</h3>
-                <img data-ph="300:80:Deep Sea" />
-                 You Are looking ate the files you will be getting with Protostrap. They are filled with complete examples ready to be used and adapted to your specific needs
-            </span>
-            <span class="span4">
-                <h3>Get It here</h3>
-                <img data-ph="300:80:Long River" />
-                 <a href="https://github.com/liip/Protostrap">Head over to Github to get it</a><br>
-                 Read more <a href="https://github.com/liip/Protostrap/blob/master/README.md">about Protostrap</a>
-            </span>
-        </div>
-
-    </div>
-    <div class="tab-pane" id="tab2">
-      <p>Howdy, I'm in Section 2.</p>
-    </div>
-    <div class="tab-pane" id="tab3">
-      <p>Howdy, I'm in Section 3.</p>
-    </div>
+<div class="hero-unit">
+  <h1>Protostrap <small>A Prototyping Framework for Designers</small></h1>
+  <br><br>
+  <div class="row">
+        <span class="span6">
+            
+            <p>Protostrap is a framework for designers that want to get <strong>clickable</strong> and <strong>testable</strong> prototypes up <strong>fast</strong>.<br><br>
+            It is based on Twitter Bootstrap, so all you can do there you can do here too.</p>
+            <p>
+                <a href="https://github.com/liip/Protostrap/archive/master.zip" class="btn btn-primary btn-large">
+                    Download Protostrap
+                </a>
+                <br><br>Protostrap is Open Source and also <a href="https://github.com/liip/Protostrap">available on GitHub</a>
+            </p>
+        </span>
+        <span class="span4">
+            <iframe src="http://de.slideshare.net/slideshow/embed_code/15409143?rel=0" width="100%" height="291" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http://de.slideshare.net/memibeltrame/techtalk-protostrap-15409143" title="Protostrap" target="_blank">Protostrap</a> </strong> from <strong><a href="http://de.slideshare.net/memibeltrame" target="_blank">Memi Beltrame</a></strong> </div>
+      </span>
   </div>
+  
+  <p>
+  </p>
 </div>
-
-<!--
-  ** TABS END **
--->
 
       <hr>
 
