@@ -40,7 +40,7 @@ include('./headTag.php');?>
 include('./navBarStaticTop.php');
 
 // this includes the markup for iOS a styled tabbar
-include('./iosTabbar.php');?>
+// include('./iosTabbar.php');?>
 
     <div class="container">
 
@@ -135,13 +135,13 @@ include('./iosTabbar.php');?>
         
                 <h3 id="grid">Grid Row 9 cols</h3>
                 <div class="row">
-                    <span class="span3">
+                    <span class="span3 outline">
                         Span 3
                     </span>
-                    <span class="span2">
+                    <span class="span2 outline">
                         Span 2
                     </span>
-                    <span class="span4">
+                    <span class="span4 outline">
                         Span 4
                     </span>
                 </div>
@@ -273,8 +273,8 @@ include('./iosTabbar.php');?>
                         </div>
                     </div>
                     <!-- Carousel nav -->
-                    <a class="left carousel-control" data-slide="prev" href="#myCarousel">‹</a>
-                    <a class="right carousel-control" data-slide="next" href="#myCarousel">›</a>
+                    <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="entypo">&#59229;</span></a>
+                    <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="entypo">&#59230;</span></a>
                 </div>
                 <h4>Markup</h4>
                 <pre class="pre-scrollable">

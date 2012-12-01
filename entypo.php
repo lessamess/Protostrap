@@ -68,6 +68,23 @@ include('./navBarStaticTop.php');
 &lt;a class="btn">&lt;i class="icon-search">&lt;/i>&lt;/a>
 &lt;a class="btn btn-danger">&lt;i class="icon-mic">&lt;/i>&lt;/a>
                 </pre><br>
+                <div class="row">
+                    <span class="span2">
+                        Huge Buttons for prominent call to actions:
+                    </span>
+                    <span class="span4">
+                        <a  class="btn btn-primary btn-huge">
+                            <i class="icon-upload"></i> Upload Photos 
+                        </a>
+                        <br><br>
+                    </span>
+                    
+                </div>
+                <pre>
+&lt;a class="btn btn-primary btn-huge">
+    &lt;i class="icon-upload">&lt;/i> Upload Photos
+&lt;/a></pre>
+                
             </span>
             <span class="span6">
                 <h3><i class="icon-check"></i>Icons in Headings</h3>

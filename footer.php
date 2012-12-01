@@ -1,3 +1,3 @@
 <footer>
-    <p>&copy; Company 2012</p>
+    <p><i class="icon-cycle"></i> Protostrap is Open Source - What goes around comes around</p>
 </footer>

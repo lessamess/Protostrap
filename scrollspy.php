@@ -94,7 +94,7 @@ include('./navBarStaticTop.php');?>
 &lt;body data-target="#scrollspy" data-spy="scroll">
 ...
 &lt;span class="span3" id="scrollspy">
-    &nbsp; &lt;!-- DO NOT REMOVE -->
+    &amp;nbsp; &lt;!-- DO NOT REMOVE -->
     &lt;ul data-spy="affix" data-offset-top="120" id="affix" class=" nav nav-tabs nav-stacked nav-wedge">
         &lt;li class="active">&lt;a href="#one">ONE&lt;/a>&lt;/li>
         &lt;li>&lt;a href="#two">TWO&lt;/a>&lt;/li>

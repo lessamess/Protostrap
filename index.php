@@ -32,10 +32,10 @@ $navbarClasses = Array('active','','','','','','','',''); // Do NOT remove line,
 // this includes all the markup that loads css files and similar stuff,
 // if you have to add more css, that's the place to do it.
 include('./headTag.php');?>
-
+<link href="./assets/css/demo.css?time=<?php time();?>" rel="stylesheet">
   </head>
 
-  <body>
+  <body id="demopage">
 
 <?php
 
@@ -52,30 +52,25 @@ include('./navBarStaticTop.php');
 <?php // this includes the header
 //include('./header.php');?>
 <br>
-
-<div class="hero-unit">
-  <h1>Protostrap <small>A Prototyping Framework for Designers</small></h1>
-  <br><br>
+<br><br><br>
   <div class="row">
-        <span class="span6">
+        <span class="span8 bigWhite">
             
-            <p>Protostrap is a framework for designers that want to get <strong>clickable</strong> and <strong>testable</strong> prototypes up <strong>fast</strong>.<br><br>
-            It is based on Twitter Bootstrap, so all you can do there you can do here too.</p>
-            <p>
-                <a href="https://github.com/liip/Protostrap/archive/master.zip" class="btn btn-primary btn-large">
-                    Download Protostrap
+            <p>A prototyping framework for designers who want to get <strong>clickable</strong> and <strong>testable</strong> prototypes up <strong>fast</strong>.<br><br>
+            Based on Twitter Bootstrap, <br>enhanced with love and PHP.</p>
+            <p><br>
+                <a href="https://github.com/liip/Protostrap/archive/master.zip" class="btn btn-primary btn-huge">
+                    <i class="icon-download"></i> Download Protostrap
                 </a>
-                <br><br>Protostrap is Open Source and also <a href="https://github.com/liip/Protostrap">available on GitHub</a>
+                <br>
+                    <!-- <small>Protostrap is Open Source and also <a href="https://github.com/liip/Protostrap">available on GitHub</a></small>-->
             </p>
+            <br><br><br>
         </span>
         <span class="span4">
-            <iframe src="http://de.slideshare.net/slideshow/embed_code/15409143?rel=0" width="100%" height="291" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http://de.slideshare.net/memibeltrame/techtalk-protostrap-15409143" title="Protostrap" target="_blank">Protostrap</a> </strong> from <strong><a href="http://de.slideshare.net/memibeltrame" target="_blank">Memi Beltrame</a></strong> </div>
+            <iframe src="http://de.slideshare.net/slideshow/embed_code/15409143?rel=0" width="100%" height="291" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> </div>
       </span>
   </div>
-  
-  <p>
-  </p>
-</div>
 
       <hr>
 

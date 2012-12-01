@@ -1,4 +1,7 @@
 <?php
+//
+$GLOBALS["lastUniqueId"] = 1;
+
 // *FAKE* Login/Logout
 $loggedIn = false ;
 $username = "Peter Muster";
@@ -29,5 +32,5 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
 // This is handy in constructs like collapsibles, so you dont have to worry about id juggling
 $lastUniqid = "";
 function getUniqueId(){
-    return $GLOBALS["lastUniqueId"] = uniqid();
+    return $GLOBALS["lastUniqueId"] = $GLOBALS["lastUniqueId"] + 1;
 }

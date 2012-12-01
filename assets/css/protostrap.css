@@ -251,6 +251,12 @@ span.btn-group {
     font-size: inherit;
 }
 
+.btn-huge{padding:9px 14px;font-size: 28px;line-height:normal;-webkit-border-radius:9px;-moz-border-radius:9px;border-radius:9px;}
+.btn-huge [class^="icon-"]{margin-top:2px;}
+ .btn-huge i{
+    font-size: 84px;
+ }
+
 /*Toogle*/
 .btn-toggle input {
     display: none;
@@ -435,3 +441,9 @@ a span.success {
     }
     
 }
+
+/* helper classes for the snipets demo */
+.outline {
+    outline: 1px solid #ddd;
+}
+
