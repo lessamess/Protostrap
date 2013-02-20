@@ -47,22 +47,29 @@ include('./headTag.php');?>
 <?php // this includes the header
 //include('./header.php');?>
 <br>
-<br><br><br>
+<br><br class="hidden-phone"><br class="hidden-phone">
   <div class="row">
         <span class="span8 bigWhite">
             
-            <p>A prototyping framework for designers who want to get <strong>clickable</strong> and <strong>testable</strong> prototypes up <strong>fast</strong>.<br><br>
+            <p>Get <strong>clickable</strong> and <strong>testable</strong> prototypes up <strong>fast</strong>.<br><br>
+            
+            A prototyping framework for designers by designers.<br><br>
             Based on Twitter Bootstrap, <br>enhanced with love and PHP.</p>
-            <p><br>
-                <a href="https://github.com/liip/Protostrap/archive/master.zip" class="btn btn-primary btn-huge">
-                    <i class="icon-download"></i> Download Protostrap
+            <p class="hidden-phone"><br>
+                <a href="https://github.com/liip/Protostrap/archive/master.zip" class=" btn btn-primary btn-huge">
+                    <i class="icon-download" ></i> Download Protostrap
                 </a>
                 <br>
-                    <!-- <small>Protostrap is Open Source and also <a href="https://github.com/liip/Protostrap">available on GitHub</a></small>-->
             </p>
-            <br><br><br>
+            <br><br>
+            
         </span>
         <span class="span4">
+            <br class="hidden-phone"><br class="hidden-phone"><br class="hidden-phone"><br class="hidden-phone">
+            <span class="hidden-desktop hidden-tablet bigWhite">
+                <p>Take a quick tour</p>
+            </span>
+            
             <iframe src="http://de.slideshare.net/slideshow/embed_code/15409143?rel=0" width="100%" height="291" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> </div>
       </span>
   </div>

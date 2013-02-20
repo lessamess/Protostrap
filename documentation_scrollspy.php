@@ -46,6 +46,7 @@ include('./headTag.php');?>
         
         // *** iOS TAB-BAR ***
         // This defines which tab is active. each pair of quotes corressponds to a tab
+        // DO NOT REMOVE
         $tabClasses = Array('active','','','','');
         // this includes the markup for iOS a styled tab-bar. Remove the // to include
         //include('./iosTabbar.php');
