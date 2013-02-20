@@ -5,7 +5,7 @@
     This file sets up project-wide things like authentication -
     DO NOT REMOVE
 **/
-include('protostrap.php');
+include('core/protostrap.php');
 
 
 /**   --- I D I V I D U A L  A C T I V A T I O N S  ---
@@ -36,11 +36,20 @@ include('./headTag.php');?>
 
   <body data-target="#scrollspy" data-spy="scroll">
 <?php
-// this includes the markup for iOS a styled tabbar
-// include('./iosTabbar.php');
-
-// this includes the markup for a static top navbar
-include('./navBarStaticTop.php');?>
+        // *** STATIC TOP NAVBAR ***
+        // This defines which navigation item is active. each pair of quotes corressponds to an item
+        // DO NOT REMOVE
+        $navbarClasses = Array('','','','active','','','','',''); 
+        // this includes the markup for a static top navbar. Remove the // to include.
+        include('./navBarStaticTop.php');
+        
+        
+        // *** iOS TAB-BAR ***
+        // This defines which tab is active. each pair of quotes corressponds to a tab
+        $tabClasses = Array('active','','','','');
+        // this includes the markup for iOS a styled tab-bar. Remove the // to include
+        //include('./iosTabbar.php');
+?>
 
     <div class="container">
 
@@ -49,8 +58,8 @@ include('./navBarStaticTop.php');?>
         <div class="row">
             <span class="span3">&nbsp;</span>
             <span class="span9">
-                <h1> Handy Snippets</h1>
-                <h3>Scrollspy and Affix Example</h3>
+                <h1>Scrollspy and Affix</h1>
+                Scrollspy and Affix allow to have an ancor-based navigation that is fixed in position and detects which ancor the user has scrolled to.
             </span>
         </div>
 
@@ -65,22 +74,30 @@ include('./navBarStaticTop.php');?>
                     <li><a href="#three">THREE</a></li>
                 </ul>
             </span>
-            <span class="span4" >
+            <span class="span6" >
 
-                <h4 id="one">ONE: Styled Navbar</h4>
-                The Navigation to the left does not look like the standard Bootstrap navigation. Ironically the Bootstrap demopage does not use the standard navigation either. It uses a much clearer Navigation where the active element is highlighted with white text on a blue background. You guessed right: this looks more like the navigation on the Bootstrap demo page.
-
+                
+                <h4 id="one">ONE: Scrollspy</h4>
+                To enable scrollspy you have to add the following elements:
+                <ul>
+                    <li>Place these 2 Attributes <br><strong>data-target="#scrollspy"</strong> and <br><strong>data-spy="scroll"</strong> to make it look like this:<br><br>
+                        <pre> &lt;body data-target="#scrollspy" data-spy="scroll"&gt;</pre>
+                    </li>
+                    <li>Place the ID you defined in the data-target attribute of the body tag inside the element that contains the navigation, see markup below.</li>
+                </ul>
+                <br>
                 <h4  id="two" >TWO: Affix - the fixed navigation</h4>
                 This is a tricky one to make sure it works alright you have to do the following
                 <ul>
                     <li>Use the Navigation Code from this Navigation</li>
                     <li>Define the Attribute <strong>data-offset-top</strong>. The Attribute describes how much the users scrolls until the affix happens
-                    <li>Adapt - if necessary - the <strong>top</strong> value in the <strong>.affix</strong> class in the file <strong>main.js</strong>. </li>
+                    <li>Adapt - if necessary - the <strong>top</strong> value in the <strong>.affix</strong> class in the file <strong>assets/css/main.css</strong>. </li>
                 </ul>
-
-                
+                <br>
+                <h4 id="three">Three: Styled Navigation</h4>
+                The Navigation to the left does not look like the standard Bootstrap navigation. Ironically the Bootstrap demopage does not use the standard navigation either. It uses a much clearer Navigation where the active element is highlighted with white text on a blue background. You guessed right: this looks more like the navigation on the Bootstrap demo page.
             </span>
-            <span class="span5">
+            <span class="span3">
 
             </span>
         </div>
@@ -89,7 +106,7 @@ include('./navBarStaticTop.php');?>
                 &nbsp;
             </span>
             <span class="span6">
-                <h4 id="code">Markup</h4>
+                <h4 id="code">The complete Markup</h4>
                 <pre>
 &lt;body data-target="#scrollspy" data-spy="scroll">
 ...

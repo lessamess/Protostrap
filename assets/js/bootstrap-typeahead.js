@@ -55,8 +55,12 @@
     }
 
   , show: function () {
-     if(this.$element.hasClass('showHits')) {
-        this.$menu.html('<li class=\"typeahead-hits\">34 Treffer</li>'+this.$menu.html()+ '<li class=\"typeahead-hits\"><a class="btn">Alle Treffer anzeigen</a></li>')
+    var results = 34;
+     if(this.$element.hasClass('showResults')) {
+        if(this.$element.attr('data-results') != undefined ){
+            results = this.$element.attr('data-results');
+            };
+        this.$menu.html('<li class=\"typeahead-hits\">'+results+' Results</li>'+this.$menu.html()+ '<li class=\"typeahead-hits\"><a class="btn">Show all results</a></li>')
      }
       //$(".typeahead.dropdown-menu").html(text+'<li>634 REsultate</li>');
       var pos = $.extend({}, this.$element.offset(), {

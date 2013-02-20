@@ -17,9 +17,9 @@
                 <!-- .nav, .navbar-search, .navbar-form, etc -->
                 <ul class="nav">
                     <li class="<?php echo $navbarClasses[0];?>"><a href="index.php">Home</a></li>
-                    <li class="<?php echo $navbarClasses[1];?>"><a href="two.php">Handy Snippets</a></li>
-                    <li class="<?php echo $navbarClasses[2];?>"><a href="entypo.php">Icons</a></li>
-                    <li class="<?php echo $navbarClasses[3];?>"><a href="scrollspy.php">Scrollspy and Affix</a></li>
+                    <li class="<?php echo $navbarClasses[1];?>"><a href="documentation_main.php">Documentation</a></li>
+                    <li class="<?php echo $navbarClasses[2];?>"><a href="documentation_icons.php">Icons</a></li>
+                    <li class="<?php echo $navbarClasses[3];?>"><a href="documentation_scrollspy.php">Scrollspy and Affix</a></li>
                     <li class="<?php echo $navbarClasses[4];?>"><a href="account.php">Fake Login</a></li>
                 </ul>
             </div>

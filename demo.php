@@ -7,6 +7,7 @@
 **/
 include('core/protostrap.php');
 
+
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,7 +32,6 @@ include('./headTag.php');?>
         $navbarClasses = Array('active','','','','','','','',''); 
         // this includes the markup for a static top navbar. Remove the // to include.
         include('./navBarStaticTop.php');
-        
         
         // *** iOS TAB-BAR ***
         // This defines which tab is active. each pair of quotes corressponds to a tab

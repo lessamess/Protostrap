@@ -1,3 +1,5 @@
+    <!-- ADD ADDITIONAL FILES AT THE BOTTOM OF THE PAGE -->
+
     <script type="text/javascript">
         (function(document,navigator,standalone) {
             // prevents links from apps from oppening in mobile safari
@@ -24,10 +26,13 @@
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/bootstrap-carousel.js"></script>
+    <script src="./assets/js/bootstrap-typeahead.js"></script>
     <script src="./assets/js/jquery.svg.placeholder.js"></script>
     <script src="./assets/js/add2home.js"></script>
     <script type='application/javascript' src='./assets/js/fastclick.js'></script>
     <script type='application/javascript' src='./assets/js/iscroll.js'></script>
     <script src="./assets/js/protostrap.js?time=<?php time();?>"></script>
-    <!-- You can add your code in this file -->
+    
+    
+    <!-- ADD ADDITIONAL FILES AT THE BOTTOM -->
     <script src="./assets/js/main.js?time=<?php time();?>"></script>

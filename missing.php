@@ -5,20 +5,8 @@
     This file sets up project-wide things like authentication -
     DO NOT REMOVE
 **/
-include('protostrap.php');
+include('core/protostrap.php');
 
-
-/**   --- I D I V I D U A L  A C T I V A T I O N S  ---
-
-     These few lines are unique to every page.
-     Here's where you define which elements are activated,
-     be it tabs or navigation etc
-**/
-$tabClasses = Array('','active','','',''); // Do NOT remove line, only add and remove elements in the brackets.
-
-$navbarClasses = Array('','','','','','','','','','',''); // Do NOT remove line, only add and remove elements in the brackets.
-
-/** END OF ACTIVATIONS **/
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -37,13 +25,25 @@ include('./headTag.php');?>
 
   <body>
 <?php
-// this includes the markup for iOS a styled tabbar
-include('./iosTabbar.php');?>
-
+        // *** STATIC TOP NAVBAR ***
+        // This defines which navigation item is active. each pair of quotes corressponds to an item
+        // DO NOT REMOVE
+        $navbarClasses = Array('','','','','','','','',''); 
+        // this includes the markup for a static top navbar. Remove the // to include.
+        include('./navBarStaticTop.php');
+        
+        
+        // *** iOS TAB-BAR ***
+        // This defines which tab is active. each pair of quotes corressponds to a tab
+        // DO NOT REMOVE
+        $tabClasses = Array('active','','','','');
+        // this includes the markup for iOS a styled tab-bar. Remove the // to include
+        //include('./iosTabbar.php');
+?>
     <div class="container">
 
 <?php // this includes the footer
-include('./header.php');?>
+//include('./header.php');?>
         <br>
         <div class="well">
             <h1>End of Prototype</h1>
