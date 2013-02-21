@@ -51,18 +51,19 @@ include('./headTag.php');?>
   <div class="row">
         <span class="span7 bigWhite">
             
-            <p>Build <strong>clickable</strong> prototypes <strong>faster</strong>.<br><br>
-            
+            <h3>Build clickable prototypes faster</h3><br>
+            <p>
             A prototyping framework for designers by designers.<br><br>
             Based on Twitter Bootstrap, <br>enhanced with love and PHP.</p>
-            <p class="hidden-phone"><br>
-                <a href="https://github.com/liip/Protostrap/archive/master.zip" class=" btn btn-primary btn-huge">
-                    <i class="icon-download" ></i> Download Protostrap
-                </a>
-                <br>
-                
-            </p>
             <br><br>
+            
+            <h3><i class="icon-circled-info"></i> Heads up</h3>
+            <ul>
+                <li>Get started by replacing this file with the contents of blank.php</li>
+                <li>Adapt the content of the navigation in the file navBarStaticTop.php</li>
+                <li>Adapt the footer.php file</li>
+            </ul>
+            
             
         </span>
         <span class="span1 hidden-phone">
