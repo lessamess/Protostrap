@@ -49,9 +49,9 @@ include('./headTag.php');?>
 <br>
 <br><br class="hidden-phone"><br class="hidden-phone">
   <div class="row">
-        <span class="span8 bigWhite">
+        <span class="span7 bigWhite">
             
-            <p>Get <strong>clickable</strong> and <strong>testable</strong> prototypes up <strong>fast</strong>.<br><br>
+            <p>Build <strong>clickable</strong> prototypes <strong>faster</strong>.<br><br>
             
             A prototyping framework for designers by designers.<br><br>
             Based on Twitter Bootstrap, <br>enhanced with love and PHP.</p>
@@ -60,12 +60,16 @@ include('./headTag.php');?>
                     <i class="icon-download" ></i> Download Protostrap
                 </a>
                 <br>
+                
             </p>
             <br><br>
             
         </span>
+        <span class="span1 hidden-phone">
+            &nbsp;
+        </span>
         <span class="span4">
-            <br class="hidden-phone"><br class="hidden-phone"><br class="hidden-phone"><br class="hidden-phone">
+            <br class="hidden-phone"><br class="hidden-phone">
             <span class="hidden-desktop hidden-tablet bigWhite">
                 <p>Take a quick tour</p>
             </span>
@@ -73,7 +77,18 @@ include('./headTag.php');?>
             <iframe src="http://de.slideshare.net/slideshow/embed_code/15409143?rel=0" width="100%" height="291" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> </div>
       </span>
   </div>
-
+    <div class="row">
+        <span class="span4 ">
+            
+            <h3><a href="documentation_main.php" class=""><i class="icon-text-doc"></i>Read the Docs</a></h3>
+        </span>
+        <span class="span4">
+        <a href="https://github.com/liip/Protostrap/blob/master/README.md" class=""><i class="icon-text-doc"></i>Protostrap on Github</a>
+        </span>
+        <span class="span4">
+                    
+        </span>
+    </div>
       <hr>
 
 <?php // this includes the footer

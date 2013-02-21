@@ -49,19 +49,17 @@ if($loggedIn){ ?>
     <div class="row">
         <span class="span12">
             <br><br>
-            <h3>John Doe</h3>
-            <ul class="stacks">
-                <li >
-                    <a >
-                        One
-                    </a>
-                </li>
-                <li>
-                    <a class="">
-                        Two
-                    </a>
-                </li>
-            </ul>
+            <h3>Profile</h3>
+            <table class="table table-condensed">
+                    <tr>
+                        <td>Name</td>
+                        <td><?php echo $username;?></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><?php echo $usermail;?></td>
+                    </tr>
+                </table>
             <br><br>
             <a class="btn" href="?logout=true">Logout</a>
         </span>

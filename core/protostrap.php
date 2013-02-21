@@ -4,8 +4,8 @@ $GLOBALS["lastUniqueId"] = 1;
 
 // *FAKE* Login/Logout
 $loggedIn = false ;
-$username = "Peter Muster";
-$usermail = "peter.muster@muster.com";
+$username = "John Doe";
+$usermail = "john.doe@site.com";
 
 if (!empty($_POST['login'])){
     if(strtolower($_POST['login']) == "fail") {

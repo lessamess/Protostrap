@@ -432,8 +432,8 @@ protostrap_javascripts.php
                 <br>
                 <h3 id="typeahead">Typeahead</h3>
                 <input type="text"  data-provide="typeahead" data-results="77" class="input-medium typeahead showResults" placeholder="Book Title, Topic...">
-                <br>
-                 Protostraps Typeahead is slightly more evolved than Bootrps version:
+                <br><
+                 Protostraps Typeahead is slightly more evolved than Bootstraps version:
                  <ul>
                     <li>
                         The "onselect" event-handler allows you to pass the selected item to a function 
@@ -482,8 +482,12 @@ placeholder="Book Title, Topic..."&gt;
                             <li>One for the Tabs</li>
                             <li>One for the Badges on each tab. You can add the classes <strong>badge-1</strong> or <strong>badge-2</strong> to each tab to simulate badges. since this is done by adding a class, this could also happen over javascript.</li>
                         </ul>
+                        
+                        <span class="visible-phone">
+                            <a href="mobiledemo.php" class="">Show demopage</a>
+                        </span>
                     </span>
-                    <span class="span5">
+                    <span class="span5 hidden-phone">
                         <iframe width="320" height="480" src="mobiledemo.php"></iframe>
                     </span>
                 </div>
