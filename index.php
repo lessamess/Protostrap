@@ -92,6 +92,7 @@ include('./headTag.php');?>
             A Blogpost on the Whys and Hows of Protostrap.
         </span>
     </div>
+    <br><br>
       <hr>
 
 <?php // this includes the footer
