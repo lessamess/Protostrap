@@ -298,3 +298,45 @@
 .icon-cc-remix:after{content: '\1F54F';}
 .icon-db-logo:after{content: '\1F5F9';}
 .icon-db-shape:after{content: '\1F5FA';}
+
+/* ENTYPO SOCIAL*/
+
+@font-face {
+    font-family: 'entypo-social';
+    src: url('../webfonts/entypo-social/entypo-social.eot');
+    src: url('../webfonts/entypo-social/entypo-social.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/entypo-social/entypo-social.woff') format('woff'),
+         url('../webfonts/entypo-social/entypo-social.ttf') format('truetype'),
+         url('../webfonts/entypo-social/entypo-social.svg#entyporegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.icon-facebook, .icon-twitter, .icon-github{
+    background:none;
+    font-family: entypo-social;
+    vertical-align:middle;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 0.5em;
+    font-size: 2em;
+    margin-bottom: .2em;
+    text-align: center;
+    width: .6em;
+    height: .45em;
+  }
+  
+  
+  /* Icons */
+.icon-facebook:after{
+     content: '\F30C';
+}
+
+.icon-twitter:after{
+     content: '\F309';
+}
+
+.icon-github:after{
+     content: '\F300';
+}

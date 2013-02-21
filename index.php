@@ -80,13 +80,16 @@ include('./headTag.php');?>
     <div class="row">
         <span class="span4 ">
             
-            <h3><a href="documentation_main.php" class=""><i class="icon-text-doc"></i>Read the Docs</a></h3>
+            <h3><a href="documentation_main.php" class=""><i class="icon-text-doc"></i> Read the Docs</a></h3>
+            Protostrap's documentation is growing and getting better - yay!
         </span>
         <span class="span4">
-        <a href="https://github.com/liip/Protostrap/blob/master/README.md" class=""><i class="icon-text-doc"></i>Protostrap on Github</a>
+        <h3><a href="https://github.com/liip/Protostrap/blob/master/README.md" class=""><i class="icon-github"></i> Protostrap on Github</a></h3>
+        Protostrap is Open Source - check it out on Github, fork it, star it, contribute. Hell yeah!
         </span>
         <span class="span4">
-                    
+            <h3><a href="http://wp.me/p37t6w-T" class=""><i class="icon-circled-info"></i> Why Protostrap?</a></h3>
+            A Blogpost on the Whys and Hows of Protostrap.
         </span>
     </div>
       <hr>
