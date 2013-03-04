@@ -28,12 +28,12 @@ if($loggedIn){
             case 'user2':
                 $user2 = true;
                 $username = "Tommy Two";
-                $usermail = "Tommy.two@muster.com";
+                $usermail = "tommy.two@site.com";
             break;
             case 'user3':
                 $user3 = true;
                 $username = "Thierry Three";
-                $usermail = "Tommy.two@muster.com";
+                $usermail = "thierry.three@site.com";
             break;
             case 'user1':
             default:
