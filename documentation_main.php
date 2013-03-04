@@ -365,7 +365,7 @@ protostrap_javascripts.php
 &lt;!-- ** End of TABS **--></pre>
                 
                 
-                <h3 id="carousel">Carousel with touch support</h3>
+                <h3 id="carousel">Carousel for touch</h3>
                 <div id="myCarousel" class="carousel slide" >
                     <!-- Carousel items -->
                     <div class="carousel-inner" >
