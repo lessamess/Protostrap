@@ -344,6 +344,66 @@ a span.success {
     width: inherit;
 }
 
+/* Icons for ALerts */
+
+.alert-success:before, .alert-error:before, .alert-info:before, .alert-open:before, .alert-warning:before{
+    font-family: entyporegular;
+    vertical-align: top;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4em;
+    display: inline-block;
+    margin-bottom: 27px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.alert-success:before {
+    content: '\2713';
+    margin-top: 0;
+}
+.alert-error:before{
+    content: '\274C';
+}
+.alert-info:before{
+    content: '\E705';
+}
+.alert-open:before{
+    content: '\E704';
+}
+.alert-warning:before {
+    content: '\26A0';
+}
+
+.alert-plain {
+    margin-bottom: 0;
+}
+.alert-multiline.alert-success:before,
+.alert-multiline.alert-error:before,
+.alert-multiline.alert-info:before ,
+.alert-multiline.alert-open:before,
+.alert-multiline.alert-open:before{
+    margin-bottom: 80px;
+}
+
+.alert-plain.alert-success:before,
+.alert-plain.alert-error:before,
+.alert-plain.alert-info:before ,
+.alert-plain.alert-open:before,
+.alert-warning.alert-open:before
+{
+    margin: 0;
+    float: none;
+}
+
+.alert ul {
+    margin: 6px 0 10px 60px;
+    padding: 0;
+}
+
+
+
 /* ERROR Hints for Forms */
 .control-group.error   .help-inline{
     margin-bottom: 0.5em;

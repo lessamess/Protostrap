@@ -69,8 +69,15 @@ if($loggedIn){ ?>
     <div class="row">
         <span class="span6">
             <h3>Sign in</h3>
-            Type anything into the Email field and submit to sign in<br><br>
-            Type 'fail' to simulate auth-error<br><br>
+            <div class="alert alert-info alert-multiline">
+                Type the following into the Email field:
+              <ul>
+                  <li>anything or <strong>user1</strong> to sign in as John Doe</li>
+                  <li><strong>user2</strong> to sign in as Tommy Two</li>
+                  <li><strong>fail</strong> to simulate auth-error</li>
+              </ul>
+            </div>
+            
             <?php if(!empty($showLoginError)){ ?>
                 <div class='alert alert-error'>
                     <button class='close' data-dismiss='alert' type='button'>×</button>
@@ -88,7 +95,7 @@ if($loggedIn){ ?>
     <div class="row">
         <span class="span3">
             <form action='' method='post'>
-                <input name='login' class='input-block-level' type='email' placeholder='Email'fail' to simulate auth-error'><br>
+                <input name='login' class='input-block-level' type='text' placeholder='Email'fail' to simulate auth-error'><br>
                 <input name='pass' class='input-block-level' type='password' placeholder='Password'>
                 <br>
                 <label class='checkbox'>
