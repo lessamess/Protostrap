@@ -4,20 +4,44 @@ $GLOBALS["lastUniqueId"] = 1;
 
 // *FAKE* Login/Logout
 $loggedIn = false ;
-$username = "John Doe";
-$usermail = "john.doe@site.com";
+$user1 = false;
+$user2 = false;
+$user3 = false;
 
 if (!empty($_POST['login'])){
     if(strtolower($_POST['login']) == "fail") {
         $showLoginError = "true";
     } else {
-        setcookie("loggedIn", true);
-        $loggedIn = true;
+        
+        setcookie("loggedIn", strtolower($_POST['login']));
+        $loggedIn = strtolower($_POST['login']);
     }
 }
 
 if (!empty($_COOKIE['loggedIn'])){
-    $loggedIn = true;
+    $loggedIn = $_COOKIE['loggedIn'];
+}
+
+
+if($loggedIn){
+    switch ($loggedIn){
+            case 'user2':
+                $user2 = true;
+                $username = "Tommy Two";
+                $usermail = "Tommy.two@muster.com";
+            break;
+            case 'user3':
+                $user3 = true;
+                $username = "Thierry Three";
+                $usermail = "Tommy.two@muster.com";
+            break;
+            case 'user1':
+            default:
+                $user1 = true;
+                $username = "John Doe";
+                $usermail = "john.doe@site.com";
+            break;
+        }
 }
 
 
