@@ -26,7 +26,7 @@ include('./headTag.php');?>
         // *** STATIC TOP NAVBAR ***
         // This defines which navigation item is active. each pair of quotes corressponds to an item
         // DO NOT REMOVE
-        $navbarClasses = Array('active','','','','','','','',''); 
+        $navbarClasses = Array('','','','','active','','','',''); 
         // this includes the markup for a static top navbar. Remove the // to include.
         include('./navBarStaticTop.php');
         
