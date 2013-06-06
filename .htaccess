@@ -4,3 +4,6 @@ RewriteEngine on
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^(.*)$ missing.php/$1
+
+
+php_value asp_tags 1

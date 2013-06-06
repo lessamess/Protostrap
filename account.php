@@ -26,11 +26,11 @@ include('./headTag.php');?>
         // *** STATIC TOP NAVBAR ***
         // This defines which navigation item is active. each pair of quotes corressponds to an item
         // DO NOT REMOVE
-        $navbarClasses = Array('','','','','active','','','',''); 
+        $navbarClasses = Array('','','','','active','','','','');
         // this includes the markup for a static top navbar. Remove the // to include.
         include('./navBarStaticTop.php');
-        
-        
+
+
         // *** iOS TAB-BAR ***
         // This defines which tab is active. each pair of quotes corressponds to a tab
         // DO NOT REMOVE
@@ -53,11 +53,15 @@ if($loggedIn){ ?>
             <table class="table table-condensed">
                     <tr>
                         <td>Name</td>
-                        <td><?php echo $username;?></td>
+                        <td><%= $username; %></td>
                     </tr>
                     <tr>
                         <td>Email</td>
-                        <td><?php echo $usermail;?></td>
+                        <td><%= $usermail; %></td>
+                    </tr>
+                    <tr>
+                        <td>Role</td>
+                        <td><%= $userrole; %></td>
                     </tr>
                 </table>
             <br><br>
@@ -72,12 +76,13 @@ if($loggedIn){ ?>
             <div class="alert alert-info alert-multiline">
                 Type the following into the Email field:
               <ul>
-                  <li>anything or <strong>user1</strong> to sign in as John Doe</li>
-                  <li><strong>user2</strong> to sign in as Tommy Two</li>
+                  <li>anything or <strong>user</strong> to sign in as John Doe</li>
+                  <li><strong>admin</strong> to sign in as Tommy Two</li>
                   <li><strong>fail</strong> to simulate auth-error</li>
               </ul>
+              You can change / add users and roles in the file data.php
             </div>
-            
+
             <?php if(!empty($showLoginError)){ ?>
                 <div class='alert alert-error'>
                     <button class='close' data-dismiss='alert' type='button'>×</button>
@@ -85,10 +90,10 @@ if($loggedIn){ ?>
                     Please re-enter your data, make sure Caps Lock is not pressed unintentionally.
                 </div>
             <?php } ?>
-            
+
         </span>
         <span class="span6">
-                    
+
         </span>
     </div>
 
@@ -105,10 +110,10 @@ if($loggedIn){ ?>
                 <button type='submit' class='btn-block btn btn-primary'>Sign in</button>
                 <br>
                             <a >I forgot my password</a>
-            
+
             </form>
-            
-            
+
+
             No Account?<br>
             <a href='register.php'class='btn btn-block'>Sign up</a>
     </div>
