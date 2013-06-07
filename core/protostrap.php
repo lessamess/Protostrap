@@ -4,6 +4,14 @@
 include('spyc.php');
 include('data.php');
 
+// Handle request ID
+$reqId = false;
+if (!empty($_POST['id'])) {
+    $reqId = $_POST['id'];
+}
+if (!empty($_GET['id'])) {
+    $reqId = $_GET['id'];
+}
 
 //
 $GLOBALS["lastUniqueId"] = 1;
