@@ -32,7 +32,18 @@
     <script type='application/javascript' src='./assets/js/fastclick.js'></script>
     <script type='application/javascript' src='./assets/js/iscroll.js'></script>
     <script src="./assets/js/protostrap.js?time=<?php time();?>"></script>
-    
-    
+    <script>
+        //livesearch example
+        $('.data-typeahead').typeahead({
+            // note that "value" is the default setting for the property option
+            source: [
+                <?= $livesearch; ?>
+            ],
+            items: 8,
+            onselect: function(obj) { window.location.href = obj.url; }
+            }
+        );
+    </script>
+
     <!-- ADD ADDITIONAL FILES AT THE BOTTOM -->
     <script src="./assets/js/main.js?time=<?php time();?>"></script>
