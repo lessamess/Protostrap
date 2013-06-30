@@ -214,13 +214,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
     padding-top:30px;
 }
 
-.align-left {
+.align-left, .table th.align-left, .table td.align-left {
     text-align: left;
 }
-.align-right {
+.align-right, .table th.align-right, .table td.align-right {
     text-align: right;
 }
-.align-center {
+.align-center, .table th.align-center, .table td.align-center {
     text-align: center;
 }
 
@@ -307,6 +307,19 @@ a span.success {
     padding: 0 12px;
 }
 
+
+.container hr.strong {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-top-color: #aaa ;
+  border-bottom-color: #fff;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}
 
 /* breadcrumb */
 
