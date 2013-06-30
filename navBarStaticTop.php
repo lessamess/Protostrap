@@ -21,8 +21,10 @@
                     <li class="<?php echo $navbarClasses[2];?>"><a href="documentation_icons.php">Icons</a></li>
                     <li class="<?php echo $navbarClasses[3];?>"><a href="documentation_scrollspy.php">Scrollspy and Affix</a></li>
                     <li class="<?php echo $navbarClasses[4];?>"><a href="account.php">Fake Login</a></li>
+                    <li class="<?php echo $navbarClasses[5];?>"><a href="documentation_data.php">Data</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
+<br><br>
