@@ -1,8 +1,13 @@
 <?php
-
+session_start();
+if(!empty($_GET['session_destroy'])){
+    session_destroy();
+    session_start();
+}
 // Model
 include('spyc.php');
-include('data.php');
+include('dataParse.php');
+
 
 // Handle request ID
 $reqId = false;
@@ -36,13 +41,15 @@ if (!empty($_COOKIE['loggedIn'])){
 
 if($loggedIn){
     if(empty($users[$loggedIn])) {
+        $user = $users['user'];
         $username = $users['user']['username'];
         $usermail = $users['user']['usermail'];
-        $userrole = $users['user']['role'];
+        $userrole = $users['user']['userrole'];
     } else {
+        $user = $users[$loggedIn];
         $username = $users[$loggedIn]['username'];
         $usermail = $users[$loggedIn]['usermail'];
-        $userrole = $users[$loggedIn]['role'];
+        $userrole = $users[$loggedIn]['userrole'];
     }
 }
 
@@ -51,7 +58,9 @@ if($loggedIn){
 if (!empty($_POST['logout']) || !empty($_GET['logout'])){
     setcookie ("loggedIn", "", time() - 3600);
     $loggedIn = false;
-    header("Location: ".$_SERVER["HTTP_REFERER"]);
+    session_destroy();
+    header("Location: http://" . $_SERVER["HTTP_HOST"] );
+    die;
 }
 
 // Generate a unique Id that can be referenced to
