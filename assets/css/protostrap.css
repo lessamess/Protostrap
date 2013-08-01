@@ -499,7 +499,7 @@ a span.success {
 /* Print Styles*/
 @media print {
     aside, hide-on-print { display:none; }
-    
+
     .accordion-heading .accordion-toggle {
         font-weight: bold;
         padding: 0;
@@ -508,11 +508,11 @@ a span.success {
     .accordion-body.collapse {
         height: auto;
     }
-    
+
     .accordion-group {
         border: 0;
     }
-    
+
 }
 
 /* helper classes for the snipets demo */
@@ -520,3 +520,10 @@ a span.success {
     outline: 1px solid #ddd;
 }
 
+.carousel-control {
+    border-width: 1px;
+    font-size: 44px;
+}
+.carousel-control.right {
+        padding-left: 2px;
+}
