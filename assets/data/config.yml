@@ -1,0 +1,9 @@
+config:
+  mobileApp: false
+  angular: false
+  typeahead: true
+  jquerySortable: false
+  datepicker: false
+  fileupload:false
+  cols: 16
+  maxWidth: 1024
