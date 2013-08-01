@@ -31,4 +31,20 @@
             myScroll = new iScroll('breadcrumbwrapper', { hScrollbar: false, vScrollbar: false, hScroll: true, vScroll: false });
             myScroll.scrollToElement('li.active');
         }
+        
+        // Manage checkbox handling for session data
+        $('.sessionCheckbox').click(function(){
+            console.log(this);
+            if(this.checked){
+                console.log("c");
+                $("#hidden" + this.id ).val($(this).attr('data-checked'));
+            } else {
+
+                console.log("u");
+                $("#hidden" + this.id ).val($(this).attr('data-unchecked'));
+
+            }
+          });
+
+
     })
