@@ -23,14 +23,16 @@ $GLOBALS["lastUniqueId"] = 1;
 
 // *FAKE* Login/Logout
 $loggedIn = false ;
+$justLoggedIn = false;
 
 if (!empty($_POST['login'])){
     if(strtolower($_POST['login']) == "fail") {
         $showLoginError = "true";
     } else {
 
-        setcookie("loggedIn", strtolower($_POST['login']));
-        $loggedIn = strtolower($_POST['login']);
+        setcookie("loggedIn", $_POST['login']);
+        $loggedIn = trim($_POST['login']);
+        $justLoggedIn = true;
     }
 }
 
@@ -41,15 +43,18 @@ if (!empty($_COOKIE['loggedIn'])){
 
 if($loggedIn){
     if(empty($users[$loggedIn])) {
-        $user = $users['user'];
+        $activeUser = $users['user'];
+
         $username = $users['user']['username'];
         $usermail = $users['user']['usermail'];
-        $userrole = $users['user']['userrole'];
+        $userrole = $users['user']['role'];
+        $userpermissions = $roles[$userrole]['permissions'];
     } else {
-        $user = $users[$loggedIn];
+        $activeUser = $users[$loggedIn];
         $username = $users[$loggedIn]['username'];
         $usermail = $users[$loggedIn]['usermail'];
-        $userrole = $users[$loggedIn]['userrole'];
+        $userrole = $users[$loggedIn]['role'];
+        $userpermissions = $roles[$userrole]['permissions'];
     }
 }
 
