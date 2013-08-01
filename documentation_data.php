@@ -187,7 +187,8 @@ Here's the code of the "Name"-field:
                         <br>
                         <pre>
 people:
-  livesearch: demo.php
+  livesearch:
+    url: demo.php
   1:
     name: Anna Alpha
     img: f_1

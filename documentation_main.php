@@ -26,11 +26,11 @@ include('./headTag.php');?>
         // *** STATIC TOP NAVBAR ***
         // This defines which navigation item is active. each pair of quotes corressponds to an item
         // DO NOT REMOVE
-        $navbarClasses = Array('','active','','','','','','',''); 
+        $navbarClasses = Array('','active','','','','','','','');
         // this includes the markup for a static top navbar. Remove the // to include.
         include('./navBarStaticTop.php');
-        
-        
+
+
         // *** iOS TAB-BAR ***
         // This defines which tab is active. each pair of quotes corressponds to a tab
         // DO NOT REMOVE
@@ -43,13 +43,13 @@ include('./headTag.php');?>
 
 <?php // this includes the footer
 //include('./header.php');?>
-        
-        
+
+
         <div class="row">
             <span class="span3 hidden-phone" id="scrollspy">
                 &nbsp; <!-- DO NOT REMOVE -->
                 <!-- ADJUST DATA-OFFSET to the amount of bixels to scroll before halting -->
-                
+
                    <ul data-spy="affix" data-offset-top="120" id="affix" class=" nav nav-tabs nav-stacked nav-wedge">
                         <li class="active"><a href="#aWordOfCaution">A word of caution</a></li>
                         <li><a href="#requirements">Requirements</a></li>
@@ -66,14 +66,14 @@ include('./headTag.php');?>
                         <li><a href="#typeahead">Typeahead</a></li>
                         <li><a href="#iostabbar">iOS Tabbar</a></li>
                     </ul>
-                
+
             </span>
             <span class="span9">
                 <h1>Documentation</h1>
                 <h3 id="aWordOfCaution">A word of caution</h3>
                 Protostrap is prototyping software and therefore lacks all security features needed for production:<br>
                 <br>
-                
+
                 <div class="alert alert-warning">
                   <strong><i class="icon-warning"></i> Do NOT use this in a production environment</strong><br>
                 </div>
@@ -99,9 +99,9 @@ include('./headTag.php');?>
                     </li>
                     <li>You're done! You can access Protostrap in the browser via: <a href="http://localhost/protostrap" class="">http://localhost/protostrap</a><br>(assuming you have named the folder protostrap and put it into the above directory.
 </li>
-                </ul> 
+                </ul>
 
-                
+
                 <h3 id="ff">Files and Folders</h3>
                 The structure is this
                 <pre>assets
@@ -111,7 +111,7 @@ include('./headTag.php');?>
     - js
     - webfonts
 core
-.htaccess  
+.htaccess
 account.php
 blank.php
 documentation_icons.php
@@ -133,7 +133,7 @@ protostrap_javascripts.php
                     Contains all assets. Most importantly the CSS and JS files:<br>
                      - Add your CSS rules in the file assets/css/main.css<br>
                      - Add your JS code in the file assets/js/main.js<br><br>
-                     
+
                     <strong>Core folder</strong><br>
                     Contains the file protostrap.php. DO NOT CHANGE THIS FILE.<br><br>
                     <strong>.htaccess</strong><br>
@@ -162,7 +162,7 @@ protostrap_javascripts.php
                     <br><br>
                     <strong>iosTabbar.php</strong><br>
                     This file contains the IOS Tabbar for prototyping IOS applications. If you are not prototyping an iOS application you do not need this file.
-                    
+
                     <br><br>
                     <strong>missing.php</strong><br>
                     This file is called by .htaccess whenever a file is not found.
@@ -251,7 +251,7 @@ protostrap_javascripts.php
     This will toggle
 &lt;/div&gt;
                 </pre>
-                
+
                 <h3 id="grid">Grid Row 9 cols</h3>
                 <div class="row">
                     <span class="span3 outline">
@@ -277,7 +277,7 @@ protostrap_javascripts.php
         Span 4
     &lt;/span>
 &lt;/div></pre>
-        
+
                 <h3 id="stackedNav">Stacked Navigation with wedge</h3>
                 <ul class="nav nav-tabs nav-stacked nav-wedge">
                     <li class="active"><a>foo</a></li>
@@ -291,7 +291,7 @@ protostrap_javascripts.php
     &lt;li>&lt;a>bar&lt;/a>&lt;/li>
     &lt;li>&lt;a>baz&lt;/a>&lt;/li>
 &lt;/ul></pre>
-        
+
                 <h3 id="stacks">Stacks ideal for mobile</h3>
                 <ul class="stacks">
                     <li >
@@ -319,7 +319,7 @@ protostrap_javascripts.php
         &lt;/a>
     &lt;/li>
 &lt;/ul></pre>
-        
+
                 <h3 id="tabs">Tabs</h3>
                 <!-- ** TABS ** -->
                 <div class="tabbable">
@@ -363,8 +363,8 @@ protostrap_javascripts.php
     &lt;/div>
 &lt;/div>
 &lt;!-- ** End of TABS **--></pre>
-                
-                
+
+
                 <h3 id="carousel">Carousel for touch</h3>
                 <div id="myCarousel" class="carousel slide" >
                     <!-- Carousel items -->
@@ -392,8 +392,8 @@ protostrap_javascripts.php
                         </div>
                     </div>
                     <!-- Carousel nav -->
-                    <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="entypo">&#59229;</span></a>
-                    <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="entypo">&#59230;</span></a>
+                    <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="entypo">&#59237;</span></a>
+                    <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="entypo">&#59238;</span></a>
                 </div>
                 <h4>Markup</h4>
                 <pre class="pre-scrollable">
@@ -423,8 +423,8 @@ protostrap_javascripts.php
         &lt;/div>
     &lt;/div>
     &lt;!-- Carousel nav -->
-    &lt;a class="left carousel-control" data-slide="prev" href="#myCarousel">‹&lt;/a>
-    &lt;a class="right carousel-control" data-slide="next" href="#myCarousel">›&lt;/a>
+    &lt;a class="left carousel-control" data-slide="prev" href="#myCarousel">&lt;span class="entypo">&amp;#59237;&lt/span>&lt/a>
+    &lt;a class="right carousel-control" data-slide="next" href="#myCarousel"&lt;span class="entypo">&amp;#59238;&lt/span>>&lt;/a>
 &lt;/div></pre>
                 <br>
                 <h3 id="scrollspyAffix">Scrollspy & Affix</h3>
@@ -436,11 +436,11 @@ protostrap_javascripts.php
                  Protostraps Typeahead is slightly more evolved than Bootstraps version:
                  <ul>
                     <li>
-                        The "onselect" event-handler allows you to pass the selected item to a function 
+                        The "onselect" event-handler allows you to pass the selected item to a function
                     </li>
                     <li>Adding class <strong>showResults</strong> to the input field allows you to display a fake amount of results.</li>
                     <li>Adding the attribute <strong>data-results</strong> to the input field allows you define the number of the fake results.</li>
-                 </ul> 
+                 </ul>
                 <h4>Markup </h4>
                 <pre class="pre-scrollable">&lt;input type="text"
 data-provide="typeahead" data-results="77"
@@ -449,7 +449,7 @@ placeholder="Book Title, Topic..."&gt;
                 </pre>
                 <br>
                 The typeahead items are defined in the main.js file:
-                
+
                 <h4>Code </h4>
                 <pre class="pre-scrollable">$('.typeahead').typeahead({
     // note that "value" is the default setting for the property option
@@ -468,8 +468,8 @@ placeholder="Book Title, Topic..."&gt;
                 </pre>
                 <br><br>
                 <h3 id="iostabbar">iOS Tabbar</h3>
-                
-                
+
+
                 <div class="row">
                     <span class="span4">
                         In order to allow HTML based prototyping of iOS Apps (to some extent at least) Protstrap has a ready to use iOS tabbar.
@@ -482,7 +482,7 @@ placeholder="Book Title, Topic..."&gt;
                             <li>One for the Tabs</li>
                             <li>One for the Badges on each tab. You can add the classes <strong>badge-1</strong> or <strong>badge-2</strong> to each tab to simulate badges. since this is done by adding a class, this could also happen over javascript.</li>
                         </ul>
-                        
+
                         <span class="visible-phone">
                             <a href="mobiledemo.php" class="">Show demopage</a>
                         </span>
@@ -491,17 +491,17 @@ placeholder="Book Title, Topic..."&gt;
                         <iframe width="320" height="480" src="mobiledemo.php"></iframe>
                     </span>
                 </div>
-                
+
                 <hr>
             </span>
         </div>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
 
 <?php // this includes the footer
 include('./footer.php');?>
