@@ -3,7 +3,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!-- Le styles -->
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap.min.css?time=<?php time();?>" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/add2home.css">
     <link href="./assets/css/protostrap.css?time=<?php time();?>" rel="stylesheet">
     <link href="./assets/css/entypoIcons.css?time=<?php time();?>" rel="stylesheet">
