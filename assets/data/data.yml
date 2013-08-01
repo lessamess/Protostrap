@@ -89,17 +89,4 @@ people:
     email:
     
 
-users:
-  user:
-    username: Otto One
-    usermail: one@company.com
-    userrole: user
-  admin:
-    username: Tommy Two
-    usermail: two@company.com
-    userrole: admin
-  superadmin:
-    username: Theodor Three
-    usermail: three@company.com
-    userrole: superadmin
 

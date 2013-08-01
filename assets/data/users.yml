@@ -1,0 +1,29 @@
+users:
+  livesearch:
+    url: user.php
+  user:
+    name: Peter Petersen
+    email: one@company.com
+    role: user
+  admin:
+    name: Tommy Two
+    email: two@company.com
+    role: admin
+  superadmin:
+    name: Theodor Three
+    email: three@company.com
+    role: superadmin
+
+roles:
+  superadmin:
+    name: Superadmin
+    permissions: ['createData', 'editData', 'deleteData','addUser']
+  admin:
+    name: Event Manager
+    permissions: ['createData', 'editData', 'deleteData','addUser']
+  user:
+    name: Default User
+    permissions: ['editData']
+  guest:
+    name: Guest User
+    permissions: [ ]
