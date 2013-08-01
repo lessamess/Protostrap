@@ -53,15 +53,15 @@ if($loggedIn){ ?>
             <table class="table table-condensed">
                     <tr>
                         <td>Name</td>
-                        <td><%= $username; %></td>
+                        <td><?= $username; ?></td>
                     </tr>
                     <tr>
                         <td>Email</td>
-                        <td><%= $usermail; %></td>
+                        <td><?= $usermail; ?></td>
                     </tr>
                     <tr>
                         <td>Role</td>
-                        <td><%= $userrole; %></td>
+                        <td><?= $userrole; ?></td>
                     </tr>
                 </table>
             <br><br>
@@ -71,36 +71,11 @@ if($loggedIn){ ?>
 
 <?php } else { ?>
     <div class="row">
-        <span class="span6">
-            <h3>Sign in</h3>
-            <div class="alert alert-info alert-multiline">
-                Type the following into the Email field:
-              <ul>
-                  <li>anything or <strong>user</strong> to sign in as John Doe</li>
-                  <li><strong>admin</strong> to sign in as Tommy Two</li>
-                  <li><strong>fail</strong> to simulate auth-error</li>
-              </ul>
-              You can change / add users and roles in the file data.php
-            </div>
-
-            <?php if(!empty($showLoginError)){ ?>
-                <div class='alert alert-error'>
-                    <button class='close' data-dismiss='alert' type='button'>×</button>
-                    <strong>Wrong Username or password</strong><br>
-                    Please re-enter your data, make sure Caps Lock is not pressed unintentionally.
-                </div>
-            <?php } ?>
-
-        </span>
-        <span class="span6">
-
-        </span>
-    </div>
-
-    <div class="row">
         <span class="span3">
+            <h3>Sign in</h3>
+
             <form action='' method='post'>
-                <input name='login' class='input-block-level' type='text' placeholder='Email'fail' to simulate auth-error'><br>
+                <input name='login' class='input-block-level' type='text' placeholder='Username'><br>
                 <input name='pass' class='input-block-level' type='password' placeholder='Password'>
                 <br>
                 <label class='checkbox'>
@@ -116,7 +91,31 @@ if($loggedIn){ ?>
 
             No Account?<br>
             <a href='register.php'class='btn btn-block'>Sign up</a>
+
+            <?php if(!empty($showLoginError)){ ?>
+                <div class='alert alert-error'>
+                    <button class='close' data-dismiss='alert' type='button'>×</button>
+                    <strong>Wrong Username or password</strong><br>
+                    Please re-enter your data, make sure Caps Lock is not pressed unintentionally.
+                </div>
+            <?php } ?>
+
+        </span>
+        <span class="span4 offset2">
+            <br><br><br>
+            <div class="alert alert-info alert-multiline">
+                Type the following into the Email field:
+              <ul>
+                  <li>anything or <strong>user</strong> to sign in as John Doe</li>
+                  <li><strong>admin</strong> to sign in as Tommy Two</li>
+                  <li><strong>fail</strong> to simulate auth-error</li>
+              </ul>
+              You can change / add users and roles in the file data.php
+            </div>
+        </span>
     </div>
+
+
 <?php } ?>
 
 
