@@ -74,3 +74,5 @@ $lastUniqid = "";
 function getUniqueId(){
     return $GLOBALS["lastUniqueId"] = $GLOBALS["lastUniqueId"] + 1;
 }
+
+include('commonController.php');
