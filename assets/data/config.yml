@@ -7,3 +7,4 @@ config:
   fileupload:false
   cols: 16
   maxWidth: 1024
+  datepickerFormat: dd.mm.yyyy
