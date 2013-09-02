@@ -31,7 +31,19 @@
             myScroll = new iScroll('breadcrumbwrapper', { hScrollbar: false, vScrollbar: false, hScroll: true, vScroll: false });
             myScroll.scrollToElement('li.active');
         }
-        
+        $(".dynForm").click(function(el) {
+            $("." + $(this).attr("data-toggle-class")).toggle();
+        });
+
+        $("select.dynForm").change(function(el) {
+
+            $(".dynFormGroup").hide();
+            $("." + $("select option:selected").attr("data-toggle-class")).toggle();
+
+        });
+
+        $('.selectpicker').selectpicker();
+
         // Manage checkbox handling for session data
         $('.sessionCheckbox').click(function(){
             console.log(this);
@@ -47,4 +59,34 @@
           });
 
 
+        $("#filtersearch").keyup(function(){
+
+            jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function (arg) {
+                return function (elem) {
+                    return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+                };
+            });
+            filtertable = "#filtertable";
+            if ($(this).attr("data-filtertable")) {
+                filtertable = $(this).attr("data-filtertable");
+            }
+
+
+            //hide all the rows
+            $(filtertable).find("tr").hide();
+
+            //split the current value of searchInput
+            var data = this.value.split(" ");
+
+            //create a jquery object of the rows
+            var jo = $(filtertable).find("tr");
+
+            //Recusively filter the jquery object to get results.
+            $.each(data, function(i, v){
+            jo = jo.filter("*:Contains('"+v+"')");
+            });
+            //show the rows that match.
+            jo.show();
+            //Removes the placeholder text
+            });
     })

@@ -8,3 +8,7 @@ config:
   cols: 16
   maxWidth: 1024
   datepickerFormat: dd.mm.yyyy
+  defaultUser: 1
+  loginWith: email # username | email
+  yesterday: ['parse', 'yesterday']
+  today: ['parse', 'date', 'd m Y']

@@ -30,40 +30,88 @@ if(isset($_SESSION['application'])){
 }
 
 // Handle datachanges
-
+$sessiondata = "";
 if (!empty($_POST['session'])){
 
     foreach($_POST['session'] as $key => $postSession) {
         setSessionVar($key, $postSession);
+        $sessiondata .= print_r($postSession, true);
     }
+    $parsed = $_SESSION;
+
+}
+
+if (!empty($_GET['session']) && isset($_GET[$_GET['session']])){
+
+    setSessionVar($_GET['session'], $_GET[$_GET['session']]);
 
     $parsed = $_SESSION;
 
 }
 
 
-
 // Expose each session key as variable and handle livesearch entry
 $livesearch = "";
 $livesearchKeys = array("name", "title");
-
+$mykeys = array();
 foreach ($parsed as $key => $item){
     $$key = $item;
 
     if (is_array($$key)) {
         $url="";
         foreach($$key as $subkey => $var){
+
+            if(!empty($var[0])){
+
+                //die();
+                if($var[0] == 'parse'){
+                    if(!empty($var[2])){
+                       $tempvar = $var[1]($var[2]);
+                    } else {
+                       $tempvar =  $var[1]();
+                    }
+                    ${$key}[$subkey] = $tempvar;
+                }
+            }
+
             if($subkey === "livesearch") {
                 $url = ${$key}[$subkey]['url'];
                 unset(${$key}[$subkey]);
             } else {
                 if(is_array($var)){
-                    ${$key}[$subkey]['id'] = $subkey;
+
+                    // Add an id if it is an associative array
+                    if(array_values($var) != $var){
+                        ${$key}[$subkey]['id'] = $subkey;
+                        };
+
                     foreach ($livesearchKeys as $lsKey){
                         if(!empty(${$key}[$subkey][$lsKey])){
                             $livesearch .= "{value: '". addslashes(${$key}[$subkey][$lsKey]) . "', url: '" . $url ."?id=" . $subkey . "'},";
                         }
                     }
+
+                    foreach ($var as $vkey => $v){
+
+                        if(!empty($v[0])){
+
+                            if($v[0] == 'parse'){
+                                $mykeys[]= $vkey;
+                                if(!empty($v[2])){
+                                   $tempvar = $v[1]($v[2]);
+                                } else {
+                                   $tempvar =  $v[1]();
+                                }
+                                ${$key}[$subkey][$vkey] = $tempvar;
+                            }
+                        }
+
+
+                    }
+
+
+
+
                 }
             }
 
@@ -79,6 +127,9 @@ function setSessionVar($key, $item){
     if(preg_match('/arrayPush/', $item)){
         $type = "push";
         $item = substr($item, 10);
+    }
+    if(preg_match('/arrayUnserialize/', $item)){
+        $item = unserialize(substr($item, 17));
     }
     switch($type){
         case 'push':
@@ -126,6 +177,4 @@ function setSessionVar($key, $item){
             }
             break;
     }
-
-
 }

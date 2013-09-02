@@ -47,6 +47,8 @@
       else text = val
 
       this.$element.val(text)
+      this.$element.attr("value", text)
+
 
       if (typeof this.onselect == "function")
           this.onselect(val)
@@ -74,7 +76,7 @@
 
       this.$menu.show()
       this.shown = true
-      
+
       return this
     }
 
@@ -203,9 +205,7 @@
         .on('keypress', $.proxy(this.keypress, this))
         .on('keyup',    $.proxy(this.keyup, this))
 
-      if ($.browser.webkit || $.browser.msie) {
-        this.$element.on('keydown', $.proxy(this.keypress, this))
-      }
+      this.$element.on('keydown', $.proxy(this.keypress, this))
 
       this.$menu
         .on('click', $.proxy(this.click, this))

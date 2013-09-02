@@ -1,7 +1,7 @@
 
     $(function(){
         // PUT YOUR JAVASCRIPT HERE BELOW
-        
+
         //livesearch example
         $('.typeahead').typeahead({
             // note that "value" is the default setting for the property option
@@ -16,8 +16,10 @@
             onselect: function(obj) { window.location.href = "documentation_main.php?choice="+obj; }
         }
     );
-        
-         
 
-
+        $('.ps-tooltip').tooltip();
+        $(".ps-tooltip").click(function() {
+            setTimeout( function(){
+                $('.ps-tooltip').tooltip('hide')}, 2000);
+        });
     })

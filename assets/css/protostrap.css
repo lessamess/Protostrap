@@ -4,8 +4,8 @@ body {
     padding-bottom: 40px;
     font-size:16px;
 }
-.container {
-    padding-left: 10px;
+.container, .container-fluid  {
+    padding-left: 20px;
     padding-right: 10px;
 }
 
@@ -308,7 +308,7 @@ a span.success {
 }
 
 
-.container hr.strong {
+.container hr.strong, hr.strong {
   -moz-border-bottom-colors: none;
   -moz-border-image: none;
   -moz-border-left-colors: none;
@@ -356,6 +356,22 @@ a span.success {
 .affix {
     width: inherit;
 }
+
+.tabs-inWell.tabs-left > .nav-tabs{
+    margin-right: 0
+}
+.tabs-inWell .tab-content{
+    background-color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #DDDDDD;
+    border-left: none;
+}
+.tabs-inWell.tabs-left  {
+
+}
+
+
 
 /* Icons for ALerts */
 
@@ -455,12 +471,42 @@ a span.success {
     font-weight: bold;
 }
 
+.navbar-inner .pull-right{
+    margin-top: 4px;
+}
+
+
+.well .table {
+    background-color: #F5F5F5;
+}
+
+/*TABLET*/
+@media (max-width: 767px) {
+
+}
+
 
 /* Phone */
-@media screen and (max-device-width : 320px){
+@media screen and (max-width : 320px) and (orientation:portrait){
  h1 {
     font-size: 28px;
  }
+
+    .navbar-inner .pull-right{
+        margin-top: 6px;
+    }
+
+    .navbar-inner {
+        padding-right: 5px;
+    }
+}
+
+/* teblet */
+@media screen and (max-width : 768px) and (orientation:portrait){
+    .container, .container-fluid  {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 /* Portrait */
@@ -471,6 +517,14 @@ a span.success {
     .visible-portrait{
         display: block;
     }
+
+    .navbar-static-top {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+
 }
 
 /* Landscape */
@@ -496,6 +550,19 @@ a span.success {
 
 
 }
+
+
+.input-append input.passwordWithToggle {
+
+    width: 70%;
+}
+.input-append span[class="add-on passwordToggle"] {
+    width: 30%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
 /* Print Styles*/
 @media print {
     aside, hide-on-print { display:none; }
@@ -520,10 +587,20 @@ a span.success {
     outline: 1px solid #ddd;
 }
 
-.carousel-control {
-    border-width: 1px;
-    font-size: 44px;
+.navbar .btn-navbar {
+    color: #766;
+    text-shadow: none;
+    font-size: 20px;
+    margin-bottom: 3px;
+    margin-top: 3px;
 }
-.carousel-control.right {
-        padding-left: 2px;
+.navbar .btn, .navbar .btn-group{
+     margin-top: 2px;
+}
+
+
+.navbar .btn-navbar:hover {
+
+    color: #333;
+    text-shadow: none;
 }

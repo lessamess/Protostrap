@@ -1,5 +1,17 @@
 RewriteEngine on
 
+// set password for testenvironment
+
+SetEnvIf Host staging.domain.com passreq
+AuthType Basic
+AuthName "Password Required"
+AuthUserFile /full/path/to/.htpasswd
+Require valid-user
+Order allow,deny
+Allow from all
+Deny from env=passreq
+Satisfy any
+
 # This redirects any links that do not work to the file missing.php
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
