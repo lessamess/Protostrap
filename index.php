@@ -7,7 +7,7 @@
 include('core/protostrap.php');
 
 /** FILE BASED VALUES **/
-$navbarClasses = Array('active','','','','','','','','');
+$activeNavigation = "one";
 
 
 

@@ -1,36 +1,15 @@
-<!--<div class="navbar navbar-static-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <!-- .btn-navbar is used as the toggle for collapsed navbar content -- >
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
+<?php
+// Define Navigation keys
+$navigation = ["one","two","three","four","five"];
 
-            <!-- Be sure to leave the brand out there if you want it shown -- >
-            <a class="brand" href="index.php">Protostrap</a>
-
-
-            <!-- Everything you want hidden at 940px or less, place within here -- >
-            <div class="nav-collapse">
-                <!-- .nav, .navbar-search, .navbar-form, etc -- >
-                <ul class="nav">
-                    <li class="<?php echo $navbarClasses[0];?>"><a href="index.php">Home</a></li>
-                    <li class="<?php echo $navbarClasses[1];?>"><a href="documentation_main.php">Documentation</a></li>
-                    <li class="<?php echo $navbarClasses[2];?>"><a href="documentation_icons.php">Icons</a></li>
-                    <li class="<?php echo $navbarClasses[3];?>"><a href="documentation_scrollspy.php">Scrollspy and Affix</a></li>
-                    <li class="<?php echo $navbarClasses[4];?>"><a href="account.php">Fake Login</a></li>
-                    <li class="<?php echo $navbarClasses[5];?>"><a href="documentation_data.php">Data</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<br><br>
-
-
--->
+// LEAVE ALONE
+$navbarClasses = Array('','','','','','','','','');
+foreach ($navigation as $key => $item){
+    if($item == $activeNavigation) {
+        $navbarClasses[$key] = "active";
+    }
+ }
+?>
 
 <header role="banner" class="navbar navbar-inverse navbar-fixed-top ">
   <div class="container">
@@ -45,19 +24,19 @@
     </div>
     <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
       <ul class="nav navbar-nav">
-        <li>
+        <li  class="<?php echo $navbarClasses[0];?>">
           <a href="../getting-started">One</a>
         </li>
-        <li>
+        <li  class="<?php echo $navbarClasses[1];?>">
           <a href="../css">Two</a>
         </li>
-        <li class="active">
+        <li  class="<?php echo $navbarClasses[2];?>">
           <a href="../components">Three</a>
         </li>
-        <li>
+        <li  class="<?php echo $navbarClasses[3];?>">
           <a href="../javascript">Four</a>
         </li>
-        <li>
+        <li  class="<?php echo $navbarClasses[4];?>">
           <a href="../customize">Five</a>
         </li>
       </ul>
