@@ -5,7 +5,7 @@ if(!empty($_GET['session_destroy'])){
     session_start();
 }
 
-include ('preDataparseFunctions.php');
+include ('functions_preDataparse.php');
 
 // Model
 include('spyc.php');
@@ -107,4 +107,4 @@ function getlabel($style, $label){
 
 
 include('dynamic_form.php');
-include('commonController.php');
+include('functions_controller.php');

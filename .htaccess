@@ -1,6 +1,6 @@
 RewriteEngine on
 
-// set password for testenvironment
+#set password for testenvironment
 
 SetEnvIf Host staging.domain.com passreq
 AuthType Basic

@@ -1,109 +1,49 @@
 <?php
 
 /** --- B A S E F U N C T I O N S ---
-
     This file sets up project-wide things like authentication -
     DO NOT REMOVE
 **/
 include('core/protostrap.php');
 
+/** FILE BASED VALUES **/
+$navbarClasses = Array('active','','','','','','','','');
+
+
+
+
 ?><!DOCTYPE html>
 <html lang="en">
-  <head>
-
-    <title>Protostrap - a prototyping framework based on Bootstrap</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-<?php
-// this includes all the markup that loads css files and similar stuff,
-// if you have to add more css, that's the place to do it.
-include('./headTag.php');?>
-<link href="./assets/css/demo.css?time=<?php time();?>" rel="stylesheet">
-  </head>
-
-  <body id="demopage">
-
-<?php
-        // *** STATIC TOP NAVBAR ***
-        // This defines which navigation item is active. each pair of quotes corressponds to an item
+    <head>
+        <title>Pagetitle</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <?php
+        // this includes all the markup that loads css files and similar stuff,
+        // if you have to add more css, that's the place to do it.
         // DO NOT REMOVE
-        $navbarClasses = Array('active','','','','','','','',''); 
-        // this includes the markup for a static top navbar. Remove the // to include.
-        include('./navBarStaticTop.php');
-        
-        
-        // *** iOS TAB-BAR ***
-        // This defines which tab is active. each pair of quotes corressponds to a tab
+        include('./meta_headTag.php');?>
+
+    </head>
+    <body>
+        <div class="container">
+            <?php // this includes the header
+            include('./snippets/header.php');?>
+
+            Your Content
+
+            <?php // this includes the footer
+            include('./snippets/footer.php');?>
+
+        </div> <!-- /container -->
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <?php
+
+        // This includes the needed javascript files
         // DO NOT REMOVE
-        $tabClasses = Array('active','','','','');
-        // this includes the markup for iOS a styled tab-bar. Remove the // to include
-        //include('./iosTabbar.php');
-
-?>
-
-    <div class="container">
-
-<?php // this includes the header
-//include('./header.php');?>
-<br>
-<br><br class="hidden-phone"><br class="hidden-phone">
-  <div class="row">
-        <span class="span7 bigWhite">
-            
-            <h3>Build clickable prototypes faster</h3><br>
-            <p>
-            A prototyping framework for designers by designers.<br><br>
-            Based on Twitter Bootstrap, <br>enhanced with love and PHP.</p>
-            <br><br>
-            
-            <h3><i class="icon-circled-info"></i> Heads up</h3>
-            <ul>
-                <li>Get started by replacing this file with the contents of blank.php</li>
-                <li>Adapt the content of the navigation in the file navBarStaticTop.php</li>
-                <li>Adapt the footer.php file</li>
-            </ul>
-            
-            
-        </span>
-        <span class="span1 hidden-phone">
-            &nbsp;
-        </span>
-        <span class="span4">
-            <br class="hidden-phone"><br class="hidden-phone">
-            <span class="hidden-desktop hidden-tablet bigWhite">
-                <p>Take a quick tour</p>
-            </span>
-            
-            <iframe src="http://de.slideshare.net/slideshow/embed_code/15409143?rel=0" width="100%" height="291" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> </div>
-      </span>
-  </div>
-    <div class="row">
-        <span class="span4 ">
-            
-            <h3><a href="documentation_main.php" class=""><i class="icon-text-doc"></i> Read the Docs</a></h3>
-            Protostrap's documentation is growing and getting better - yay!
-        </span>
-        <span class="span4">
-        <h3><a href="https://github.com/liip/Protostrap/blob/master/README.md" class=""><i class="icon-github"></i> Protostrap on Github</a></h3>
-        Protostrap is Open Source - check it out on Github, fork it, star it, contribute. Hell yeah!
-        </span>
-        <span class="span4">
-            <h3><a href="http://wp.me/p37t6w-T" class=""><i class="icon-circled-info"></i> Why Protostrap?</a></h3>
-            A Blogpost on the Whys and Hows of Protostrap.
-        </span>
-    </div>
-    <br><br>
-      <hr>
-
-<?php // this includes the footer
-include('./footer.php');?>
-
-    </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-<?php include ('protostrap_javascripts.php');?>
+        include ('meta_javascripts.php');?>
   </body>
 </html>

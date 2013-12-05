@@ -13,9 +13,6 @@
             new FastClick(document.body);
         }, false);
 
-        // Generate Placeholder images
-        $('img[data-ph]').tsPlaceHold();
-
         // Carousel if there is any
         $('.carousel').carousel(
             {interval: 0}
@@ -58,7 +55,29 @@
             }
           });
 
+        $("#filtersearch").focus(function() {
+            $('html, body').animate({
+                    scrollTop: $(this).offset().top - 10
+                }, 500);
+            $("#filtersearch-clear i").removeClass('icon-search');
+            $("#filtersearch-clear i").addClass('icon-cross');
 
+            $("#filterSearchCount").removeClass("hide");
+
+        });
+
+        $("#filtersearch").blur(function() {
+            $("#filtersearch-clear i").removeClass('icon-cross');
+            $("#filtersearch-clear i").addClass('icon-search');
+        });
+        $("#filtersearch-focus").click(function() {
+            $("#filtersearch").focus();
+        });
+        $("#filtersearch-clear").click(function() {
+            $("#filtersearch").val('');
+            $("#filtersearch").trigger("keyup");
+            $("#filtersearch").focus();
+        });
         $("#filtersearch").keyup(function(){
 
             jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function (arg) {
@@ -82,11 +101,30 @@
             var jo = $(filtertable).find("tr");
 
             //Recusively filter the jquery object to get results.
+            anzahlRows = 0;
             $.each(data, function(i, v){
-            jo = jo.filter("*:Contains('"+v+"')");
+                jo = jo.filter("*:Contains('"+v+"')");
+                anzahlRows = jo.length;
             });
             //show the rows that match.
             jo.show();
+            $("#filterSearchCount").html(anzahlRows);
+            console.log(anzahlRows);
+
             //Removes the placeholder text
             });
+
+
+        //password show toggle
+        $(".passwordToggle").click(function() {
+            $(this).children('i').toggleClass('icon-check-empty');
+            $(this).children('i').toggleClass('icon-check-sign');
+            $(this).prev().attr('type', function(id, oldval){
+                if (oldval == 'password') {
+                    return 'text';
+                } else {
+                    return 'password';
+                }
+            })
+        });
     })
