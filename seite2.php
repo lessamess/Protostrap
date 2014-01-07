@@ -33,13 +33,13 @@ $activeNavigation = "one";
 
 
             <?php // this includes the header
-            include('./snippets/header.php');?>
+            //include('./snippets/header.php');?>
 
-            
 
+            <?= $_POST['benutzer'];?>
 
             <?php // this includes the footer
-            include('./snippets/footer.php');?>
+            //include('./snippets/footer.php');?>
 
         </div> <!-- /container -->
 

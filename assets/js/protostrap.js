@@ -39,7 +39,7 @@
 
         });
 
-        $('.selectpicker').selectpicker();
+        //$('.selectpicker').selectpicker();
 
         // Manage checkbox handling for session data
         $('.sessionCheckbox').click(function(){
@@ -114,6 +114,12 @@
             //Removes the placeholder text
             });
 
+        // select Users to for easy Login
+        $(".loginUserselection").click(function() {
+            console.log("foo");
+            $('#login').val($(this).attr("data-key"));
+            $('#loginform').submit();
+        });
 
         //password show toggle
         $(".passwordToggle").click(function() {

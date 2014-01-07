@@ -53,7 +53,7 @@
             source: [
                 <?php
                 foreach($users as $p){
-                    echo "{value:'". $p['name']. "'},";
+                    echo "{value:'". $p['fullName']. "'},";
                 }
                 ?>
             ],

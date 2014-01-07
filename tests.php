@@ -33,13 +33,21 @@ $activeNavigation = "one";
 
 
             <?php // this includes the header
-            include('./snippets/header.php');?>
+            //include('./snippets/header.php');?>
 
-            
 
+            <form name="name" action="seite2.php" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="row">
+                <span class="col-xs-12">
+                    <input type="text" name="benutzer" class="input-medium" placeholder="" value=""/>
+                    <input type="submit" value="senden">
+                </span>
+            </div>
+
+            </form>
 
             <?php // this includes the footer
-            include('./snippets/footer.php');?>
+            //include('./snippets/footer.php');?>
 
         </div> <!-- /container -->
 

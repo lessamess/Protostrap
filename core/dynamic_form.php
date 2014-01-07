@@ -73,7 +73,7 @@ function dynForm($dynForm, $id = false){
 
             // This defines the next index for the array
             if($dynForm['sessionId']){
-                $formSessionItem = count($GLOBALS[$dynForm['sessionId']]);
+                $formSessionItem = count($GLOBALS[$dynForm['sessionId']]) + 1;
             }
 
 

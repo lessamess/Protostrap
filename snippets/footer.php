@@ -1,6 +1,6 @@
 <footer>
     <hr>
-    <p><i class="icon-cycle"></i> Protostrap is Open Source - What goes around comes around</p>
+    <p>&copy; <?= $brand;?></p>
     <br>
-        <a href="?session_destroy=true">Renew PHP Session</a>
+        <a href="?session_destroy=true">Renew Prototype Session</a>
 </footer>

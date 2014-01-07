@@ -86,6 +86,7 @@ if($loggedIn){
 if (!empty($_POST['logout']) || !empty($_GET['logout'])){
     setcookie ("loggedIn", "", time() - 3600);
     $loggedIn = false;
+    $justLoggedIn = false;
     session_destroy();
     header("Location: http://" . $_SERVER["HTTP_HOST"] );
     die;
@@ -105,6 +106,14 @@ function getlabel($style, $label){
     echo "<span class=\"label label-{$style}\">{$label}</span>";
 }
 
+function forceLogin(){
+
+    if(!$GLOBALS['loggedIn']){
+        $users = $GLOBALS['users'];
+        include('snippets/forceLogin.php');
+    }
+
+}
 
 include('dynamic_form.php');
 include('functions_controller.php');

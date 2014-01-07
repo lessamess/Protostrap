@@ -2,3 +2,6 @@
     top: 40px; /* Position where the element is fixed */
 }
 
+.header-fixed {
+    margin-top: 60px;
+}
