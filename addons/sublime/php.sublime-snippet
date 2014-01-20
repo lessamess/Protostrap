@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[<?php $1 ?>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>php</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>PHP Tag Protostrap PS</description>
+</snippet>

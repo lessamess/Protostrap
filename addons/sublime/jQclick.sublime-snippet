@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[\$("#${1:id}").click(function() {
+
+});
+
+        ]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>click</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>jQ click event Protostrap PS</description>
+</snippet>
+

@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[<?php foreach (\$${1:item} as \$${2:key} => \$${3:val}) { ?>
+    
+<?php } ?>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>fore</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Foreach Protostrap PS</description>
+</snippet>
+

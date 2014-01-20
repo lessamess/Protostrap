@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[&nbsp;]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>nb</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>nbsp Protostrap PS</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[<label class="${1:checkbox}">
+    <input type="${1:checkbox}" name="chk<?php echo getUniqueId();?>" id="chk<?php echo \$lastUniqueId;?>" value="chk<?php echo \$lastUniqueId;?>"> 
+        ${2:Label}
+</label>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>check</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Checkbox Protostrap PS</description>
+</snippet>

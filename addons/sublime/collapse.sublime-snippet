@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[<a class="${1:btn}" data-toggle="collapse" data-target="#collapse<?php echo getUniqueId();?>">${2:Trigger}</a>
+<div id="collapse<?php echo \$lastUniqueId;?>" class="collapse">
+
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>coll</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Collapse Protostrap PS</description>
+</snippet>

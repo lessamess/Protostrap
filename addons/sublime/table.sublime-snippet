@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[<table class="table table-condensed"> 
+    <tr> 
+        <th></th> 
+        <th></th> 
+        <th></th> 
+    </tr> 
+    <tr> 
+        <td></td> 
+        <td></td> 
+        <td></td> 
+    </tr> 
+</table>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>table</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Table Protostrap PS</description>
+</snippet>

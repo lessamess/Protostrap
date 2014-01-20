@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[<div class="row"> 
+    <span class="col-${1:md}-6"> 
+        
+    </span> 
+    <span class="col-${1:md}-6"> 
+    
+    </span> 
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>row</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Row Protostrap PS</description>
+</snippet>
