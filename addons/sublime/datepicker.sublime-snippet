@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[<div class="input-group date" id="" data-date="">
+    <input class="form-control" type="text" value="">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>datepicker</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Datepicker Protostrap PS</description>
+</snippet>

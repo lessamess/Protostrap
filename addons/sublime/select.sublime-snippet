@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[<select class="selectpicker ${1:col-md-1}" ${2:data-live-search="true"} name="${3:select}">
+    <option value="">${4:one}</option>
+    <option value="">${5:two}</option>
+    <option value="">${6:three}</option>
+</select>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>select</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Select Protostrap PS</description>
+</snippet>
