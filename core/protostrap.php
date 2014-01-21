@@ -5,7 +5,7 @@ if(!empty($_GET['session_destroy'])){
     session_start();
 }
 
-include ('functions_preDataparse.php');
+include ('functions_preDataParse.php');
 
 // Model
 include('spyc.php');
