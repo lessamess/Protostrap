@@ -40,13 +40,24 @@ foreach ($navigation as $key => $item){
           <a href="#">Five</a>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="" ><a href="" class="" ><i class="icon-user"></i> <?= $activeUser['fullName']; ?></a></li>
-        <li>
+      <?php if(!empty($loggedIn)) { ?>
+          <ul class="nav navbar-nav navbar-right">
+              <li class="" ><a href="" class="" ><i class="icon-user"></i> <?= $activeUser['fullName']; ?></a></li>
+              <li>
 
-          <a href="index.php?logout=true">Logout</a>
-        </li>
-      </ul>
+                <a href="index.php?logout=true">Logout</a>
+              </li>
+          </ul>
+        <?php } else { ?>
+
+          <ul class="nav navbar-nav navbar-right">
+              <li>
+
+                <a href="login.php">Login</a>
+              </li>
+          </ul>
+          <?php }?>
+      
     </nav>
   </div>
 </header>
