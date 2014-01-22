@@ -115,5 +115,30 @@ function forceLogin(){
 
 }
 
+function showIf($string) {
+    $class = "hidden";
+    if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
+        $class = "";
+    }
+    echo $class;
+}
+
+function hideIf($string) {
+    $class = "";
+    if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
+        $class = "hidden";
+    }
+    echo $class;
+}
+
+function includeIf($roles, $file) {
+    if(!empty($GLOBALS['userrole']) && strpos($roles, $GLOBALS['userrole']) !== false){
+        if (file_exists('./snippets/'. $file)){
+            include('./snippets/' . $file);
+        } else {
+            echo "file missing";
+        }
+    }
+}
 include('dynamic_form.php');
 include('functions_controller.php');

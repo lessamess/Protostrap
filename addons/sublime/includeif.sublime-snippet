@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[<?php includeIf("${1:roles}","${2:file}.php") ;?>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>incif</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Include If Protostrap PS</description>
+</snippet>

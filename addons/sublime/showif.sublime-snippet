@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[<?php showIf("${1:roles}") ;?>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>showif</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Show If Protostrap PS</description>
+</snippet>
