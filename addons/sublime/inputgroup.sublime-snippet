@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[<div class="input-group">
+      ${1:<span class="input-group-addon">${2:pre}</span>}
+      <input type="text" class="form-control" name="" placeholder="${3}">
+      ${4:<span class="input-group-addon">${5:post}</span>}
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>inputgr</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Input Group Protostrap PS</description>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[<input type="text" class="form-control" name="" placeholder="${1}">]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>input</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Input Field Protostrap PS</description>
+</snippet>
