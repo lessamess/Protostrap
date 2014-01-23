@@ -4,18 +4,10 @@
 
         //livesearch example
         $('.typeahead').typeahead({
-            // note that "value" is the default setting for the property option
-            source: [
-                'Typography Guidelines And References',
-                'Web Typography: Educational Resources, Tools and Techniques',
-                'Vintage and Retro Typography Showcase',
-                'Typography Is The Foundation Of Web Designn',
-                'When Typography Speaks Louder Than Words'
-            ],
-            items: 4,
-            onselect: function(obj) { window.location.href = "documentation_main.php?choice="+obj; }
-        }
-    );
+              name: 'kunden',
+              local: ['boo','bar','bazinga','barrabing'],
+              limit: 10
+        });
 
         $('.ps-tooltip').tooltip();
         $(".ps-tooltip").click(function() {

@@ -27,7 +27,7 @@
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/angular.min.js"></script>
     <script src="./assets/js/bootstrap-carousel.js"></script>
-    <script src="./assets/js/bootstrap-typeahead.js"></script>
+    <script src="./assets/js/typeahead.min.js"></script>
     <script src="./assets/js/jquery.svg.placeholder.js"></script>
     <script src="./assets/js/add2home.js"></script>
     <script type='application/javascript' src='./assets/js/fastclick.js'></script>
@@ -38,28 +38,7 @@
     <script src="./assets/js/jquery.sortable.min.js"></script>
     <script src="./assets/js/protostrap.js?time=<?php time();?>"></script>
     <script>
-        //livesearch example
-        $('.data-typeahead').typeahead({
-            // note that "value" is the default setting for the property option
-            source: [
-                <?= $livesearch; ?>
-            ],
-            items: 8,
-            onselect: function(obj) { window.location.href = obj.url; }
-            }
-        );
-        $('.selectUsers').typeahead({
-            // note that "value" is the default setting for the property option
-            source: [
-                <?php
-                foreach($users as $p){
-                    echo "{value:'". $p['fullName']. "'},";
-                }
-                ?>
-            ],
-            items: 8
-            }
-        );
+        
 
     </script>
 

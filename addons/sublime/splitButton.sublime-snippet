@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[<div class="btn-group"> 
+    <a class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"> 
+      ${1:Label} 
+      <span class="caret"></span> 
+    </a> 
+    <ul class="dropdown-menu"> 
+        <li class=""><a href="" class="">${2:foo}</a></li> 
+        <li class=""><a href="" class="">${3:bar}</a></li>${4:
+        <li class="disabled"><a tabindex="-1" href="#">Label</a></li>}
+    </ul> 
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>splitbtn</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Split Button Protostrap PS</description>
+</snippet>
+

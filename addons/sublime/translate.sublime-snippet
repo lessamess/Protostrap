@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[<?php __("${1}")?>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>trans</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Translation Protostrap PS</description>
+</snippet>
+

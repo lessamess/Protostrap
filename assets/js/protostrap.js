@@ -133,4 +133,16 @@
                 }
             })
         });
+
+        $('.typeahead').on('keydown', function(event) {
+            // Define tab key
+            var e = jQuery.Event("keydown");
+            e.keyCode = e.which = 9; // 9 == tab
+
+            if (event.which == 13){
+                $('.typeahead').trigger(e); // trigger "tab" key - which works as "enter"
+                $('.typeahead').blur();
+            } // if pressing enter
+        });
+
     })

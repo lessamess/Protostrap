@@ -39,6 +39,16 @@ foreach ($navigation as $key => $item){
         <li  class="<?php echo $navbarClasses[4];?>">
           <a href="#">Five</a>
         </li>
+        <li  class="<?php echo $navbarClasses[4];?>">
+            <span class="form">
+                <input type="text" class="form-control typeahead" name="" placeholder="Typeahead search">
+            </span>
+        </li>
+        <li  class="">
+            <span>
+                text
+            </span>
+        </li>
       </ul>
       <?php if(!empty($loggedIn)) { ?>
           <ul class="nav navbar-nav navbar-right">
