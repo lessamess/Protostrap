@@ -2,16 +2,16 @@
     <content><![CDATA[<!--  ** TABS ** --> 
 <div class="tabbable"> 
     <ul class="nav nav-tabs"> 
-          <li class="active"><a href="#tab1" data-toggle="tab">${1:One}</a></li> 
-          <li><a href="#tab2" data-toggle="tab">${2:Two}</a></li> 
+          <li class="active"><a href="#${1:tab}1" data-toggle="tab">${2:One}</a></li> 
+          <li><a href="#${1:tab}2" data-toggle="tab">${3:Two}</a></li> 
     </ul> 
     <div class="tab-content"> 
-        <div class="tab-pane active" id="tab1"> 
+        <div class="tab-pane active" id="${1:tab}1"> 
             <!-- TAB 1 CONTENT --> 
          
             <!-- TAB 1 CONTENT  END --> 
         </div> 
-        <div class="tab-pane " id="tab2"> 
+        <div class="tab-pane " id="${1:tab}2"> 
             <!-- TAB 2 CONTENT --> 
          
             <!-- TAB 2 CONTENT  END --> 
