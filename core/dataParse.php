@@ -41,9 +41,13 @@ if (!empty($_POST['session'])){
 
 }
 
-if (!empty($_GET['session']) && isset($_GET[$_GET['session']])){
-
-    setSessionVar($_GET['session'], $_GET[$_GET['session']]);
+if (!empty($_GET['session'])){
+    foreach ($_GET as $key => $value) {
+        if($key!== "session"){
+            setSessionVar($key, $value);
+        }
+    }
+    
 
     $parsed = $_SESSION;
 
@@ -59,6 +63,17 @@ foreach ($parsed as $key => $item){
 
     if (is_array($$key)) {
         $url="";
+
+        if(!empty(${$key}[0]) && ${$key}[0] == 'parse'){
+                    if(!empty(${$key}[2])){
+                       $tempvar = ${$key}[1](${$key}[2]);
+                    } else {
+                       $tempvar =  ${$key}[1]();
+                    }
+                    $$key = $tempvar;
+                    continue;
+                }
+
         foreach($$key as $subkey => $var){
 
             if(!empty($var[0])){
