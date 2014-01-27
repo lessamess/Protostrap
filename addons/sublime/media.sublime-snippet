@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="/assets/img/${1:img.png}" alt="">
+  </a>
+  <div class="media-body">
+    <${2:h4} class="media-heading">${3:Headline}</${2:h4}>
+    ${4:body}
+  </div>
+</div>}]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>media</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Media Protostrap PS</description>
+</snippet>
