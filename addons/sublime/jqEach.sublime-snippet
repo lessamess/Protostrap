@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[.each(function (it, elem) {
+    ${1}
+});]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>each</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>jQuery Each Protostrap PS</description>
+</snippet>

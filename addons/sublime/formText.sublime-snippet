@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[<div class="form-group">
+    <label for="${1:id}" class="col-sm-2 control-label">${2:Label}</label>
+    <div class="col-sm-10">
+        <input type="${3:text}" class="form-control" id="${1:id}" placeholder="${4:Placeholder}">
+    </div>
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>formtext</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Form Group Text Protostrap PS</description>
+</snippet>

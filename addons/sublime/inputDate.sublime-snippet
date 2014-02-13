@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[<div class="input-group date" id="" data-date="">
+    <input class="form-control" type="text" value="${1:<?php echo \$today ;?>}" name="">
+    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>inputdate</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Input Date Protostrap PS</description>
+</snippet>

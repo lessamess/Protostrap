@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="${1:name}"> ${1:Label}
+            </label>
+        </div>
+    </div>
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>formchk</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Form Group Checkbox Protostrap PS</description>
+</snippet>
