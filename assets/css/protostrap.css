@@ -257,6 +257,10 @@ span.btn-group {
     font-size: 84px;
  }
 
+.tab-pane.active {
+    overflow: hidden;
+}
+
 /*Toogle*/
 .btn-toggle input {
     display: none;
@@ -464,13 +468,6 @@ a span.success {
     vertical-align: middle;
 }
 
-/* Typeahead Hits*/
-.typeahead-hits {
-    padding: 4px 15px 4px 15px;
-    text-align: right;
-    font-weight: bold;
-}
-
 .navbar-inner .pull-right{
     margin-top: 4px;
 }
@@ -605,16 +602,12 @@ a span.success {
     text-shadow: none;
 }
 .navbar-nav > li > span {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     line-height: 20px;
 }
 .nav > li > span {
     display: block;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     position: relative;
 }
 
