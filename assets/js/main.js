@@ -4,8 +4,7 @@
 
         //livesearch example
         $('.typeahead').typeahead({
-              name: 'kunden',
-              local: ['boo','bar','bazinga','barrabing'],
+              source: ['foo bar','foo fighters','a fools errand','football'],
               limit: 10
         });
 

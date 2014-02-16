@@ -605,6 +605,7 @@ a span.success {
     padding: 15px;
     line-height: 20px;
 }
+
 .nav > li > span {
     display: block;
     padding: 15px;
@@ -625,82 +626,71 @@ a span.success {
 .navbar-inverse .navbar-nav > li > span {
     color: #fff;
 }
+.bootstrap-select:not([class*="span"]).col-md-05 {
+    width: 90px;
 
-/* Twitter typeahead styles */
-.twitter-typeahead .tt-hint
-{
+}
+
+.nav-tabs > li:first-child {
+    margin-left: 10px;
+}
+
+
+.tab-content > .active, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus  {
+    background-color: #fff;
+}
+.tab-content > .active{
+    padding: 10px;
+}
+
+.col-md-12{
     display: block;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.428571429;
-    border: 1px solid transparent;
-    border-radius:4px;
-}
 
-.twitter-typeahead .hint-small
-{
-    height: 30px;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 3px;
-    line-height: 1.5;
-}
 
-.twitter-typeahead .hint-large
-{
-    height: 45px;
-    padding: 10px 16px;
-    font-size: 18px;
-    border-radius: 6px;
-    line-height: 1.33;
-}
-
-.tt-dropdown-menu {
-        width: 100%;
-  margin-top: 2px;
-  padding: 5px 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0,0,0,.2);
-  *border-right-width: 2px;
-  *border-bottom-width: 2px;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-          box-shadow: 0 5px 10px rgba(0,0,0,.2);
-  -webkit-background-clip: padding-box;
-     -moz-background-clip: padding;
-          background-clip: padding-box;
-}
-
-.tt-suggestion {
-  display: block;
-  padding: 3px 20px;
-}
-
-.tt-suggestion.tt-is-under-cursor {
-  color: #fff;
-  background-color: #0081c2;
-  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0)
-}
-
-.tt-suggestion.tt-is-under-cursor a {
-  color: #fff;
-}
-
-.tt-suggestion p {
-  margin: 0;
 }
 
 
+label.radio {
+    font-weight: normal;
+}
+
+input.span1 {
+    width: 8%;
+}
+
+input.span2 {
+    width: 16%;
+}
 
 
+input.span3 {
+    width: 24%;
+}
+
+input.span100 {
+    width: 100px;
+}
+
+input.span150, .span150 {
+    width: 150px;
+}
+input.span160, .span160 {
+    width: 160px;
+}
+input.span180, .span180 {
+    width: 180px;
+}
+
+input.span200, .span200 {
+    width: 200px;
+}
+input.span220, .span220 {
+    width: 220px;
+}
+input.span250, .span250 {
+    width: 250px;
+}
+
+table.table.noTopBorder tr:first-Child td{
+    border-top: none;
+} 
