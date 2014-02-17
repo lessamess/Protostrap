@@ -2,19 +2,19 @@ users:
   livesearch:
     url: user.php
   1:
-    fullName: Peter Petersen
+    fullName: Sara One
     email: one@company.com
-    username: peter21
+    username: sammy
     role: user
   2:
-    fullName: Tommy Two
+    fullName: Mara Two
     email: two@company.com
-    username: tom2
+    username: mara
     role: admin
   3:
-    fullName: Theodor Three
+    fullName: Lara Three
     email: three@company.com
-    username: Theo33
+    username: lara
     role: superadmin
 
 roles:
@@ -22,8 +22,8 @@ roles:
     name: Superadmin
     permissions: ['createData', 'editData', 'deleteData','addUser']
   admin:
-    name: Event Manager
-    permissions: ['createData', 'editData', 'deleteData','addUser']
+    name: Admin
+    permissions: ['createData', 'editData', 'deleteData']
   user:
     name: Default User
     permissions: ['editData']

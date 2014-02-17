@@ -55,30 +55,30 @@
             }
           });
 
-        $("#filtersearch").focus(function() {
+        $(".filtersearch").focus(function() {
             $('html, body').animate({
                     scrollTop: $(this).offset().top - 10
                 }, 500);
-            $("#filtersearch-clear i").removeClass('icon-search');
-            $("#filtersearch-clear i").addClass('icon-cross');
+            $(".filtersearch-clear i").removeClass('icon-search');
+            $(".filtersearch-clear i").addClass('icon-cross');
 
-            $("#filterSearchCount").removeClass("hide");
+            $(".filtersearchCount").removeClass("hide");
 
         });
 
-        $("#filtersearch").blur(function() {
-            $("#filtersearch-clear i").removeClass('icon-cross');
-            $("#filtersearch-clear i").addClass('icon-search');
+        $(".filtersearch").blur(function() {
+            $(".filtersearch-clear i").removeClass('icon-cross');
+            $(".filtersearch-clear i").addClass('icon-search');
         });
-        $("#filtersearch-focus").click(function() {
-            $("#filtersearch").focus();
+        $(".filtersearch-focus").click(function() {
+            $(".filtersearch").focus();
         });
-        $("#filtersearch-clear").click(function() {
-            $("#filtersearch").val('');
-            $("#filtersearch").trigger("keyup");
-            $("#filtersearch").focus();
+        $(".filtersearch-clear").click(function() {
+            $(".filtersearch").val('');
+            $(".filtersearch").trigger("keyup");
+            $(".filtersearch").focus();
         });
-        $("#filtersearch").keyup(function(){
+        $(".filtersearch, .simpleFilterSearch").keyup(function(){
 
             jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function (arg) {
                 return function (elem) {
@@ -87,18 +87,19 @@
             });
             filtertable = "#filtertable";
             if ($(this).attr("data-filtertable")) {
-                filtertable = $(this).attr("data-filtertable");
+                //console.log($(this).attr("data-filtertable"));
+                filtertable = "#"+ $(this).attr("data-filtertable");
             }
 
 
             //hide all the rows
-            $(filtertable).find("tr").hide();
+            $(filtertable).find("tr.filterme").hide();
 
             //split the current value of searchInput
             var data = this.value.split(" ");
 
             //create a jquery object of the rows
-            var jo = $(filtertable).find("tr");
+            var jo = $(filtertable).find("tr.filterme");
 
             //Recusively filter the jquery object to get results.
             anzahlRows = 0;
@@ -108,8 +109,8 @@
             });
             //show the rows that match.
             jo.show();
-            $("#filterSearchCount").html(anzahlRows);
-            console.log(anzahlRows);
+            $(".filtersearchCount").html(anzahlRows);
+            //console.log(anzahlRows);
 
             //Removes the placeholder text
             });
@@ -123,8 +124,8 @@
 
         //password show toggle
         $(".passwordToggle").click(function() {
-            $(this).children('i').toggleClass('icon-check-empty');
-            $(this).children('i').toggleClass('icon-check-sign');
+            $(this).children('i').toggleClass('fa-square-o');
+            $(this).children('i').toggleClass('fa-check-square-o');
             $(this).prev().attr('type', function(id, oldval){
                 if (oldval == 'password') {
                     return 'text';
@@ -134,6 +135,13 @@
             })
         });
 
-        
+        $('.selectpicker').selectpicker();
+        $('.input-group.date, .date').datepicker({
+            language: "de",
+            orientation: "auto left",
+            format: "dd.mm.yyyy",
+            autoclose: true,
+            todayHighlight: true
+        });
 
     })

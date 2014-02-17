@@ -115,6 +115,19 @@ function forceLogin(){
 
 }
 
+function getNavclasses($navKeys, $activeNavigation){
+    if(empty($activeNavigation)){
+        die("You have to define a key for the active Navigation");
+    }
+    $navClasses = Array('','','','','','','','','','','','','','','','','','','','','','','','','');
+    foreach ($navKeys as $key => $item){
+        if($item == $activeNavigation) {
+            $navClasses[$key] = "active";
+        }
+     }
+     return $navClasses;
+}
+
 function showIf($string) {
     $class = "hidden";
     if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
@@ -140,5 +153,17 @@ function includeIf($roles, $file) {
         }
     }
 }
+
+function __($key){
+    $translations = $GLOBALS['translations'];
+    $lang = $GLOBALS['lang'];
+
+    if(!empty($translations[$key][$lang])){
+        echo $translations[$key][$lang];
+    } else {
+        echo $key;
+    }
+}
+
 include('dynamic_form.php');
 include('functions_controller.php');

@@ -6,7 +6,7 @@
 **/
 include('core/protostrap.php');
 
-/** Define VALUES  valid for this file **/
+/** FILE BASED VALUES **/
 $activeNavigation = "one";
 
 
@@ -15,7 +15,7 @@ $activeNavigation = "one";
 ?><!DOCTYPE html>
 <html lang="en">
     <head>
-        <title><?php echo $application . " - " . $brand ;?></title>
+        <title>Log in - <?php echo $application . " - " . $brand ;?></title>
         <meta name="description" content="">
         <meta name="author" content="">
         <?php
@@ -27,27 +27,15 @@ $activeNavigation = "one";
     </head>
 <?php 
 
-// uncomment the following function to force user to be logged in
-// forceLogin(); ?>
+// Call the following function to force user to log in
+//  forceLogin(); ?>
 
     <body class="header-fixed">
         <div class="container">
 
             <?php 
-            // this includes the header
-            include('./snippets/header.php');?>
-            
-            <h4 class="text-muted"> <i class="fa fa-level-down fa-rotate-180"></i> Change this in snippets/header.php </h3>
-            <h1>Start here </h1>
-            <br>
-
-            Or <a href="http://protostrap.ch/documentation_main.php" class="">Read the Documentation</a>
-            <br><br>
-            
-            <h4 class="text-muted"> <i class="fa fa-level-up fa-rotate-180"></i> Change this in snippets/footer.php </h3>
-
-
-            <?php // this includes the footer
+            $loginaction ="index.php";
+            include ('./snippets/loginForm.php');
             include('./snippets/footer.php');?>
 
         </div> <!-- /container -->

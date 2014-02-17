@@ -9,6 +9,11 @@ body {
     padding-right: 10px;
 }
 
+/* navbar*/
+
+.navbar-collapse {
+    max-height: none;
+}
 /**
  * Megamenu
  */
@@ -498,7 +503,7 @@ a span.success {
     }
 }
 
-/* teblet */
+/* tablet */
 @media screen and (max-width : 768px) and (orientation:portrait){
     .container, .container-fluid  {
         padding-left: 10px;
@@ -591,9 +596,6 @@ a span.success {
     margin-bottom: 3px;
     margin-top: 3px;
 }
-.navbar .btn, .navbar .btn-group{
-     margin-top: 2px;
-}
 
 
 .navbar .btn-navbar:hover {
@@ -620,7 +622,11 @@ a span.success {
 .nav > li > span.form {
     display: block;
     padding-top: 8px;
+    padding-bottom: 8px;
     position: relative;
+}
+.navbar-form {
+    margin: 7px 0;
 }
 
 .navbar-inverse .navbar-nav > li > span {

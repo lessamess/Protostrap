@@ -6,8 +6,8 @@
     <link href="./assets/css/bootstrap.min.css?time=<?php time();?>" rel="stylesheet">
     <link href="./assets/css/extendBootstrapGrid.min.css?time=<?php time();?>" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/add2home.css">
+    <link href="./assets/css/fontawesome.css?time=<?php time();?>" rel="stylesheet">
     <link href="./assets/css/protostrap.css?time=<?php time();?>" rel="stylesheet">
-    <link href="./assets/css/entypoIcons.css?time=<?php time();?>" rel="stylesheet">
     <link href="./assets/css/main.css?time=<?php time();?>" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
