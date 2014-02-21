@@ -46,7 +46,6 @@ $activeNavigation = "one";
             
             <h4 class="text-muted"> <i class="fa fa-level-up fa-rotate-180"></i> Change this in snippets/footer.php </h3>
 
-
             <?php // this includes the footer
             include('./snippets/footer.php');?>
 

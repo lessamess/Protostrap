@@ -1,0 +1,53 @@
+<snippet>
+    <content><![CDATA[
+        <?php 
+// define the carousel Id
+// this is the name of the variable containing the carousel data
+\$carouselId = "carousel" ;?>
+<div id="<?php echo \$carouselId ;?>" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+  <?php foreach (\$carousel as \$key => \$val) { 
+    \$class = "";
+    if(\$key === 0){
+        \$class = "active";
+        
+    }
+    ?>
+    <li data-target="#<?php echo \$carouselId ;?>" data-slide-to="<?php echo \$key ;?>" class="<?php echo \$class ;?>"></li>
+  <?php } ?>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+      <?php foreach (\$carousel as \$key => \$value) { 
+            \$class = "";
+            if(\$key == 0){
+                \$class = "active";
+                
+            }?>
+            <div class="item <?php echo \$class ;?>">
+                <img width="100%"src="./assets/img/<?php echo \$value['image'] ;?>" alt="<?php echo \$value['caption-title'] ;?>">
+                <div class="carousel-caption">
+                    <h4><?php echo \$value['caption-title'] ;?></h4>
+                    <p><?php echo \$value['caption-text'] ;?></p>
+                </div>
+            </div>
+      <?php } ?>
+    
+    
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#<?php echo \$carouselId ;?>" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#<?php echo \$carouselId ;?>" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>carousel</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Carousel Protostrap PS</description>
+</snippet>

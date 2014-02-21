@@ -1,17 +1,44 @@
+    /**
+     *   PROTOSTRAP GOODIES - LEAVE ALONE
+     */
+
+
     var myscroll;
-    $(function(){
-        /**
-         *   PROTOSTRAP GOODIES - LEAVE ALONE
-         */
 
+    function init_fastclick(){
         var $window = $(window)
-
         var totalWidth = 0;
-
         // initialize fastclick
         window.addEventListener('load', function() {
             new FastClick(document.body);
         }, false);
+
+    }
+    function init_datepicker(){
+        $('.input-group.date, .date').datepicker({
+            language: "de",
+            orientation: "auto left",
+            format: "dd.mm.yyyy",
+            autoclose: true,
+            todayHighlight: true
+        });
+    }
+    
+    function init_select(){
+        $('.selectpicker').selectpicker();
+    }
+
+    function init_typeahead(){
+        $('.typeahead').typeahead({
+              source: ['foo bar','foo fighters','a fools errand','football'],
+              limit: 10
+        });
+    }
+
+    $(function(){
+        
+
+
 
         // Carousel if there is any
         $('.carousel').carousel(
@@ -135,13 +162,6 @@
             })
         });
 
-        $('.selectpicker').selectpicker();
-        $('.input-group.date, .date').datepicker({
-            language: "de",
-            orientation: "auto left",
-            format: "dd.mm.yyyy",
-            autoclose: true,
-            todayHighlight: true
-        });
+        
 
     })

@@ -1,6 +1,22 @@
 application: My Site
 brand: My Brand
 
+# The following is dummy data
+
+carousel:
+  0:
+    image: "gallery1.jpg"
+    caption-title: "Caption 1"
+    caption-text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  1:
+    image: "gallery2.jpg"
+    caption-title: "Caption 2"
+    caption-text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+  2:
+    image: "gallery3.jpg"
+    caption-title: "Caption 3"
+    caption-text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
 people:
   livesearch:
     url: demo.php
@@ -9,85 +25,24 @@ people:
     img: f_1
     function: Head of Sales
     email: anna.alpha@acme.com
-    
+
   2:
     name: Bruno Bravo
     img: m_8
     function: Marketing Specialist
     email: bruno.bravo@company.com
-    
+
   3:
     name: Chucky Charly
     img: m_9
     function: Strategy Consultant
     email:
-    
+
   4:
     name: Doris Delta
     img: f_2
     function: Member of the Board
     email:
-    
-  5:
-    name: Emma Echo
-    img: f_3
-    function: Chief Financial Officer
-    email:
-    
-  6:
-    name: Freddy Foxtrott
-    img: m_10
-    function: Designer
-    email:
-    
-  7:
-    name: Gary Golf
-    img: m_11
-    function: Artist in residence
-    email:
-        
-  8:
-    name: Hilda Hotel
-    img: f_4
-    function: Diplomatic attache
-    email:
-    
-  9:
-    name: Indira India
-    img: f_5
-    function: Artist
-    email:
-    
-  10:
-    name: Jayjay Juliet
-    img: m_12
-    function: Contortionist
-    email:
-    
-  11:
-    name: Koni Kilo
-    img: m_13
-    function: Head of Bendy Business
-    email:
-    
-  12:
-    name: Lara Lima
-    img: f_7
-    function: Creative Director
-    email:
-    
-  13:
-    name: Micky Mike
-    img: m_14
-    company: 1
-    function: Art Director
-    email:
-    
-  14:
-    name: Nora November
-    img: f_6
-    function: Intern
-    email:
-    
+
 
 
