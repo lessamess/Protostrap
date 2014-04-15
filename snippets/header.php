@@ -1,15 +1,15 @@
+<?php
+    // Define Navigation keys
+    // You can use one of these keys on the pages that include the navigation
+    // to specify which item should be active by setting $activeNavigation
+
+    $navKeys = ["one","two"];
+
+    // Leave next line alone
+    $navClasses = getNavclasses($navKeys, $activeNavigation);
+?>
 <div class="row">
     <div class="col-md-12">
-        <?php
-        // Define Navigation keys
-        // You can use one of these keys on the pages that include the navigation 
-        // to specify which item should be active by setting $activeNavigation
-
-        $navKeys = ["one","two"];
-
-        // Leave next line alone
-        $navClasses = getNavclasses($navKeys, $activeNavigation);
-        ?>
         <header role="banner" class="navbar navbar-default navbar-fixed-top ">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -41,8 +41,8 @@
                 </li>
                 <li  class="">
                     <span class="form">
-                        <!-- 
-                        Typeahead 
+                        <!--
+                        Typeahead
                         Change Data in assets/js/main.js
                         Documentation: https://github.com/bassjobsen/Bootstrap-3-Typeahead -->
                         <input type="text" class="form-control typeahead" name="mytypeahead" placeholder="Typeahead (Try: foo)">

@@ -25,7 +25,7 @@ $activeNavigation = "one";
         include('./meta_headTag.php');?>
 
     </head>
-<?php 
+<?php
 
 // uncomment the following function to force user to be logged in
 // forceLogin(); ?>
@@ -33,17 +33,17 @@ $activeNavigation = "one";
     <body class="header-fixed">
         <div class="container">
 
-            <?php 
+            <?php
             // this includes the header
             include('./snippets/header.php');?>
-            
+
             <h4 class="text-muted"> <i class="fa fa-level-down fa-rotate-180"></i> Change this in snippets/header.php </h3>
-            <h1>Start here </h1>
+            <h1><?php echo __("startHere"); ?> </h1>
             <br>
 
             Or <a href="http://protostrap.ch/documentation_main.php" class="">Read the Documentation</a>
             <br><br>
-            
+
             <h4 class="text-muted"> <i class="fa fa-level-up fa-rotate-180"></i> Change this in snippets/footer.php </h3>
 
             <?php // this includes the footer
