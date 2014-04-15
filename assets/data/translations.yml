@@ -1,0 +1,28 @@
+lang: "en"
+languages:
+  de: Deutsch
+  en: English
+
+# Link to a Google Drive Spreadsheet.
+# Please note: This is a link to a read only spread sheet. Replace this with a link to one of your files.
+translations_url: "https://docs.google.com/spreadsheet/pub?key=0ArBmrXMFlb5DdFNWSEpHNHZ1bVNWRTJYZ0RldGhDX3c&single=true&gid=0&output=csv"
+
+# If you prefer you can have a local CSV file. This is useful if you want to work offline or have privacy concerns.
+# Please note that the field delimiter is a comma and the row delimiter a new line. Escape commas that are part of the translations.
+# translations_url: "assets/csv/translations.csv"
+
+# If you prefer you can have translations as text arrays.
+# Please note that these are ignored if a spread sheet or CSV file is used.
+translations:
+  cancel:
+    de: Abbrechen
+    en: Cancel
+  save:
+    de: Speichern
+    en: Save
+  startHere:
+    de: Hier starten.
+    en: Start Here.
+  endOfPrototype:
+    de: Hier endet der Prototyp.
+    en: End of Prototype.
