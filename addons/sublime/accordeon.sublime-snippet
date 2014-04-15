@@ -1,29 +1,34 @@
 <snippet>
-    <content><![CDATA[<div id="accordion1" class="accordion accordeon-wedge">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a href="#<?php echo getUniqueId();?>" data-parent="#accordion1" data-toggle="collapse" class="accordion-toggle"> 
-                ${1:One}
-            </a>
-        </div>
-        <div class="accordion-body collapse" id="<?php echo \$lastUniqueId;?>">
-            <div class="accordion-inner">
-                <b>One open</b>
-            </div>
-        </div>
+    <content><![CDATA[
+<div class="panel-group accordeon-wedge" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#coll?php echo getUniqueId();?>">
+            ${1:One}
+        </a>
+      </h4>
     </div>
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a href="#<?php echo getUniqueId();?>" data-parent="#accordion1" data-toggle="collapse" class="accordion-toggle">
-                 ${2:Two} 
-            </a> 
-        </div>
-        <div class="accordion-body collapse" id="<?php echo \$lastUniqueId;?>">
-            <div class="accordion-inner">
-                <b>Two open</b>
-            </div>
-        </div>
+    <div id="coll<?php echo \$lastUniqueId;?>" class="panel-collapse collapse in">
+      <div class="panel-body">
+        OneBody
+      </div>
     </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#coll?php echo getUniqueId();?>">
+                ${2:Two}
+        </a>
+      </h4>
+    </div>
+    <div id="coll<?php echo \$lastUniqueId;?>" class="panel-collapse collapse">
+      <div class="panel-body">
+        TwoBody
+      </div>
+    </div>
+  </div>
 </div>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>acc</tabTrigger>

@@ -1,16 +1,18 @@
 <snippet>
-    <content><![CDATA[<div class="accordion-group">
-    <div class="accordion-heading">
-        <a href="#<?php echo getUniqueId();?>" data-parent="#accordion1" data-toggle="collapse" class="accordion-toggle"> 
+    <content><![CDATA[<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#coll?php echo getUniqueId();?>">
             ${1:One}
         </a>
+      </h4>
     </div>
-    <div class="accordion-body collapse" id="<?php echo \$lastUniqueId;?>">
-        <div class="accordion-inner">
-            <b>One open</b>
-        </div>
+    <div id="coll<?php echo \$lastUniqueId;?>" class="panel-collapse collapse in">
+      <div class="panel-body">
+        OneBody
+      </div>
     </div>
-</div>]]></content>
+  </div>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>acgr</tabTrigger>
     <!-- Optional: Description to show in the menu -->
