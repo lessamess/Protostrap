@@ -26,6 +26,9 @@ if(isset($_SESSION['application'])){
         $dir->close();
 
     $parsed = Spyc::YAMLLoad($yaml);
+    if(!empty($parsed['translations_url']) && strlen($parsed['translations_url']) > 0){
+        $parsed['translations'] = get_translations($parsed['translations_url']);
+    }
     $_SESSION = $parsed;
 }
 
@@ -47,7 +50,7 @@ if (!empty($_GET['session'])){
             setSessionVar($key, $value);
         }
     }
-    
+
 
     $parsed = $_SESSION;
 
@@ -198,4 +201,33 @@ function setSessionVar($key, $item){
             }
             break;
     }
+}
+
+function get_translations($url){
+
+    if(!ini_set('default_socket_timeout',    15)) echo "unable to change socket timeout";
+
+    if (($handle = fopen($url, "r")) !== FALSE) {
+        $i = 0;
+        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                if($i == 0){
+                    array_shift($data);
+                    $i++;
+                    $languages = $data;
+                } else {
+                    foreach ($languages as $key => $lang) {
+                        $translations[$data[0]][$lang]=$data[$key + 1];
+                    }
+
+
+                }
+
+        }
+        fclose($handle);
+    }
+    else{
+        die("Problem reading Translation csv from Google Drive");
+    }
+
+    return($translations);
 }
