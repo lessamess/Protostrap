@@ -15,4 +15,4 @@ Satisfy any
 # This redirects any links that do not work to the file missing.php
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^(.*)$ missing.php/$1
+RewriteRule ^(.*)$ fileNotFound.php/$1
