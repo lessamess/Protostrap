@@ -50,8 +50,6 @@ include('./headTag.php');?>
         </div>
         <div class="row">
 
-
-
             <span class="span3">
 
                 <?php foreach ($users as $user){?>
