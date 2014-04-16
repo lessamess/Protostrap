@@ -16,16 +16,14 @@ $activeNavigation = "one";
 <html lang="en">
     <head>
         <title>Log in - <?php echo $application . " - " . $brand ;?></title>
-        <meta name="description" content="">
-        <meta name="author" content="">
         <?php
         // this includes all the markup that loads css files and similar stuff,
         // if you have to add more css, that's the place to do it.
         // DO NOT REMOVE
-        include('./meta_headTag.php');?>
+        include('./snippets/meta_headTag.php');?>
 
     </head>
-<?php 
+<?php
 
 // Call the following function to force user to log in
 //  forceLogin(); ?>
@@ -33,7 +31,7 @@ $activeNavigation = "one";
     <body class="header-fixed">
         <div class="container">
 
-            <?php 
+            <?php
             $loginaction ="index.php";
             include ('./snippets/loginForm.php');
             include('./snippets/footer.php');?>
@@ -47,6 +45,6 @@ $activeNavigation = "one";
 
         // This includes the needed javascript files
         // DO NOT REMOVE
-        include ('meta_javascripts.php');?>
+        include ('./snippets/meta_javascripts.php');?>
   </body>
 </html>

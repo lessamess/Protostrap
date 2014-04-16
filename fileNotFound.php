@@ -12,14 +12,12 @@ include('core/protostrap.php');
 <html lang="en">
   <head>
 
-    <title>Protostrap - a prototyping framework based on Bootstrap</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>File not Found - <?php echo $application . " - " . $brand ;?></title>
 
 <?php
 // this includes all the markup that loads css files and similar stuff,
 // if you have to add more css, that's the place to do it.
-include('./meta_headTag.php');?>
+include('./snippets/meta_headTag.php');?>
 
   </head>
 
@@ -63,6 +61,6 @@ include('./snippets/footer.php');?>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-<?php include ('./meta_javascripts.php');?>
+<?php include ('./snippets/meta_javascripts.php');?>
   </body>
 </html>
