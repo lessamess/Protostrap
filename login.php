@@ -9,9 +9,6 @@ include('core/protostrap.php');
 /** FILE BASED VALUES **/
 $activeNavigation = "one";
 
-
-
-
 ?><!DOCTYPE html>
 <html lang="en">
     <head>
@@ -38,11 +35,8 @@ $activeNavigation = "one";
 
         </div> <!-- /container -->
 
-        <!-- Le javascript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
         <?php
-
+        // JAVASCRIPT
         // This includes the needed javascript files
         // DO NOT REMOVE
         include ('./snippets/meta_javascripts.php');?>
