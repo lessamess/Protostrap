@@ -23,7 +23,7 @@
             todayHighlight: true
         });
     }
-    
+
     function init_select(){
         $('.selectpicker').selectpicker();
     }
@@ -36,9 +36,14 @@
     }
 
     $(function(){
-        
 
 
+        // Tooltip if there is any
+        $('.ps-tooltip').tooltip();
+        $(".ps-tooltip").click(function() {
+            setTimeout( function(){
+                $('.ps-tooltip').tooltip('hide')}, 2000);
+        });
 
         // Carousel if there is any
         $('.carousel').carousel(
@@ -55,6 +60,7 @@
             myScroll = new iScroll('breadcrumbwrapper', { hScrollbar: false, vScrollbar: false, hScroll: true, vScroll: false });
             myScroll.scrollToElement('li.active');
         }
+
         $(".dynForm").click(function(el) {
             $("." + $(this).attr("data-toggle-class")).toggle();
         });
@@ -66,7 +72,7 @@
 
         });
 
-        //$('.selectpicker').selectpicker();
+        // $('.selectpicker').selectpicker();
 
         // Manage checkbox handling for session data
         $('.sessionCheckbox').click(function(){
@@ -162,6 +168,6 @@
             })
         });
 
-        
+
 
     })

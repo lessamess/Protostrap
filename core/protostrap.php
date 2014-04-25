@@ -154,15 +154,27 @@ function includeIf($roles, $file) {
     }
 }
 
+function setFromGet($var, $default = false){
+    if(!empty($_GET[$var])){
+                $GLOBALS[$var] = $_GET[$var];
+            } else {
+                $GLOBALS[$var] = $default;
+            }
+}
+
 function __($key){
     $translations = $GLOBALS['translations'];
     $lang = $GLOBALS['lang'];
 
     if(!empty($translations[$key][$lang])){
-        echo $translations[$key][$lang];
+        return $translations[$key][$lang];
     } else {
-        echo $key;
+        return $key;
     }
+}
+
+function cacheHandler(){
+    return "?time=".time();
 }
 
 include('dynamic_form.php');

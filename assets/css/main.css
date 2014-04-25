@@ -1,7 +1,7 @@
 .affix {
-    top: 40px; /* Position where the element is fixed */
+    top: 60px; /* Position where the element is fixed */
 }
 
 .header-fixed {
     margin-top: 60px;
-}       
+}

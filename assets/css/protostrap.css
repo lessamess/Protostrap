@@ -229,6 +229,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
     text-align: center;
 }
 
+tr.odd  td, tr.odd  th {
+    background-color: #fff;
+}
+
+tr.even td, tr.even th {
+    background-color: #F0F0F0;
+}
+
 .hidden, .navbar .nav.hidden {
     display: none;
 }
@@ -250,6 +258,17 @@ td.alert {
 }
 td.error {
     background-color: #F2DEDE;
+}
+
+.table.table-plain > tr > th, .table.table-plain > tr > th,
+.table.table-plain > thead > tr > th, .table.table-plain > tbody > tr > th,
+.table.table-plain > tfoot > tr > th, .table.table-plain > thead > tr > td,
+.table.table-plain > tbody > tr > td, .table.table-plain > tfoot > tr > td {
+    border-top: none;
+}
+
+.panel-body .table.table-plain {
+    margin :0;
 }
 
 span.btn-group {
@@ -309,12 +328,6 @@ a span.success {
     vertical-align: middle;
     margin-top: 2px;
 }
-.nav-pills li.active {
-    line-height: 32px;
-    vertical-align: middle;
-    color: #999999;
-    padding: 0 12px;
-}
 
 
 .container hr.strong, hr.strong {
@@ -328,6 +341,19 @@ a span.success {
   border-style: solid none;
   border-width: 1px 0;
   margin: 18px 0;
+}
+
+hr.plain{
+    margin: 0 0 8px 0;
+    -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-top-color: #aaa ;
+  border-bottom-color: #fff;
+  border-style: solid none;
+  border-width: 1px 0;
 }
 
 /* breadcrumb */
@@ -362,10 +388,6 @@ a span.success {
     padding-right: 12px;
 }
 
-.affix {
-    width: inherit;
-}
-
 .tabs-inWell.tabs-left > .nav-tabs{
     margin-right: 0
 }
@@ -381,65 +403,44 @@ a span.success {
 }
 
 
+/* Highlight active Nav */
 
-/* Icons for ALerts */
-
-.alert-success:before, .alert-error:before, .alert-info:before, .alert-open:before, .alert-warning:before{
-    font-family: entyporegular;
-    vertical-align: top;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 4em;
-    display: inline-block;
-    margin-bottom: 27px;
-    float: left;
-    margin-top: 5px;
-    margin-right: 5px;
+.nav.nav-stacked > li > a {
+    padding: 3px 15px;
+    margin: 7px 0;
 }
 
-.alert-success:before {
-    content: '\2713';
-    margin-top: 0;
+.nav-pills > li > a {
+    border-radius: 0;
+
 }
-.alert-error:before{
-    content: '\274C';
-}
-.alert-info:before{
-    content: '\E705';
-}
-.alert-open:before{
-    content: '\E704';
-}
-.alert-warning:before {
-    content: '\26A0';
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: rgba(0, 0, 0, 0);
+    color: #333;
+    font-weight: bold;
 }
 
-.alert-plain {
-    margin-bottom: 0;
-}
-.alert-multiline.alert-success:before,
-.alert-multiline.alert-error:before,
-.alert-multiline.alert-info:before ,
-.alert-multiline.alert-open:before,
-.alert-multiline.alert-open:before{
-    margin-bottom: 80px;
+.nav .nav > li > a {
+       padding: 0 0 0 8px;
+       margin: 4px 0 4px 15px ;
 }
 
-.alert-plain.alert-success:before,
-.alert-plain.alert-error:before,
-.alert-plain.alert-info:before ,
-.alert-plain.alert-open:before,
-.alert-warning.alert-open:before
-{
-    margin: 0;
-    float: none;
+.nav.nav-stacked > .active > a, .nav.nav-stacked > .active:hover > a, .nav.nav-stacked > .active:focus > a,
+.nav.nav-stacked .nav > .active > a, .nav.nav-stacked .nav > .active:hover > a, .nav.nav-stacked .nav > .active:focus > a {
+    color: background-color: rgba(0, 0, 0, 0);
+    border-left: 2px solid #333;
+    color: #333;
 }
 
-.alert ul {
-    margin: 6px 0 10px 60px;
-    padding: 0;
+/* hide subnavigation of inactive items */
+.nav .nav {
+    display: none;
+    padding-bottom: 10px;
 }
-
+/* show subnavigation of active item */
+ .nav > .active > ul {
+    display: block;
+}
 
 
 /* ERROR Hints for Forms */
@@ -466,6 +467,12 @@ a span.success {
     padding-right: .2em;
     content: '\2713';
 }
+
+.micropadding {
+    height: 8px;
+    display: block;
+}
+
 
 
 /* multistep */
@@ -669,12 +676,29 @@ input.span2 {
 }
 
 
-input.span3 {
+input.span3, .span3 {
     width: 24%;
 }
 
-input.span100 {
+input.span80, .span80 {
+    width: 80px;
+}
+input.span90, .span90 {
+    width: 90px;
+}
+input.span100, .span100 {
     width: 100px;
+}
+
+input.span120, .span120 {
+    width: 120px;
+}
+
+input.span130, .span130 {
+    width: 130px;
+}
+input.span140, .span140 {
+    width: 140px;
 }
 
 input.span150, .span150 {
@@ -699,4 +723,4 @@ input.span250, .span250 {
 
 table.table.noTopBorder tr:first-Child td{
     border-top: none;
-} 
+}

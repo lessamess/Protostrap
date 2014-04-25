@@ -23,7 +23,7 @@ $application = $GLOBALS['application'];?>
 
         // This includes the needed javascript files
         // DO NOT REMOVE
-        include ('meta_javascripts.php');?>
+        include ('./snippets/meta_javascripts.php');?>
   </body>
 </html>
 <?php die(); ?>

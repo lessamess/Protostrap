@@ -5,7 +5,7 @@
 $navKeys = ["one","two","three","four","five"];
 
 // LEAVE ALONE
-$navbarClasses = Array('','','','','','','','','');
+$navbarClasses = array_fill(0, 10, '');
 foreach ($navKeys as $key => $item){
     if($item == $activeNavigation) {
         $navbarClasses[$key] = "active";
@@ -16,7 +16,7 @@ foreach ($navKeys as $key => $item){
 
 
 <header role="banner" class="navbar navbar-default navbar-fixed-top ">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#headernav">
         <span class="sr-only">Toggle navigation</span>
@@ -46,7 +46,7 @@ foreach ($navKeys as $key => $item){
         </li>
         <li  class="<?php echo $navbarClasses[4];?>">
             <span class="form">
-                <!-- Typeahead 
+                <!-- Typeahead
                      Change Data in assets/js/main.js
                      Documentation: https://github.com/bassjobsen/Bootstrap-3-Typeahead -->
                 <input type="text" class="form-control typeahead" name="mytypeahead" placeholder="Typeahead (Try: foo)">
@@ -75,7 +75,7 @@ foreach ($navKeys as $key => $item){
               </li>
           </ul>
           <?php }?>
-      
+
     </nav>
   </div>
 </header>
