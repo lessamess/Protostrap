@@ -2,7 +2,7 @@
     <content><![CDATA[<div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#coll?php echo getUniqueId();?>">
+        <a data-toggle="collapse" data-parent="#accordion" href="#coll<?php echo getUniqueId();?>">
             ${1:One}
         </a>
       </h4>

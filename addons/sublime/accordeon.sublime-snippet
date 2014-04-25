@@ -2,30 +2,26 @@
     <content><![CDATA[
 <div class="panel-group accordeon-wedge" id="accordion">
   <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#coll?php echo getUniqueId();?>">
+    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#coll<?php echo getUniqueId();?>">
+        <a  class="panel-title">
             ${1:One}
         </a>
-      </h4>
     </div>
-    <div id="coll<?php echo \$lastUniqueId;?>" class="panel-collapse collapse in">
+    <div id="coll<?php echo \$lastUniqueId;?>" class="panel-collapse collapse ${3:in}">
       <div class="panel-body">
-        OneBody
+        One Body
       </div>
     </div>
   </div>
   <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#coll?php echo getUniqueId();?>">
-                ${2:Two}
+    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#coll<?php echo getUniqueId();?>">
+        <a  class="panel-title">
+            ${2:Two}
         </a>
-      </h4>
     </div>
     <div id="coll<?php echo \$lastUniqueId;?>" class="panel-collapse collapse">
       <div class="panel-body">
-        TwoBody
+        Two Body
       </div>
     </div>
   </div>
