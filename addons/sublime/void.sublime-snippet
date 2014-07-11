@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[javascript:void(0);]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>void</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Javascript Void Protostrap PS</description>
+</snippet>

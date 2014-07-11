@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[.removeClass("hide");]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>rh</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>.removeClass("hide"); Protostrap PS</description>
+</snippet>

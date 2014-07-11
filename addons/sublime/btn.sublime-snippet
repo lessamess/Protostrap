@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[<a href="javascript:void(0)" class="btn">${1:$TM_SELECTED_TEXT}</a>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
-    <tabTrigger>btn</tabTrigger>
+    <tabTrigger>psbtn</tabTrigger>
     <!-- Optional: Description to show in the menu -->
     <description>Button Protostrap PS</description>
 </snippet>

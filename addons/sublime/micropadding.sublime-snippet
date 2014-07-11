@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[<div class="micropadding"></div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>micropadding</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Micropadding Protostrap PS</description>
+</snippet>
