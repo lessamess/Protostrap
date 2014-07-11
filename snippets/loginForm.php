@@ -2,13 +2,13 @@
                     $loginaction = "";
                 } ?>
 
-            <div class="row"> 
-                <span class="col-md-12"> 
+            <div class="row">
+                <span class="col-xs-12 col-md-12">
                     <h3>Sign in</h3>
                 </span>
             </div>
             <div class="row">
-                <span class="col-md-3">
+                <span class="col-xs-12 col-md-3">
                     <form action='<?php echo $loginaction ;?>' method='post' id="loginform">
                         <div class="form-group"><input id="login" name='login' class='form-control' type='text' placeholder='Username'></div>
                         <div class="input-group">
@@ -23,7 +23,7 @@
                         <button type='submit' class='btn-block btn btn-primary'>Sign in</button>
                     </form>
                 </span>
-                <span class="col-md-offset-1 col-md-6">
+                <span class="col-xs-12 col-md-offset-1 col-md-6">
                 <strong>User-Roles</strong><br>
                     Click the following to log in as:<br>
                     <?php foreach($users as $key => $user){ ?>
