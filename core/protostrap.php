@@ -164,10 +164,10 @@ function setFromGet($var, $default = false){
 
 function __($key){
     $translations = $GLOBALS['translations'];
-    $lang = $GLOBALS['lang'];
+    $language = $GLOBALS['language'];
 
-    if(!empty($translations[$key][$lang])){
-        return $translations[$key][$lang];
+    if(!empty($translations[$key][$language])){
+        return $translations[$key][$language];
     } else {
         return $key;
     }
