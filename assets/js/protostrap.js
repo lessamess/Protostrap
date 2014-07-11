@@ -128,8 +128,16 @@
             //hide all the rows
             $(filtertable).find("tr.filterme").hide();
 
+            // Concatenate all Searchterms
+            var concat = "";
+            $(".simpleFilterSearch").each(function (it, elem) {
+                if($(elem).val().length > 0 ){
+                    concat = $(elem).val() + " " + concat;
+                }
+            });
+
             //split the current value of searchInput
-            var data = this.value.split(" ");
+            var data = concat.split(" ");
 
             //create a jquery object of the rows
             var jo = $(filtertable).find("tr.filterme");
@@ -168,6 +176,8 @@
             })
         });
 
-
+        $(".checkall").click(function() {
+                $("." + $(this).data("class")).prop('checked',$(this).prop('checked'));
+        });
 
     })
