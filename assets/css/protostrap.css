@@ -489,6 +489,19 @@ hr.plain{
     background-color: #F5F5F5;
 }
 
+.table-responsive {
+    border: 1px solid #DDDDDD;
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 100%;
+}
+.noWrap {white-space: nowrap;}
+
+td .radio, td .checkbox, th .radio, th .checkbox {
+    margin: 0;
+}
+
 /*TABLET*/
 @media (max-width: 767px) {
 
