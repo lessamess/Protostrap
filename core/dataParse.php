@@ -206,6 +206,7 @@ function setSessionVar($key, $item){
 function get_translations($url){
 
     if(!ini_set('default_socket_timeout',    15)) echo "unable to change socket timeout";
+    $url = preg_replace("|edit\?usp=sharing|", "export?format=csv", $url);
 
     if (($handle = fopen($url, "r")) !== FALSE) {
         $i = 0;
@@ -230,4 +231,55 @@ function get_translations($url){
     }
 
     return($translations);
+}
+
+function normalize ($string) {
+    $table = array(
+        'Š'=>'S', 'š'=>'s', 'Ð'=>'Dj', 'Ž'=>'Z', 'ž'=>'z', 'C'=>'C', 'c'=>'c', 'C'=>'C', 'c'=>'c',
+        'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
+        'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O',
+        'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U', 'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss',
+        'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c', 'è'=>'e', 'é'=>'e',
+        'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o',
+        'ô'=>'o', 'õ'=>'o', 'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'ý'=>'y', 'þ'=>'b',
+        'ÿ'=>'y', 'R'=>'R', 'r'=>'r', ' '=>'_', '-'=>'_',
+    );
+
+    return strtr($string, $table);
+}
+
+function get_spreadsheetData($url, $var){
+
+    if(empty($_GET['session_destroy']) AND !empty($_SESSION[$var])){
+        return $_SESSION[$var];
+    }
+
+    $val = Array();
+    $url = preg_replace("|edit\?usp=sharing|", "export?format=csv", $url);
+
+    if(!ini_set('default_socket_timeout',    15)) echo "unable to change socket timeout";
+
+    if (($handle = fopen($url, "r")) !== FALSE) {
+        $i = 0;
+        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                if($i == 0){
+                    foreach ($data as $key => $itemval){
+                        $val['fields']['keys'][$key] = normalize(strtolower($itemval));
+                        $val['fields']['labels'][$key] = $itemval;
+                    }
+                    $i++;
+                } else {
+                    foreach ($val['fields']['keys'] as $key => $itemval) {
+                        $val['data'][$i][$itemval]=$data[$key];
+                    }
+                    $i++;
+                }
+        }
+        fclose($handle);
+    }
+    else{
+        die("Problem reading Translation csv from Google Drive");
+    }
+    $_SESSION[$var] = $val;
+    return($val);
 }
