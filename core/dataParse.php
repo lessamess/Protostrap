@@ -29,6 +29,13 @@ if(isset($_SESSION['application'])){
     if(!empty($parsed['translations_url']) && strlen($parsed['translations_url']) > 0){
         $parsed['translations'] = get_translations($parsed['translations_url']);
     }
+
+    if(!empty($parsed['linkedData'])){
+        foreach ($parsed['linkedData'] as $key => $link) {
+            $parsed[$key] = get_spreadsheetData($link, $key);
+        }
+    }
+
     $_SESSION = $parsed;
 }
 
@@ -80,8 +87,6 @@ foreach ($parsed as $key => $item){
         foreach($$key as $subkey => $var){
 
             if(!empty($var[0])){
-
-                //die();
                 if($var[0] == 'parse'){
                     if(!empty($var[2])){
                        $tempvar = $var[1]($var[2]);
@@ -99,10 +104,14 @@ foreach ($parsed as $key => $item){
                 if(is_array($var)){
 
                     // Add an id if it is an associative array
-                    if(array_values($var) != $var){
+                    if(array_values($var) != $var && !empty($var['addId'])){
                         ${$key}[$subkey]['id'] = $subkey;
-                        };
+                        unset(${$key}[$subkey]['addId']);
+                    };
 
+                    if($subkey)
+
+                    // Build Livesearch
                     foreach ($livesearchKeys as $lsKey){
                         if(!empty(${$key}[$subkey][$lsKey])){
                             $livesearch .= "{value: '". addslashes(${$key}[$subkey][$lsKey]) . "', url: '" . $url ."?id=" . $subkey . "'},";
@@ -123,13 +132,7 @@ foreach ($parsed as $key => $item){
                                 ${$key}[$subkey][$vkey] = $tempvar;
                             }
                         }
-
-
                     }
-
-
-
-
                 }
             }
 
@@ -137,6 +140,9 @@ foreach ($parsed as $key => $item){
     }
 }
 $livesearch = substr($livesearch, 0, -1);
+
+
+
 
 
 function setSessionVar($key, $item){
@@ -227,7 +233,7 @@ function get_translations($url){
         fclose($handle);
     }
     else{
-        die("Problem reading Translation csv from Google Drive");
+        die("Problem reading csv from Google Drive");
     }
 
     return($translations);
@@ -278,7 +284,7 @@ function get_spreadsheetData($url, $var){
         fclose($handle);
     }
     else{
-        die("Problem reading Translation csv from Google Drive");
+        die("Problem reading csv from Google Drive");
     }
     $_SESSION[$var] = $val;
     return($val);
