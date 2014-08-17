@@ -153,8 +153,7 @@
             $(".filtersearchCount").html(anzahlRows);
             //console.log(anzahlRows);
 
-            //Removes the placeholder text
-            });
+        });
 
         // select Users to for easy Login
         $(".loginUserselection").click(function() {
