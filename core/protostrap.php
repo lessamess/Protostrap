@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!empty($_GET['session_destroy'])){
+if(!empty($_GET['session_destroy']) OR !empty($forceLoadData)){
     session_destroy();
     session_start();
 }
