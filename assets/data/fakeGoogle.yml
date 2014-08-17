@@ -1,0 +1,10 @@
+google:
+  callParameters:
+    cx: "YOUR-CX-IDENTIFICATION"
+    key: "YOUR-API-KEY"
+    gl: "ch" #country code
+
+  urlsToReplace:
+    1: "http://www.example.com?ID=1234"
+  replacements:
+    1: "index.php"
