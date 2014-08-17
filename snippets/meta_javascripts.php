@@ -29,28 +29,11 @@
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
 
-
-    <?php 
-    // Extentions defined in config
-
-    foreach ($config['extentions'] as $key => $val) { 
-        if(is_array($val) == true){?>
-        <script src="./assets/js/<?php echo $key ;?>.min.js"></script>
-        <script>
-            <?php if(!empty($val[1]) && strpos($val[1], "init") == 0){?>
-            $(function(){
-                init_<?php echo substr($val[1], 5) ;?>();
-            })
-            <?php } ?>
-        </script>
-    <?php 
-        }
-    } ?>
     <!-- Protostrap -->
     <script src="./assets/js/protostrap.js?time=<?php time();?>"></script>
     <script>
-        <!-- Inline Scripts that need PHP --> 
-        
+        <!-- Inline Scripts that need PHP -->
+
 
     </script>
     <!-- ADD your other login to main.js -->
