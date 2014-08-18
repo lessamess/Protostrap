@@ -1,15 +1,15 @@
 config:
+  projectRootFolder: "/"
   datepickerFormat: dd.mm.yyyy
   defaultUser: 1
   loginWith: email # username | email
-  extentions:
-      bootstrap-typeahead:      ['js','init:typeahead']
-      bootstrap-datepicker:     ['js','init:datepicker', 'css']
-      bootstrap-select:         ['js','init:select', 'css']
-      bootstrap-fileupload:     ['js', false, 'css']
-      bootstrap-switch:         ['js', false, 'css']
-      jquery-sortable:          ['js', false]
+  cssFiles:
+    ["bootstrap.min.css",
+    "add2home.css",
+    "bootstrap-select.min.css",
+    "bootstrap-switch.min.css",
+    "datepicker3.css",
+    "sortable.css",
+    "fontawesome.css",
+    "protostrap.css"]
 
-      # set the following to true if its a mobile App.
-      add2home:                 false  # ['js','init:add2home', 'css']
-      fastclick:                ['js','init:fastclick']

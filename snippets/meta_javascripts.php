@@ -26,20 +26,26 @@
 
 
     <!-- jQuery and Bootstrap -->
+    <?php $csd = dirname(__FILE__);    ?>
     <script>
-        <?php include("./assets/js/jquery.js");?>
-        <?php include("./assets/js/bootstrap.min.js");?>
+        <?php include($csd."/../assets/js/jquery.js");?>
+        <?php include($csd."/../assets/js/bootstrap.min.js");?>
     </script>
+    <!-- ADD 2 Home -->
+    <script >
+        <?php include($csd."/../assets/js/add2home.min.js");?>
+    </script>
+
     <!-- Typeahead -->
     <script >
-        <?php include("./assets/js/bootstrap-typeahead.min.js");?>
+        <?php include($csd."/../assets/js/bootstrap-typeahead.min.js");?>
     </script>
 
     <!-- Datepicker -->
-    <script >  <?php include("./assets/js/bootstrap-datepicker.min.js");?> </script>
+    <script >  <?php include($csd."/../assets/js/bootstrap-datepicker.min.js");?> </script>
 
     <!-- Bootstrap Select -->
-    <script >  <?php include("./assets/js/bootstrap-select.min.js");?> </script>
+    <script >  <?php include($csd."/../assets/js/bootstrap-select.min.js");?> </script>
     <script>
         $(function(){
             init_select();
@@ -48,27 +54,29 @@
 
     <!-- File Input -->
     <!-- http://gregpike.net/demos/bootstrap-file-input/demo.html -->
-    <script >  <?php include("./assets/js/bootstrap-file-input.min.js");?> </script>
+    <script >  <?php include($csd."/../assets/js/bootstrap-file-input.min.js");?> </script>
 
     <!-- Switch -->
     <!-- http://www.bootstrap-switch.org -->
-    <script >  <?php include("./assets/js/bootstrap-switch.min.js");?> </script>
+    <script >  <?php include($csd."/../assets/js/bootstrap-switch.min.js");?> </script>
 
     <!-- Sortable -->
-    <script >  <?php include("./assets/js/jquery-sortable.min.js");?> </script>
+    <script >  <?php include($csd."/../assets/js/jquery-sortable.min.js");?> </script>
 
-    <script src="./assets/js/fastclick.min.js"></script>
+    <!-- Fastclick -->
+    <script >  <?php include($csd."/../assets/js/fastclick.min.js");?> </script>
+
 
 
 
 
 
     <!-- Protostrap -->
-    <script >  <?php include("./assets/js/protostrap.js");?> </script>
+    <script >  <?php include($csd."/../assets/js/protostrap.js");?> </script>
     <script>
         <!-- Inline Scripts that need PHP -->
 
 
     </script>
     <!-- ADD your other login to main.js -->
-    <script src="./assets/js/main.js?time=<?php time();?>"></script>
+    <script src=$csd."/assets/js/main.js?time=<?php time();?>"></script>

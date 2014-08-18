@@ -1,4 +1,6 @@
 <?php
+
+
 $file = '../assets/data/data.yml';
 // Öffnet die Datei, um den vorhandenen Inhalt zu laden
 $current = file_get_contents($file);
@@ -12,6 +14,34 @@ file_put_contents($file, $current);
     DO NOT REMOVE
 **/
 include('../core/protostrap.php');
+
+$combinedCssFile = '../assets/css/combined.css';
+    $combined = "";
+    foreach($config['cssFiles'] as $key => $file){
+        $combined .= file_get_contents('../assets/css/'.$file);
+    };
+
+    file_put_contents($combinedCssFile, $combined);
+
+    die();
+function writeCss($config){
+    // write combined File
+    $combinedCssFile = '../assets/css/combined.css';
+    $combined = "";
+    foreach($config['cssFiles'] as $key => $file){
+        $combined .= file_get_contents('../assets/css/'.$file);
+    };
+
+    file_put_contents($combinedCssFile, $combined);
+}
+
+function writeYml($linkedData){
+    foreach($linkedData as $key => $url){
+        $combined .= file_get_contents('../assets/css/'.$file);
+    };
+}
+
+
 
 /** Define VALUES valid for this file **/
 $activeNavigation = "one";
@@ -35,7 +65,22 @@ $activeNavigation = "one";
 
     <body class="">
         <div class="container">
+        <h2>Protostrap Admin</h2>
 
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Data</h3>
+                <div class="well">
+                    Import Data from spreadsheets
+                </div>
+            </div>
+            <div class="col-md-4">
+                Status
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
 
 
         </div> <!-- /container -->

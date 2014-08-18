@@ -5,16 +5,6 @@
 
     var myscroll;
 
-    function init_fastclick(){
-        var $window = $(window)
-        var totalWidth = 0;
-        // initialize fastclick
-        window.addEventListener('load', function() {
-            new FastClick(document.body);
-        }, false);
-
-    }
-
     // Define Datepicker Languages
     $.fn.datepicker.dates['de'] = {
         days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"],
@@ -70,6 +60,9 @@
 
 
     $(function(){
+
+        // fastclick
+        FastClick.attach(document.body);
 
         // http://farhadi.ir/projects/html5sortable/
         $('.sortable').sortable();
