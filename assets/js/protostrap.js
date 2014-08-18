@@ -61,6 +61,9 @@
     // File input
     $('input[type=file]').bootstrapFileInput();
 
+    // Switch
+    $(".switch").bootstrapSwitch();
+
     function init_select(){
         $('.selectpicker').selectpicker();
     }
@@ -108,8 +111,6 @@
             $("." + $("select option:selected").attr("data-toggle-class")).toggle();
 
         });
-
-        // $('.selectpicker').selectpicker();
 
         // Manage checkbox handling for session data
         $('.sessionCheckbox').click(function(){

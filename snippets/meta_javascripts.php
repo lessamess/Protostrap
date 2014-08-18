@@ -54,9 +54,9 @@
     <!-- http://gregpike.net/demos/bootstrap-file-input/demo.html -->
     <script >  <?php include("./assets/js/bootstrap-file-input.min.js");?> </script>
 
-    <script src="./assets/js/bootstrap-switch.min.js"></script>
-    <script>
-    </script>
+    <!-- Switch -->
+    <script >  <?php include("./assets/js/bootstrap-switch.min.js");?> </script>
+
     <script src="./assets/js/jquery-sortable.min.js"></script>
         <script>
     </script>
