@@ -46,11 +46,6 @@
 
     <!-- Bootstrap Select -->
     <script >  <?php include($csd."/../assets/js/bootstrap-select.min.js");?> </script>
-    <script>
-        $(function(){
-            init_select();
-        })
-    </script>
 
     <!-- File Input -->
     <!-- http://gregpike.net/demos/bootstrap-file-input/demo.html -->
@@ -79,4 +74,4 @@
 
     </script>
     <!-- ADD your other login to main.js -->
-    <script src=$csd."/assets/js/main.js?time=<?php time();?>"></script>
+    <script src="<?php echo $config['projectRootFolder'] ;?>assets/js/main.js?time=<?php time();?>"></script>

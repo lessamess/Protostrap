@@ -54,10 +54,6 @@
     // Switch
     $(".switch").bootstrapSwitch();
 
-    function init_select(){
-        $('.selectpicker').selectpicker();
-    }
-
 
     $(function(){
 
@@ -66,6 +62,8 @@
 
         // http://farhadi.ir/projects/html5sortable/
         $('.sortable').sortable();
+
+        $('.selectpicker').selectpicker();
 
         // Tooltip if there is any
         $('.ps-tooltip').tooltip();
