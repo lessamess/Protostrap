@@ -77,6 +77,8 @@
 
     $(function(){
 
+        // http://farhadi.ir/projects/html5sortable/
+        $('.sortable').sortable();
 
         // Tooltip if there is any
         $('.ps-tooltip').tooltip();
