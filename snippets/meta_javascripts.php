@@ -23,12 +23,13 @@
             }
         })(document,window.navigator,'standalone');
     </script>
-    <!-- TO DO :
-        Minify iscroll, datepicker, bootstrap-switch
-        -->
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
 
+
+    <!-- jQuery and Bootstrap -->
+    <script>
+        <?php include("./assets/js/jquery.js");?>
+        <?php include("./assets/js/bootstrap.min.js");?>
+    </script>
     <!-- Typeahead -->
     <script >
         <?php include("./assets/js/bootstrap-typeahead.min.js");?>
@@ -55,23 +56,20 @@
     <script >  <?php include("./assets/js/bootstrap-file-input.min.js");?> </script>
 
     <!-- Switch -->
+    <!-- http://www.bootstrap-switch.org -->
     <script >  <?php include("./assets/js/bootstrap-switch.min.js");?> </script>
 
-    <script src="./assets/js/jquery-sortable.min.js"></script>
-        <script>
-    </script>
+    <!-- Sortable -->
+    <script >  <?php include("./assets/js/jquery-sortable.min.js");?> </script>
+
     <script src="./assets/js/fastclick.min.js"></script>
-    <script>
-        $(function(){
-        })
-    </script>
 
 
 
 
 
     <!-- Protostrap -->
-    <script src="./assets/js/protostrap.js?time=<?php time();?>"></script>
+    <script >  <?php include("./assets/js/protostrap.js");?> </script>
     <script>
         <!-- Inline Scripts that need PHP -->
 
