@@ -431,6 +431,11 @@ hr.plain{
     overflow-y: scroll;
     width: 100%;
 }
+
+.table-responsive-maxheight{
+    max-height: 400px;
+}
+
 .noWrap {white-space: nowrap;}
 
 td .radio, td .checkbox, th .radio, th .checkbox {
