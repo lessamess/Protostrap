@@ -9,6 +9,7 @@
     -->
     <link rel="stylesheet" href="./assets/css/add2home.css">
     <link href="./assets/css/bootstrap-select.min.css?time=<?php time();?>" rel="stylesheet">
+    <link href="./assets/css/datepicker3.css?time=<?php time();?>" rel="stylesheet">
     <link href="./assets/css/fontawesome.css?time=<?php time();?>" rel="stylesheet">
     <link href="./assets/css/protostrap.css?time=<?php time();?>" rel="stylesheet">
     <link href="./assets/css/main.css?time=<?php time();?>" rel="stylesheet">

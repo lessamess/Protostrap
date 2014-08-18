@@ -29,6 +29,45 @@
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
 
+    <!-- Typeahead -->
+    <script >
+        <?php include("./assets/js/bootstrap-typeahead.min.js");?>
+    </script>
+    <script>
+        $(function(){
+            init_typeahead();
+        })
+    </script>
+
+    <!-- Datepicker -->
+    <script >  <?php include("./assets/js/bootstrap-datepicker.min.js");?> </script>
+
+    <!-- Bootstrap Select -->
+    <script >  <?php include("./assets/js/bootstrap-select.min.js");?> </script>
+    <script>
+        $(function(){
+            init_select();
+        })
+    </script>
+    <script src="./assets/js/bootstrap-fileupload.min.js"></script>
+        <script>
+    </script>
+    <script src="./assets/js/bootstrap-switch.min.js"></script>
+        <script>
+    </script>
+    <script src="./assets/js/jquery-sortable.min.js"></script>
+        <script>
+    </script>
+    <script src="./assets/js/fastclick.min.js"></script>
+    <script>
+        $(function(){
+        })
+    </script>
+
+
+
+
+
     <!-- Protostrap -->
     <script src="./assets/js/protostrap.js?time=<?php time();?>"></script>
     <script>

@@ -8,4 +8,13 @@
               limit: 10
         });
 
+        // Datepicker
+        $('.input-group.date, .date').datepicker({
+            language: "en",
+            orientation: "auto left",
+            format: "dd.mm.yyyy",
+            autoclose: true,
+            todayHighlight: true
+        });
+
     })
