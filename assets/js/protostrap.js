@@ -68,12 +68,6 @@
         $('.selectpicker').selectpicker();
     }
 
-    function init_typeahead(){
-        $('.typeahead').typeahead({
-              source: ['foo bar','foo fighters','a fools errand','football'],
-              limit: 10
-        });
-    }
 
     $(function(){
 

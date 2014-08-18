@@ -34,11 +34,6 @@
     <script >
         <?php include("./assets/js/bootstrap-typeahead.min.js");?>
     </script>
-    <script>
-        $(function(){
-            init_typeahead();
-        })
-    </script>
 
     <!-- Datepicker -->
     <script >  <?php include("./assets/js/bootstrap-datepicker.min.js");?> </script>
