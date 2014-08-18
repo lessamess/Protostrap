@@ -4,12 +4,13 @@ if(!empty($_GET['session_destroy']) OR !empty($forceLoadData)){
     session_destroy();
     session_start();
 }
-
-include ('functions_preDataParse.php');
+//current script directory
+$csd = dirname(__FILE__);
+include ($csd.'/../functions_preDataParse.php');
 
 // Model
-include('spyc.php');
-include('dataParse.php');
+include($csd.'/spyc.php');
+include($csd.'/dataParse.php');
 
 
 // Handle request ID
@@ -177,5 +178,5 @@ function cacheHandler(){
     return "?time=".time();
 }
 
-include('dynamic_form.php');
-include('functions_controller.php');
+include($csd.'/dynamic_form.php');
+include($csd.'/../functions_controller.php');
