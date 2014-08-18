@@ -58,6 +58,8 @@
         today: "Hoy"
     };
 
+    // File input
+    $('input[type=file]').bootstrapFileInput();
 
     function init_select(){
         $('.selectpicker').selectpicker();
