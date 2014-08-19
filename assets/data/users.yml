@@ -2,17 +2,17 @@ users:
   livesearch:
     url: user.php
   1:
-    fullName: Sara One
+    fullName: Sara Default-User
     email: one@company.com
     username: sammy
     role: user
   2:
-    fullName: Mara Two
+    fullName: Mara Admin
     email: two@company.com
     username: mara
     role: admin
   3:
-    fullName: Lara Three
+    fullName: Lara Superadmin
     email: three@company.com
     username: lara
     role: superadmin

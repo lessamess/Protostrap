@@ -9,8 +9,10 @@ if(isset($_SESSION['application'])){
     $yaml = "";
     // READ ALL FILES IN ASSETS/DATA AND CONCATENATE
 
+        //current script directory
+        $csd = dirname(__FILE__);
         //Open directory
-        $path = "assets/data/";
+        $path = $csd."/../assets/data/";
         $dir = dir($path);
 
         //List files in directory
@@ -30,11 +32,11 @@ if(isset($_SESSION['application'])){
         $parsed['translations'] = get_translations($parsed['translations_url']);
     }
 
-    if(!empty($parsed['linkedData'])){
-        foreach ($parsed['linkedData'] as $key => $link) {
-            $parsed[$key] = get_spreadsheetData($link, $key);
-        }
-    }
+    // if(!empty($parsed['linkedData'])){
+    //     foreach ($parsed['linkedData'] as $key => $link) {
+    //         $parsed[$key] = get_spreadsheetData($link, $key);
+    //     }
+    // }
 
     $_SESSION = $parsed;
 }

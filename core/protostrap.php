@@ -178,5 +178,46 @@ function cacheHandler(){
     return "?time=".time();
 }
 
+function writeCss($config){
+    if(empty($_GET['writeCss'])){
+        return;
+    }
+    // write combined File
+    $combinedCssFile = '../assets/css/combined.css';
+    $combined = "";
+    foreach($config['cssFiles'] as $key => $file){
+        $combined .= file_get_contents('../assets/css/'.$file);
+    };
+    file_put_contents($combinedCssFile, $combined);
+}
+
+function updateYAMLfromSpreadsheets($linkedData){
+    if(empty($_GET['updateYAML'])){
+        return;
+    }
+    if(!is_array($linkedData) OR count($linkedData)<1){
+        //echo "no Links available";
+        return;
+    }
+
+    file_put_contents("../assets/data/dataFromSpreadsheets.yml", "");
+    foreach($linkedData as $key => $url){
+        $val[$key] = get_spreadsheetData($url, $key);
+
+        $yaml = Spyc::YAMLDump($val );
+        unset($val);
+        file_put_contents("../assets/data/dataFromSpreadsheets.yml", $yaml, FILE_APPEND);
+    };
+}
+
+function removeSpreadsheetData(){
+    if(empty($_GET['removeSpreadsheetData'])){
+        return;
+    }
+    file_put_contents("../assets/data/dataFromSpreadsheets.yml", "");
+}
+
+
+
 include($csd.'/dynamic_form.php');
 include($csd.'/../functions_controller.php');

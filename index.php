@@ -34,11 +34,18 @@ $activeNavigation = "one";
             include('./snippets/header.php');?>
 
             <h4 class="text-muted"> <i class="fa fa-level-down fa-rotate-180"></i> Change this in snippets/navBarTop.php </h4>
-            <h1><?php echo __("startHere"); ?> </h1>
-            <br>
-            Or <a href="http://protostrap.ch/documentation_features.php" class="">Read the Documentation</a>
             <br><br>
+            <div class="jumbotron">
+                <h1>READY.</h1>
+                <p>
+                    <br>
+                    Go to the <a href="ps-admin/">Admin Panel</a>
+                    <br>
+                    or <a href="http://protostrap.ch/" class="">Read the Documentation</a>
+                </p>
+            </div>
 
+            <br><br>
             <h4 class="text-muted"> <i class="fa fa-level-up fa-rotate-180"></i> Change this in snippets/footer.php </h4>
             <?php // this includes the footer
             include('./snippets/footer.php');?>

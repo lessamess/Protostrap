@@ -1,45 +1,29 @@
 <?php
 
 
-$file = '../assets/data/data.yml';
-// Öffnet die Datei, um den vorhandenen Inhalt zu laden
-$current = file_get_contents($file);
-// Fügt eine neue Person zur Datei hinzu
-$current .= "\nnewContent: John Smith\n";
-// Schreibt den Inhalt in die Datei zurück
-file_put_contents($file, $current);
+// $file = '../assets/data/data.yml';
+// // Öffnet die Datei, um den vorhandenen Inhalt zu laden
+// $current = file_get_contents($file);
+// // Fügt eine neue Person zur Datei hinzu
+// $current .= "\nnewContent: John Smith\n";
+// // Schreibt den Inhalt in die Datei zurück
+// file_put_contents($file, $current);
 
 /** --- B A S E F U N C T I O N S ---
     This file sets up project-wide things like authentication -
     DO NOT REMOVE
 **/
+
+
 include('../core/protostrap.php');
 
-$combinedCssFile = '../assets/css/combined.css';
-    $combined = "";
-    foreach($config['cssFiles'] as $key => $file){
-        $combined .= file_get_contents('../assets/css/'.$file);
-    };
+/* Update stuff */
 
-    file_put_contents($combinedCssFile, $combined);
+writeCss($config);
 
-    die();
-function writeCss($config){
-    // write combined File
-    $combinedCssFile = '../assets/css/combined.css';
-    $combined = "";
-    foreach($config['cssFiles'] as $key => $file){
-        $combined .= file_get_contents('../assets/css/'.$file);
-    };
+updateYAMLfromSpreadsheets($linkedData);
 
-    file_put_contents($combinedCssFile, $combined);
-}
-
-function writeYml($linkedData){
-    foreach($linkedData as $key => $url){
-        $combined .= file_get_contents('../assets/css/'.$file);
-    };
-}
+removeSpreadsheetData();
 
 
 
@@ -65,17 +49,33 @@ $activeNavigation = "one";
 
     <body class="">
         <div class="container">
-        <h2>Protostrap Admin</h2>
-
+        <br>
+        <a href="../"><i class="fa fa-long-arrow-left"></i> Back to site</a><br>
+        <hr>
+        <br>
+        <h1>Protostrap Admin Panel</h1>
+        <br>
         <div class="row">
             <div class="col-md-4">
                 <h3>Data</h3>
                 <div class="well">
-                    Import Data from spreadsheets
+                    <a href="index.php?session_destroy=true" class="btn btn-lg btn-link "><i class="fa fa-refresh"></i> Renew Prototype Session</a><br>
+
+                    <?php
+                    $tmpClass = "";
+                    $tmpMsg = "";
+                    if(!is_array($linkedData) OR count($linkedData)<1){
+                            $tmpClass = "disabled";
+                            $tmpMsg = "<br><div class='alert alert-warning'>You have no links to spreadsheets. Add them to /assets/data/linkedData.yml</div>";
+                        } ?>
+
+
+                    <a href="index.php?updateYAML=true" class="btn btn-lg btn-link <?php echo $tmpClass ;?>"><i class="fa fa-cloud-download"></i> Import Data from spreadsheets</a>
+                    <?php echo $tmpMsg ;?>
                 </div>
             </div>
             <div class="col-md-4">
-                Status
+                <!-- Status -->
             </div>
             <div class="col-md-4">
 
