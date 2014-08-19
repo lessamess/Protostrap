@@ -201,11 +201,15 @@ function updateYAMLfromSpreadsheets($linkedData){
     }
 
     file_put_contents("../assets/data/dataFromSpreadsheets.yml", "");
+    $flashMsg['type'] = "success";
+    $flashMsg['text'] = "<b>Import successful</b><br>The following variables have been imported: <br>";
     foreach($linkedData as $key => $url){
+        $flashMsg['text'] .= "<b>".$key."</b>, ";
         $val[$key] = get_spreadsheetData($url, $key);
 
         $yaml = Spyc::YAMLDump($val );
         unset($val);
+        $GLOBALS['flashMsg'] = $flashMsg;
         file_put_contents("../assets/data/dataFromSpreadsheets.yml", $yaml, FILE_APPEND);
     };
 }

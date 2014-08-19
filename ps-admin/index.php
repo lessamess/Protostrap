@@ -50,8 +50,12 @@ $activeNavigation = "one";
         <br>
         <h1>Protostrap Admin Panel</h1>
         <br>
+
         <div class="row">
             <div class="col-md-4">
+                <?php if (!empty($flashMsg)) {?>
+                    <div class="alert alert-<?php echo $flashMsg['type'] ;?>"><?php echo $flashMsg['text'] ;?></div>
+                <?php } ?>
                 <h3>Data</h3>
                 <div class="well">
                     <a href="index.php?session_destroy=true" class="btn btn-lg btn-link "><i class="fa fa-refresh"></i> Renew Prototype Session</a><br>
