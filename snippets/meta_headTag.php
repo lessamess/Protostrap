@@ -1,16 +1,18 @@
-
+    <?php if(empty($pathToAssets)){
+        $pathToAssets = "";
+        } ?>
     <meta charset="utf-8"><meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!-- Le styles -->
-    <link href="<?php echo $config['projectRootFolder'] ;?>assets/css/combined.css?time=<?php time();?>" rel="stylesheet">
+    <link href="<?php echo $pathToAssets ;?>assets/css/combined.css?time=<?php time();?>" rel="stylesheet">
 
     <!-- Uncomment the following line if having the full width of the screen is needed
-    <link href="<?php echo $config['projectRootFolder'] ;?>assets/css/extendBootstrapGrid.min.css?time=<?php time();?>" rel="stylesheet">
+    <link href="<?php echo $pathToAssets ;?>assets/css/extendBootstrapGrid.min.css?time=<?php time();?>" rel="stylesheet">
     -->
 
-    <link href="<?php echo $config['projectRootFolder'] ;?>assets/css/main.css?time=<?php time();?>" rel="stylesheet">
+    <link href="<?php echo $pathToAssets ;?>assets/css/main.css?time=<?php time();?>" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

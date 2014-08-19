@@ -1,5 +1,4 @@
 config:
-  projectRootFolder: "/"
   datepickerFormat: dd.mm.yyyy
   defaultUser: 1
   loginWith: email # username | email

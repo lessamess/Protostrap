@@ -1,13 +1,6 @@
 <?php
 
 
-// $file = '../assets/data/data.yml';
-// // Öffnet die Datei, um den vorhandenen Inhalt zu laden
-// $current = file_get_contents($file);
-// // Fügt eine neue Person zur Datei hinzu
-// $current .= "\nnewContent: John Smith\n";
-// // Schreibt den Inhalt in die Datei zurück
-// file_put_contents($file, $current);
 
 /** --- B A S E F U N C T I O N S ---
     This file sets up project-wide things like authentication -
@@ -26,6 +19,8 @@ updateYAMLfromSpreadsheets($linkedData);
 removeSpreadsheetData();
 
 
+// path to assets from admin
+$pathToAssets = "../";
 
 /** Define VALUES valid for this file **/
 $activeNavigation = "one";
