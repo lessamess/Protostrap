@@ -53,17 +53,16 @@ if (!empty($_POST['session'])){
 
 }
 
-if (!empty($_GET['session'])){
+
+if(!empty($_GET)){
     foreach ($_GET as $key => $value) {
-        if($key!== "session"){
+        if(!empty($_SESSION[$key])){
             setSessionVar($key, $value);
         }
     }
-
-
     $parsed = $_SESSION;
-
 }
+
 
 
 // Expose each session key as variable and handle livesearch entry
