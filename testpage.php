@@ -34,6 +34,10 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
                 <div class="col-md-4">
 
                     <h3>Testpage</h3>
+
+                    <h4>Icons</h4>
+                    Fontawesome 4.2:
+                    <div><i class="fa fa-bicycle"></i> Bicycle &nbsp;&nbsp;<i class="fa fa-wifi"></i> WiFi</div>
                     <br>
                     <h4>Typeahead</h4>
                     <span class="form">
