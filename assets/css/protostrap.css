@@ -611,6 +611,12 @@ table.table.noTopBorder tr:first-Child td{
     border-top: none;
 }
 
+.
+@media print {
+    .pageBreak {page-break-after: always;}
+}
+
+
 /* Fake Google Search */
 .googleSearchfield {
     border-color: none;
@@ -700,3 +706,5 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
 .flt, .flt u, a.fl {
     text-decoration: none;
 }
+
+
