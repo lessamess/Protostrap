@@ -18,8 +18,6 @@
 
                         <br>
 
-
-
                         <button type='submit' class='btn-block btn btn-primary'>Sign in</button>
                     </form>
                 </span>
