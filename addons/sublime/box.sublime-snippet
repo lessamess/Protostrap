@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[ box("${1}", "${2:info}", "${3:inherit}" )]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>box</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Alert Protostrap PS</description>
+</snippet>

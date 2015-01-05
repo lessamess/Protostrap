@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[<?php if (\$${2:key} == ${3:true}){ ?>
+
+<?php  \} ${1:else \{ ?>
+
+<?php  \}}?>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>psif</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>If Statement Protostrap PS</description>
+</snippet>
