@@ -10,9 +10,9 @@
             <div class="row">
                 <span class="col-xs-12 col-md-3">
                     <form action='<?php echo $loginaction ;?>' method='post' id="loginform">
-                        <div class="form-group"><input id="login" name='login' class='form-control' type='text' placeholder='Username'></div>
+                        <div class="form-group"><input id="login" name='login' class='form-control' type='text' placeholder='Username' autofocus></div>
                         <div class="input-group">
-                              <input type="password" class="form-control" name="" placeholder="Password">
+                              <input type="password" class="form-control" name="" placeholder="Password" >
                               <span class="input-group-addon passwordToggle"><i class="fa fa-square-o"></i> Show</span>
                         </div>
 
