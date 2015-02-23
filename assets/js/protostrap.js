@@ -204,4 +204,9 @@
                 $("." + $(this).data("class")).prop('checked',$(this).prop('checked'));
         });
 
+
+        $(".selectOnClick").focus(function() {
+            $(this).select();
+        });
+
     })
