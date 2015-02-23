@@ -1,6 +1,5 @@
 <?php
 $roles = $GLOBALS['roles'];
-$livesearch = $GLOBALS['livesearch'];
 $brand = $GLOBALS['brand'];
 $application = $GLOBALS['application'];?>
 
