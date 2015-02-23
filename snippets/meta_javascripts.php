@@ -58,6 +58,9 @@
     <!-- Sortable -->
     <script >  <?php include($csd."/../assets/js/jquery-sortable.min.js");?> </script>
 
+    <!-- Hotkeys -->
+    <script >  <?php include($csd."/../assets/js/jquery.hotkeys.js");?> </script>
+
     <!-- Fastclick -->
     <script >  <?php include($csd."/../assets/js/fastclick.min.js");?> </script>
 

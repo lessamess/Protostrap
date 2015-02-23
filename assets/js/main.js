@@ -23,6 +23,15 @@
         });
 
 
+        $(document).bind('keydown','alt+r', function(){
 
+            var url = window.location.href;
+            var get = "session_destroy=true";
+            var start = "?";
+            if (url.indexOf("?") >= 0){
+                start = "&";
+            }
+            window.location.href = url+start+get;
+        });
 
     })
