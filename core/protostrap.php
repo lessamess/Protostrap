@@ -28,10 +28,11 @@ $GLOBALS["lastUniqueId"] = 1;
 // *FAKE* Login/Logout
 $loggedIn = false ;
 $justLoggedIn = false;
+$showLoginError = false;
 
 if (!empty($_POST['login'])){
     if(strtolower($_POST['login']) == "fail") {
-        $showLoginError = "true";
+        $showLoginError = true;
     } else {
 
         setcookie("loggedIn", $_POST['login']);
@@ -45,8 +46,8 @@ if (!empty($_COOKIE['loggedIn'])){
 }
 
 
+$loginWith = $config['loginWith'];
 if($loggedIn){
-    $loginWith = $config['loginWith'];
     $userExists = false;
     foreach ($users as $user){
         if($loggedIn == $user[$loginWith]){
@@ -67,20 +68,21 @@ if($loggedIn){
             die();
         }
 
-        $activeUser = $users[$config['defaultUser']];
+        setUserVars($users[$config['defaultUser']]);
 
-        $username = $activeUser['username'];
-        $usermail = $activeUser['email'];
-        $userrole = $activeUser ['role'];
-        $userpermissions = $roles[$userrole]['permissions'];
     } else {
-        $activeUser = $userExists;
-        $username = $userExists['username'];
-        $usermail = $userExists['email'];
-        $userrole = $userExists['role'];
-        $userpermissions = $roles[$userrole]['permissions'];
+        setUserVars($userExists);
+
     }
 }
+
+if(!empty($_GET['deeplink']) && !empty($_GET['user'])){
+        setUserVars($users[$_GET['user']]);
+        setcookie("loggedIn", $activeUser[$loginWith]);
+        $loggedIn = trim($activeUser[$loginWith]);
+        $justLoggedIn = true;
+    }
+
 
 
 
@@ -89,12 +91,25 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
     $loggedIn = false;
     $justLoggedIn = false;
     session_destroy();
-    header("Location: http://" . $_SERVER["HTTP_HOST"] );
-    die;
+    if(empty($_POST['noredirect']) AND empty($_GET['noredirect'])){
+        header("Location: index.php" );
+        die;
+    }
+
 }
 
 // Generate a unique Id that can be referenced to
 // This is handy in constructs like collapsibles, so you dont have to worry about id juggling
+
+function setUserVars($user){
+        $GLOBALS['activeUser'] = $user;
+        $GLOBALS['username'] = $user['username'];
+        $GLOBALS['usermail'] = $user['email'];
+        $GLOBALS['userrole'] = $user ['role'];
+        $GLOBALS['userpermissions'] = $GLOBALS['roles'][$user ['role']]['permissions'];
+}
+
+
 
 function getUniqueId($param = "lastUniqueId"){
     if(empty($GLOBALS[$param])){
@@ -219,6 +234,20 @@ function removeSpreadsheetData(){
         return;
     }
     file_put_contents("../assets/data/dataFromSpreadsheets.yml", "");
+}
+
+function getDeeplink(){
+    $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $start = "?";
+    $user = "";
+    if(strpos($url,"?")) {
+        $start = "&";
+    }
+    if(!empty($GLOBALS['activeUser'])){
+        $user = "&userrole=".$GLOBALS['userrole']."&user=".$GLOBALS['activeUser']['id'];
+    }
+    return $url.$start."deeplink=true".$user;
+
 }
 
 
