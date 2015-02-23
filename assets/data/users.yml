@@ -1,6 +1,5 @@
 users:
-  livesearch:
-    url: user.php
+  addId: true
   1:
     fullName: Sara Default-User
     email: one@company.com

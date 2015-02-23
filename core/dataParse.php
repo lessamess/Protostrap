@@ -66,8 +66,7 @@ if(!empty($_GET)){
 
 
 // Expose each session key as variable and handle livesearch entry
-$livesearch = "";
-$livesearchKeys = array("name", "title");
+
 $mykeys = array();
 foreach ($parsed as $key => $item){
     $$key = $item;
@@ -85,6 +84,7 @@ foreach ($parsed as $key => $item){
                     continue;
                 }
 
+        $addId = false;
         foreach($$key as $subkey => $var){
 
             if(!empty($var[0])){
@@ -97,52 +97,40 @@ foreach ($parsed as $key => $item){
                     ${$key}[$subkey] = $tempvar;
                 }
             }
+            switch ($subkey){
+                case 'addId':
+                    $addId = true;
+                break;
+                default:
+                    if(is_array($var)){
 
-            if($subkey === "livesearch") {
-                $url = ${$key}[$subkey]['url'];
-                unset(${$key}[$subkey]);
-            } else {
-                if(is_array($var)){
+                        // Add an id if it is an associative array
+                        if(array_values($var) != $var && $addId == true){
+                            ${$key}[$subkey]['id'] = $subkey;
+                            unset(${$key}['addId']);
+                        };
 
-                    // Add an id if it is an associative array
-                    if(array_values($var) != $var && !empty($var['addId'])){
-                        ${$key}[$subkey]['id'] = $subkey;
-                        unset(${$key}[$subkey]['addId']);
-                    };
+                        foreach ($var as $vkey => $v){
 
-                    if($subkey)
+                            if(!empty($v[0])){
 
-                    // Build Livesearch
-                    foreach ($livesearchKeys as $lsKey){
-                        if(!empty(${$key}[$subkey][$lsKey])){
-                            $livesearch .= "{value: '". addslashes(${$key}[$subkey][$lsKey]) . "', url: '" . $url ."?id=" . $subkey . "'},";
-                        }
-                    }
-
-                    foreach ($var as $vkey => $v){
-
-                        if(!empty($v[0])){
-
-                            if($v[0] == 'parse'){
-                                $mykeys[]= $vkey;
-                                if(!empty($v[2])){
-                                   $tempvar = $v[1]($v[2]);
-                                } else {
-                                   $tempvar =  $v[1]();
+                                if($v[0] == 'parse'){
+                                    $mykeys[]= $vkey;
+                                    if(!empty($v[2])){
+                                       $tempvar = $v[1]($v[2]);
+                                    } else {
+                                       $tempvar =  $v[1]();
+                                    }
+                                    ${$key}[$subkey][$vkey] = $tempvar;
                                 }
-                                ${$key}[$subkey][$vkey] = $tempvar;
                             }
                         }
                     }
-                }
+                break;
             }
-
         }
     }
 }
-$livesearch = substr($livesearch, 0, -1);
-
-
 
 
 
