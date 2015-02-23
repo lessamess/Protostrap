@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[<button class="btn  btn-${1:primary}">${2:$TM_SELECTED_TEXT}</button>]]></content>
+    <content><![CDATA[<button class="btn  btn-${1:primary}">${2:Label}${3:$TM_SELECTED_TEXT}</button>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>psbtn</tabTrigger>
     <!-- Optional: Description to show in the menu -->
