@@ -39,6 +39,7 @@ if(isset($_SESSION['application'])){
     // }
 
     $_SESSION = $parsed;
+    $_SESSION['prototype'] = $csd;
 }
 
 // Handle datachanges
