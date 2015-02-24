@@ -4,6 +4,9 @@ session_start();
 //current script directory
 $csd = dirname(__FILE__);
 
+if(empty($_SESSION['prototype'])){
+    $_SESSION['prototype'] = "";
+}
 if(!empty($_GET['session_destroy']) OR !empty($forceLoadData) OR $_SESSION['prototype'] != $csd){
     session_destroy();
     session_start();
