@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[<span class="form">
+                        <!-- Typeahead
+                             Change Data in assets/js/main.js
+                             Documentation: https://github.com/bassjobsen/Bootstrap-3-Typeahead -->
+                        <input type="text" class="form-control typeahead" name="mytypeahead" placeholder="Typeahead (Try: foo)">
+                    </span>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>typeahead</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Typeahead Protostrap PS</description>
+</snippet>
