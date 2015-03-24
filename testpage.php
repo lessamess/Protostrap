@@ -83,6 +83,10 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
                               <input type="password" class="form-control" name="" placeholder="Password">
                               <span class="input-group-addon passwordToggle"><i class="fa fa-square-o"></i> Show</span>
                     </div>
+                    <br><br>
+                    <h4>Masked Input</h4>
+                    Social Security Number:
+                    <input type="text" class="form-control" id="socialsecurity" value="" placeholder="__-__-____" >
 
                 </div>
 

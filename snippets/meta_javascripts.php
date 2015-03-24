@@ -58,6 +58,9 @@
     <!-- Sortable -->
     <script >  <?php include($csd."/../assets/js/jquery-sortable.min.js");?> </script>
 
+    <!-- Masked input -->
+    <script >  <?php include($csd."/../assets/js/jquery.maskedinput.min.js");?> </script>
+
     <!-- Hotkeys -->
     <script >  <?php include($csd."/../assets/js/jquery.hotkeys.js");?> </script>
 

@@ -34,4 +34,6 @@
             window.location.href = url+start+get;
         });
 
+        $("#socialsecurity").mask("99-99-9999",{placeholder:"__-__-____"});
+
     })
