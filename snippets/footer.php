@@ -4,7 +4,7 @@
     <br>
         <a href="?session_destroy=true">Renew Prototype Session</a>&nbsp;&nbsp;|&nbsp;&nbsp;
         <?php foreach ($languages as $key => $language){ ?>
-            <a href="?session=true&lang=<?php echo $key ;?>"><?php echo $language ;?></a>&nbsp;&nbsp;
+            <a href="?switchLanguage=<?php echo $key ;?>"><?php echo $language ;?></a>&nbsp;&nbsp;
         <?php } ?>
     <br>
     <a class="" data-toggle="collapse" data-target="#collapse<?php echo getUniqueId();?>">Deeplink</a>

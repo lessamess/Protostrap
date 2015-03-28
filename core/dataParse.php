@@ -65,7 +65,6 @@ if(!empty($_GET)){
 }
 
 
-
 // Expose each session key as variable and handle livesearch entry
 
 $mykeys = array();
@@ -134,6 +133,18 @@ foreach ($parsed as $key => $item){
 }
 
 
+// Handle language
+if(!empty($_COOKIE[$applicationKey."_language"])){
+    $language = $_COOKIE[$applicationKey."_language"];
+}
+
+
+// Handle Language Switch
+if(!empty($_GET['switchLanguage'])){
+    $language = $_GET['switchLanguage'];
+    //persist into cookie
+    setcookie($applicationKey."_language",$_GET['switchLanguage']);
+}
 
 function setSessionVar($key, $item){
     $el = explode('.', $key);

@@ -35,6 +35,9 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
 
                     <h3>Testpage</h3>
 
+                    <h4>Translations</h4>
+                    Active Language: <?php echo $languages[$language] ;?><br><br>
+
                     <h4>Icons</h4>
                     Fontawesome 4.3:
                     <div><i class="fa fa-user-plus"></i> Add User &nbsp;&nbsp;<i class="fa fa-bed"></i> Bed</div>
