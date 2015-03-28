@@ -8,18 +8,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!-- Le styles -->
-    <link href="<?php echo $pathToAssets ;?>assets/css/combined.css?time=<?php time();?>" rel="stylesheet">
+    <link href="<?php echo $pathToAssets ;?>assets/css/combined.css?time=<?php echo time();?>" rel="stylesheet">
 
     <!-- Uncomment the following line if having the full width of the screen is needed
-    <link href="<?php echo $pathToAssets ;?>assets/css/extendBootstrapGrid.min.css?time=<?php time();?>" rel="stylesheet">
+    <link href="<?php echo $pathToAssets ;?>assets/css/extendBootstrapGrid.min.css?time=<?php echo time();?>" rel="stylesheet">
     -->
 
-    <link href="<?php echo $pathToAssets ;?>assets/css/main.css?time=<?php time();?>" rel="stylesheet">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link href="<?php echo $pathToAssets ;?>assets/css/main.css?time=<?php echo time();?>" rel="stylesheet">
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="<?php echo $pathToAssets ;?>assets/ico/favicon.ico?<?php echo time() ;?>">
