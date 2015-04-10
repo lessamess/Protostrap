@@ -10,75 +10,48 @@ body {
     padding-right: 10px;
 }
 
+
 /* navbar*/
 
 .navbar-collapse {
     max-height: none;
 }
 
+
+/* Flexbox */
+
+.flex-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.flex-item {
+    -webkit-flex: 1 auto;
+    flex: 1 auto;
+}
+
 /**
  * iOS-TABBAR Styles
  **/
 
-.tabbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    height: 49px;
-    z-index: 100;
-}
-.tabbar.tabbar-badges {
-    background: none;
-    z-index: 200;
-}
-.tabbar-inner {
-    width: 320px;
-    margin: auto;
-}
 
- .tabbar-tab {
-    color: #ccc;
-    display: block;
-    float: left;
-    height: 49px;
-    padding: 0;
-    font-size: 12px;
-    text-align: center;
-}
-
-.tabbar-tab.active{
-    color: #11aef7;
-    background-color: #444;
-}
-
-.tabbar-inner div{
-    width: 80px;
-}
-
-.tabbar-inner.tabs-5 div{
-    width: 62px;
-}
-
-.tab-icon {
-    font-size: 2em;
-    line-height: 1.2em;
-    vertical-align: bottom;
-}
-
-.badge-1 {
-    background: url(../img/badge-1.png) 32px 0 no-repeat;
-}
-
-.badge-2 {
-    background: url(../img/badge-2.png) 32px 0 no-repeat;
-}
 
 @media(min-width:481px) {
-    .tabbar{
+    .iosTabbar{
         display: none;
     }
 }
+
+@media(max-width:481px) {
+
+    body.iosTabbar {
+        margin-bottom: 60px;
+    }
+
+}
+
 /*--------------------*/
 
 /**
