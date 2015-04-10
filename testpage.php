@@ -8,7 +8,6 @@ include('core/protostrap.php');
 
 /** Define VALUES  valid for this file **/
 $activeNavigation = "one";
-
 $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4YW-a0e1bOS9cU4sZpjcGHzSu_F08xgFHzg/edit?usp=sharing", "firmen");
 
 
@@ -34,9 +33,6 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
                 <div class="col-md-4">
 
                     <h3>Testpage</h3>
-
-                    <h4>Translations</h4>
-                    Active Language: <?php echo $languages[$language] ;?><br><br>
 
                     <h4>Icons</h4>
                     Fontawesome 4.3:
@@ -86,10 +82,6 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
                               <input type="password" class="form-control" name="" placeholder="Password">
                               <span class="input-group-addon passwordToggle"><i class="fa fa-square-o"></i> Show</span>
                     </div>
-                    <br><br>
-                    <h4>Masked Input</h4>
-                    Social Security Number:
-                    <input type="text" class="form-control" id="socialsecurity" value="" placeholder="__-__-____" >
 
                 </div>
 

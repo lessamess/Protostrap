@@ -1,63 +1,49 @@
+<?php
+$navKeys = ["home","tagebuch","add","essen","fitness"];
 
-<!--
-    ** TABS **
-    UTF8 Characters from http://copypastecharacter.com
--->
-    <div class="tabbar">
-      <div class="tabbar-inner tabs-5">
-            <a href="./index.php">
-                <div  class="tabbar-tab  <?php echo $tabClasses[0];?> " >
-                    <span class="tab-icon">★</span><br>
-                    First
-                </div>
-            </a>
-            <a href="./documentation.php">
-                <div class="tabbar-tab <?php echo $tabClasses[1];?>" >
-                    <span class="tab-icon">❄</span><br>
-                    Second
-                </div>
-            </a>
-            <a href="./three.php">
-                <div class="tabbar-tab <?php echo $tabClasses[2];?>" >
-                    <span class="tab-icon">❤</span><br>
-                    Third
-                </div>
-            </a>
-            <a href="./four.php">
-                <div class="tabbar-tab <?php echo $tabClasses[3];?>" >
-                    <span class="tab-icon">↔</span><br>
-                    Fourth
-                </div>
-            </a>
-            <a href="./account.php">
-                <div class="tabbar-tab <?php echo $tabClasses[4];?>" >
-                    <span class="tab-icon">♛</span><br>
-                    Account
-                </div>
-            </a>
-      </div>
-    </div>
+// LEAVE ALONE
+$tabbarClasses = array_fill(0, 10, '');
+foreach ($navKeys as $key => $item){
+    if($item == $activeNavigation) {
+        $tabbarClasses[$key] = "active";
+    }
+ }
+?>
 
-<!--
- ** Badges **
-    Add or remove classes badge-1 or badge-2 to the badgeboxes
- -->
-    <div class="tabbar tabbar-badges">
-      <div class="tabbar-inner tabs-5">
-            <a href="./index.php">
-                <div id="badgebox-1" class="tabbar-tab " ></div>
-            </a>
-            <a href="./documentation.php">
-                <div id="badgebox-2" class="tabbar-tab " ></div>
-            </a>
-            <a href="./three.php">
-                <div id="badgebox-3" class="tabbar-tab badge-1" ></div>
-            </a>
-            <a href="./four.php">
-                <div id="badgebox-4" class="tabbar-tab " ></div>
-            </a>
-            <a href="./account.php">
-                <div id="badgebox-5" class="tabbar-tab badge-2" ></div>
-            </a>
-      </div>
+
+
+<header  role="banner" class="iosTabbar navbar navbar-default navbar-fixed-bottom ">
+<div class="micropadding"></div>
+  <div class="flex-container ">
+    <div class="flex-item align-center" >
+        <span class="tabbar-badge">1</span>
+        <a href="index.php" class="align-center <?php echo $tabbarClasses[0] ;?>">
+            <span class="tabbar-icon"><i class="fa fa-2x fa-home"></i></span>   <span class="tabbar-label">One</span>
+        </a>
     </div>
+    <div class="flex-item align-center" >
+        <span class="tabbar-badge">1</span>
+        <a href="tagebuch.php" class="<?php echo $tabbarClasses[1] ;?>">
+            <i class="fa fa-2x fa-book"></i>   <span class="tabbar-label">Two</span>
+        </a>
+    </div>
+    <div class="flex-item align-center" >
+        <span class="tabbar-badge">1</span>
+        <a href="add.php" class="<?php echo $tabbarClasses[2] ;?>">
+            <i class="fa fa-2x fa-plus"></i>   <span class="tabbar-label">Three</span>
+        </a>
+    </div>
+    <div class="flex-item align-center" >
+        <span class="tabbar-badge">1</span>
+        <a href="essen.php" class="<?php echo $tabbarClasses[3] ;?>">
+            <i class="fa fa-2x fa-coffee"></i>   <span class="tabbar-label">Four</span>
+        </a>
+    </div>
+    <div class="flex-item align-center" >
+        <span class="tabbar-badge">1</span>
+        <a href="fitness.php" class="<?php echo $tabbarClasses[4] ;?>">
+            <i class="fa fa-2x fa-futbol-o"></i><span class="tabbar-label">Five</span>
+        </a>
+       </div>
+  </div>
+</header>
