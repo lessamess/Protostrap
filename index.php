@@ -26,7 +26,7 @@ $activeNavigation = "one";
 // uncomment the following function to force user to be logged in
 // forceLogin(); ?>
 
-    <body class="header-fixed">
+    <body class="header-fixed ">
         <div class="container">
 
             <?php
@@ -35,7 +35,7 @@ $activeNavigation = "one";
 
             <h4 class="text-muted"> <i class="fa fa-level-down fa-rotate-180"></i> Change this in snippets/navBarTop.php </h4>
             <br><br>
-            <div class="jumbotron">
+            <div class="">
                 <h1>READY.</h1>
                 <p>
                     <br>
@@ -49,6 +49,7 @@ $activeNavigation = "one";
             <h4 class="text-muted"> <i class="fa fa-level-up fa-rotate-180"></i> Change this in snippets/footer.php </h4>
             <?php // this includes the footer
             include('./snippets/footer.php');?>
+
 
         </div> <!-- /container -->
 

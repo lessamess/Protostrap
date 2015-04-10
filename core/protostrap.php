@@ -104,8 +104,6 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
 
 }
 
-// Generate a unique Id that can be referenced to
-// This is handy in constructs like collapsibles, so you dont have to worry about id juggling
 
 function setUserVars($user){
         $GLOBALS['activeUser'] = $user;
@@ -116,6 +114,8 @@ function setUserVars($user){
 }
 
 
+// Generate a unique Id that can be referenced to
+// This is handy in constructs like collapsibles, so you dont have to worry about id juggling
 
 function getUniqueId($param = "lastUniqueId"){
     if(empty($GLOBALS[$param])){
@@ -123,6 +123,7 @@ function getUniqueId($param = "lastUniqueId"){
     }
     return $GLOBALS[$param] = $GLOBALS[$param] + 1;
 }
+
 
 function getlabel($style, $label){
     echo "<span class=\"label label-{$style}\">{$label}</span>";
