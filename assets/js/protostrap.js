@@ -57,6 +57,12 @@
     // Switch
     $(".switch").bootstrapSwitch();
 
+    function updateSessionVar(type, varname, val){
+        $.get('core/updateSessionVar.php?type=' + type + '&varname=' + varname + '&val=' + val, function(data){
+            return;
+        });
+    }
+
 
     $(function(){
 
