@@ -58,7 +58,7 @@ $activeNavigation = "one";
                 <?php } ?>
                 <h3>Data</h3>
                 <div class="well">
-                    <a href="index.php?session_destroy=true" class="btn btn-lg btn-link "><i class="fa fa-refresh"></i> Renew Prototype Session</a><br>
+                    <a href="index.php?session_renew=true" class="btn btn-lg btn-link "><i class="fa fa-refresh"></i> Renew Prototype Session</a><br>
 
                     <?php
                     $tmpClass = "";
