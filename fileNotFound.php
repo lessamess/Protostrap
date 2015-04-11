@@ -9,7 +9,7 @@ include('core/protostrap.php');
 
 
 ?><!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
 
     <title>File not Found - <?php echo $application . " - " . $brand ;?></title>
