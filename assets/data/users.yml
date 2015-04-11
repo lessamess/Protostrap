@@ -1,9 +1,9 @@
 users:
   addId: true
   1:
-    fullName: Sara Default-User
+    fullName: Sara Default
     email: one@company.com
-    username: sammy
+    username: sara
     role: user
   2:
     fullName: Mara Admin
