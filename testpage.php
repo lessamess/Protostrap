@@ -112,6 +112,17 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
             <br>
             <div class="row">
                 <div class="col-md-12">
+                    <h4>Translations</h4>
+                    Key: thisIsAtest <br>
+
+                    En: <?php echo __("thisIsAtest","en"); ?> <br>
+                    De: <?php echo __("thisIsAtest","de"); ?> <br>
+                    Fr: <?php echo __("thisIsAtest","fr"); ?> (Not available) <br>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
                     <h4>Filtertable</h4>
                     <div class="table-responsive table-responsive-maxheight">
                         <?php

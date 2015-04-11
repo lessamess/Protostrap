@@ -33,6 +33,9 @@ translations:
   save:
     de: Speichern
     en: Save
+  thisIsAtest:
+    de: Das ist ein Test.
+    en: This is a test.
   startHere:
     de: Hier starten.
     en: Start Here.
