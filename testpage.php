@@ -123,6 +123,12 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
             <br>
             <div class="row">
                 <div class="col-md-12">
+                    <?php include ('./snippets/loginForm.php'); ?>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
                     <h4>Filtertable</h4>
                     <div class="table-responsive table-responsive-maxheight">
                         <?php
