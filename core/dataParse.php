@@ -257,7 +257,7 @@ function normalize ($string) {
 
 function get_spreadsheetData($url, $var){
 
-    if(empty($_GET['session_destroy']) AND !empty($_SESSION[$var])){
+    if(empty($_GET['session_renew']) AND !empty($_SESSION[$var])){
         return $_SESSION[$var];
     }
 

@@ -1,8 +1,8 @@
 <footer>
     <hr>
-    <p>&copy; <?= $brand;?> &nbsp;&nbsp; <span class="text-muted"><i class="fa fa-long-arrow-left"></i> This is data that can be changed in assets/data/data.yml</span></p>
+    <p>&copy; <?php echo  $brand;?> &nbsp;&nbsp; <span class="text-muted"><i class="fa fa-long-arrow-left"></i> This is data that can be changed in assets/data/data.yml</span></p>
     <br>
-        <a href="?session_destroy=true">Renew Prototype Session</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="?session_renew=true">Renew Prototype Session</a>&nbsp;&nbsp;|&nbsp;&nbsp;
         <?php foreach ($languages as $key => $language){ ?>
             <a href="?switchLanguage=<?php echo $key ;?>"><?php echo $language ;?></a>&nbsp;&nbsp;
         <?php } ?>

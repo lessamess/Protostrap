@@ -95,7 +95,7 @@ function dynForm($dynForm, $id = false){
 
 // form tag
         if($fullForm){?>
-            <form method="post" action="<?= $postAction;?>" class="form-horizontal">
+            <form method="post" action="<?php echo  $postAction;?>" class="form-horizontal">
         <?php }
 
 // Hidden fields (only for new entries)
@@ -125,7 +125,7 @@ function dynForm($dynForm, $id = false){
                     if(is_array($val)){
                          $val = "arrayUnserialize:" . serialize($val);
                     }?>
-                    <input type="hidden" name="<?= $formSessionName;?>" value="<?= $val;?>">
+                    <input type="hidden" name="<?php echo  $formSessionName;?>" value="<?php echo  $val;?>">
                 <?php
                 }
 
@@ -140,7 +140,7 @@ function dynForm($dynForm, $id = false){
 
                         // show edit link
                         if($showList && $disableEdit == false){ ?>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" class="dynForm " data-toggle-class="<?= $dynForm['id'];?>Form "><small><i class="icon-pencil"></i>Edit</small></a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" class="dynForm " data-toggle-class="<?php echo  $dynForm['id'];?>Form "><small><i class="icon-pencil"></i>Edit</small></a>
                         <?php }?>
                     </legend>
         <?php } ?>
@@ -190,14 +190,14 @@ function dynForm($dynForm, $id = false){
             // show <th> cell
                         ?>
                         <tr>
-                            <th class="span3 align-left "><?= $field['label'];?>
+                            <th class="span3 align-left "><?php echo  $field['label'];?>
 
                             </th>
 
                             <?php
             // show List value
                     if($showList){?>
-                            <td class="<?= $tempId;?>Form"><?= $field['value'];?></td>
+                            <td class="<?php echo  $tempId;?>Form"><?php echo  $field['value'];?></td>
 
                             <?php
 
@@ -205,7 +205,7 @@ function dynForm($dynForm, $id = false){
 
             // show form field
                             ?>
-                            <td class="<?= $tempId;?>Form <?= $formFieldStile?>">
+                            <td class="<?php echo  $tempId;?>Form <?php echo  $formFieldStile?>">
 
 
                                 <?php
@@ -227,9 +227,9 @@ function dynForm($dynForm, $id = false){
                             <tr>
                                 <th class="span3 align-left ">&nbsp;</th>
                                 <?php if($showList){ ?>
-                                <td class="<?= $tempId;?>Form "></td>
+                                <td class="<?php echo  $tempId;?>Form "></td>
                                 <?php } ?>
-                                <td class="<?= $tempId;?>Form <?= $formFieldStile?>">
+                                <td class="<?php echo  $tempId;?>Form <?php echo  $formFieldStile?>">
                                     <input type="submit" class="btn btn-primary" value="Save">
                                     <a href="javascript:history.back();" class="btn ">Cancel</a>
                                 </td>
@@ -270,7 +270,7 @@ function getFieldMarkup($field, $fillVals, $dynForm, $item ){
             if (empty($field['required'])) {
                 if ($field['value'] == "None"){$checked = "checked=\"checked\"";} ?>
                     <label class="radio">
-                        <input type="radio" name="<?= $field['formSessionName'] ;?>" id="optionsRadios1" value="" <?= $checked;?>>
+                        <input type="radio" name="<?php echo  $field['formSessionName'] ;?>" id="optionsRadios1" value="" <?php echo  $checked;?>>
                         None
                     </label>
             <?php }
@@ -280,14 +280,14 @@ function getFieldMarkup($field, $fillVals, $dynForm, $item ){
                 $checked = "";
                 if ($field['value'] == $radioVal['name']){$checked = "checked=\"checked\"";} ?>
                     <label class="radio">
-                        <input type="radio" name="<?= $field['formSessionName'] ;?>" id="optionsRadios1" value="<?= $radioKey;?>" <?= $checked;?>>
-                        <?= $radioVal['name'];?>
+                        <input type="radio" name="<?php echo  $field['formSessionName'] ;?>" id="optionsRadios1" value="<?php echo  $radioKey;?>" <?php echo  $checked;?>>
+                        <?php echo  $radioVal['name'];?>
                     </label>
               <?php }
               if (!empty($field['addOption'])) { ?>
               <label class="radio">
-                    <input type="radio" name="<?= $field['formSessionName'] ;?>" id="optionsRadios1" value="<?= $radioKey;?>">
-                    <input type="text" placeholder="Add new <?= $field['label']?>">
+                    <input type="radio" name="<?php echo  $field['formSessionName'] ;?>" id="optionsRadios1" value="<?php echo  $radioKey;?>">
+                    <input type="text" placeholder="Add new <?php echo  $field['label']?>">
                 </label>
 
             <?php }
@@ -301,14 +301,14 @@ function getFieldMarkup($field, $fillVals, $dynForm, $item ){
                 $checked = "";
                 if ($field['value'] == $radioVal['name']){$checked = "checked=\"checked\"";} ?>
                     <label class="checkbox">
-                        <input type="checkbox" name="<?= $field['formSessionName'] ;?>" id="" value="<?= $radioKey;?>" <?= $checked;?>>
-                        <?= $radioVal['name'];?>
+                        <input type="checkbox" name="<?php echo  $field['formSessionName'] ;?>" id="" value="<?php echo  $radioKey;?>" <?php echo  $checked;?>>
+                        <?php echo  $radioVal['name'];?>
                     </label>
               <?php }
               if (!empty($field['addOption'])) { ?>
               <label class="checkbox">
-                    <input type="checkbox" name="<?= $field['formSessionName'] ;?>" id="" value="<?= $radioKey;?>">
-                    <input type="text" placeholder="Add new <?= $field['label']?>">
+                    <input type="checkbox" name="<?php echo  $field['formSessionName'] ;?>" id="" value="<?php echo  $radioKey;?>">
+                    <input type="text" placeholder="Add new <?php echo  $field['label']?>">
                 </label>
 
             <?php }
@@ -320,28 +320,28 @@ function getFieldMarkup($field, $fillVals, $dynForm, $item ){
             echo "<select name=\"" . $field['formSessionName']  . "\">";
             $selected = "";
             if ($field['value'] == "None"){$selected = " selected";} ?>
-                    <option <?= $selected;?>>None</option>
+                    <option <?php echo  $selected;?>>None</option>
             <?php
             Foreach($GLOBALS[$field['isForeignKey']] as $selectKey => $selectVal ) {
                 $selected = "";
                 if ($field['value'] == $selectVal['name']){$selected = " selected";} ?>
-                     <option value="<?= $selectKey; ?>"<?= $selected;?>><?= $selectVal['name'];?></option>
+                     <option value="<?php echo  $selectKey; ?>"<?php echo  $selected;?>><?php echo  $selectVal['name'];?></option>
               <?php }
             echo "</select>";
 
             break;
         case 'textarea':?>
-            <textarea name="<?= $field['formSessionName'] ;?>" rows="10" class="input-block-level" wrap="SOFT"><?= $field['value'];?></textarea>
+            <textarea name="<?php echo  $field['formSessionName'] ;?>" rows="10" class="input-block-level" wrap="SOFT"><?php echo  $field['value'];?></textarea>
            <?php
             break;
         case 'date':?>
 
-            <input name="<?= $field['formSessionName'] ;?>" type="text" class="" value="<?= $field['value'];?>" id="dpd1" data-date-format="<?= $GLOBALS['config']['datepickerFormat'];?>" >
+            <input name="<?php echo  $field['formSessionName'] ;?>" type="text" class="" value="<?php echo  $field['value'];?>" id="dpd1" data-date-format="<?php echo  $GLOBALS['config']['datepickerFormat'];?>" >
             <?php
             break;
         case 'date-dpd2':?>
 
-            <input  name="<?= $field['formSessionName'] ;?>" type="text" class="" value="<?= $field['value'];?>" id="dpd2" data-date-format="<?= $GLOBALS['config']['datepickerFormat'];?>">
+            <input  name="<?php echo  $field['formSessionName'] ;?>" type="text" class="" value="<?php echo  $field['value'];?>" id="dpd2" data-date-format="<?php echo  $GLOBALS['config']['datepickerFormat'];?>">
             <?php
             break;
         case 'typeahead':
@@ -362,27 +362,27 @@ function getFieldMarkup($field, $fillVals, $dynForm, $item ){
 
 
                 ?>
-                <input type="hidden" id="<?= $field['name']?>-fkTypeField" name="<?= $fktype?>" value="<?= $fktypevalue?>"/>
-                <input type="hidden" id="<?= $field['name']?>-fkValue" name="<?= $fkvalue;?>" value="<?= $fkvaluevalue?>"/>
+                <input type="hidden" id="<?php echo  $field['name']?>-fkTypeField" name="<?php echo  $fktype?>" value="<?php echo  $fktypevalue?>"/>
+                <input type="hidden" id="<?php echo  $field['name']?>-fkValue" name="<?php echo  $fkvalue;?>" value="<?php echo  $fkvaluevalue?>"/>
             <?php } ?>
 
             <input type="text"
-                   name="<?= $field['formSessionName'] ;?>"
-                    data-provide="select<?= ucfirst($field['name']);?>"
-                    class="input-medium select<?= ucfirst($field['name']);?> "
-                    value="<?= $field['value'];?>"
+                   name="<?php echo  $field['formSessionName'] ;?>"
+                    data-provide="select<?php echo  ucfirst($field['name']);?>"
+                    class="input-medium select<?php echo  ucfirst($field['name']);?> "
+                    value="<?php echo  $field['value'];?>"
                     placeholder="Search">
           <?php
             break;
         case 'password':?>
             <div class="input-append ">
-                        <input name='pass' class='passwordWithToggle ' type='<?= $field['type'] ;?>' placeholder='Password'>
+                        <input name='pass' class='passwordWithToggle ' type='<?php echo  $field['type'] ;?>' placeholder='Password'>
                         <span class="add-on passwordToggle"><i class="icon-check-empty"></i> Show</span>
                      </div>
             <?php
             break;
         default: ?>
-            <input id="<?= $fieldId;?>" type="<?= $field['type'] ;?>" placeholder="<?= $placeholder;?>" name="<?= $field['formSessionName'] ;?>"value="<?= $field['value'];?>">
+            <input id="<?php echo  $fieldId;?>" type="<?php echo  $field['type'] ;?>" placeholder="<?php echo  $placeholder;?>" name="<?php echo  $field['formSessionName'] ;?>"value="<?php echo  $field['value'];?>">
             <?php
              break;
         }

@@ -7,7 +7,7 @@ $csd = dirname(__FILE__);
 if(empty($_SESSION['prototype'])){
     $_SESSION['prototype'] = "";
 }
-if(!empty($_GET['session_destroy']) OR !empty($forceLoadData) OR $_SESSION['prototype'] != $csd){
+if(!empty($_GET['session_renew']) OR !empty($forceLoadData) OR $_SESSION['prototype'] != $csd){
     session_destroy();
     session_start();
 }
@@ -64,7 +64,7 @@ if($loggedIn){
     if(!$userExists) {
         if(!array_key_exists('defaultUser', $config)){
             echo "Error: <b>defaultUser</b> not defined in config.yml<br>";
-            echo "Add configuration and <a href='?session_destroy=true'>Renew PHP session</a> ";
+            echo "Add configuration and <a href='?session_renew=true'>Renew PHP session</a> ";
             die();
         }
 
@@ -87,16 +87,14 @@ if(!empty($_GET['deeplink']) && !empty($_GET['user'])){
         setcookie("loggedIn", $activeUser[$loginWith]);
         $loggedIn = trim($activeUser[$loginWith]);
         $justLoggedIn = true;
-    }
-
-
+}
 
 
 if (!empty($_POST['logout']) || !empty($_GET['logout'])){
     setcookie ("loggedIn", "", time() - 3600);
     $loggedIn = false;
     $justLoggedIn = false;
-    session_destroy();
+    session_renew();
     if(empty($_POST['noredirect']) AND empty($_GET['noredirect'])){
         header("Location: index.php" );
         die;
@@ -125,30 +123,15 @@ function getUniqueId($param = "lastUniqueId"){
 }
 
 
-function getlabel($style, $label){
-    echo "<span class=\"label label-{$style}\">{$label}</span>";
+function label($text, $class){
+    echo "<span class=\"label label-{$class}\">{$text}</span>";
 }
 
 function forceLogin(){
-
     if(!$GLOBALS['loggedIn']){
         $users = $GLOBALS['users'];
         include('snippets/forceLogin.php');
     }
-
-}
-
-function getNavclasses($navKeys, $activeNavigation){
-    if(empty($activeNavigation)){
-        die("You have to define a key for the active Navigation");
-    }
-    $navClasses = Array('','','','','','','','','','','','','','','','','','','','','','','','','');
-    foreach ($navKeys as $key => $item){
-        if($item == $activeNavigation) {
-            $navClasses[$key] = "active";
-        }
-     }
-     return $navClasses;
 }
 
 function showIf($string) {
@@ -179,16 +162,17 @@ function includeIf($roles, $file) {
 
 function setFromGet($var, $default = false){
     if(!empty($_GET[$var])){
-                $GLOBALS[$var] = $_GET[$var];
-            } else {
-                $GLOBALS[$var] = $default;
-            }
+        $GLOBALS[$var] = $_GET[$var];
+    } else {
+        $GLOBALS[$var] = $default;
+    }
 }
 
-function __($key){
+function __($key, $language = false){
     $translations = $GLOBALS['translations'];
-    $language = $GLOBALS['language'];
-
+    if($language == false){
+        $language = $GLOBALS['language'];
+    }
     if(!empty($translations[$key][$language])){
         return $translations[$key][$language];
     } else {
@@ -256,8 +240,6 @@ function getDeeplink(){
     return $url.$start."deeplink=true".$user;
 
 }
-
-
 
 include($csd.'/dynamic_form.php');
 include($csd.'/../functions_controller.php');
