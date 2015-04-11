@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[<div class="container flex-container ">
+    <div class="flex-item align-center" ></div>
+    <div class="flex-item align-center" ></div>
+    <div class="flex-item align-center" ></div>
+    <div class="flex-item align-center" ></div>
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>flexbox</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Flexbox Protostrap PS</description>
+</snippet>
