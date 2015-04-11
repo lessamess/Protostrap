@@ -25,7 +25,7 @@
                 <strong>User-Roles</strong><br>
                     Click the following to log in as:<br>
                     <?php foreach($users as $key => $user){ ?>
-                        <strong><a href="javascript:void(0);" class="loginUserselection" data-key="<?= $user['email'];?>"><?= $roles[$user['role']]['name']; ?></a></strong><br>
+                        <strong><a href="javascript:void(0);" class="loginUserselection" data-key="<?php echo  $user['email'];?>"><?php echo  $roles[$user['role']]['name']; ?></a></strong><br>
                         <?php }?>
                 </span>
             </div>

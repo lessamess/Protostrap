@@ -24,7 +24,7 @@ foreach ($navKeys as $key => $item){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><?= $brand;?></a>
+      <a class="navbar-brand" href="/"><?php echo  $brand;?></a>
     </div>
     <nav role="navigation" class="collapse navbar-collapse " id="headernav" >
       <ul class="nav navbar-nav">
@@ -60,7 +60,7 @@ foreach ($navKeys as $key => $item){
       </ul>
       <?php if(!empty($loggedIn)) { ?>
           <ul class="nav navbar-nav navbar-right">
-              <li class="" ><a href="" class="" ><i class="icon-user"></i> <?= $activeUser['fullName']; ?></a></li>
+              <li class="" ><a href="" class="" ><i class="icon-user"></i> <?php echo  $activeUser['fullName']; ?></a></li>
               <li>
 
                 <a href="index.php?logout=true">Logout</a>
