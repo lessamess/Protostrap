@@ -39,7 +39,7 @@ $activeNavigation = "one";
                 <h1>READY.</h1>
                 <p>
                     <br>
-                    Go to the <a href="ps-admin/">Admin Panel</a>
+                    Go to the <a href="core/">Admin Panel</a>
                     <br>
                     or <a href="http://protostrap.ch/" class="">Read the Documentation</a>
                 </p>
