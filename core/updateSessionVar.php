@@ -1,18 +1,18 @@
 <?php
-error_reporting(E_ALL);
-/** --- B A S E F U N C T I O N S ---
-    This file sets up project-wide things like authentication -
-    DO NOT REMOVE
-**/
-include('core/protostrap.php');
+include('protostrap.php');
 
 if(empty($_GET['type']) OR empty($_GET['varname']) OR empty($_GET['val'])){
     echo "Error: Missing Parameters";
     die();
 }
+
+if(empty($_SESSION[$_GET['varname']])){
+    echo "Error: Variable does not exist";
+    die();
+}
+
 $tmpType = $_GET['type'];
 $tmpVarname = $_GET['varname'];
-$tmpVar = $$tmpVarname;
 $tmpVal = $_GET['val'];
 
 switch ($tmpType) {
@@ -33,3 +33,4 @@ switch ($tmpType) {
         }
         break;
 }
+echo "Done.";
