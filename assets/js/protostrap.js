@@ -69,6 +69,8 @@
         // fastclick
         FastClick.attach(document.body);
 
+        addToHomescreen();
+
         // http://farhadi.ir/projects/html5sortable/
         $('.sortable').sortable();
 
@@ -190,9 +192,15 @@
         });
 
         // select Users to for easy Login
-        $(".loginUserselection").click(function() {
-            console.log("foo");
+        $(".loginUser").click(function() {
             $('#login').val($(this).attr("data-key"));
+            $('#loginform').submit();
+        });
+
+        $(".loginFirstUser").click(function() {
+            if($('#login').val().length == 0 ){
+                $('#login').val($(this).attr("data-key"));
+            }
             $('#loginform').submit();
         });
 
