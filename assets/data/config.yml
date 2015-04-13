@@ -1,58 +1,54 @@
+---
 config:
   datepickerFormat: dd.mm.yyyy
   defaultUser: 1
-  loginWith: email # username | email
+  loginWith: email
   assets:
-    bootstrap:
-      title: "Bootstrap Library"
-      load: 1
-      init: ""
     extendBootstrapGrid:
-      title: "Bootstrap Grid Extention CSS"
-      load: 1
-      init: ""
-    add2home:
-      title: "Add to Home-Screen"
-      load: 1
-      init: "addToHomescreen()"
+      title: Bootstrap Grid Extention CSS
+      load: 'false'
+      init:
     select:
-      title: "Bootstrap Select Plugin"
+      title: Bootstrap Select Plugin
       load: 1
       init: "$('.selectpicker').selectpicker()"
     switch:
-      title: "Bootstrap Switch Plugin"
+      title: Bootstrap Switch Plugin
       load: 1
-      init: "$(".switch").bootstrapSwitch()"
+      init: $(".switch").bootstrapSwitch()
     datepicker:
-      title: "Bootstrap Datepicker Plugin"
+      title: Bootstrap Datepicker Plugin
       load: 1
-      init: ""
+      init:
     file:
-      title: "Bootstrap File Input Plugin"
+      title: Bootstrap File Input Plugin
       load: 1
       init: "$('input[type=file]').bootstrapFileInput()"
     typeahead:
-      title: "Bootstrap Typeahead Plugin"
+      title: Bootstrap Typeahead Plugin
       load: 1
-      init: ""
+      init:
+    add2home:
+      title: Add to Home-Screen
+      load: 'false'
+      init: addToHomescreen()
     fastclick:
-      title: "Fastclick extentions"
-      load: 1
-      init: "FastClick.attach(document.body)"
+      title: Fastclick extentions
+      load: 'false'
+      init: FastClick.attach(document.body)
     sortable:
-      title: "jQuery Sortable Plugin"
+      title: jQuery Sortable Plugin
       load: 1
       init: "$('.sortable').sortable()"
     hotkeys:
-      title: "jQuery Hotkeys Plugin"
+      title: jQuery Hotkeys Plugin
       load: 1
-      init: ""
+      init:
     maskedinput:
-      title: "jQuery Masked Input Plugin"
+      title: jQuery Masked Input Plugin
       load: 1
-      init: ""
+      init:
     fontawesome:
-      title: "Fontawesome Icons"
+      title: Fontawesome Icons
       load: 1
-      init: ""
-
+      init:

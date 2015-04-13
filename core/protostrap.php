@@ -167,6 +167,10 @@ function writeCombined($config){
 
     readAsset("css", $config);
     readAsset("js", $config);
+    $yaml['config'] = $config;
+    $output = Spyc::YAMLDump($yaml);
+    file_put_contents("../assets/data/config.yml", $output);
+    //var_dump($output);
 }
 
 function readAsset($type, $config){
@@ -177,6 +181,9 @@ function readAsset($type, $config){
     if($type == "js"){
         $combined .= file_get_contents('assets/' . $type . '/jquery.min.js');
     }
+
+    // attach bootstrap
+    $combined .= file_get_contents('assets/' . $type . '/bootstrap.min.'.$type);
 
     // Walk through assets
     foreach($config['assets'] as $key => $asset){

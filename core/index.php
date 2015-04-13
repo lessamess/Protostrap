@@ -72,15 +72,27 @@ $activeNavigation = "one";
                     <a href="index.php?updateYAML=true" class="btn btn-lg btn-link <?php echo $tmpClass ;?>"><i class="fa fa-cloud-download"></i> Import Data from spreadsheets</a>
                     <?php echo $tmpMsg ;?>
                     <br>
-                    <a href="index.php?writeCombined=true" class="btn btn-lg btn-link "><i class="fa fa-code"></i> Write Combined Assets</a>
+
                 </div>
                 <a href="../testpage.php">Open Test-Page</a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
                 <!-- Status -->
             </div>
             <div class="col-md-4">
-
+                <h3>Components</h3>
+                <?php
+                foreach ($config['assets'] as $key => $asset):
+                    $checked = "";
+                    if($asset['load'] == 1){
+                        $checked = "checked";
+                        }?>
+                    <?php echo $asset['title'] ;?> <div class="pull-right"><input type="checkbox" data-asset="<?php echo $key ;?>" class="switch assetSwitch" data-on-text="ON" data-off-text="OFF" data-on-color="primary" <?php echo $checked ;?>></div><br>
+                    <div class="micropadding"></div>
+                    <div class="micropadding"></div>
+                <?php endforeach ?>
+                <br>
+                <a href="index.php?writeCombined=true" class="btn btn-block btn-primary "> Write Combined Assets</a>
             </div>
         </div>
 
@@ -92,5 +104,27 @@ $activeNavigation = "one";
         // This includes the needed javascript files
         // DO NOT REMOVE
         include ('../snippets/meta_javascripts.php');?>
+        <script>
+            $(function(){
+                function updateSessionVar(type, varname, val){
+                    $.get('updateSessionVar.php?type=' + type + '&varname=' + varname + '&val=' + val, function(data){
+                        return;
+                    });
+                }
+                $('.assetSwitch').on('switchChange.bootstrapSwitch', function(event, state) {
+                      console.log($(this).data("asset")); // DOM element
+                      console.log(event); // jQuery event
+                      console.log(state); // true | false
+                    var asset = $(this).data("asset");
+                    var val = 1;
+                    if (state === false){
+                        val = false;
+                    }
+                    updateSessionVar("set","config.assets."+asset+".load",val);
+
+
+                });
+            })
+        </script>
   </body>
 </html>
