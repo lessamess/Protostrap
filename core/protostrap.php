@@ -12,7 +12,6 @@ if(!empty($_GET['session_renew']) OR !empty($forceLoadData) OR $_SESSION['protot
     session_start();
 }
 
-include ($csd.'/../functions_preDataParse.php');
 
 // Model
 include($csd.'/spyc.php');
@@ -94,7 +93,7 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
     setcookie ("loggedIn", "", time() - 3600);
     $loggedIn = false;
     $justLoggedIn = false;
-    session_renew();
+    session_destroy();
     if(empty($_POST['noredirect']) AND empty($_GET['noredirect'])){
         header("Location: index.php" );
         die;
@@ -102,6 +101,23 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
 
 }
 
+/** DATA HANDLING FUNCTIONS **/
+
+function yesterday(){
+    return date("d.m.Y", time() - 60 * 60 * 24);
+}
+
+function tomorrow(){
+    return date("d.m.Y", time() + 60 * 60 * 24);
+}
+
+function makePeriod(){
+    return date("M d.", time() - 60 * 60 * 24). date("-d Y", time() + 60 * 60 * 24);
+}
+
+function makeDateFromString($str){
+    return date("d.m.Y", strtotime($str));
+}
 
 function setUserVars($user){
         $GLOBALS['activeUser'] = $user;
@@ -112,51 +128,11 @@ function setUserVars($user){
 }
 
 
-// Generate a unique Id that can be referenced to
-// This is handy in constructs like collapsibles, so you dont have to worry about id juggling
-
-function getUniqueId($param = "lastUniqueId"){
-    if(empty($GLOBALS[$param])){
-        $GLOBALS[$param] = 0;
-    }
-    return $GLOBALS[$param] = $GLOBALS[$param] + 1;
-}
-
-
-function label($text, $class){
-    echo "<span class=\"label label-{$class}\">{$text}</span>";
-}
 
 function forceLogin(){
     if(!$GLOBALS['loggedIn']){
         $users = $GLOBALS['users'];
         include('snippets/forceLogin.php');
-    }
-}
-
-function showIf($string) {
-    $class = "hidden";
-    if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
-        $class = "";
-    }
-    echo $class;
-}
-
-function hideIf($string) {
-    $class = "";
-    if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
-        $class = "hidden";
-    }
-    echo $class;
-}
-
-function includeIf($roles, $file) {
-    if(!empty($GLOBALS['userrole']) && strpos($roles, $GLOBALS['userrole']) !== false){
-        if (file_exists('./snippets/'. $file)){
-            include('./snippets/' . $file);
-        } else {
-            echo "file missing";
-        }
     }
 }
 
@@ -184,17 +160,43 @@ function cacheHandler(){
     return "?time=".time();
 }
 
-function writeCss($config){
-    if(empty($_GET['writeCss'])){
+function writeCombined($config){
+    if(empty($_GET['writeCombined'])){
         return;
     }
-    // write combined File
-    $combinedCssFile = '../assets/css/combined.css';
+
+    readAsset("css", $config);
+    readAsset("js", $config);
+}
+
+function readAsset($type, $config){
+    $files = scandir ( "assets/".$type);
     $combined = "";
-    foreach($config['cssFiles'] as $key => $file){
-        $combined .= file_get_contents('../assets/css/'.$file);
+
+    // Add jquery
+    if($type == "js"){
+        $combined .= file_get_contents('assets/' . $type . '/jquery.min.js');
+    }
+
+    // Walk through assets
+    foreach($config['assets'] as $key => $asset){
+        if($asset['load'] != 1){continue;}
+        foreach ($files as $file) {
+            // if there is a file with the key in the name -> get its content.
+            if(strpos($file, $key) !== false){
+                $combined .= file_get_contents('assets/' . $type . '/'.$file);
+                $combined .= "\n";
+            }
+        }
     };
-    file_put_contents($combinedCssFile, $combined);
+
+    // attach protostrap
+    $combined .= file_get_contents('assets/' . $type . '/protostrap.'.$type);
+
+    // write combined File
+    $combinedFile = "assets/". $type ."/combined.". $type ;
+
+    file_put_contents($combinedFile, $combined);
 }
 
 function updateYAMLfromSpreadsheets($linkedData){
@@ -241,5 +243,75 @@ function getDeeplink(){
 
 }
 
-include($csd.'/dynamic_form.php');
+/** DISPLAY FUNCTIONS **/
+
+function showIf($string) {
+    $class = "hidden";
+    if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
+        $class = "";
+    }
+    echo $class;
+}
+
+function hideIf($string) {
+    $class = "";
+    if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
+        $class = "hidden";
+    }
+    echo $class;
+}
+
+function includeIf($roles, $file) {
+    if(!empty($GLOBALS['userrole']) && strpos($roles, $GLOBALS['userrole']) !== false){
+        if (file_exists('./snippets/'. $file)){
+            include('./snippets/' . $file);
+        } else {
+            echo "file missing";
+        }
+    }
+}
+
+// Generate a unique Id that can be referenced to
+// This is handy in constructs like collapsibles, so you dont have to worry about id juggling
+
+function getUniqueId($param = "lastUniqueId"){
+    if(empty($GLOBALS[$param])){
+        $GLOBALS[$param] = 0;
+    }
+    return $GLOBALS[$param] = $GLOBALS[$param] + 1;
+}
+
+
+function label($text, $class){
+    echo "<span class=\"label label-{$class}\">{$text}</span>";
+}
+
+function box($text, $class="info",$icon="inherit", $id="", $dismiss = true ){
+    if ($icon == "inherit") {
+        switch ($class) {
+            case 'success':
+                $icon = "check";
+                break;
+            case 'danger':
+                $icon = "warning";
+                break;
+
+            default:
+                $icon = "info-circle";
+                break;
+        }
+    }
+    echo "<div id=\"" . $id . "\" class=\"alert alert-". $class ."\">";
+    if($dismiss){
+        echo "<button class='close' data-dismiss='alert'  type='button'>×</button>";
+    }
+    echo "<ul class=\"fa-ul\">
+          <li style='width:96%'>
+            <i class=\"fa fa-" . $icon . " fa-lg fa-li\"></i>
+            " . $text . "
+          </li>
+        </ul>
+      </div>";
+}
+
 include($csd.'/../functions_controller.php');

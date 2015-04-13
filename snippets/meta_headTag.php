@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!-- Le styles -->
-    <link href="<?php echo $pathToAssets ;?>assets/css/combined.css?time=<?php echo time();?>" rel="stylesheet">
+    <link href="<?php echo $pathToAssets ;?>core/assets/css/combined.css?time=<?php echo time();?>" rel="stylesheet">
 
     <!-- Uncomment the following line if having the full width of the screen is needed
     <link href="<?php echo $pathToAssets ;?>assets/css/extendBootstrapGrid.min.css?time=<?php echo time();?>" rel="stylesheet">

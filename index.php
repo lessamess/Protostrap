@@ -11,7 +11,7 @@ $activeNavigation = "one";
 
 
 ?><!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title><?php echo $application . " - " . $brand ;?></title>
         <?php

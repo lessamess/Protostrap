@@ -24,58 +24,16 @@
         })(document,window.navigator,'standalone');
     </script>
 
-
-    <!-- jQuery and Bootstrap -->
-    <?php $csd = dirname(__FILE__);    ?>
-    <script>
-        <?php include($csd."/../assets/js/jquery.js");?>
-        <?php include($csd."/../assets/js/bootstrap.min.js");?>
-    </script>
-    <!-- ADD 2 Home -->
-    <script >
-        <?php include($csd."/../assets/js/add2home.min.js");?>
-    </script>
-
-    <!-- Typeahead -->
-    <script >
-        <?php include($csd."/../assets/js/bootstrap-typeahead.min.js");?>
-    </script>
-
-    <!-- Datepicker -->
-    <script >  <?php include($csd."/../assets/js/bootstrap-datepicker.min.js");?> </script>
-
-    <!-- Bootstrap Select -->
-    <script >  <?php include($csd."/../assets/js/bootstrap-select.min.js");?> </script>
-
-    <!-- File Input -->
-    <!-- http://gregpike.net/demos/bootstrap-file-input/demo.html -->
-    <script >  <?php include($csd."/../assets/js/bootstrap-file-input.min.js");?> </script>
-
-    <!-- Switch -->
-    <!-- http://www.bootstrap-switch.org -->
-    <script >  <?php include($csd."/../assets/js/bootstrap-switch.min.js");?> </script>
-
-    <!-- Sortable -->
-    <script >  <?php include($csd."/../assets/js/jquery-sortable.min.js");?> </script>
-
-    <!-- Masked input -->
-    <script >  <?php include($csd."/../assets/js/jquery.maskedinput.min.js");?> </script>
-
-    <!-- Hotkeys -->
-    <script >  <?php include($csd."/../assets/js/jquery.hotkeys.js");?> </script>
-
-    <!-- Fastclick -->
-    <script >  <?php include($csd."/../assets/js/fastclick.min.js");?> </script>
-
-
-
-
-
-
-    <!-- Protostrap -->
-    <script >  <?php include($csd."/../assets/js/protostrap.js");?> </script>
+    <script src="<?php echo $pathToAssets ;?>core/assets/js/combined.js?time=<?php time();?>"></script>
     <script>
         <!-- Inline Scripts that need PHP -->
+        <?php
+        foreach ($config['assets'] as $key => $asset) {
+            if($asset['load'] != 1){continue;}
+            if($asset['init'] != ""){
+                echo $asset['init']. ";\n";
+            }
+        } ?>
 
 
     </script>

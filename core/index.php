@@ -8,11 +8,11 @@
 **/
 
 
-include('../core/protostrap.php');
+include('protostrap.php');
 
 /* Update stuff */
 
-writeCss($config);
+writeCombined($config);
 
 updateYAMLfromSpreadsheets($linkedData);
 
@@ -27,7 +27,7 @@ $activeNavigation = "one";
 
 
 ?><!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title><?php echo $application . " - " . $brand ;?></title>
         <?php

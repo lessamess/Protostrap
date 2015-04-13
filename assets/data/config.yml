@@ -2,13 +2,57 @@ config:
   datepickerFormat: dd.mm.yyyy
   defaultUser: 1
   loginWith: email # username | email
-  cssFiles:
-    ["bootstrap.min.css",
-    "add2home.css",
-    "bootstrap-select.min.css",
-    "bootstrap-switch.min.css",
-    "datepicker3.css",
-    "sortable.css",
-    "fontawesome.css",
-    "protostrap.css"]
+  assets:
+    bootstrap:
+      title: "Bootstrap Library"
+      load: 1
+      init: ""
+    extendBootstrapGrid:
+      title: "Bootstrap Grid Extention CSS"
+      load: 1
+      init: ""
+    add2home:
+      title: "Add to Home"
+      load: 1
+      init: ""
+    select:
+      title: "Bootstrap Select Plugin"
+      load: 1
+      init: ""
+    switch:
+      title: "Bootstrap Switch Plugin"
+      load: 1
+      init: ""
+    datepicker:
+      title: "Bootstrap Datepicker Plugin"
+      load: 1
+      init: ""
+    file:
+      title: "Bootstrap File Input Plugin"
+      load: 1
+      init: ""
+    typeahead:
+      title: "Bootstrap Typeahead Plugin"
+      load: 1
+      init: ""
+    fastclick:
+      title: "Fastclick extentions"
+      load: 1
+      init: ""
+    sortable:
+      title: "jQuery Sortable Plugin"
+      load: 1
+      init: ""
+    hotkeys:
+      title: "jQuery Hotkeys Plugin"
+      load: 1
+      init: ""
+    maskedinput:
+      title: "jQuery Masked Input Plugin"
+      load: 1
+      init: ""
+    fontawesome:
+      title: "Fontawesome Icons"
+      load: 1
+      init: ""
 

@@ -38,7 +38,7 @@ if(!empty($_GET['q'])){
     // var_dump($apiurl);
 }
  ?><!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title><?php echo $application . " - " . $brand ;?></title>
         <?php
