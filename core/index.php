@@ -98,10 +98,13 @@ $activeNavigation = "one";
                     <div class="micropadding"></div>
                 <?php endforeach ?>
                 <br>
-                <?php if ($showNotWritableMessage):
-                     box("You can't overwrite the file <b>core/assets/css/combined.css</b>. <br> Please make sure the file is writable.", "info", "inherit" , "boxid" , "dismiss" );
+                <?php
+                $disbleWritingCombined = "";
+                if ($showNotWritableMessage):
+                    box("You can't overwrite the file <b>core/assets/css/combined.css</b>. <br> Please make sure the file is writable.", "info", "inherit" , "boxid" , "dismiss" );
+                    $disbleWritingCombined = "disabled";
                 endif ?>
-                <a href="index.php?writeCombined=true" class="btn btn-block btn-primary "> Write Combined Assets</a>
+                <a href="index.php?writeCombined=true" class="btn btn-block btn-primary <?php echo $disbleWritingCombined ;?>"> Write Combined Assets</a>
             </div>
         </div>
 
