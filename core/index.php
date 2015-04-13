@@ -71,9 +71,10 @@ $activeNavigation = "one";
 
                     <a href="index.php?updateYAML=true" class="btn btn-lg btn-link <?php echo $tmpClass ;?>"><i class="fa fa-cloud-download"></i> Import Data from spreadsheets</a>
                     <?php echo $tmpMsg ;?>
-                    <br><br>
-                    <a href="index.php?writeCss=true" class="btn btn-lg btn-link "><i class="fa fa-code"></i> Write Combined Css</a>
+                    <br>
+                    <a href="index.php?writeCombined=true" class="btn btn-lg btn-link "><i class="fa fa-code"></i> Write Combined Assets</a>
                 </div>
+                <a href="../testpage.php">Open Test-Page</a>
             </div>
             <div class="col-md-4">
                 <!-- Status -->

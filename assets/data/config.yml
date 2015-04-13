@@ -12,17 +12,17 @@ config:
       load: 1
       init: ""
     add2home:
-      title: "Add to Home"
+      title: "Add to Home-Screen"
       load: 1
-      init: ""
+      init: "addToHomescreen()"
     select:
       title: "Bootstrap Select Plugin"
       load: 1
-      init: ""
+      init: "$('.selectpicker').selectpicker()"
     switch:
       title: "Bootstrap Switch Plugin"
       load: 1
-      init: ""
+      init: "$(".switch").bootstrapSwitch()"
     datepicker:
       title: "Bootstrap Datepicker Plugin"
       load: 1
@@ -30,7 +30,7 @@ config:
     file:
       title: "Bootstrap File Input Plugin"
       load: 1
-      init: ""
+      init: "$('input[type=file]').bootstrapFileInput()"
     typeahead:
       title: "Bootstrap Typeahead Plugin"
       load: 1
@@ -38,11 +38,11 @@ config:
     fastclick:
       title: "Fastclick extentions"
       load: 1
-      init: ""
+      init: "FastClick.attach(document.body)"
     sortable:
       title: "jQuery Sortable Plugin"
       load: 1
-      init: ""
+      init: "$('.sortable').sortable()"
     hotkeys:
       title: "jQuery Hotkeys Plugin"
       load: 1

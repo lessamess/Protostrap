@@ -3,8 +3,6 @@
      */
 
 
-    var myscroll;
-
     // Define Datepicker Languages
     $.fn.datepicker.dates['de'] = {
         days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"],
@@ -52,10 +50,10 @@
     };
 
     // File input
-    $('input[type=file]').bootstrapFileInput();
+
 
     // Switch
-    $(".switch").bootstrapSwitch();
+
 
     function updateSessionVar(type, varname, val){
         $.get('core/updateSessionVar.php?type=' + type + '&varname=' + varname + '&val=' + val, function(data){
@@ -65,17 +63,6 @@
 
 
     $(function(){
-
-        // fastclick
-        FastClick.attach(document.body);
-
-        addToHomescreen();
-
-        // http://farhadi.ir/projects/html5sortable/
-        $('.sortable').sortable();
-
-        $('.selectpicker').selectpicker();
-
         // Tooltip if there is any
         $('.ps-tooltip').tooltip();
         $(".ps-tooltip").click(function() {

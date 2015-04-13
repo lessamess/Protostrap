@@ -27,6 +27,7 @@
     <script src="<?php echo $pathToAssets ;?>core/assets/js/combined.js?time=<?php time();?>"></script>
     <script>
         <!-- Inline Scripts that need PHP -->
+        $(function(){
         <?php
         foreach ($config['assets'] as $key => $asset) {
             if($asset['load'] != 1){continue;}
@@ -35,6 +36,7 @@
             }
         } ?>
 
+        })
 
     </script>
     <!-- ADD your other login to main.js -->
