@@ -18,6 +18,12 @@ updateYAMLfromSpreadsheets($linkedData);
 
 removeSpreadsheetData();
 
+/* perform checks */
+
+$showNotWritableMessage = false;
+if(!is_writable ( "assets/css/combined.css")){
+    $showNotWritableMessage = true;
+}
 
 // path to assets from admin
 $pathToAssets = "../";
@@ -92,6 +98,9 @@ $activeNavigation = "one";
                     <div class="micropadding"></div>
                 <?php endforeach ?>
                 <br>
+                <?php if ($showNotWritableMessage):
+                     box("You can't overwrite the file <b>core/assets/css/combined.css</b>. <br> Please make sure the file is writable.", "info", "inherit" , "boxid" , "dismiss" );
+                endif ?>
                 <a href="index.php?writeCombined=true" class="btn btn-block btn-primary "> Write Combined Assets</a>
             </div>
         </div>
