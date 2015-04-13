@@ -71,6 +71,12 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
                     </form>
                     <br>
 
+                    <h4>Masked Input</h4>
+                        Social Security Number <br>
+                        <input id="socialsecurity" name="social" type="text" placeholder="00-00-0000">
+                    <br>
+                    <br>
+
                     <h4>Switch</h4>
                     <!-- http://www.bootstrap-switch.org -->
                     <input type="checkbox" class="switch" checked> &nbsp;&nbsp;
