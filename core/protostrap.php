@@ -1,4 +1,12 @@
 <?php
+/***********
+ *
+ * Protostrap
+ * v. 3.0
+ *
+ ***********/
+
+
 session_start();
 
 //current script directory
