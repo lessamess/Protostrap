@@ -133,10 +133,11 @@ foreach ($parsed as $key => $item){
 }
 
 
-// Handle language
-if(!empty($_COOKIE[$applicationKey."_language"])){
-    $language = $_COOKIE[$applicationKey."_language"];
-}
+// For v 3.1
+// make language persistent
+// if(!empty($_COOKIE[$applicationKey."_language"])){
+//     $language = $_COOKIE[$applicationKey."_language"];
+// }
 
 
 // Handle Language Switch
