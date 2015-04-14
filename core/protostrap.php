@@ -17,7 +17,6 @@ if(!empty($_GET['session_renew']) OR !empty($forceLoadData) OR $_SESSION['protot
 include($csd.'/spyc.php');
 include($csd.'/dataParse.php');
 
-
 // Handle request ID
 $reqId = false;
 if (!empty($_POST['id'])) {

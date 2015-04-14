@@ -71,7 +71,7 @@ foreach ($navKeys as $key => $item){
           <ul class="nav navbar-nav navbar-right">
               <li>
 
-                <a href="login.php">Login</a>
+                <a href="testpage.php#login">Sign in</a>
               </li>
           </ul>
           <?php }?>

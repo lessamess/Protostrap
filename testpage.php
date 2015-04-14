@@ -12,7 +12,7 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
 
 
 ?><!DOCTYPE html>
-<html lang="en">
+<html >
     <head>
         <title><?php echo $application . " - " . $brand ;?></title>
         <?php
@@ -31,6 +31,8 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
+
+                    <a href="index.php"><i class="fa fa-long-arrow-left"></i> Back to site</a>
 
                     <h3>Testpage</h3>
 
@@ -129,6 +131,7 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
             <br>
             <div class="row">
                 <div class="col-md-12">
+                    <a name="login"></a>
                     <?php include ('./snippets/loginForm.php'); ?>
                 </div>
             </div>

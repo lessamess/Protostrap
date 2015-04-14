@@ -39,7 +39,7 @@ include('./snippets/meta_headTag.php');?>
     <div class="container">
 
 <?php // this includes the footer
-//include('./snippets/header.php');?>
+//include('./snippets/navBarTop.php');?>
         <br>
         <div class="well">
             <h1>End of Prototype</h1>

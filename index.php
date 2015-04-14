@@ -31,7 +31,7 @@ $activeNavigation = "one";
 
             <?php
             // this includes the header
-            include('./snippets/header.php');?>
+            include('./snippets/navBarTop.php');?>
 
             <h4 class="text-muted"> <i class="fa fa-level-down fa-rotate-180"></i> Change this in snippets/navBarTop.php </h4>
             <br><br>

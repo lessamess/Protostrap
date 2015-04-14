@@ -12,7 +12,7 @@ Allow from all
 Deny from env=passreq
 Satisfy any
 
-# This redirects any links that do not work to the file missing.php
+# This redirects any links that do not work to the file fileNotFound.php
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^(.*)$ fileNotFound.php/$1
