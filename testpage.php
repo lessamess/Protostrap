@@ -133,6 +133,18 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
                 <div class="col-md-12">
                     <a name="login"></a>
                     <?php include ('./snippets/loginForm.php'); ?>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-6">
+                    <a class="" data-toggle="collapse" data-target="#collapse<?php echo getUniqueId();?>">Show Deeplink</a>
+                    <div id="collapse<?php echo $lastUniqueId;?>" class="collapse">
+                        <input type="text" class="form-control selectOnClick" name="" placeholder="" value="<?php echo getDeeplink(); ;?>">
+                    </div>
                 </div>
             </div>
             <br>
