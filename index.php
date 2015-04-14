@@ -40,6 +40,8 @@ $activeNavigation = "one";
                 <p>
                     <br>
                     Go to the <a href="core/">Admin Panel</a>
+                    <br><br>
+                    Go to the <a href="testpage.php">Test-Page</a>
                     <br>
                     or <a href="http://protostrap.ch/" class="">Read the Documentation</a>
                 </p>
