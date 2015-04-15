@@ -18,7 +18,7 @@ $activeNavigation = "one";
         // this includes all the markup that loads css files and similar stuff,
         // if you have to add more css, that's the place to do it.
         // DO NOT REMOVE
-        include('./snippets/meta_headTag.php');?>
+        include(snippet("meta_headTag"));?>
 
     </head>
 <?php
@@ -31,7 +31,7 @@ $activeNavigation = "one";
 
             <?php
             // this includes the header
-            include('./snippets/navBarTop.php');?>
+            include(snippet("navBarTop"));?>
 
             <h4 class="text-muted"> <i class="fa fa-level-down fa-rotate-180"></i> Change this in snippets/navBarTop.php </h4>
             <br><br>
@@ -50,7 +50,7 @@ $activeNavigation = "one";
             <br><br>
             <h4 class="text-muted"> <i class="fa fa-level-up fa-rotate-180"></i> Change this in snippets/footer.php </h4>
             <?php // this includes the footer
-            include('./snippets/footer.php');?>
+            include(snippet("footer"));?>
 
 
         </div> <!-- /container -->
@@ -59,6 +59,6 @@ $activeNavigation = "one";
         // JAVASCRIPT
         // This includes the needed javascript files
         // DO NOT REMOVE
-        include ('./snippets/meta_javascripts.php');?>
+        include(snippet("meta_javascripts"));?>
   </body>
 </html>

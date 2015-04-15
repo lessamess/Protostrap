@@ -19,7 +19,7 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
         // this includes all the markup that loads css files and similar stuff,
         // if you have to add more css, that's the place to do it.
         // DO NOT REMOVE
-        include('./snippets/meta_headTag.php');?>
+        include(snippet("meta_headTag"));?>
 
     </head>
 <?php
@@ -132,7 +132,7 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
             <div class="row">
                 <div class="col-md-12">
                     <a name="login"></a>
-                    <?php include ('./snippets/loginForm.php'); ?>
+                    <?php include(snippet("loginForm"));?>
 
                 </div>
             </div>
@@ -163,22 +163,17 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
                     <div class="table-responsive table-responsive-maxheight">
                         <?php
                         $tabledata = $firmen;
-                        include("./snippets/makeTableFromData.php");?>
+                        include(snippet("makeTableFromData"));?>
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div> <!-- /container -->
 
         <?php
         // JAVASCRIPT
         // This includes the needed javascript files
         // DO NOT REMOVE
-        include ('./snippets/meta_javascripts.php');?>
+        include(snippet("meta_javascripts"));?>
         <script>
         $(function(){
             $("#favoriteColorChange").change(function() {
