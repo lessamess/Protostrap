@@ -14,7 +14,6 @@ foreach ($navKeys as $key => $item){
 ?>
 
 
-
 <header role="banner" class="navbar navbar-default navbar-fixed-top ">
   <div class="container">
     <div class="navbar-header">
@@ -28,10 +27,10 @@ foreach ($navKeys as $key => $item){
     </div>
     <nav role="navigation" class="collapse navbar-collapse " id="headernav" >
       <ul class="nav navbar-nav">
-        <li  class="<?php echo $navbarClasses[0];?>">
+        <li  class="<?php echo $navbarClasses[navId()];?>">
           <a href="javascript:void(0);">One</a>
         </li>
-        <li  class="<?php echo $navbarClasses[1];?>">
+        <li  class="<?php echo $navbarClasses[navId()];?>">
           <a href="javascript:void(0);">Two</a>
         </li>
         <li class="dropdown">
@@ -44,7 +43,7 @@ foreach ($navKeys as $key => $item){
             <li><a href="javascript:void(0)">Separated link</a></li>
           </ul>
         </li>
-        <li  class="<?php echo $navbarClasses[4];?>">
+        <li  class="<?php echo $navbarClasses[navId()];?>">
             <span class="form">
                 <!-- Typeahead
                      Change Data in assets/js/main.js

@@ -300,6 +300,16 @@ function getUniqueId($param = "lastUniqueId"){
     return $GLOBALS[$param] = $GLOBALS[$param] + 1;
 }
 
+function navId(){
+    if(empty($GLOBALS["navId"])){
+        $GLOBALS["navId"] = 1;
+        //return $GLOBALS["navId"] ;
+    } else {
+        $GLOBALS["navId"]++;
+    }
+    return $GLOBALS["navId"]-1;
+}
+
 
 function label($text, $class){
     echo "<span class=\"label label-{$class}\">{$text}</span>";
