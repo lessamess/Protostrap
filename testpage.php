@@ -149,6 +149,15 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
             </div>
             <br>
             <div class="row">
+                <div class="col-md-3">
+                    <h4>Change Data</h4>
+                    Favorite Color: <span id="favColor"><?php echo $favoriteColor ;?></span><br>
+                    <input type="text" class="form-control" id="favoriteColorChange" value="" placeholder="Change Color" >
+                    <span class="hide" id="reloadInfo"><i class="fa fa-info"></i> Reload to see that the value changed permanently</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
                 <div class="col-md-12">
                     <h4>Filtertable</h4>
                     <div class="table-responsive table-responsive-maxheight">
@@ -170,5 +179,18 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1pYV5OwCy4
         // This includes the needed javascript files
         // DO NOT REMOVE
         include ('./snippets/meta_javascripts.php');?>
+        <script>
+        $(function(){
+            $("#favoriteColorChange").change(function() {
+                $("#favColor").html($(this).val());
+                updateSessionVar("set","favoriteColor",$(this).val());
+                $(this).val("");
+                $("#reloadInfo").removeClass("hide");
+            });
+
+        })
+
+
+        </script>
   </body>
 </html>
