@@ -259,6 +259,11 @@ function getDeeplink(){
 
 /** DISPLAY FUNCTIONS **/
 
+
+function snippet($snippet){
+    return "./snippets/".$snippet.".php";
+}
+
 function showIf($string) {
     $class = "hidden";
     if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
