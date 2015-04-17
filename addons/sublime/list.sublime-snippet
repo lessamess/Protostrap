@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[<ul class="list-group">
+    <li class="list-group-item"></li>
+    <li class="list-group-item"></li>
+    <li class="list-group-item"></li>
+</ul>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>list</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>List-Group Protostrap PS</description>
+</snippet>
