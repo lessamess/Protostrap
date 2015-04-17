@@ -211,6 +211,18 @@ function setSessionVar($key, $item){
     }
 }
 
+function parseVar($var){
+    $pattern ="|'parse', ?'([a-zA-Z0-9]*)', ?'?([a-zA-Z0-9]*)'?|";
+    $matches = preg_match($pattern, $var, $mymatches);
+
+    if(empty($matches)){
+        return $var;
+    } else {
+
+        return $mymatches[1]($mymatches[2]);
+    }
+}
+
 function get_translations($url){
 
     if(!ini_set('default_socket_timeout',    15)) echo "unable to change socket timeout";
