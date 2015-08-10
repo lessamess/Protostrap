@@ -20,21 +20,276 @@ body {
 
 /* Flexbox */
 
-.flex-container {
-    display: -webkit-box;
+
+.flexbox{
+    display:flex;
     display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
+    justify-content: space-between;
 }
-.flex-item {
-    -webkit-flex: 1 auto;
-    flex: 1 auto;
+
+.flexbox.padded > div {
+    box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;
+      border: 10px solid transparent;
 }
+
+.flex-1 {
+    flex: 1  0px;
+    -webkit-flex: 1  0px;
+}
+.flex-2 {
+    flex: 2  0px;
+    -webkit-flex: 2  0px;
+}
+.flex-3 {
+    flex: 3  0px;
+    -webkit-flex: 3  0px;
+}
+.flex-4 {
+    flex: 4  0px;
+    -webkit-flex: 4  0px;
+}
+.flex-5 {
+    flex: 5  0px;
+    -webkit-flex: 5  0px;
+}
+.flex-6 {
+    flex: 6  0px;
+    -webkit-flex: 6  0px;
+}
+.flex-7 {
+    flex: 7  0px;
+    -webkit-flex: 7  0px;
+}
+.flex-8 {
+    flex: 8  0px;
+    -webkit-flex: 8  0px;
+}
+.flex-9 {
+    flex: 9  0px;
+    -webkit-flex: 9  0px;
+}
+.flex-10 {
+    flex: 10  0px;
+    -webkit-flex: 10  0px;
+}
+.flex-11 {
+    flex: 11  0px;
+    -webkit-flex: 11  0px;
+}
+
+
+.fixed-size-20{
+    width: 20px;
+}
+.fixed-size-40{
+    width: 40px;
+}
+.fixed-size-60{
+    width: 60px;
+}
+.fixed-size-80{
+    width: 80px;
+}
+.fixed-size-100{
+    width: 100px;
+}
+.fixed-size-120{
+    width: 120px;
+}
+.fixed-size-140{
+    width: 140px;
+}
+.fixed-size-160{
+    width: 160px;
+}
+
+
+/**
+ * iOS-TOPBAR Styles
+ **/
+
+
+.iosTopbar .flexbox .navbar-toggle {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.topbar-title{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.topbar-fixed{
+    padding: 0 10px;
+    margin-top: 10px;
+    color: #007aff;
+}
+
+.topbar-fixed .icon{
+    font-size: 36px;
+    line-height: 24px;
+}
+
+/** END iOS-TOPBAR Styles **/
 
 /**
  * iOS-TABBAR Styles
  **/
+
+
+.iosTabbar .flexbox{
+    height: 48px;
+}
+
+.tabbar-label {
+    display: block;
+    font-size: 10px;
+    position: relative;
+    bottom: 7px;
+}
+
+.tabbar-icon  {
+    display: block;
+}
+
+.tabbar-item  .icon, .button-box  .icon{
+
+    font-size: 36px;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 24px;
+    text-rendering: auto;
+    transform: translate(0px, 0px);
+    position: relative;
+    top:-3px;
+}
+
+.tabbar-item .tabbar-badge{
+    background-color: #d00;
+    border-radius: 8px;
+    color: white;
+    display: inline-flex;
+    font-size: 0.8em;
+    left: 17px;
+    line-height: 16px;
+    max-height: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    padding: 0 4px;
+    vertical-align: middle;
+    position: relative;
+    top: -55px;
+    z-index: 1100;
+}
+
+
+#tabbar-badges{
+    z-index: 999;
+}
+
+.tabbar-item {
+    padding-top:4px;
+}
+
+.tabbar-item a , .tabbar-item a:hover , .tabbar-item a:focus  {
+    text-decoration: none;
+    color: #777;
+    display: block;
+}
+.tabbar-item a.active , .tabbar-item a.active:hover , .tabbar-item a.active:focus  {
+    text-decoration: none;
+    color: #007aff;
+}
+
+/** END iOS-TABBAR Styles **/
+
+/**********************/
+/* CLASSES FOR MOBILE */
+
+/* Add Item Popover */
+
+.fullwidth.popover, .fullwidth.popover-content{
+    padding:0;
+}
+
+.fullwidth.popover{
+    width: 100%;
+}
+
+.fullwidth.popover div.list-group{
+    margin: 0;
+}
+
+.fullwidth.popover div.list-group a:first-child{
+    border-top: none;
+}
+.fullwidth.popover div.list-group a:last-child{
+    border-bottom: none;
+}
+
+/* Options Dropdown */
+
+.btn-group.open .optionsDropdown.dropdown-toggle {
+    box-shadow: none;
+    background-color: #eee;
+    border:1px solid rgba(0, 0, 0, 0.15)
+}
+
+.optionsDropdown {
+    background-color: #fff;
+    padding: 0 10px ;
+    max-height: 33px;
+}
+.optionsDropdown .icon {
+    position: relative;
+    top: -10px;
+    font-size: 36px;
+    line-heigth: 24px;
+}
+
+/* Touchfriendly list */
+
+.list-touchfriendly > div, .topborder {
+    border-top: 1px solid #d3d3d3;
+}
+
+.list-touchfriendly > div:last-child, .bottomborder {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.list-touchfriendly > div > div{
+    min-height: 44px;
+    padding:5px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+/* Iconicon Icons */
+
+.icon.icon-sm{
+    font-size: 30px;
+    margin-top: 3px;
+    margin-bottom: 4px
+}
+
+.icon.icon-lg{
+    font-size: 48px;
+
+}
+
 
 
 
@@ -53,79 +308,6 @@ body {
 }
 
 /*--------------------*/
-
-/**
- * Stacks
- */
-
-ul.stacks {
-    margin: 0;
-}
-ul.stacks li{
-    padding-right: 24px;
-    padding-left: 12px;
-    background: url("../img/next.png") no-repeat scroll right center transparent;
-    display: block;
-    text-decoration: none;
-    overflow: auto;
-    min-height: 44px;
-    line-height: 44px;
-    border-bottom: 1px solid #cccccc;
-
-}
-ul.stacks li:first-child{
-    border-top: 1px solid #cccccc;
-}
-
-ul.stacks li a {
-    display: block;
-    font-size: 16px;
-}
-
-.teaserRow a.teaser, .teaser, .pileMore{
-    background: url("../img/next.png") no-repeat scroll right center transparent;
-}
-
-.teaserRow a, .teaser{
-    display: block;
-    overflow: auto;
-    padding-right: 24px;
-    text-decoration: none;
-}
-.teaserRow {
-    border-bottom: 1px solid #cccccc;
-    border-top: 1px solid #fff;
-    display: block;
-    text-decoration: none;
-    overflow: auto;
-    padding: 4px 0 24px 8px;
-background: rgb(244,244,244),;
-background: -moz-linear-gradient(top,  rgba(244,244,244,1) 22%, rgba(231,232,233,1) 100%, rgba(208,211,212,1) 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(22%,rgba(244,244,244,1)), color-stop(100%,rgba(231,232,233,1)), color-stop(100%,rgba(208,211,212,1)));
-background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 22%,rgba(231,232,233,1) 100%,rgba(208,211,212,1) 100%);
-background: -o-linear-gradient(top,  rgba(244,244,244,1) 22%,rgba(231,232,233,1) 100%,rgba(208,211,212,1) 100%);
-background: -ms-linear-gradient(top,  rgba(244,244,244,1) 22%,rgba(231,232,233,1) 100%,rgba(208,211,212,1) 100%);
-background: linear-gradient(to bottom,  rgba(244,244,244,1) 22%,rgba(231,232,233,1) 100%,rgba(208,211,212,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#d0d3d4',GradientType=0 );
-
-
-}
-
-.teaserRow:first-child {
-    border-top: 1px solid #ccc;
-}
-
-.tableRowTeaser, .nav-wedge li a {
-    background: url("../img/next.png") no-repeat scroll right center transparent;
-
-}
-
-.nav-wedge > .active > a, .nav-wedge > .active > a:hover {
-    background:  url("../img/next-white.png") no-repeat scroll right center transparent;
-    background-color: #0088CC;
-    color: #fff;
-
-}
 
 
 .clear {
@@ -680,4 +862,189 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
     text-decoration: none;
 }
 
+/* Prevent Bootstrap from printing URLs */
+@media print {
+  a[href]:after {
+    content: none;
+  }
+}
 
+.label-as-badge {
+    border-radius: 1em;
+    margin-right: 4px;
+    font-size: inherit;
+}
+
+.label.label-as-badge {
+    border-radius: 1em;
+    margin-right: 4px;
+    font-size: 100%;
+}
+
+.label.label-default {
+    background-color: #999;
+}
+
+.stepper .mysteps {
+  position: relative;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  *zoom: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+
+.stepper .mysteps:before,
+.stepper .mysteps:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.stepper .mysteps:after {
+  clear: both;
+}
+
+.stepper .mysteps ul {
+  width: 4000px;
+  padding: 0;
+  margin: 0;
+  list-style: none outside none;
+}
+
+.stepper .mysteps ul.previous-disabled li.complete {
+  cursor: default;
+}
+
+.stepper .mysteps ul.previous-disabled li.complete:hover {
+  color: #468847;
+  cursor: default;
+  background: #f3f4f5;
+}
+
+.stepper .mysteps ul.previous-disabled li.complete:hover .chevron:before {
+  border-left-color: #f3f4f5;
+}
+
+.stepper .mysteps ul li {
+  position: relative;
+  float: left;
+  height: 46px;
+  padding: 0 20px 0 30px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 46px;
+  color: #999999;
+  cursor: default;
+  background: #ededed;
+}
+
+.stepper .mysteps ul li .chevron {
+  position: absolute;
+  top: 0;
+  right: -14px;
+  z-index: 1;
+  display: block;
+  border: 24px solid transparent;
+  border-right: 0;
+  border-left: 14px solid #d4d4d4;
+}
+
+.stepper .mysteps ul li .chevron:before {
+  position: absolute;
+  top: -24px;
+  right: 1px;
+  display: block;
+  border: 24px solid transparent;
+  border-right: 0;
+  border-left: 14px solid #ededed;
+  content: "";
+}
+
+.stepper .mysteps ul li.complete {
+  color: #468847;
+  background: #f3f4f5;
+}
+
+.stepper .mysteps ul li.complete:hover {
+  cursor: pointer;
+  background: #e7eff8;
+}
+
+.stepper .mysteps ul li.complete:hover .chevron:before {
+  border-left: 14px solid #e7eff8;
+}
+
+.stepper .mysteps ul li.complete .chevron:before {
+  border-left: 14px solid #f3f4f5;
+}
+
+.stepper .mysteps ul li.active {
+  color: #3a87ad;
+  background: #f1f6fc;
+}
+
+.stepper .mysteps ul li.active .chevron:before {
+  border-left: 14px solid #f1f6fc;
+}
+
+.stepper .mysteps ul li .badge {
+  margin-right: 8px;
+}
+
+.stepper .mysteps ul li:first-child {
+  padding-left: 20px;
+  border-radius: 4px 0 0 4px;
+}
+
+.stepper .mysteps .actions {
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  float: right;
+  padding-right: 15px;
+  padding-left: 15px;
+  line-height: 46px;
+  vertical-align: middle;
+  background-color: #e5e5e5;
+  border-left: 1px solid #d4d4d4;
+}
+
+.stepper .mysteps .actions a {
+  margin-right: 8px;
+  font-size: 12px;
+  line-height: 45px;
+}
+
+.stepper .mysteps .actions .btn-prev i {
+  margin-right: 5px;
+}
+
+.stepper .mysteps .actions .btn-next i {
+  margin-left: 5px;
+}
+
+.stepper .step-content {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #D4D4D4;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.stepper .step-content .step-pane {
+  display: none;
+}
+
+.stepper .step-content .active {
+  display: block;
+}
+
+.stepper .step-content .active .btn-group .active {
+  display: inline-block;
+}

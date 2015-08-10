@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[<div class="btn-group">
+    <content><![CDATA[<div class="btn-group ${4:toggleSinglePrimary}">
     <button type="button" class="btn btn-default">${1:Left}</button>
     <button type="button" class="btn btn-default">${2:Middle}</button>
     <button type="button" class="btn btn-default">${3:Right}</button>

@@ -8,6 +8,10 @@ config:
       title: Bootstrap Grid Extention CSS
       load: 'false'
       init:
+    tablesorter:
+      title: Tablesorter Plugin
+      load: 1
+      init: "$('.tablesorter').tablesorter()"
     select:
       title: Bootstrap Select Plugin
       load: 1

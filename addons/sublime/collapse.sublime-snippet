@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[<a class="${1:btn}" data-toggle="collapse" data-target="#collapse<?php echo getUniqueId();?>">${2:Trigger}</a>
+    <content><![CDATA[<a href="javascript:void(0);" class="${1:btn}" data-toggle="collapse" data-target="#collapse<?php echo getUniqueId();?>">${2:Trigger}</a>
 <div id="collapse<?php echo \$lastUniqueId;?>" class="collapse">
 
 </div>]]></content>

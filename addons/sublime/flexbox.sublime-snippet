@@ -1,9 +1,7 @@
 <snippet>
-    <content><![CDATA[<div class="container flex-container ">
-    <div class="flex-item align-center" ></div>
-    <div class="flex-item align-center" ></div>
-    <div class="flex-item align-center" ></div>
-    <div class="flex-item align-center" ></div>
+    <content><![CDATA[<div class="flexbox">
+    <div class="fixed-size-${1:80}" ></div>
+    <div class="flex-1" ></div>
 </div>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>flexbox</tabTrigger>

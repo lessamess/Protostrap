@@ -22,9 +22,7 @@
               }
         });
 
-
         $(document).bind('keydown','alt+r', function(){
-
             var url = window.location.href;
             var get = "session_renew=true";
             var start = "?";
@@ -35,5 +33,19 @@
         });
 
         $("#socialsecurity").mask("99-99-9999",{placeholder:"__-__-____"});
+
+        $(".mypopover").popover();
+
+        $(".htmlpopover").popover({
+            container: 'body',
+            html: true,
+            template: '<div class="popover fullwidth" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="fullwidth popover-content"></div></div>',
+            content: function () {
+                var content = $("#"+$(this).data('content-div')).html();
+                return content;
+            }
+        });
+
+
 
     })

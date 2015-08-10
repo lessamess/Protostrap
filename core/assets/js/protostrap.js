@@ -213,4 +213,69 @@
             $(this).select();
         });
 
+        $(".stepper .btn-next").click(function() {
+            var nextId = $(this).attr("data-nextid");
+            var thisId = parseInt(nextId) - 1;
+
+            // Tabs
+            $("#step-tab-" + thisId).removeClass("active");
+            $("#step-tab-" + thisId).addClass("complete");
+            $("#step-tab-" + nextId).addClass("active");
+            //Badge in Tabs
+            $("#badge" + thisId).removeClass("label-info");
+            $("#badge" + thisId).addClass("label-success");
+            $("#badge" + nextId).removeClass("label-default");
+            $("#badge" + nextId).addClass("label-info");
+            // Panes
+            $("#step" + thisId).removeClass("active");
+            $("#step" + nextId).addClass("active");
+
+       });
+
+       $(".stepper .btn-prev").click(function() {
+            var prevId = parseInt($(this).attr("data-previd"));
+            var thisId = prevId + 1;
+            console.log(prevId);
+            console.log(thisId);
+
+            if(prevId == 1){
+                $(".complete").removeClass("complete");
+                $(".label-success").removeClass("label-success");
+                $("#step-tab-6" + thisId).removeClass("active");
+                $("#step6").removeClass("active");
+
+            }
+
+            // Tabs
+            $("#step-tab-" + thisId).removeClass("active");
+            $("#step-tab-" + prevId).removeClass("complete");
+            $("#step-tab-" + prevId).addClass("active");
+            //Badge in Tabs
+            $("#badge" + thisId).removeClass("label-info");
+            $("#badge" + thisId).addClass("label-default");
+            $("#badge" + prevId).removeClass("label-success");
+            $("#badge" + prevId).addClass("label-info");
+            // Panes
+            $("#step" + thisId).removeClass("active");
+            $("#step" + prevId).addClass("active");
+       });
+
+
+        $("body").on("click",".toggleSinglePrimary .btn", function() {
+            var removePrimary = false;
+            if($(this).hasClass("btn-primary")){
+                removePrimary = true;
+            }
+            $(this).siblings().removeClass("btn-primary active");
+            $(this).addClass("btn-primary active");
+            if(removePrimary == true){
+                $(this).removeClass("btn-primary active");
+            }
+        });
+
+        $("body").on("click",".toggleMultiPrimary .btn", function() {
+            $(this).toggleClass("btn-primary");
+        });
+
+
     })

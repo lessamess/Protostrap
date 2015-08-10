@@ -5,34 +5,3 @@
 .header-fixed {
     margin-top: 60px;
 }
-
-.tabbar-label {
-    display: block;
-    font-size: 0.8em;
-}
-
-.tabbar-icon {
-    display: block;
-}
-
-.tabbar-badge{
-    background-color: #d00;
-    border-radius: 8px;
-    color: white;
-    display: inline-flex;
-    font-size: 0.8em;
-    left: 41px;
-    line-height: 16px;
-    max-height: 16px;
-    min-height: 16px;
-    min-width: 16px;
-    padding: 0 4px;
-    position: relative;
-    top: -18px;
-    vertical-align: middle;
-    z-index: 100;
-}
-
-.iosTabbar .flex-container {
-    max-height: 55px;
-}
