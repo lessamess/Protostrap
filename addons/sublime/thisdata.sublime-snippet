@@ -1,7 +1,7 @@
 <snippet>
-    <content><![CDATA[\$(this).data("${1}");]]></content>
+    <content><![CDATA[\$(this).data("${1}")]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>data</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description> this data- Protostrap PS</description>
+    <description>this data Protostrap PS</description>
 </snippet>

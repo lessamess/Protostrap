@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[if(isset(\$_GET['${1:var}'])){
+    \$${1:var} = \$_GET['${1:var}'];
+}]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>issetget</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>if Isset GET Protostrap PS</description>
+</snippet>

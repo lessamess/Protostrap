@@ -7,5 +7,5 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>togglesingle</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Break Protostrap PS</description>
+    <description>Toggle Single Primary Protostrap PS</description>
 </snippet>

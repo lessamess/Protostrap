@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[<img src="assets/img/${1:file}.png" alt="">]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>image</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Image Protostrap PS</description>
+</snippet>

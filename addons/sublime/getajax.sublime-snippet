@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[\$.get('${1:file}.php?getparameter='+value, function(data){
+    \$("#${2:id}").html(data);
+    return;
+});]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>getajax</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Ajax Get Protostrap PS</description>
+</snippet>
