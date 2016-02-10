@@ -29,7 +29,7 @@ config:
       load: 1
       init: "$('input[type=file]').bootstrapFileInput()"
     typeahead:
-      title: Bootstrap Typeahead Plugin
+      title: Twitter Typeahead Plugin
       load: 1
       init:
     add2home:
