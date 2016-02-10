@@ -1048,3 +1048,38 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
 .stepper .step-content .active .btn-group .active {
   display: inline-block;
 }
+
+/* Twitter Typeahead */
+
+.tt-dataset{
+    background-color: #fff;
+    border:1px solid #c1c1c1;
+}
+.tt-suggestion{
+    padding: 8px;
+}
+.tt-suggestion:hover, .tt-suggestion.tt-cursor{
+    background-color: #337ab7;
+    color:#fff;
+}
+.tt-highlight {
+    background-color: yellow;
+}
+.tt-suggestion:hover .tt-highlight, .tt-suggestion.tt-cursor .tt-highlight{
+    background-color: black;
+    color:yellow;
+}
+.tt-noentries {
+    padding: 8px;
+}
+
+.tt-footer {
+    padding: 8px;
+    margin:0;
+    background-color: #f3f3f3;
+    border-top:1px solid #c1c1c1;
+}
+.tt-menu{
+    min-width:400px;
+}
+
