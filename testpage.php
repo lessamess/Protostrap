@@ -8,7 +8,7 @@ include('core/protostrap.php');
 
 /** Define VALUES  valid for this file **/
 $activeNavigation = "one";
-//$firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1ZrYyaqpAVgzjC7NEY9XIypo-hOR7EX_7yXs35Y6xxmo/edit?usp=sharing", "firmen");
+$firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1ZrYyaqpAVgzjC7NEY9XIypo-hOR7EX_7yXs35Y6xxmo/edit?usp=sharing", "firmen");
 
 
 ?><!DOCTYPE html>
@@ -49,7 +49,7 @@ $activeNavigation = "one";
 
                     <h4>Icons</h4>
                     Fontawesome 4.5:
-                    <div><i class="fa fa-percent"></i> Percent &nbsp;&nbsp;<i class="fa fa-bed"></i> Bed</div>
+                    <div><i class="fa fa-percent"></i> Percent &nbsp;&nbsp;<i class="fa fa-hashtag"></i> Hashtag</div>
                     <br>
                     <h4>Typeahead</h4>
                     <span class="form">
