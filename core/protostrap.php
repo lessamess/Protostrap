@@ -2,28 +2,39 @@
 /***********
  *
  * Protostrap
- * v. 3.0
+ * v. 3.1
  *
  ***********/
-
-
-session_start();
 
 //current script directory
 $csd = dirname(__FILE__);
 
+$version = "1";
+if (file_exists($csd. "/../snippets/version.php")) {
+   include($csd. "/../snippets/version.php");
+}
+
+
+session_start();
+
+
 if(empty($_SESSION['prototype'])){
     $_SESSION['prototype'] = "";
 }
-if(!empty($_GET['session_renew']) OR !empty($forceLoadData) OR $_SESSION['prototype'] != $csd){
+
+if(!empty($_GET['session_renew']) OR !empty($forceLoadData) OR $_SESSION['prototype'] != $csd OR !isset($_COOKIE['version']) OR $_COOKIE['version'] != $version){
     session_destroy();
     session_start();
+    setcookie("version", $version, time()+3600*24*180);
 }
 
 
 // Model
 include($csd.'/spyc.php');
 include($csd.'/dataParse.php');
+
+// Check if the User is authorised
+if(strlen($config['prototypeauth']) > 0){checkAuth($config);};
 
 // Handle request ID
 $reqId = false;
@@ -331,6 +342,24 @@ function box($text, $class="info",$icon="inherit", $id="", $dismiss = true ){
           </li>
         </ul>
       </div>";
+}
+
+
+function checkAuth($config){
+
+    if(!empty($_COOKIE["prototypeauth"]) and $_COOKIE["prototypeauth"] == $config['prototypeauth']){
+        return;
+    }
+    if(!empty($_POST["prototypeauth"]) and $_POST["prototypeauth"] == $config['prototypeauth']){
+        setcookie("prototypeauth",$_POST["prototypeauth"],time()+3600*24*180);
+        return;
+
+    }
+    if(!empty($_POST["prototypeauth"]) and $_POST["prototypeauth"] != $config['prototypeauth']){
+        $autherror=true;
+    }
+    include("./snippets/prototypeauth.php");
+
 }
 
 include($csd.'/../functions_controller.php');
