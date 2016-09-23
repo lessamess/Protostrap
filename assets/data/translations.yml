@@ -1,4 +1,3 @@
-language: "en"
 languages:
   de: Deutsch
   en: English
@@ -36,6 +35,9 @@ translations:
   send:
     de: Senden
     en: Send
+  signIn:
+    de: Anmelden
+    en: Sign in
   thisIsAtest:
     de: Das ist ein Test.
     en: This is a test.
