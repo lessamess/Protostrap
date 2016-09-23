@@ -3,6 +3,7 @@ config:
   datepickerFormat: dd.mm.yyyy
   defaultUser: 1
   loginWith: email
+  prototypeauth: sesame
   assets:
     extendBootstrapGrid:
       title: Bootstrap Grid Extention CSS
