@@ -63,6 +63,7 @@
 
 
     $(function(){
+
         // Tooltip if there is any
         $('.ps-tooltip').tooltip();
         $(".ps-tooltip").click(function() {
@@ -209,7 +210,7 @@
         });
 
 
-        $(".selectOnClick").focus(function() {
+        $(".selectOnFocus").focus(function() {
             $(this).select();
         });
 
@@ -261,12 +262,23 @@
        });
 
 
+        var getToggleSinglePrimaryParent = function(el){
+            tpmParent = $(el).parent();
+            while(!$(tpmParent).hasClass("toggleSinglePrimary")){
+                tpmParent = $(tpmParent).parent();
+            }
+            return tpmParent;
+        }
+
         $("body").on("click",".toggleSinglePrimary .btn", function() {
             var removePrimary = false;
             if($(this).hasClass("btn-primary")){
                 removePrimary = true;
             }
-            $(this).siblings().removeClass("btn-primary active");
+
+
+            var parent = getToggleSinglePrimaryParent($(this));
+            $(parent).find(".btn-primary.active").removeClass("btn-primary active");
             $(this).addClass("btn-primary active");
             if(removePrimary == true){
                 $(this).removeClass("btn-primary active");
