@@ -1083,6 +1083,42 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
     margin-bottom: 12px;
 }
 
+.oneliner {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nopadding{
+    padding: 0;
+}
+
+.nomargin{
+    margin: 0;
+}
+
+.noborder{
+    border: none;
+}
+
+
+.btn.btn-circle {
+    width: 50px;
+    height:50px;
+    border-radius: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.btn.btn-circle i {
+    height: 50px;
+    line-height: 48px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+
 
 /* Twitter Typeahead */
 
@@ -1117,4 +1153,3 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
 .tt-menu{
     min-width:400px;
 }
-

@@ -8,7 +8,7 @@ include('core/protostrap.php');
 
 /** Define VALUES  valid for this file **/
 $activeNavigation = "one";
-$firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1ZrYyaqpAVgzjC7NEY9XIypo-hOR7EX_7yXs35Y6xxmo/edit?usp=sharing", "firmen");
+$names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZLZoKAaSvGv5UBKPBzuxtJwmZWgyL0JF-wU/edit?usp=sharing", "names");
 
 
 ?><!DOCTYPE html>
@@ -197,12 +197,12 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1ZrYyaqpAV
 
             <div class="row">
                 <div class="col-md-12">
-                    <h4>Filtertable</h4>
-                    <div class="table-responsive table-responsive-maxheight">
+                    <h4>Filtertable and Table Sorter</h4>
                         <?php
-                        $tabledata = $firmen;
+                        $tabledata = $names;
                         $noField = array("einheit","pakete");
                         include(snippet("makeTableFromData"));?>
+                    <div class="table-responsive table-responsive-maxheight">
                     </div>
                 </div>
             </div>
