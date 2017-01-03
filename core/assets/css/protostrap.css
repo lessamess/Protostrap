@@ -112,6 +112,12 @@ body {
 .fixed-size-160, .fix160{
     width: 160px;
 }
+.fixed-size-180, .fix180{
+    width: 180px;
+}
+.fixed-size-200, .fix200{
+    width: 200px;
+}
 
 .p25{
     width: 25%;
@@ -387,6 +393,12 @@ td.error {
 .table.table-plain > tfoot > tr > th, .table.table-plain > thead > tr > td,
 .table.table-plain > tbody > tr > td, .table.table-plain > tfoot > tr > td {
     border-top: none;
+}
+
+
+table.table.table-plain tr th:first-child,
+table.table.table-plain tr td:first-child{
+    padding-left: 0;
 }
 
 .panel-body .table.table-plain {
