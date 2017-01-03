@@ -1,4 +1,4 @@
 <?php
 // changing the value of $version
-// will reset the session
-$version = "q1";
+// will force a reset of the session
+$version = "1";
