@@ -48,9 +48,13 @@ $firmen = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1ZrYyaqpAV
                     <h3>Testpage</h3>
 
                     <h4>Icons</h4>
-                    Fontawesome 4.5:
+                    Fontawesome:
                     <div><i class="fa fa-percent"></i> Percent &nbsp;&nbsp;<i class="fa fa-hashtag"></i> Hashtag</div>
                     <br>
+                    Ionicons:
+                    <div><i class="icon ion-ios-star-outline"></i> Star empty &nbsp;&nbsp;<i class="icon ion-ios-bolt-outline"></i> Bolt outline</div>
+                    <br>
+
                     <h4>Typeahead</h4>
                     <span class="form">
                         <!-- Typeahead
