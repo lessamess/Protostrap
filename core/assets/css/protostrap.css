@@ -278,20 +278,22 @@ body {
 }
 
 /* Iconicon Icons */
+/* Iconicon Icons */
 
-.icon.icon-sm{
-    font-size: 30px;
+
+.icon {
+    font-size: 24px;
     margin-top: 3px;
     margin-bottom: 4px
 }
 
-.icon.icon-lg{
-    font-size: 48px;
-
+.icon.icon-sm{
+    font-size: 24px;
 }
 
-
-
+.icon.icon-lg{
+    font-size: 36px;
+}
 
 @media(min-width:481px) {
     .iosTabbar{
@@ -1048,6 +1050,15 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
 .stepper .step-content .active .btn-group .active {
   display: inline-block;
 }
+
+
+.simpleList {
+    margin: 12px 0;
+}
+.simpleList li{
+    margin-bottom: 12px;
+}
+
 
 /* Twitter Typeahead */
 
