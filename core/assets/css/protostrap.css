@@ -29,9 +29,17 @@ body {
 
 .flexbox.padded > div {
     box-sizing:border-box;
-      -moz-box-sizing:border-box;
-      -webkit-box-sizing:border-box;
-      border: 10px solid transparent;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border: 10px solid transparent;
+}
+
+.flexbox.padded > div:first-child {
+    border-left: 0 solid transparent;
+}
+
+.flexbox.padded > div:last-child {
+    border-right: 0 solid transparent;
 }
 
 .flex-1 {
@@ -80,29 +88,45 @@ body {
 }
 
 
-.fixed-size-20{
+.fixed-size-20, .fix20{
     width: 20px;
 }
-.fixed-size-40{
+.fixed-size-40, .fix40{
     width: 40px;
 }
-.fixed-size-60{
+.fixed-size-60, .fix60{
     width: 60px;
 }
-.fixed-size-80{
+.fixed-size-80, .fix80{
     width: 80px;
 }
-.fixed-size-100{
+.fixed-size-100, .fix100{
     width: 100px;
 }
-.fixed-size-120{
+.fixed-size-120, .fix120{
     width: 120px;
 }
-.fixed-size-140{
+.fixed-size-140, .fix140{
     width: 140px;
 }
-.fixed-size-160{
+.fixed-size-160, .fix160{
     width: 160px;
+}
+
+.p25{
+    width: 25%;
+}
+.p50{
+    width: 50%;
+}
+.p75{
+    width: 75%;
+}
+.p33{
+    width: 33%;
+}
+.p66{
+    width: 66%;
 }
 
 
