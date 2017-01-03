@@ -3,7 +3,7 @@ config:
   datepickerFormat: dd.mm.yyyy
   defaultUser: 1
   loginWith: email
-  prototypeauth: sesame
+  prototypeauth:
   assets:
     extendBootstrapGrid:
       title: Bootstrap Grid Extention CSS
@@ -53,7 +53,15 @@ config:
       title: jQuery Masked Input Plugin
       load: 1
       init:
+    nouislider:
+      title: 'noUiSlider - A mobile friendly slider'
+      load: 1
+      init:
     fontawesome:
       title: Fontawesome Icons
+      load: 1
+      init:
+    ionicons:
+      title: Ionicons Icons
       load: 1
       init:
