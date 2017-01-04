@@ -12,15 +12,16 @@ table.tablesorter {
 	text-align: left;
 }
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-	background-color: #e6EEEE;
+	background-color: #FFF;
 	border: 1px solid #FFF;
 	padding: 4px;
 }
 table.tablesorter thead tr .header {
-	background-image: url(../../../assets/img/bg.gif);
-	background-repeat: no-repeat;
-	background-position: center right;
-	cursor: pointer;
+    background-image: url(../../../assets/img/sort.svg);
+    background-repeat: no-repeat;
+    background-position: right center ;
+    cursor: pointer;
+    background-size: contain;
 }
 table.tablesorter tbody td {
 	color: #3D3D3D;
@@ -31,15 +32,24 @@ table.tablesorter tbody td {
 table.tablesorter tbody tr.odd td {
 	background-color:#F0F0F6;
 }
+
 table.tablesorter thead tr .headerSortUp {
-	background-image: url(../../../assets/img/asc.gif);
+    background-image: url(../../../assets/img/sort-desc.svg);
+    background-repeat: no-repeat;
+    background-position: right center ;
+    cursor: pointer;
+    background-size: contain;
 }
 table.tablesorter thead tr .headerSortDown {
-	background-image: url(../../../assets/img/desc.gif);
+    background-image: url(../../../assets/img/sort-asc.svg);
+    background-repeat: no-repeat;
+    background-position: right center ;
+    cursor: pointer;
+    background-size: contain;
 }
-table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-background-color: #8dbdd8;
-}
+
+
+
 
 /*!
  * Bootstrap-select v1.12.1 (http://silviomoreto.github.io/bootstrap-select)
@@ -1270,6 +1280,69 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
     font-size: 18px;
     vertical-align: middle;
 }
+
+.btn-circle-sm {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0;
+}
+
+.btn.btn-circle-sm i {
+    height: 40px;
+    line-height: 38px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+.btn-onCard, .btn-onCard.topRight {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.btn-onCard.topLeft {
+    left: 10px;
+}
+.btn-onCard.bottomLeft {
+    left: 10px;
+}
+
+
+
+/*CARD*/
+
+.card {
+    position: relative;
+    display: block;
+    margin-bottom: .75rem;
+    background-color: #fff;
+    border-radius: .25rem;
+    border: 1px solid rgba(0,0,0,.125);
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.card-img-top {
+    border-top-right-radius: calc(.25rem - 1px);
+    border-top-left-radius: calc(.25rem - 1px);
+    width:100%;
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+.card-title {
+    margin-bottom: .75rem;
+}
+
+.cardContainer, .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardContainer > [class*='col-'], .flex-row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/*CARD*/
 
 
 

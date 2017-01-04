@@ -498,5 +498,47 @@ r=document.activeElement,s=i.is(r),o=i.has(r).length>0,e.isMsie()&&(s||o)&&(t.pr
             $(this).toggleClass("btn-primary");
         });
 
+        $(".btn-togglePrimary").click(function() {
+            console.log('pip');
+            $(this).toggleClass("btn-primary");
+            var icon = $(this).find("i").first();
+            if($(icon).hasClass("fa-heart-o")){
+                $(icon).removeClass("fa-heart-o");
+                $(icon).addClass("fa-heart");
+                return;
+            }
+            if($(icon).hasClass("fa-heart")){
+                $(icon).removeClass("fa-heart");
+                $(icon).addClass("fa-heart-o");
+                return;
+            }
+            if($(icon).hasClass("fa-star-o")){
+                $(icon).removeClass("fa-star-o");
+                $(icon).addClass("fa-star");
+                return;
+            }
+            if($(icon).hasClass("fa-star")){
+                $(icon).removeClass("fa-star");
+                $(icon).addClass("fa-star-o");
+                return;
+            }
+            if($(icon).hasClass("fa-user-o")){
+                $(icon).removeClass("fa-user-o");
+                $(icon).addClass("fa-user");
+                return;
+            }
+            if($(icon).hasClass("fa-user")){
+                $(icon).removeClass("fa-user");
+                $(icon).addClass("fa-user-o");
+                return;
+            }
+        });
+
+        $(".btn-onCard.bottomRight, .btn-onCard.bottomLeft").each(function (it, elem) {
+            var imgheight = $(elem).siblings("img").first().height();
+            var top = imgheight -  10 - $(elem).height();
+            $(elem).css("top", top);
+        });
+
 
     })
