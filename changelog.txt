@@ -1,5 +1,6 @@
 
 # v3.1
+- added Bootstrap 4 style cards with responsive flexbox grid support
 - added nouiSlider
 - added ionicons
 - updated Bootstrap, 3rd party plugins and Font Awesome to the latest versions
