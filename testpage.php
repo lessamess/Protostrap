@@ -132,6 +132,30 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
 
             </div>
             <br>
+            <h4>Cards, same height, flexbox, responsive</h4>
+            <div class="row flex-row ">
+                <?php
+                $i = 1;
+                while ($i <= 4) {?>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card">
+                            <div class="btn btn-default btn-togglePrimary btn-circle-sm btn-onCard"><i class="fa fa-heart-o"></i></div>
+                            <img class="card-img-top" src="assets/img/placeholderImage.svg" class="img-responsive" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Card title</h4>
+                                <p class="card-text">A description of your card's content.
+                                <?php if($i == 3){
+                                    echo "<br>With more and more content";
+                                    } ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <?php $i++;
+                } ?>
+            </div>
+
+            <br><br>
+
             <div class="row">
                 <div class="col-md-6">
                     <h4>Sortable List</h4>
