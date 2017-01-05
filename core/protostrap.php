@@ -154,6 +154,17 @@ function forceLogin(){
     }
 }
 
+function getFirstUserLogin(){
+    if(!isset($GLOBALS['users'])){
+        return "";
+    }
+    $loginWith = $GLOBALS['config']['loginWith'];
+    $users = $GLOBALS['users'];
+    $firstUser = reset($users);
+    echo $firstUser[$loginWith];
+}
+
+
 function setFromGet($var, $default = false){
     if(!empty($_GET[$var])){
         $GLOBALS[$var] = $_GET[$var];
@@ -276,7 +287,7 @@ function snippet($snippet){
 }
 
 function showIf($string) {
-    $class = "hidden";
+    $class = "hide";
     if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
         $class = "";
     }
@@ -286,7 +297,7 @@ function showIf($string) {
 function hideIf($string) {
     $class = "";
     if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
-        $class = "hidden";
+        $class = "hide";
     }
     echo $class;
 }
