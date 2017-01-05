@@ -7,5 +7,5 @@
 - added versioning to force a refresh of the prototype for distributed tests
 - New, cookie based language switch
 - added an htaccess free password protection for the prototype itself
-- add stepper
+- added a stepper to show the status of a process.
 - move to Twitter typeahead
