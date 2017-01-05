@@ -923,7 +923,7 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
     background-color: #999;
 }
 
-.stepper .mysteps {
+.stepper .steps {
   position: relative;
   overflow: hidden;
   background-color: #f9f9f9;
@@ -937,39 +937,39 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 }
 
-.stepper .mysteps:before,
-.stepper .mysteps:after {
+.stepper .steps:before,
+.stepper .steps:after {
   display: table;
   line-height: 0;
   content: "";
 }
 
-.stepper .mysteps:after {
+.stepper .steps:after {
   clear: both;
 }
 
-.stepper .mysteps ul {
-  width: 4000px;
+.stepper ul.steps {
+  width: 100%;
   padding: 0;
   margin: 0;
   list-style: none outside none;
 }
 
-.stepper .mysteps ul.previous-disabled li.complete {
+.stepper ul.steps.previous-disabled li.complete {
   cursor: default;
 }
 
-.stepper .mysteps ul.previous-disabled li.complete:hover {
+.stepper ul.steps.previous-disabled li.complete:hover {
   color: #468847;
   cursor: default;
   background: #f3f4f5;
 }
 
-.stepper .mysteps ul.previous-disabled li.complete:hover .chevron:before {
+.stepper ul.steps.previous-disabled li.complete:hover .chevron:before {
   border-left-color: #f3f4f5;
 }
 
-.stepper .mysteps ul li {
+.stepper ul.steps li {
   position: relative;
   float: left;
   height: 46px;
@@ -982,7 +982,7 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
   background: #ededed;
 }
 
-.stepper .mysteps ul li .chevron {
+.stepper ul.steps li .chevron {
   position: absolute;
   top: 0;
   right: -14px;
@@ -993,7 +993,7 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
   border-left: 14px solid #d4d4d4;
 }
 
-.stepper .mysteps ul li .chevron:before {
+.stepper ul.steps li .chevron:before {
   position: absolute;
   top: -24px;
   right: 1px;
@@ -1004,43 +1004,43 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
   content: "";
 }
 
-.stepper .mysteps ul li.complete {
+.stepper ul.steps li.complete {
   color: #468847;
   background: #f3f4f5;
 }
 
-.stepper .mysteps ul li.complete:hover {
+.stepper ul.steps li.complete:hover {
   cursor: pointer;
   background: #e7eff8;
 }
 
-.stepper .mysteps ul li.complete:hover .chevron:before {
+.stepper ul.steps li.complete:hover .chevron:before {
   border-left: 14px solid #e7eff8;
 }
 
-.stepper .mysteps ul li.complete .chevron:before {
+.stepper ul.steps li.complete .chevron:before {
   border-left: 14px solid #f3f4f5;
 }
 
-.stepper .mysteps ul li.active {
+.stepper ul.steps li.active {
   color: #3a87ad;
   background: #f1f6fc;
 }
 
-.stepper .mysteps ul li.active .chevron:before {
+.stepper ul.steps li.active .chevron:before {
   border-left: 14px solid #f1f6fc;
 }
 
-.stepper .mysteps ul li .badge {
+.stepper ul.steps li .badge {
   margin-right: 8px;
 }
 
-.stepper .mysteps ul li:first-child {
+.stepper ul.steps li:first-child {
   padding-left: 20px;
   border-radius: 4px 0 0 4px;
 }
 
-.stepper .mysteps .actions {
+.stepper .steps .actions {
   position: absolute;
   right: 0;
   z-index: 1000;
@@ -1053,17 +1053,17 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
   border-left: 1px solid #d4d4d4;
 }
 
-.stepper .mysteps .actions a {
+.stepper .steps .actions a {
   margin-right: 8px;
   font-size: 12px;
   line-height: 45px;
 }
 
-.stepper .mysteps .actions .btn-prev i {
+.stepper .steps .actions .btn-prev i {
   margin-right: 5px;
 }
 
-.stepper .mysteps .actions .btn-next i {
+.stepper .steps .actions .btn-next i {
   margin-left: 5px;
 }
 
@@ -1086,6 +1086,7 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
 .stepper .step-content .active .btn-group .active {
   display: inline-block;
 }
+
 
 
 .simpleList {
@@ -1169,6 +1170,10 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
     flex-basis: 0;
     flex-grow: 1;
 }
+.card:hover{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+}
+
 .card-img-top {
     border-top-right-radius: calc(.25rem - 1px);
     border-top-left-radius: calc(.25rem - 1px);
