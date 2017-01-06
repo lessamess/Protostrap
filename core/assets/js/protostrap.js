@@ -327,7 +327,7 @@
 
         $(".btn-onCard.bottomRight, .btn-onCard.bottomLeft").each(function (it, elem) {
             var imgheight = $(elem).siblings("img").first().height();
-            var top = imgheight -  10 - $(elem).height();
+            var top = imgheight -  10 - $(elem).outerHeight();
             $(elem).css("top", top);
         });
 
