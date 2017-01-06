@@ -111,6 +111,11 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
     setcookie ("loggedIn", "", time() - 3600);
     $loggedIn = false;
     $justLoggedIn = false;
+    $activeUser = false;
+    $username = false;
+    $usermail = false;
+    $userrole = false;
+    $userpermissions = false;
     session_destroy();
     if(empty($_POST['noredirect']) AND empty($_GET['noredirect'])){
         header("Location: index.php" );
