@@ -5,3 +5,49 @@
 .header-fixed {
     margin-top: 60px;
 }
+
+ul.list-group.list-touchfriendly li  {
+    min-height: 44px;
+    border-radius: 0;
+
+}
+/*ul.list-group.list-touchfriendly li{
+    width:100%;
+    min-height: 44px;
+    vertical-align: middle;
+}*/
+
+ul.list-group.list-touchfriendly a li.list-group-item{
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+
+ul.list-group.list-touchfriendly {
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+div.list-touchfriendly a {
+    border-top: 1px solid #ddd;
+
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    min-height: 44px;
+}
+div.list-touchfriendly a:last-child {
+    border-bottom: 1px solid #ddd;
+}

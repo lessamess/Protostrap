@@ -36,7 +36,7 @@ $activeNavigation = "home";
                 </div>
             </div>
         </div>
-        <div class="list-touchfriendly">
+        <div class="list-touchfriendly hide">
                     <?php
                     $listOfItems = array("Mountain", "Beer", "Trains");
                     foreach ($listOfItems as $key => $value): ?>
@@ -54,6 +54,30 @@ $activeNavigation = "home";
                         </div>
                     <?php endforeach ?>
         </div>
+
+        <div class="list-touchfriendly">
+            <a href="javascript:void(0);">Cras justo odios <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a>
+            <a href="javascript:void(0);">Dapibus ac facilisis</a>
+            <a href="javascript:void(0);">Morbi leo risus</a>
+        </div>
+
+
+        <ul class="list-group list-touchfriendly">
+          <a href="javascript:void(0);"><li class="list-group-item">Cras justo odio</li></a>
+          <a href="javascript:void(0);"><li class="list-group-item">Dapibus ac facilisis in</li></a>
+          <a href="javascript:void(0);"><li class="list-group-item">Morbi leo risus</li></a>
+          <a href="javascript:void(0);"><li class="list-group-item">Porta ac consectetur ac</li></a>
+          <a href="javascript:void(0);"><li class="list-group-item">
+            <span style="display: block;" >&nbsp;<i class="icon ion-ios-gear-outline " ></i> Settings</span>
+
+
+
+          </li></a>
+        </ul>
+
+
+
+
 
         <?php
         // JAVASCRIPT

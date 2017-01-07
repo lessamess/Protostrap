@@ -234,14 +234,12 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                 <div class="col-md-12">
                     <h4>Stepper</h4>
                     <div class="stepper">
-                        <div class="mysteps">
-                            <ul class="steps">
-                                <li id="step-tab-1" data-target="#step1" class="active"><span id="badge1" class="label label-as-badge label-info">1</span> Step 1<span class="chevron"></span></li>
-                                <li id="step-tab-2" data-target="#step2"><span id="badge2" class="label label-default label-as-badge">2</span> Step 2<span class="chevron"></span></li>
-                                <li id="step-tab-3" data-target="#step3"><span id="badge3" class="label label-default label-as-badge">3</span> Step 3<span class="chevron"></span></li>
-                                <li id="step-tab-4" data-target="#step4"><span id="badge4" class="label label-default label-as-badge">4</span> Step 4<span class="chevron"></span></li>
-                            </ul>
-                        </div>
+                        <ul class="steps">
+                            <li id="step-tab-1" data-target="#step1" class="active"><span id="badge1" class="label label-as-badge label-info">1</span> Step 1<span class="chevron"></span></li>
+                            <li id="step-tab-2" data-target="#step2"><span id="badge2" class="label label-default label-as-badge">2</span> Step 2<span class="chevron"></span></li>
+                            <li id="step-tab-3" data-target="#step3"><span id="badge3" class="label label-default label-as-badge">3</span> Step 3<span class="chevron"></span></li>
+                            <li id="step-tab-4" data-target="#step4"><span id="badge4" class="label label-default label-as-badge">4</span> Step 4<span class="chevron"></span></li>
+                        </ul>
                         <div class="step-content">
                             <div class="step-pane step-pane-1 active" id="step1">
 

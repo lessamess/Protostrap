@@ -112,49 +112,30 @@
             }
           });
 
-        $(".filtersearch").focus(function() {
-            $('html, body').animate({
-                    scrollTop: $(this).offset().top - 10
-                }, 500);
-            $(".filtersearch-clear i").removeClass('icon-search');
-            $(".filtersearch-clear i").addClass('icon-cross');
-
-            $(".filtersearchCount").removeClass("hide");
-
-        });
-
-        $(".filtersearch").blur(function() {
-            $(".filtersearch-clear i").removeClass('icon-cross');
-            $(".filtersearch-clear i").addClass('icon-search');
-        });
-        $(".filtersearch-focus").click(function() {
-            $(".filtersearch").focus();
-        });
-        $(".filtersearch-clear").click(function() {
-            $(".filtersearch").val('');
-            $(".filtersearch").trigger("keyup");
-            $(".filtersearch").focus();
-        });
-        $(".filtersearch, .simpleFilterSearch").keyup(function(){
+        $(".filterSearch").keyup(function(){
 
             jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function (arg) {
                 return function (elem) {
                     return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
                 };
             });
-            filtertable = "#filtertable";
-            if ($(this).attr("data-filtertable")) {
-                //console.log($(this).attr("data-filtertable"));
-                filtertable = "#"+ $(this).attr("data-filtertable");
-            }
 
+
+            filtertable = false;
+            tmpTable = $(this).parent();
+            while(filtertable == false){
+                if($(tmpTable).hasClass("filterTable")){
+                    filtertable = tmpTable;
+                }
+                tmpTable = $(tmpTable).parent();
+            }
 
             //hide all the rows
             $(filtertable).find("tr.filterme").hide();
 
             // Concatenate all Searchterms
             var concat = "";
-            $(".simpleFilterSearch").each(function (it, elem) {
+            $(".filterSearch").each(function (it, elem) {
                 if($(elem).val().length > 0 ){
                     concat = $(elem).val() + " " + concat;
                 }

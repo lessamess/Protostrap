@@ -10,7 +10,7 @@ if(empty($tabledata['fields']) OR empty($tabledata['data'])){
 }
 
 ?>
-    <table id="filtertable" class="simpleFilterTable table table-condensed table-striped table-hover draggable tablesorter">
+    <table class="filterTable table table-condensed table-striped table-hover draggable tablesorter">
         <thead>
             <tr>
                 <?php
@@ -39,7 +39,7 @@ if(empty($tabledata['fields']) OR empty($tabledata['data'])){
                                 echo "<td></td>";
                             } else { ?>
 
-                                 <td><input  type="text" class="simpleFilterSearch form-control" name="" placeholder=""></td>
+                                 <td><input  type="text" class="filterSearch form-control" name="" placeholder=""></td>
                             <?php } ?>
                         <?php break;
                     }
@@ -50,7 +50,7 @@ if(empty($tabledata['fields']) OR empty($tabledata['data'])){
         <tbody>
             <?php
                 foreach ($tabledata['data'] as $key => $filterrow) { ?>
-                <tr class=" searchresults filterme ">
+                <tr class="filterme ">
                     <?php foreach ($tabledata['fields']['keys'] as $key => $feld) { ?>
                             <td class="noWrap"><?php
                                 switch ($feld) {
