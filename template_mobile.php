@@ -1,14 +1,9 @@
 <?php
-
 /** --- B A S E F U N C T I O N S ---
     This file sets up project-wide things like authentication -
     DO NOT REMOVE
 **/
 include('core/protostrap.php');
-
-/** Define VALUES  valid for this file **/
-$activeNavigation = "home";
-
 
 ?><!DOCTYPE html>
 <html >
@@ -19,61 +14,170 @@ $activeNavigation = "home";
         // if you have to add more css, that's the place to do it.
         // DO NOT REMOVE
         include(snippet("meta_headTag"));?>
-        <link href="<?php echo $pathToAssets ;?>core/assets/css/ionicons.min.css" rel="stylesheet">
+
+        <style>
+            #page-camera{
+                background-image: url('assets/img/camdummy.jpg') ;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                background-size: cover;
+            }
+        </style>
+
     </head>
 <?php
 
 // uncomment the following function to force user to be logged in
 // forceLogin(); ?>
+    <body class="">
+        <!-- T O P B A R S -->
+        <div class="topbarContainer ">
+            <div id="topbar-start" class="flexbox topbar topbar-current">
+                <div class="fix80" >
+                    <a href="javascript:void(0);" class="goto btn" data-goto="camera" data-animation="moveInFromBottom">
+                        <i class="icon ion-ios-camera-outline topbar-icon" style="padding: 7px 11px 0;" ></i>
+                    </a>
+                </div>
+                <div class="flex-1 align-center">
+                        <span class="topbar-title">mobile template</span>
+                </div>
 
-    <body class="header-fixed">
-        <?php include("./snippets/iosTopbar.php");?>
-        <?php include("./snippets/iosTabbar.php");?>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1>Mobile Template</h1>
+                <div class="fix80 align-right" >
+                    <a href="javascript:void(0);" class="goto btn" data-goto="notifications" data-animation="moveInFromRight">
+                        <i class="icon ion-ios-bell-outline topbar-icon" style="padding: 7px 11px 0;" ></i>
+                        <span class="topbar-badge">1</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="topbar-notifications" class="flexbox topbar">
+                <div class="fixed-size-120" >
+                    <a href="javascript:void(0);" class="btn goto" data-animation="moveOutFromRight" data-goto="start"><i class="icon ion-ios-arrow-back topbar-icon"></i></a>
+                </div>
+                <div class="flex-1 align-center">
+                    <span class="topbar-title">Notifictions</span>
+                </div>
+                <div class="fixed-size-120 align-right" >
+
+                </div>
+            </div>
+            <div id="topbar-page2" class="flexbox topbar">
+                <div class="fixed-size-120" >
+                    <a href="javascript:void(0);" class="btn goto" data-animation="moveInFromRight" data-goto="start"><i class="icon ion-ios-arrow-back topbar-icon"></i></a>
+                </div>
+                <div class="flex-1 align-center">
+                    <span class="topbar-title">Page 2</span>
+                </div>
+                <div class="fixed-size-120 align-right" >
+
+                </div>
+            </div>
+            <div id="topbar-page3" class="flexbox topbar">
+                <div class="fixed-size-120" >
+                    <a href="javascript:void(0);" class="btn goto" data-animation="moveInFromBottom" data-goto="start"><i class="icon ion-ios-close-empty topbar-icon"></i></a>
+                </div>
+                <div class="flex-1 align-center">
+                    <span class="topbar-title">Page 3</span>
+                </div>
+                <div class="fixed-size-120 align-right" >
+
+                </div>
+            </div>
+            <div id="topbar-camera" class="flexbox topbar topbar-black">
+                <div class="fixed-size-120" >
+                    <a href="javascript:void(0);" class="btn goto" data-animation="moveOutFromTop" data-goto="start"><i class="icon ion-ios-close-empty topbar-icon"></i></a>
                 </div>
             </div>
         </div>
-        <div class="list-touchfriendly hide">
-                    <?php
-                    $listOfItems = array("Mountain", "Beer", "Trains");
-                    foreach ($listOfItems as $key => $value): ?>
-                        <div class="flexbox">
-                            <div class="fixed-size-80" >
-                                <img class="img-responsive" src="assets/img/gallery<?php echo $key + 1 ;?>.jpg" alt="">
-                            </div>
-                            <div class="flex-1" ><?php echo $value ;?></div>
-                            <div class="fixed-size-60 align-right" >
-                                <?php
-                                    $activeItems = array("fave","compare");
-                                    $thisItem = $value;
-                                    include("./snippets/optionsDropdown.php");?>
-                            </div>
-                        </div>
-                    <?php endforeach ?>
+
+
+        <!-- T A B B A R S -->
+        <div id="tabbarContainer" class="tabnavbar navbar-default navbar-fixed-bottom transparent ">
+
+            <div id="tabbar-start" class="flexbox tabbar tabbar-current">
+                <div class="flex-1">
+                    <button class="btn btn-primary btn-block goto " data-animation="moveInFromLeft" data-goto="page2">Register</button>
+                </div>
+                <div class="flex-1">
+                    <button class="goto btn-block  btn btn-default" data-animation="moveInFromTop" data-goto="page3">Sign in</button>
+                </div>
+            </div>
+
+
+            <div id="tabbar-notifications" class="flexbox tabbar ">
+                <div class="flex-1">
+                    <button class="goto btn-block  btn btn-primary" data-animation="moveInFromleft" data-goto="start">Go back</button>
+                </div>
+            </div>
+
+
+            <div id="tabbar-page2" class="flexbox tabbar ">
+                <div class="flex-1">
+                    <button class="goto btn-block  btn btn-primary" data-animation="moveInFromRight" data-goto="start">Go back</button>
+                </div>
+            </div>
+
+
+            <div id="tabbar-page3" class="flexbox tabbar ">
+                <div class="tabbar-item flex-1 align-center" >
+                    <a href="javascript:void(0);" class="">
+                        <i class="icon ion-ios-home-outline"></i>   <span class="tabbar-label">Home</span>
+                    </a>
+                </div>
+                <div class="tabbar-item flex-1 align-center" >
+                    <a href="javascript:void(0);" class="">
+                        <i class="icon ion-ios-location-outline"></i>   <span class="tabbar-label">Two</span>
+                    </a>
+                </div>
+                <div class="tabbar-item flex-1 align-center" >
+                    <!-- Plus sign with dismissable popover -->
+                    <a href="javascript:void(0);" data-placement="top"  data-content-div="add" class="htmlpopover " tabindex="0" role="button" data-toggle="popover" data-trigger="focus">
+                        <i class="icon icon-lg ion-ios-plus-empty"></i>
+                    </a>
+                </div>
+                <div class="tabbar-item flex-1 align-center" >
+                    <a href="javascript:void(0);" class="">
+                        <i class="icon ion-ios-email-outline"></i>   <span class="tabbar-label">Four</span>
+                    </a>
+                    <span class="tabbar-badge">1</span>
+                </div>
+                <div class="tabbar-item flex-1 align-center" >
+                    <a href="javascript:void(0);" class="">
+                        <i class="icon ion-ios-person-outline"></i><span class="tabbar-label">Five</span>
+                    </a>
+                    <span class="tabbar-badge">1</span>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="tabbar-camera" class="flexbox tabbar hide"></div>
+
         </div>
 
-        <div class="list-touchfriendly">
-            <a href="javascript:void(0);">Cras justo odios <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a>
-            <a href="javascript:void(0);">Dapibus ac facilisis</a>
-            <a href="javascript:void(0);">Morbi leo risus</a>
+        <!-- P A G E S -->
+        <div id="pt-main" class="pt-perspective">
+            <div id="page-start" class="first-page pt-page page-current container">
+                    <h1>Start</h1>
+            </div>
+            <div id="page-notifications" class="pt-page container ">
+                <h1>Notifications</h1>
+                Move in from right
+            </div>
+            <div id="page-page2" class="pt-page container ">
+                <h1>Page 2</h1>
+                Move in from Left
+            </div>
+            <div id="page-page3" class="pt-page container ">
+                <h1>Page 3</h1>
+                Move in from Top
+            </div>
+            <div id="page-camera" class="pt-page container">
+
+            </div>
         </div>
-
-
-        <ul class="list-group list-touchfriendly">
-          <a href="javascript:void(0);"><li class="list-group-item">Cras justo odio</li></a>
-          <a href="javascript:void(0);"><li class="list-group-item">Dapibus ac facilisis in</li></a>
-          <a href="javascript:void(0);"><li class="list-group-item">Morbi leo risus</li></a>
-          <a href="javascript:void(0);"><li class="list-group-item">Porta ac consectetur ac</li></a>
-          <a href="javascript:void(0);"><li class="list-group-item">
-            <span style="display: block;" >&nbsp;<i class="icon ion-ios-gear-outline " ></i> Settings</span>
-
-
-
-          </li></a>
-        </ul>
 
 
 

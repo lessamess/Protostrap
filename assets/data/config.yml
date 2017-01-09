@@ -65,3 +65,7 @@ config:
       title: Ionicons Icons
       load: 1
       init:
+    pagetransitions:
+      title: Pagetransitions
+      load: 1
+      init:

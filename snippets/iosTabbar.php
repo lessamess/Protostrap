@@ -14,7 +14,7 @@ foreach ($navKeys as $key => $item){
 
 <!-- List of Icons: http://ionicons.com/ -->
 
-<header  role="banner" class="iosTabbar navbar navbar-default navbar-fixed-bottom ">
+<div class="tabbar navbar navbar-default navbar-fixed-bottom tabbar-current">
     <div class="flexbox ">
         <div class="tabbar-item flex-1 align-center" >
             <a href="javascript:void(0);" class="<?php echo $tabbarClasses[0] ;?>">
@@ -24,7 +24,7 @@ foreach ($navKeys as $key => $item){
         </div>
         <div class="tabbar-item flex-1 align-center" >
             <a href="javascript:void(0);" class="<?php echo $tabbarClasses[1] ;?>">
-                <i class="icon icon-sm ion-ios-location-outline"></i>   <span class="tabbar-label">Two</span>
+                <i class="icon ion-ios-location-outline"></i>   <span class="tabbar-label">Two</span>
             </a>
             <span class="tabbar-badge">1</span>
         </div>
@@ -46,14 +46,5 @@ foreach ($navKeys as $key => $item){
             </a>
             <span class="tabbar-badge">1</span>
         </div>
-    </div>
-</header>
-<div id="add" class="hide">
-    <div class="list-group">
-        <a href="javascript:void(0);" class="list-group-item">Link 1</a>
-        <a href="javascript:void(0);" class="list-group-item">Link 2</a>
-        <a href="javascript:void(0);" class="list-group-item">Link 3</a>
-        <a href="javascript:void(0);" class="list-group-item">Link 4</a>
-        <a href="javascript:void(0);" class="list-group-item">Link 5</a>
     </div>
 </div>

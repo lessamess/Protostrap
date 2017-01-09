@@ -136,23 +136,161 @@ body {
 }
 
 
-/**
- * iOS-TOPBAR Styles
+/*
+ * COMMON STYLES
  **/
 
-
-.iosTopbar .flexbox .navbar-toggle {
-    margin-left: 0;
-    margin-right: 0;
+.topbar, .tabbar {
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
 }
+
+.topbar.topbar-current, .tabbar.tabbar-current {
+  visibility: visible;
+
+}
+
+
+
+/**
+ * TOPBAR Styles
+ **/
+
+.topbarContainer {
+  background-color: #e7e7e7;
+  color: #333;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  border-bottom: none;
+  height: 44px;
+  top: 0;
+  left: 0; }
+
+.topbarContainerPlain {
+  background-color: none;
+  color: #757575;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  border-bottom: none;
+  height: 44px;
+  top: 0;
+  left: 0; }
+
+  .topbar {
+    border-bottom: 1px solid #c5c5c5;
+  }
+
+.topbar-black {
+    background-color: #333;
+    color: #fff;
+    border-bottom: 2px solid black;
+}
+
+.topbar-black .icon.topbar-icon{
+    color: #fff;
+}
+
+
+.topbar-label {
+  padding-top: 7px;
+  font-size: 16px; }
+
+.topbar-label.topbar-center {
+  font-size: 18px; }
+
+/* NEEDED? */
+.topbarContainer .topbar-label a {
+    /*originally white*/
+    color: red;
+}
+
+.topbar .btn {
+  padding: 0 6px; }
+
+
+.btn.btn-topbar {
+  background-color: #233a77;
+  border-color: #233a77;
+  padding: 0 20px;
+  height: 26px;
+  margin-top: 8px;
+  margin-left: 5px; }
+
+.topbar .btn.btn-topbar-text {
+  font-size: 16px;
+  padding-top: 7px; }
+
+
+
+.topbar-badge {
+  background-color: #d00;
+  border-radius: 8px;
+  color: white;
+  display: inline-flex;
+  font-size: 0.8em;
+  line-height: 16px;
+  max-height: 16px;
+  min-height: 16px;
+  min-width: 16px;
+  padding: 0 5px;
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  vertical-align: middle;
+  z-index: 1100; }
+
+.topbar-badge-left {
+  background-color: #d00;
+  border-radius: 8px;
+  color: white;
+  display: inline-flex;
+  font-size: 0.8em;
+  line-height: 16px;
+  max-height: 16px;
+  min-height: 16px;
+  min-width: 16px;
+  padding: 0 5px;
+  position: absolute;
+  right: 56px;
+  top: 5px;
+  vertical-align: middle;
+  z-index: 1100; }
+
+.topbar-badge-home {
+  background-color: #d00;
+  border-radius: 8px;
+  color: white;
+  display: inline-flex;
+  font-size: 0.8em;
+  left: -16px;
+  line-height: 16px;
+  max-height: 16px;
+  min-height: 16px;
+  min-width: 16px;
+  padding: 0 5px;
+  position: relative;
+  top: -16px;
+  vertical-align: middle;
+  z-index: 1100; }
+
+.icon.topbar-icon {
+  color: #333;
+  font-size: 28px;
+  padding: 7px 10px 0; }
+
 
 .topbar-title{
     font-size: 18px;
-    font-weight: 300;
-    line-height: 50px;
+    margin-top: 10px;
+    display: inline-block;
     vertical-align: middle;
 }
 
+/*NEEDED?*/
 .topbar-fixed{
     padding: 0 10px;
     margin-top: 10px;
@@ -164,29 +302,55 @@ body {
     line-height: 24px;
 }
 
-/** END iOS-TOPBAR Styles **/
+
+
+/** END TOPBAR Styles **/
 
 /**
- * iOS-TABBAR Styles
+ * TABBAR Styles
  **/
 
-
-.iosTabbar .flexbox{
-    height: 48px;
+.tabnavbar.navbar-fixed-bottom{
+    height: 46px;
 }
 
-.tabbar-label {
-    display: block;
-    font-size: 10px;
-    position: relative;
-    bottom: 7px;
+.tabbar a, .tabbar a:hover, .tabbar a:focus {
+  color: #757575;
+  display: block;
+  text-decoration: none; }
+
+.tabbar a.active, .tabbar a.active:hover, .tabbar a.active:focus {
+  color: #233a77;
+  display: block;
+  text-decoration: none; }
+
+.tabbar-badge {
+  background-color: #d00;
+  border-radius: 8px;
+  color: white;
+  display: table;
+  font-size: 11px;
+  left: 42px;
+  line-height: 16px;
+  max-height: 16px;
+  min-height: 16px;
+  min-width: 16px;
+  padding: 0 4px;
+  position: relative;
+  top: -50px;
+  vertical-align: middle;
+  z-index: 1100; }
+
+
+.tabbar .flexbox{
+    height: 48px;
 }
 
 .tabbar-icon  {
     display: block;
 }
 
-.tabbar-item  .icon, .button-box  .icon{
+/*.tabbar-item  .icon, .button-box  .icon{
 
     font-size: 36px;
     -moz-osx-font-smoothing: grayscale;
@@ -205,34 +369,18 @@ body {
     transform: translate(0px, 0px);
     position: relative;
     top:-3px;
-}
-
-.tabbar-item .tabbar-badge{
-    background-color: #d00;
-    border-radius: 8px;
-    color: white;
-    display: inline-flex;
-    font-size: 0.8em;
-    left: 17px;
-    line-height: 16px;
-    max-height: 16px;
-    min-height: 16px;
-    min-width: 16px;
-    padding: 0 4px;
-    vertical-align: middle;
-    position: relative;
-    top: -55px;
-    z-index: 1100;
-}
+}*/
 
 
-#tabbar-badges{
-    z-index: 999;
-}
+.tabbar-label {
+  bottom: 7px;
+  display: block;
+  font-size: 10px;
+  position: relative; }
 
-.tabbar-item {
+/*.tabbar-item {
     padding-top:4px;
-}
+}*/
 
 .tabbar-item a , .tabbar-item a:hover , .tabbar-item a:focus  {
     text-decoration: none;
@@ -244,7 +392,13 @@ body {
     color: #007aff;
 }
 
-/** END iOS-TABBAR Styles **/
+.tabbar .btn {
+    border-radius: 0;
+    padding: 10px 12px;
+    font-size: 16px;
+}
+
+/** END TABBAR Styles **/
 
 /**********************/
 /* CLASSES FOR MOBILE */
@@ -313,6 +467,11 @@ body {
 
 .icon {
     font-size: 24px;
+    margin-top: 3px;
+    margin-bottom: 4px
+}
+.tabbar .icon {
+    font-size: 28px;
     margin-top: 3px;
     margin-bottom: 4px
 }
