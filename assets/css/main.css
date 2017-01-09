@@ -1,10 +1,8 @@
-.affix {
-    top: 60px; /* Position where the element is fixed */
-}
 
 .header-fixed {
     margin-top: 60px;
 }
+
 
 ul.list-group.list-touchfriendly li  {
     min-height: 44px;
