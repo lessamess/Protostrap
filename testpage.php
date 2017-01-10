@@ -58,24 +58,30 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                     <h4>Typeahead</h4>
                     <span class="form">
                         <!-- Typeahead
-                             Change Data in assets/js/main.js
+                             Change Data in snippets/typeahead.php
                              Documentation: https://github.com/bassjobsen/Bootstrap-3-Typeahead -->
-                        <input type="text" class="form-control typeahead" name="mytypeahead" placeholder="Typeahead (Try: foo)">
+                        <input type="text" class="form-control typeahead" placeholder="Typeahead (Try: foo)">
                     </span>
                     <br>
 
-
+                    <br>
                     <h4>Select</h4>
-                    <select class="selectpicker" data-live-search="true" name="select" data-width="auto">
+                    <select class="selectpicker" data-live-search="true" name="select" data-count-selected-text="{0} selected" data-icon-base="fa" data-tick-icon ="fa fa-check" data-width="auto" multiple data-selected-text-format="count > 2" title="Select one or more">
                         <option value="">one</option>
                         <option value="">two</option>
                         <option value="">three</option>
+                        <option value="">four</option>
+                        <option value="">five</option>
+                        <option value="">six</option>
+                        <option value="">seven</option>
+                        <option value="">eight</option>
                     </select>
                     <br>
 
 
+                    <br>
                     <h4>Datepicker</h4>
-                    <div class="input-group date" id="" data-date="">
+                    <div class="input-group date" id="datepicker" data-date="">
                         <input class="form-control" type="text" value="">
                         <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                     </div>
