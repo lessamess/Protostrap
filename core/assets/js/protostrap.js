@@ -259,10 +259,10 @@
 
 
             var parent = getToggleSinglePrimaryParent($(this));
-            $(parent).find(".btn-primary.active").removeClass("btn-primary active");
-            $(this).addClass("btn-primary active");
+            $(parent).find(".btn-primary").removeClass("btn-primary");
+            $(this).addClass("btn-primary");
             if(removePrimary == true){
-                $(this).removeClass("btn-primary active");
+                $(this).removeClass("btn-primary");
             }
         });
 

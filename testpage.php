@@ -102,7 +102,7 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                     <h4>Toggle One Button in a group</h4>
 
                     <div class="btn-group toggleSinglePrimary">
-                        <button type="button" class="btn btn-default">Left</button>
+                        <button type="button" class="btn btn-default btn-primary">Left</button>
                         <button type="button" class="btn btn-default">Middle</button>
                         <button type="button" class="btn btn-default">Right</button>
                     </div>
@@ -230,7 +230,6 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                     <h4>Filtertable and Table Sorter</h4>
                         <?php
                         $tabledata = $names;
-                        $noField = array("einheit","pakete");
                         include(snippet("makeTableFromData"));?>
                     <div class="table-responsive table-responsive-maxheight">
                     </div>
@@ -279,41 +278,6 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                 </div>
             </div>
             <br>
-            <div class="row">
-                <div class="col-md-12" id="flexboxdemo">
-                    <h4>Flexbox</h4>
-                    Fixed & Flexing
-                    <div class="flexbox padded">
-                        <div class="fixed" >Fixed</div>
-                        <div class="flex-1" >Flexible</div>
-                    </div>
-                    <br>
-                    Equal Parts
-                    <div class="flexbox padded">
-                        <div class="flex-1" >One</div>
-                        <div class="flex-1" >Two</div>
-                        <div class="flex-1" >Three</div>
-                    </div>
-                    <br>
-                    One Third & Two Thirds
-                    <div class="flexbox padded">
-                        <div class="flex-1" >One Third</div>
-                        <div class="flex-2" >Two Thirds</div>
-                    </div>
-
-
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-6">
-                     <?php box("Please note that the width of a flexbox container is determined after padding is added. This results in slightly faulty alignment.", "info", "inherit" , "boxid" , "dismiss" ); ?>
-
-                </div>
-                <div class="col-md-6">
-
-                </div>
-            </div>
         </div> <!-- /container -->
 
         <?php
