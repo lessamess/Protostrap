@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[<div class="btn-group toggleSinglePrimary">
+                            <button type="button" class="btn btn-default">${1:one}</button>
+                            <button type="button" class="btn btn-default">${2:two}</button>
+                            <button type="button" class="btn btn-default">${3:three}</button>
+                        </div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>togglesingle</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Toggle Single Primary Protostrap PS</description>
+</snippet>

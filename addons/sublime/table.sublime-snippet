@@ -14,5 +14,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>pstable</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Table Protostrap PS</description>
+    <description>Table - Protostrap</description>
+    <type>HTML</type>
 </snippet>

@@ -3,5 +3,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>br</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Break Protostrap PS</description>
+    <description>Break - Protostrap</description>
+    <type>HTML</type>
 </snippet>

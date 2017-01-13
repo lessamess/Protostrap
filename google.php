@@ -31,11 +31,16 @@ if(!empty($_GET['q'])){
 
     $json = file_get_contents($apiurl);
 
-    foreach ($urls as $key => $val) {
-        $json =  str_replace($val, $replacements[$key], $json);
-    }
     $data = json_decode($json, TRUE);
-    // var_dump($apiurl);
+    foreach ($data['items'] as $key => $item) {
+        foreach ($urls as $urlkey => $val) {
+            $pattern = preg_quote($val,"|");
+            preg_match("|".$pattern."|",  $item['link'],$matches);
+            if(!empty($matches)){
+                $data['items'][$key]['link'] =  $replacements[$urlkey];
+            }
+        }
+    }
 }
  ?><!DOCTYPE html>
 <html>
@@ -58,17 +63,15 @@ if(!empty($_GET['q'])){
                 case 'searchfield'; ?>
                     <div class="container">
                         <div class="row">
-                            <span class="col-md-3">&nbsp;</span>
-                            <span class="col-md-6 align-center">
+                            <span class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 align-center">
                                 <br><br><br><br>
                                 <img src="assets/img/google.png"><br><br>
                                 <form action="google.php" method="get">
-                                    <input type="text" class="form-control googleSearchfield"  name="q" value=""> <br>
+                                    <input type="text" class="form-control googleSearchfield"  name="q" value="" autofocus> <br>
                                     <input type="submit"  name="submit" class="btn googleBtn" value="Google-Suche">
                                     &nbsp;&nbsp;&nbsp;
                                     <input type="submit"  name="submit" class="btn googleBtn" value="Auf gut Glück!">
                                 </form>
-                                </div>
                             </span>
                             <span class="col-md-3">&nbsp;</span>
                         </div>

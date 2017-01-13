@@ -1,4 +1,5 @@
 RewriteEngine on
+Options -Multiviews
 
 #set password for staging-environment (e.g. on a server reachable by clients)
 

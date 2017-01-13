@@ -3,5 +3,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>incif</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Include If Protostrap PS</description>
+    <description>Include If - Protostrap</description>
+    <type>PHP</type>
 </snippet>

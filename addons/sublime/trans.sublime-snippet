@@ -1,7 +1,8 @@
 <snippet>
-    <content><![CDATA[<?php echo __("${1}"); ?>]]></content>
+    <content><![CDATA[<?php echo __("${1:key}"); ?>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>__</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Translation Protostrap PS</description>
+    <description>Get translation for a key - Protostrap</description>
+    <type>PHP</type>
 </snippet>

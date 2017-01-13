@@ -1,8 +1,9 @@
 <snippet>
-    <content><![CDATA[<?php var_dump(${1:expression}) ;?>]]></content>
+    <content><![CDATA[${2:<?php }var_dump(\$${1:var}) ;${3:?>}]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
-    <tabTrigger>dump</tabTrigger>
+    <tabTrigger>vd</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>vardump Protostrap PS</description>
+    <description>PHP vardump - Protostrap</description>
+    <type>PHP</type>
 </snippet>
 

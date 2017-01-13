@@ -7,5 +7,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>inputgr</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Input Group Protostrap PS</description>
+    <description>Input Group - Protostrap</description>
+    <type>HTML</type>
 </snippet>

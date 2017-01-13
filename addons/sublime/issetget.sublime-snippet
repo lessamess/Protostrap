@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[\$${1:var} = "";
+if(isset(\$_GET['${1:var}'])){
+    \$${1:var} = \$_GET['${1:var}'];
+}]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>issetget</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Assign a specific GET variable if it exists - Protostrap</description>
+    <type>PHP</type>
+</snippet>

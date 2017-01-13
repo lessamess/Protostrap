@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[ul.simpleList>li*${1:5}]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>sl</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Make Emmet markup for a simple List - Protostrap</description>
+    <type>HTML</type>
+</snippet>

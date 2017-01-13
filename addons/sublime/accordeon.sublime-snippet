@@ -29,6 +29,7 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>acc</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Accordeon Protostrap PS</description>
+    <description>Accordeon - Protostrap</description>
+    <type>HTML</type>
 </snippet>
 

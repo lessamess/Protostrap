@@ -105,6 +105,13 @@ $activeNavigation = "one";
                     $disbleWritingCombined = "disabled";
                 endif ?>
                 <a href="index.php?writeCombined=true" class="btn btn-block btn-primary <?php echo $disbleWritingCombined ;?>"> Write Combined Assets</a>
+                <?php
+                    $filename = 'assets/css/combined.css';
+                    if (file_exists($filename)) {
+                            echo "<br><span class=\"small\">Last write: " . date ("F d Y H:i:s", filemtime($filename))."</span>";
+                    }
+
+                 ?>
             </div>
         </div>
 

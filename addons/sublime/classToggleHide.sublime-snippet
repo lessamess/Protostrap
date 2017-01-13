@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[.toggleClass("${1:hide}");]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>tc</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>jQuery Toggle Class, use "hide" as default - Protostrap</description>
+    <type>jQuery</type>
+</snippet>

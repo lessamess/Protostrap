@@ -1,7 +1,8 @@
 <snippet>
-    <content><![CDATA[<?php include(snippet("${1:snippet}"));?>]]></content>
+    <content><![CDATA[<?php include("./snippets/${1}.php");?>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
-    <tabTrigger>snippet</tabTrigger>
+    <tabTrigger>include</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Snippet Protostrap PS</description>
+    <description>Include - Protostrap</description>
+    <type>PHP</type>
 </snippet>

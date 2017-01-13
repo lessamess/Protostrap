@@ -1,15 +1,16 @@
 <snippet>
     <content><![CDATA[<div class="media">
-  <a class="pull-left" href="#">
-    <img class="media-object" src="/assets/img/${1:img.png}" alt="">
-  </a>
-  <div class="media-body">
-    <${2:h4} class="media-heading">${3:Headline}</${2:h4}>
-    ${4:body}
-  </div>
-</div>}]]></content>
+    <a class="pull-left" href="javascript:void(0);">
+        <img class="media-object" src="assets/img/${1:img.png}" alt="">
+    </a>
+    <div class="media-body">
+        <h${2:4} class="media-heading">${3:Headline}</h${2:4}>
+        ${4:Bodytext}
+    </div>
+</div>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>media</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Media Protostrap PS</description>
+    <description>Media - Protostrap</description>
+    <type>HTML</type>
 </snippet>

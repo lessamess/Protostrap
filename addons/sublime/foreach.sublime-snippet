@@ -5,6 +5,7 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>foreach</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Foreach Protostrap PS</description>
+    <description>Foreach - Protostrap</description>
+    <type>PHP</type>
 </snippet>
 

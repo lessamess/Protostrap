@@ -3,5 +3,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>psinput</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Input Field Protostrap PS</description>
+    <description>Input Field - Protostrap</description>
+    <type>HTML</type>
 </snippet>

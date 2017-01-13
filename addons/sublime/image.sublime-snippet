@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[<img class="img-responsive" src="assets/img/${1:file.png}" alt="">]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>image</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Image - Protostrap</description>
+    <type>HTML</type>
+</snippet>

@@ -1,7 +1,8 @@
 <snippet>
-    <content><![CDATA[<hr>]]></content>
+    <content><![CDATA[<hr class="${1:plain}">]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
-    <tabTrigger>hr</tabTrigger>
+    <tabTrigger>hrp</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Horizontal Ruler Protostrap PS</description>
+    <description>Horizontal Ruler with plain class - Protostrap</description>
+    <type>HTML</type>
 </snippet>

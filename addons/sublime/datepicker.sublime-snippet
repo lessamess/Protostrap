@@ -6,5 +6,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>datepicker</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Datepicker Protostrap PS</description>
+    <description>Datepicker - Protostrap</description>
+    <type>HTML</type>
 </snippet>

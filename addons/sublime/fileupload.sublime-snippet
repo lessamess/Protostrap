@@ -8,5 +8,6 @@ ${1:<a href="javascript:void(0)" class="btn">Upload</a>}]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>fileupload</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Fileupload Protostrap PS</description>
+    <description>Fileupload - Protostrap</description>
+    <type>HTML</type>
 </snippet>

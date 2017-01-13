@@ -3,5 +3,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>void</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Javascript Void Protostrap PS</description>
+    <description>Javascript Void - Protostrap</description>
+    <type>HTML</type>
 </snippet>

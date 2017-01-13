@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[<div class="card">
+    <div class="btn btn-default btn-togglePrimary btn-circle-sm btn-onCard"><i class="fa fa-heart-o"></i></div>
+    <img class="card-img-top" src="assets/img/placeholderImage.svg" class="img-responsive" alt="Card image cap">
+    <div class="card-block">
+        <h4 class="card-title">Star small round</h4>
+        <p class="card-text">A card with a round heart icon button that toggles to primary. <br>
+        <br>
+        Classes used: <br>
+            btn btn-default btn-circle-sm btn-togglePrimary btn-onCard
+        </p></p>
+    </div>
+</div>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>card</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Card - Protostrap</description>
+    <type>HTML</type>
+</snippet>

@@ -1,17 +1,17 @@
 <snippet>
     <content><![CDATA[
-        <?php 
+        <?php
 // define the carousel Id
 // this is the name of the variable containing the carousel data
 \$carouselId = "carousel" ;?>
 <div id="<?php echo \$carouselId ;?>" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-  <?php foreach (\$carousel as \$key => \$val) { 
+  <?php foreach (\$carousel as \$key => \$val) {
     \$class = "";
     if(\$key === 0){
         \$class = "active";
-        
+
     }
     ?>
     <li data-target="#<?php echo \$carouselId ;?>" data-slide-to="<?php echo \$key ;?>" class="<?php echo \$class ;?>"></li>
@@ -20,11 +20,11 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-      <?php foreach (\$carousel as \$key => \$value) { 
+      <?php foreach (\$carousel as \$key => \$value) {
             \$class = "";
             if(\$key == 0){
                 \$class = "active";
-                
+
             }?>
             <div class="item <?php echo \$class ;?>">
                 <img width="100%"src="./assets/img/<?php echo \$value['image'] ;?>" alt="<?php echo \$value['caption-title'] ;?>">
@@ -34,8 +34,8 @@
                 </div>
             </div>
       <?php } ?>
-    
-    
+
+
   </div>
 
   <!-- Controls -->
@@ -49,5 +49,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>carousel</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Carousel Protostrap PS</description>
+    <description>Carousel - Protostrap</description>
+    <type>HTML</type>
 </snippet>

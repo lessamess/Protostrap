@@ -1,5 +1,7 @@
 <?php
-$navKeys = ["home","tagebuch","add","essen","fitness"];
+
+$navKeys = ["home", "two", "three", "four", "five"];
+$navLinks = ["link1.php", "link2.php", "link3.php", "link4.php", "link5.php"];
 
 // LEAVE ALONE
 $tabbarClasses = array_fill(0, 10, '');
@@ -10,40 +12,39 @@ foreach ($navKeys as $key => $item){
  }
 ?>
 
+<!-- List of Icons: http://ionicons.com/ -->
 
-
-<header  role="banner" class="iosTabbar navbar navbar-default navbar-fixed-bottom ">
-<div class="micropadding"></div>
-  <div class="flex-container ">
-    <div class="flex-item align-center" >
-        <span class="tabbar-badge">1</span>
-        <a href="index.php" class="align-center <?php echo $tabbarClasses[0] ;?>">
-            <span class="tabbar-icon"><i class="fa fa-2x fa-home"></i></span>   <span class="tabbar-label">One</span>
-        </a>
+<div class="tabbar navbar navbar-default navbar-fixed-bottom tabbar-current">
+    <div class="flexbox ">
+        <div class="tabbar-item flex-1 align-center" >
+            <a href="javascript:void(0);" class="<?php echo $tabbarClasses[0] ;?>">
+                <i class="icon ion-ios-home-outline"></i>   <span class="tabbar-label">Home</span>
+            </a>
+            <span class="tabbar-badge">1</span>
+        </div>
+        <div class="tabbar-item flex-1 align-center" >
+            <a href="javascript:void(0);" class="<?php echo $tabbarClasses[1] ;?>">
+                <i class="icon ion-ios-location-outline"></i>   <span class="tabbar-label">Two</span>
+            </a>
+            <span class="tabbar-badge">1</span>
+        </div>
+        <div class="tabbar-item flex-1 align-center" >
+            <!-- Plus sign with dismissable popover -->
+            <a href="javascript:void(0);" data-placement="top"  data-content-div="add" class="htmlpopover <?php echo $tabbarClasses[2] ;?>" tabindex="0" role="button" data-toggle="popover" data-trigger="focus">
+                <i class="icon icon-lg ion-ios-plus-empty"></i>
+            </a>
+        </div>
+        <div class="tabbar-item flex-1 align-center" >
+            <a href="javascript:void(0);" class="<?php echo $tabbarClasses[3] ;?>">
+                <i class="icon ion-ios-email-outline"></i>   <span class="tabbar-label">Four</span>
+            </a>
+            <span class="tabbar-badge">1</span>
+        </div>
+        <div class="tabbar-item flex-1 align-center" >
+            <a href="javascript:void(0);" class="<?php echo $tabbarClasses[4] ;?>">
+                <i class="icon ion-ios-person-outline"></i><span class="tabbar-label">Five</span>
+            </a>
+            <span class="tabbar-badge">1</span>
+        </div>
     </div>
-    <div class="flex-item align-center" >
-        <span class="tabbar-badge">1</span>
-        <a href="tagebuch.php" class="<?php echo $tabbarClasses[1] ;?>">
-            <i class="fa fa-2x fa-book"></i>   <span class="tabbar-label">Two</span>
-        </a>
-    </div>
-    <div class="flex-item align-center" >
-        <span class="tabbar-badge">1</span>
-        <a href="add.php" class="<?php echo $tabbarClasses[2] ;?>">
-            <i class="fa fa-2x fa-plus"></i>   <span class="tabbar-label">Three</span>
-        </a>
-    </div>
-    <div class="flex-item align-center" >
-        <span class="tabbar-badge">1</span>
-        <a href="essen.php" class="<?php echo $tabbarClasses[3] ;?>">
-            <i class="fa fa-2x fa-coffee"></i>   <span class="tabbar-label">Four</span>
-        </a>
-    </div>
-    <div class="flex-item align-center" >
-        <span class="tabbar-badge">1</span>
-        <a href="fitness.php" class="<?php echo $tabbarClasses[4] ;?>">
-            <i class="fa fa-2x fa-futbol-o"></i><span class="tabbar-label">Five</span>
-        </a>
-       </div>
-  </div>
-</header>
+</div>

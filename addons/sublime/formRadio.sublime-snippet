@@ -22,5 +22,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>formradio</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Form Group Radio Protostrap PS</description>
+    <description>Form Group Radio - Protostrap</description>
+    <type>HTML</type>
 </snippet>

@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[div.row>div.col-md-6*2]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>md6</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>grid Row with 2 md-6 slots - Protostrap</description>
+    <type>HTML</type>
+</snippet>
+

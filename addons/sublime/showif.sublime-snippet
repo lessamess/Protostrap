@@ -3,5 +3,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>showif</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Show If Protostrap PS</description>
+    <description>Show If - Protostrap</description>
+    <type>PHP</type>
 </snippet>

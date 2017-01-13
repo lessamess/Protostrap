@@ -1,0 +1,18 @@
+
+<svg width="242px" height="162px" viewBox="-1 -1 242 162" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="240" height="160"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="242" height="162">
+            <rect x="-1" y="-1" width="242" height="162" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Rectangle" stroke="none" fill="none">
+        <use fill="#ECECEC" fill-rule="evenodd" xlink:href="#path-1"></use>
+        <use stroke="#979797" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+    </g>
+    <path d="M0.5,159.5 L239.5,0.5" id="Line" stroke="#979797" stroke-width="1" stroke-linecap="square" fill="none"></path>
+    <path d="M0.5,159.5 L239.5,0.5" id="Line-Copy" stroke="#979797" stroke-width="1" stroke-linecap="square" fill="none" transform="translate(120.000000, 80.000000) scale(-1, 1) translate(-120.000000, -80.000000) "></path>
+</svg>

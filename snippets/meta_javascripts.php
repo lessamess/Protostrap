@@ -27,6 +27,7 @@
     <script src="<?php echo $pathToAssets ;?>core/assets/js/combined.js?time=<?php time();?>"></script>
     <script>
         <!-- Inline Scripts that need PHP -->
+        <!-- DO NOT TOUCH -->
         $(function(){
         <?php
         foreach ($config['assets'] as $key => $asset) {
@@ -35,6 +36,8 @@
                 echo $asset['init']. ";\n";
             }
         } ?>
+
+        <?php include("./snippets/typeahead.php");?>
 
         })
 

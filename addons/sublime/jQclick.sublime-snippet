@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[\$("#${1:id}").click(function() {
+    <content><![CDATA[\$(".${1:class}").click(function() {
 
 });
 
@@ -7,6 +7,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>click</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>jQ click event Protostrap PS</description>
+    <description>jQuery click event handler - Protostrap</description>
+    <type>jQuery</type>
 </snippet>
-

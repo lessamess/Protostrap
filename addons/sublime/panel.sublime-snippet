@@ -10,5 +10,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>panel</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Panel Protostrap PS</description>
+    <description>Panel - Protostrap</description>
+    <type>HTML</type>
 </snippet>

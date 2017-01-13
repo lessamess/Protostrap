@@ -22,5 +22,6 @@ ${2:<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#${1
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>modal</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Modal Protostrap PS</description>
+    <description>Modal - Protostrap</description>
+    <type>HTML</type>
 </snippet>

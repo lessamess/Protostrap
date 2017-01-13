@@ -1,7 +1,8 @@
 <snippet>
-    <content><![CDATA[console.log(${1});]]></content>
+    <content><![CDATA[console.log('${1}');]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>console</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Console Log Protostrap PS</description>
+    <description>Console Log - Protostrap</description>
+    <type>jQuery</type>
 </snippet>

@@ -1,7 +1,8 @@
 <snippet>
     <content><![CDATA[<input type="checkbox" class="switch" data-on-text="${1:ON}" data-off-text="${2:OFF}" data-on-color="${3:primary}" checked>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
-    <tabTrigger>psswitch</tabTrigger>
+    <tabTrigger>switchbtn</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Switch Protostrap PS</description>
+    <description>Switch Button - Protostrap</description>
+    <type>HTML</type>
 </snippet>

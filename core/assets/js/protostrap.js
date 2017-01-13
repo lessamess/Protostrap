@@ -63,17 +63,93 @@
 
 
     $(function(){
-        // Tooltip if there is any
-        $('.ps-tooltip').tooltip();
-        $(".ps-tooltip").click(function() {
-            setTimeout( function(){
-                $('.ps-tooltip').tooltip('hide')}, 2000);
-        });
 
         // Carousel if there is any
         $('.carousel').carousel(
             {interval: 0}
         );
+
+        $('.btn-spinner').on('click', function() {
+          // keep width of button
+          var width = $(this).outerWidth();
+          $(this).css("width", width+"px");
+          // spinner markup
+          var spinner = "<i class=\"fa fa-spinner fa-spin\"></i>";
+          // original button label
+          var tmpContent = $(this).html();
+          // show spinner
+          $(this).html(spinner);
+          // make scope for timeout function
+          var that = $(this);
+            setTimeout(function() {
+               // rollback
+               $(that).html(tmpContent);
+           }, 1000);
+        });
+
+        $(".fakeReload").click(function() {
+            var spinnerMarkup = "<div class=\" align-center\">";
+            spinnerMarkup += "    ";
+            spinnerMarkup += "    <i class=\"fa fa-spinner fa-spin fa-3x\"></i>";
+            spinnerMarkup += "    <br><br><br>";
+            spinnerMarkup += "</div>";
+            var target = $(this).data("target");
+            var tmpContent = $("#"+target).html();
+            $("#"+target).html(spinnerMarkup);
+            setTimeout(function(){
+                $("#"+target).html(tmpContent);
+            },1000);
+        });
+
+        $('.tooltiptrigger').tooltip({trigger: "click"});
+        $(".tooltiptrigger").click(function() {
+            if($(this).data("hide") != undefined){
+                var delay = $(this).data("hide");
+                var that = this;
+                setTimeout( function(){
+                    $(that).tooltip('hide')}, delay);
+            }
+        });
+
+        $(".trigger").click(function() {
+            var group = $(this).data("group");
+            var item = $(this).data("item");
+            $("."+group).addClass("hide");
+            $("."+group+"-" + item).removeClass("hide");
+        });
+
+        function showTooltip(target, text){
+             $(target).attr('data-toggle','tooltip');
+             $(target).attr('data-placement','top');
+             $(target).attr('data-trigger','click');
+             $(target).attr('title', text);
+
+
+            //and finally show the popover
+            $(target).tooltip('show');
+            var that = target;
+            setTimeout( function(){
+                     $(that).tooltip('hide')}, 1500);
+        }
+
+        $(".copyToClipboard").click(function() {
+            var target = $(this).data("target");
+            var text = $("#"+target).html();
+            $('<div style="opacity:0"><textarea id="textarea'+target+'">'+text+'</textarea></div>').appendTo("body");
+            $("#textarea"+target).select();
+            document.execCommand('copy');
+            $("#textarea"+target).remove();
+            showTooltip(this, "Copied to Clipboard");
+        });
+
+        $(".showHide").click(function() {
+            if($("#"+$(this).data("show")).hasClass("hide")){
+                $("#"+$(this).data("show")).css("display", "none").removeClass("hide");
+            }
+            $("#"+$(this).data("show")).toggle("slow");
+            $("#"+$(this).data("hide")).toggle("slow");
+        });
+
 
         // Affix if there is any
         if($('#breadcrumbwrapper').length > 0){
@@ -99,61 +175,42 @@
 
         // Manage checkbox handling for session data
         $('.sessionCheckbox').click(function(){
-            console.log(this);
+
             if(this.checked){
-                console.log("c");
+
                 $("#hidden" + this.id ).val($(this).attr('data-checked'));
             } else {
 
-                console.log("u");
+
                 $("#hidden" + this.id ).val($(this).attr('data-unchecked'));
 
             }
           });
 
-        $(".filtersearch").focus(function() {
-            $('html, body').animate({
-                    scrollTop: $(this).offset().top - 10
-                }, 500);
-            $(".filtersearch-clear i").removeClass('icon-search');
-            $(".filtersearch-clear i").addClass('icon-cross');
-
-            $(".filtersearchCount").removeClass("hide");
-
-        });
-
-        $(".filtersearch").blur(function() {
-            $(".filtersearch-clear i").removeClass('icon-cross');
-            $(".filtersearch-clear i").addClass('icon-search');
-        });
-        $(".filtersearch-focus").click(function() {
-            $(".filtersearch").focus();
-        });
-        $(".filtersearch-clear").click(function() {
-            $(".filtersearch").val('');
-            $(".filtersearch").trigger("keyup");
-            $(".filtersearch").focus();
-        });
-        $(".filtersearch, .simpleFilterSearch").keyup(function(){
+        $(".filterSearch").keyup(function(){
 
             jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function (arg) {
                 return function (elem) {
                     return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
                 };
             });
-            filtertable = "#filtertable";
-            if ($(this).attr("data-filtertable")) {
-                //console.log($(this).attr("data-filtertable"));
-                filtertable = "#"+ $(this).attr("data-filtertable");
-            }
 
+
+            filtertable = false;
+            tmpTable = $(this).parent();
+            while(filtertable == false){
+                if($(tmpTable).hasClass("filterTable")){
+                    filtertable = tmpTable;
+                }
+                tmpTable = $(tmpTable).parent();
+            }
 
             //hide all the rows
             $(filtertable).find("tr.filterme").hide();
 
             // Concatenate all Searchterms
             var concat = "";
-            $(".simpleFilterSearch").each(function (it, elem) {
+            $(".filterSearch").each(function (it, elem) {
                 if($(elem).val().length > 0 ){
                     concat = $(elem).val() + " " + concat;
                 }
@@ -174,7 +231,7 @@
             //show the rows that match.
             jo.show();
             $(".filtersearchCount").html(anzahlRows);
-            //console.log(anzahlRows);
+            //
 
         });
 
@@ -209,8 +266,155 @@
         });
 
 
-        $(".selectOnClick").focus(function() {
+        $(".selectOnFocus").focus(function() {
             $(this).select();
+        });
+
+        $(".stepper .btn-next").click(function() {
+            var nextId = $(this).attr("data-nextid");
+            var thisId = parseInt(nextId) - 1;
+
+            // Tabs
+            $("#step-tab-" + thisId).removeClass("active");
+            $("#step-tab-" + thisId).addClass("complete");
+            $("#step-tab-" + nextId).addClass("active");
+            //Badge in Tabs
+            $("#badge" + thisId).removeClass("label-info");
+            $("#badge" + thisId).addClass("label-success");
+            $("#badge" + nextId).removeClass("label-default");
+            $("#badge" + nextId).addClass("label-info");
+            // Panes
+            $("#step" + thisId).removeClass("active");
+            $("#step" + nextId).addClass("active");
+
+       });
+
+       $(".stepper .btn-prev").click(function() {
+            var prevId = parseInt($(this).attr("data-previd"));
+            var thisId = prevId + 1;
+
+
+
+            if(prevId == 1){
+                $(".complete").removeClass("complete");
+                $(".label-success").removeClass("label-success");
+                $("#step-tab-6" + thisId).removeClass("active");
+                $("#step6").removeClass("active");
+
+            }
+
+            // Tabs
+            $("#step-tab-" + thisId).removeClass("active");
+            $("#step-tab-" + prevId).removeClass("complete");
+            $("#step-tab-" + prevId).addClass("active");
+            //Badge in Tabs
+            $("#badge" + thisId).removeClass("label-info");
+            $("#badge" + thisId).addClass("label-default");
+            $("#badge" + prevId).removeClass("label-success");
+            $("#badge" + prevId).addClass("label-info");
+            // Panes
+            $("#step" + thisId).removeClass("active");
+            $("#step" + prevId).addClass("active");
+       });
+
+
+        var getToggleSinglePrimaryParent = function(el){
+            tpmParent = $(el).parent();
+            while(!$(tpmParent).hasClass("toggleSinglePrimary")){
+                tpmParent = $(tpmParent).parent();
+            }
+            return tpmParent;
+        }
+
+        $("body").on("click",".toggleSinglePrimary .btn", function() {
+            var removePrimary = false;
+            if($(this).hasClass("btn-primary")){
+                removePrimary = true;
+            }
+
+
+            var parent = getToggleSinglePrimaryParent($(this));
+            $(parent).find(".btn-primary").removeClass("btn-primary");
+            $(this).addClass("btn-primary");
+            if(removePrimary == true){
+                $(this).removeClass("btn-primary");
+            }
+        });
+
+        $("body").on("click",".toggleMultiPrimary .btn", function() {
+            $(this).toggleClass("btn-primary");
+        });
+
+        $(".btn-togglePrimary").click(function() {
+
+            $(this).toggleClass("btn-primary");
+            var icon = $(this).find("i").first();
+            if($(icon).hasClass("fa-heart-o")){
+                $(icon).removeClass("fa-heart-o");
+                $(icon).addClass("fa-heart");
+                return;
+            }
+            if($(icon).hasClass("fa-heart")){
+                $(icon).removeClass("fa-heart");
+                $(icon).addClass("fa-heart-o");
+                return;
+            }
+            if($(icon).hasClass("fa-star-o")){
+                $(icon).removeClass("fa-star-o");
+                $(icon).addClass("fa-star");
+                return;
+            }
+            if($(icon).hasClass("fa-star")){
+                $(icon).removeClass("fa-star");
+                $(icon).addClass("fa-star-o");
+                return;
+            }
+            if($(icon).hasClass("fa-user-o")){
+                $(icon).removeClass("fa-user-o");
+                $(icon).addClass("fa-user");
+                return;
+            }
+            if($(icon).hasClass("fa-user")){
+                $(icon).removeClass("fa-user");
+                $(icon).addClass("fa-user-o");
+                return;
+            }
+        });
+
+        $(".btn-onCard.bottomRight, .btn-onCard.bottomLeft").each(function (it, elem) {
+            var imgheight = $(elem).siblings("img").first().height();
+            var top = imgheight -  10 - $(elem).outerHeight();
+            $(elem).css("top", top);
+        });
+
+
+        $(document).bind('keydown','alt+r', function(){
+            var url = window.location.href;
+            var get = "session_renew=true";
+            var start = "?";
+            if (url.indexOf("?") >= 0){
+                start = "&";
+            }
+            window.location.href = url+start+get;
+        });
+
+        $(".showpopover").click(function() {
+
+            $('#popoversuccess').popover('show')
+            setTimeout(function(){
+                $("#popoversuccess").popover("hide");
+            },2000);
+        });
+
+        function countDown(target){
+            var number = Number($("#"+target).html());
+            number = Math.ceil(number*0.89);
+            $("#"+target).html(number);
+        }
+
+        $(".countDown").click(function() {
+            var target = $(this).data("target");
+            countDown(target);
         });
 
     })

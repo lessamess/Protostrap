@@ -8,5 +8,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>formtext</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Form Group Text Protostrap PS</description>
+    <description>Form Group Text - Protostrap</description>
+    <type>HTML</type>
 </snippet>

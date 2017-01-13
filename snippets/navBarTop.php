@@ -69,8 +69,7 @@ foreach ($navKeys as $key => $item){
 
           <ul class="nav navbar-nav navbar-right">
               <li>
-
-                <a href="testpage.php#login">Sign in</a>
+                 <a href="testpage.php#login"><?php echo __("signIn") ;?></a>
               </li>
           </ul>
           <?php }?>

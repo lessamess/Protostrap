@@ -1,7 +1,8 @@
 <snippet>
-    <content><![CDATA[\$_POST['$1']]]></content>
+    <content><![CDATA[\$_POST['${1:id}']]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>post</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Post Protostrap PS</description>
+    <description>Post - Protostrap</description>
+    <type>PHP</type>
 </snippet>

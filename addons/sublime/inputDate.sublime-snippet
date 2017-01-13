@@ -6,5 +6,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>inputdate</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Input Date Protostrap PS</description>
+    <description>Input Date - Protostrap</description>
+    <type>HTML</type>
 </snippet>

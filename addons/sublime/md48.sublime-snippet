@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[div.row>div.col-md-4+div.col-md-8]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>md48</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>grid Row with an md-4 and an md-8 slot - Protostrap</description>
+    <type>HTML</type>
+</snippet>
+

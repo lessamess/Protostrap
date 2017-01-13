@@ -2,28 +2,39 @@
 /***********
  *
  * Protostrap
- * v. 3.0
+ * v. 3.1
  *
  ***********/
-
-
-session_start();
 
 //current script directory
 $csd = dirname(__FILE__);
 
+$version = "1";
+if (file_exists($csd. "/../snippets/version.php")) {
+   include($csd. "/../snippets/version.php");
+}
+
+
+session_start();
+
+
 if(empty($_SESSION['prototype'])){
     $_SESSION['prototype'] = "";
 }
-if(!empty($_GET['session_renew']) OR !empty($forceLoadData) OR $_SESSION['prototype'] != $csd){
+
+if(!empty($_GET['session_renew']) OR !empty($forceLoadData) OR $_SESSION['prototype'] != $csd OR !isset($_COOKIE['version']) OR $_COOKIE['version'] != $version){
     session_destroy();
     session_start();
+    setcookie("version", $version, time()+3600*24*180);
 }
 
 
 // Model
 include($csd.'/spyc.php');
 include($csd.'/dataParse.php');
+
+// Check if the User is authorised
+if(strlen($config['prototypeauth']) > 0){checkAuth($config);};
 
 // Handle request ID
 $reqId = false;
@@ -100,6 +111,11 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
     setcookie ("loggedIn", "", time() - 3600);
     $loggedIn = false;
     $justLoggedIn = false;
+    $activeUser = false;
+    $username = false;
+    $usermail = false;
+    $userrole = false;
+    $userpermissions = false;
     session_destroy();
     if(empty($_POST['noredirect']) AND empty($_GET['noredirect'])){
         header("Location: index.php" );
@@ -110,21 +126,38 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
 
 /** DATA HANDLING FUNCTIONS **/
 
-function yesterday(){
-    return date("d.m.Y", time() - 60 * 60 * 24);
+function today($format = false){
+    if($format == false){
+        $format = $GLOBALS['config']['defaultPHPdateFormat'];
+    }
+    return date($format, time() );
+}
+function yesterday($format = false){
+    if($format == false){
+        $format = $GLOBALS['config']['defaultPHPdateFormat'];
+    }
+    return date($format, time() - 60 * 60 * 24);
 }
 
-function tomorrow(){
-    return date("d.m.Y", time() + 60 * 60 * 24);
+function tomorrow($format = false){
+    if($format == false){
+        $format = $GLOBALS['config']['defaultPHPdateFormat'];
+    }
+    return date($format, time() + 60 * 60 * 24);
 }
 
 function makePeriod(){
     return date("M d.", time() - 60 * 60 * 24). date("-d Y", time() + 60 * 60 * 24);
 }
 
-function makeDateFromString($str){
-    return date("d.m.Y", strtotime($str));
+function makeDateFromString($str, $format = false){
+    if($format == false){
+        $format = $GLOBALS['config']['defaultPHPdateFormat'];
+    }
+    return date($format, strtotime($str));
 }
+
+$currentYear = date("Y");
 
 function setUserVars($user){
         $GLOBALS['activeUser'] = $user;
@@ -134,14 +167,23 @@ function setUserVars($user){
         $GLOBALS['userpermissions'] = $GLOBALS['roles'][$user ['role']]['permissions'];
 }
 
-
-
 function forceLogin(){
     if(!$GLOBALS['loggedIn']){
         $users = $GLOBALS['users'];
         include('snippets/forceLogin.php');
     }
 }
+
+function getFirstUserLogin(){
+    if(!isset($GLOBALS['users'])){
+        return "";
+    }
+    $loginWith = $GLOBALS['config']['loginWith'];
+    $users = $GLOBALS['users'];
+    $firstUser = reset($users);
+    echo $firstUser[$loginWith];
+}
+
 
 function setFromGet($var, $default = false){
     if(!empty($_GET[$var])){
@@ -265,7 +307,7 @@ function snippet($snippet){
 }
 
 function showIf($string) {
-    $class = "hidden";
+    $class = "hide";
     if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
         $class = "";
     }
@@ -275,7 +317,7 @@ function showIf($string) {
 function hideIf($string) {
     $class = "";
     if(!empty($GLOBALS['userrole']) && strpos($string, $GLOBALS['userrole']) !== false){
-        $class = "hidden";
+        $class = "hide";
     }
     echo $class;
 }
@@ -300,6 +342,7 @@ function getUniqueId($param = "lastUniqueId"){
     return $GLOBALS[$param] = $GLOBALS[$param] + 1;
 }
 
+<<<<<<< HEAD
 function navId(){
     if(empty($GLOBALS["navId"])){
         $GLOBALS["navId"] = 1;
@@ -316,6 +359,9 @@ function label($text, $class){
 }
 
 function box($text, $class="info",$icon="inherit", $id="", $dismiss = true ){
+=======
+function alert($text, $class="info",$icon="inherit", $id="", $dismiss = true ){
+>>>>>>> development
     if ($icon == "inherit") {
         switch ($class) {
             case 'success':
@@ -341,6 +387,46 @@ function box($text, $class="info",$icon="inherit", $id="", $dismiss = true ){
           </li>
         </ul>
       </div>";
+}
+
+
+function checkAuth($config){
+
+    if(!empty($_COOKIE["prototypeauth"]) and $_COOKIE["prototypeauth"] == $config['prototypeauth']){
+        return;
+    }
+    if(!empty($_POST["prototypeauth"]) and $_POST["prototypeauth"] == $config['prototypeauth']){
+        setcookie("prototypeauth",$_POST["prototypeauth"],time()+3600*24*180);
+        return;
+
+    }
+    if(!empty($_POST["prototypeauth"]) and $_POST["prototypeauth"] != $config['prototypeauth']){
+        $autherror=true;
+    }
+    include("./snippets/prototypeauth.php");
+
+}
+
+function itemOrder($a, $b) {
+    // Change 'name'-key to whatever Index your array should be ordered by
+    switch ($_SESSION['order_direction'] ) {
+        case 'desc':
+            return $a['age'] < $b['age'] ? 1 : -1;
+            break;
+
+        default:
+            return $a['age'] > $b['age'] ? 1 : -1;
+            break;
+    }
+
+}
+
+function reorder($array, $column, $direction = "asc"){
+
+    $_SESSION['order_column'] = $column;
+    $_SESSION['order_direction'] = $direction;
+    uasort($array, 'itemOrder');
+    return $array;
 }
 
 include($csd.'/../functions_controller.php');

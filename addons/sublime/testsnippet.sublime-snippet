@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[ This is the test snippet. If you can see this it worked! ]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>testsnippet</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Testsnippet - Protostrap</description>
+    <type>test</type>
+</snippet>

@@ -1,7 +1,6 @@
-language: "en"
 languages:
-  de: Deutsch
   en: English
+  de: Deutsch
 
 #   GOOGLE DRIVE SPREADSHEET
 #   ------------------------
@@ -33,6 +32,12 @@ translations:
   save:
     de: Speichern
     en: Save
+  send:
+    de: Senden
+    en: Send
+  signIn:
+    de: Anmelden
+    en: Sign in
   thisIsAtest:
     de: Das ist ein Test.
     en: This is a test.
@@ -42,3 +47,12 @@ translations:
   endOfPrototype:
     de: Hier endet der Prototyp.
     en: End of Prototype.
+  authTitle:
+    de: "Prototyp Autorisierung"
+    en: "Prototype Authorisation"
+  authText:
+    de: "Autorisierungscode eingeben "
+    en: "Enter Authorisation Code"
+  authError:
+    de: "Code Falsch, bitte nochmals versuchen. "
+    en: "Wrong Code, please try again"

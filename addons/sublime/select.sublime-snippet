@@ -7,5 +7,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>selectpicker</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Select Protostrap PS</description>
+    <description>Select - Protostrap</description>
+    <type>HTML</type>
 </snippet>

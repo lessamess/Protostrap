@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[div.flexbox>div.fix${1:80}+div.flex-${2:1}+${3:div.fix${1}}]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>flex</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Flex Row with a fixed, a flex and a fixed slot - Protostrap</description>
+    <type>HTML</type>
+</snippet>
+

@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[<?php
+\$i = 1;
+while (\$i <= ${1:3}) {?>
+
+    <?php \$i++;
+} ?>]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>while</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>While loop with increment - Protostrap</description>
+    <type>PHP</type>
+</snippet>

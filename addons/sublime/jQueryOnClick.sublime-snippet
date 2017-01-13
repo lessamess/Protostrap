@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[\$("${1:body}").on("${2:click}", ".${3:classname}", function() {
+
+});
+
+        ]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>onclick</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>jQuery onclick event handler - Protostrap</description>
+    <type>jQuery</type>
+</snippet>

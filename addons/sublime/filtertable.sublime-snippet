@@ -1,11 +1,12 @@
 <snippet>
     <content><![CDATA[<div class="table-responsive table-responsive-maxheight">
     <?php
-    \$tabledata = \$${1:firmen};
+    \$tabledata = \$${1:var};
     include("./snippets/makeTableFromData.php");?>
 </div>]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>filtertable</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Break Protostrap PS</description>
+    <description>Filtertable - Protostrap</description>
+    <type>HTML</type>
 </snippet>

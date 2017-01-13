@@ -1,13 +1,19 @@
 ---
 config:
   datepickerFormat: dd.mm.yyyy
+  defaultPHPdateFormat: d.m.Y
   defaultUser: 1
   loginWith: email
+  prototypeauth:
   assets:
     extendBootstrapGrid:
       title: Bootstrap Grid Extention CSS
       load: 'false'
       init:
+    tablesorter:
+      title: Tablesorter Plugin
+      load: 1
+      init: "$('.tablesorter').tablesorter()"
     select:
       title: Bootstrap Select Plugin
       load: 1
@@ -25,7 +31,7 @@ config:
       load: 1
       init: "$('input[type=file]').bootstrapFileInput()"
     typeahead:
-      title: Bootstrap Typeahead Plugin
+      title: Twitter Typeahead Plugin
       load: 1
       init:
     add2home:
@@ -48,7 +54,19 @@ config:
       title: jQuery Masked Input Plugin
       load: 1
       init:
+    nouislider:
+      title: 'noUiSlider - A mobile friendly slider'
+      load: 1
+      init:
     fontawesome:
       title: Fontawesome Icons
+      load: 1
+      init:
+    ionicons:
+      title: Ionicons Icons
+      load: 1
+      init:
+    pagetransitions:
+      title: Pagetransitions
       load: 1
       init:

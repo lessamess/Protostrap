@@ -16,6 +16,7 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>acgr</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>Accordeon Group Protostrap PS</description>
+    <description>Accordeon Group - Protostrap</description>
+    <type>HTML</type>
 </snippet>
 

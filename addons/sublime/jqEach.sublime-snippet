@@ -5,5 +5,6 @@
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>each</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>jQuery Each Protostrap PS</description>
+    <description>jQuery Each - Protostrap</description>
+    <type>jQuery</type>
 </snippet>

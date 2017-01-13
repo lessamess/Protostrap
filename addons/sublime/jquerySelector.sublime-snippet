@@ -1,7 +1,8 @@
 <snippet>
-    <content><![CDATA[\$("${1:.}")]]></content>
+    <content><![CDATA[\$(".${1:class}")]]></content>
     <!-- Optional: Tab trigger to activate the snippet -->
     <tabTrigger>$$</tabTrigger>
     <!-- Optional: Description to show in the menu -->
-    <description>jQuery Selector Protostrap PS</description>
+    <description>jQuery Selector - Protostrap</description>
+    <type>jQuery</type>
 </snippet>
