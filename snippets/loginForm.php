@@ -18,7 +18,7 @@ $loginFirstUser = $users[1][$config['loginWith']];
         <form action='<?php echo $loginaction ;?>' method='post' id="loginform">
             <div class="form-group">
                 <label for="login">Username</label>
-                <input id="login" name='login' class='form-control' type='text' placeholder='Username' autofocus>
+                <input id="login" name='login' class='form-control' type='text' placeholder='Username'>
             </div>
 
             <div class="form-group">

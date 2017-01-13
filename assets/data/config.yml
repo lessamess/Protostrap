@@ -1,6 +1,7 @@
 ---
 config:
   datepickerFormat: dd.mm.yyyy
+  defaultPHPdateFormat: d.m.Y
   defaultUser: 1
   loginWith: email
   prototypeauth:

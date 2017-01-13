@@ -274,7 +274,7 @@ function normalize ($string) {
 function get_spreadsheetData($url, $var, $sheet = false){
 
     if(empty($_GET['session_renew']) AND !empty($_SESSION[$var])){
-        // return $_SESSION[$var];
+        return $_SESSION[$var];
     }
 
     $val = Array();
@@ -291,26 +291,64 @@ function get_spreadsheetData($url, $var, $sheet = false){
 
     if(!ini_set('default_socket_timeout',    15)) echo "unable to change socket timeout";
 
-    if (($handle = fopen($url, "r")) !== FALSE) {
-        $i = 0;
-        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                if($i == 0){
-                    foreach ($data as $key => $itemval){
-                        $val['fields']['keys'][$key] = normalize(strtolower($itemval));
-                        $val['fields']['labels'][$key] = $itemval;
-                    }
-                    $i++;
-                } else {
-                    foreach ($val['fields']['keys'] as $key => $itemval) {
-                        $val['data'][$i][$itemval]=$data[$key];
-                    }
-                    $i++;
-                }
+    try
+    {
+        $handle = @fopen($url,"r");
+        if (!$handle) {
+             throw new Exception('Failed to open spreadsheet. <b>Are you offline?</b>');
         }
-        fclose($handle);
+      // send success JSON
+
+    } catch ( Exception $e ) {
+        echo '<div class="container"><pre>Caught exception: ',  $e->getMessage(), "</pre></div><br><br>";
+        return;
     }
-    else{
-        die("Problem reading csv from Google Drive");
+
+
+    $i = 0;
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+        if($i == 0){
+            foreach ($data as $key => $itemval){
+                // check if the column name belongs to a column that has to be parsed
+                if(strpos($itemval, "_parse_") > 0){
+                    $val['fields']['keys'][$key] = $itemval;
+                    $parts = explode("_", $itemval);
+                    $val['fields']['labels'][$key] = $parts[0];
+                } else {
+                    $val['fields']['keys'][$key] = normalize(strtolower($itemval));
+                    $val['fields']['labels'][$key] = $itemval;
+                }
+            }
+            $i++;
+        } else {
+            foreach ($val['fields']['keys'] as $key => $itemval) {
+                // check if the value belongs to a column that has to be parsed
+                if(strpos($itemval, "_parse_") > 0){
+                    $parts = explode("_", $itemval);
+                    // check if the function exists
+                    if(function_exists($parts[2])){
+                        $colval = $parts[2]($data[$key]);
+                    } else {
+                        $colval = $data[$key]." >> not parsed: missing function ". $parts[2];
+                    }
+
+                    $itemval = $parts[0];
+                } else {
+                    $colval = $data[$key];
+                }
+                $val['data'][$i-1][$itemval] = $colval;
+            }
+            $i++;
+        }
+    }
+    fclose($handle);
+
+    // Change the keys that belong to parsed columns
+    foreach ($val['fields']['keys'] as $key => $itemval) {
+        if(strpos($itemval, "_parse_") > 0){
+            $parts = explode("_", $itemval);
+            $val['fields']['keys'][$key] = $parts[0];
+        }
     }
     $_SESSION[$var] = $val;
     return($val);

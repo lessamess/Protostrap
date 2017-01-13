@@ -126,20 +126,35 @@ if (!empty($_POST['logout']) || !empty($_GET['logout'])){
 
 /** DATA HANDLING FUNCTIONS **/
 
-function yesterday(){
-    return date("d.m.Y", time() - 60 * 60 * 24);
+function today($format = false){
+    if($format == false){
+        $format = $GLOBALS['config']['defaultPHPdateFormat'];
+    }
+    return date($format, time() );
+}
+function yesterday($format = false){
+    if($format == false){
+        $format = $GLOBALS['config']['defaultPHPdateFormat'];
+    }
+    return date($format, time() - 60 * 60 * 24);
 }
 
-function tomorrow(){
-    return date("d.m.Y", time() + 60 * 60 * 24);
+function tomorrow($format = false){
+    if($format == false){
+        $format = $GLOBALS['config']['defaultPHPdateFormat'];
+    }
+    return date($format, time() + 60 * 60 * 24);
 }
 
 function makePeriod(){
     return date("M d.", time() - 60 * 60 * 24). date("-d Y", time() + 60 * 60 * 24);
 }
 
-function makeDateFromString($str){
-    return date("d.m.Y", strtotime($str));
+function makeDateFromString($str, $format = false){
+    if($format == false){
+        $format = $GLOBALS['config']['defaultPHPdateFormat'];
+    }
+    return date($format, strtotime($str));
 }
 
 $currentYear = date("Y");
@@ -327,12 +342,7 @@ function getUniqueId($param = "lastUniqueId"){
     return $GLOBALS[$param] = $GLOBALS[$param] + 1;
 }
 
-
-function label($text, $class){
-    echo "<span class=\"label label-{$class}\">{$text}</span>";
-}
-
-function box($text, $class="info",$icon="inherit", $id="", $dismiss = true ){
+function alert($text, $class="info",$icon="inherit", $id="", $dismiss = true ){
     if ($icon == "inherit") {
         switch ($class) {
             case 'success':
@@ -376,6 +386,28 @@ function checkAuth($config){
     }
     include("./snippets/prototypeauth.php");
 
+}
+
+function itemOrder($a, $b) {
+    // Change 'name'-key to whatever Index your array should be ordered by
+    switch ($_SESSION['order_direction'] ) {
+        case 'desc':
+            return $a['age'] < $b['age'] ? 1 : -1;
+            break;
+
+        default:
+            return $a['age'] > $b['age'] ? 1 : -1;
+            break;
+    }
+
+}
+
+function reorder($array, $column, $direction = "asc"){
+
+    $_SESSION['order_column'] = $column;
+    $_SESSION['order_direction'] = $direction;
+    uasort($array, 'itemOrder');
+    return $array;
 }
 
 include($csd.'/../functions_controller.php');

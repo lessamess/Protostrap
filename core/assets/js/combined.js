@@ -300,6 +300,32 @@ var PageTransitions = (function() {
                 outClass = 'pt-page-moveToRight';
                 inClass = 'pt-page-moveFromLeft';
                 break;
+            case "moveInFromBottom":
+                outClass = 'pt-page-moveToTop';
+                inClass = 'pt-page-moveFromBottom pt-page-ontop';
+                break;
+            case "moveInFromTop":
+                outClass = 'pt-page-moveToBottom';
+                inClass = 'pt-page-moveFromTop pt-page-ontop';
+                break;
+            case "moveOutFromTop":
+                outClass = 'pt-page-moveToBottomFade  pt-page-ontop';
+                inClass = 'pt-page-scaleUp';
+                break;
+            case "moveOutToRight":
+                outClass = 'pt-page-moveToRightFade';
+                inClass = 'pt-page-moveFromLeftFade';
+                break;
+            case "moveOutFromRight":
+                outClass = 'pt-page-moveToRight';
+                inClass = 'pt-page-moveFromLeft';
+                break;
+            case "moveCamInFromBottom":
+                outClass = 'pt-page-moveToTop';
+                inClass = 'pt-page-moveFromBottom pt-page-ontop';
+                $("#tabbarContainer").addClass("hide");
+                $nextPage.data("topbaraction", 'hide');
+                break;
             case "moveInFromRightNoTabbar":
                 outClass = 'pt-page-moveToLeft';
                 inClass = 'pt-page-moveFromRight';
@@ -310,9 +336,10 @@ var PageTransitions = (function() {
                 inClass = 'pt-page-moveFromBottom';
                 $("#tabbarContainer").addClass("hide");
                 break;
-            case "moveOutFromRight":
-                outClass = 'pt-page-moveToRight';
-                inClass = 'pt-page-moveFromLeft';
+            case "moveOutFromTopNoTabbar":
+                outClass = 'pt-page-moveToBottomFade  pt-page-ontop';
+                inClass = 'pt-page-scaleUp';
+                $("#tabbarContainer").addClass("hide");
                 break;
             case "moveOutFromRightNoTabbar":
                 outClass = 'pt-page-moveToRight';
@@ -329,41 +356,15 @@ var PageTransitions = (function() {
                 inClass = 'pt-page-scaleUp';
                 $("#tabbarContainer").removeClass("hide");
                 break;
-            case "moveInFromBottom":
-                outClass = 'pt-page-moveToTop';
-                inClass = 'pt-page-moveFromBottom pt-page-ontop';
-                break;
-            case "moveInFromTop":
-                outClass = 'pt-page-moveToBottom';
-                inClass = 'pt-page-moveFromTop pt-page-ontop';
-                break;
-            case "moveCamInFromBottom":
-                outClass = 'pt-page-moveToTop';
-                inClass = 'pt-page-moveFromBottom pt-page-ontop';
-                $("#tabbarContainer").addClass("hide");
-                $nextPage.data("topbaraction", 'hide');
-                break;
-            case "moveOutFromTop":
-                outClass = 'pt-page-moveToBottomFade  pt-page-ontop';
-                inClass = 'pt-page-scaleUp';
-                break;
-            case "moveOutFromTopNoTabbar":
-                outClass = 'pt-page-moveToBottomFade  pt-page-ontop';
-                inClass = 'pt-page-scaleUp';
-                $("#tabbarContainer").addClass("hide");
-                break;
             case "moveCamOutFromTop":
                 outClass = 'pt-page-moveToBottomFade  pt-page-ontop';
                 inClass = 'pt-page-scaleUp';
                 $(".topbarContainer").removeClass("hide");
                 $("#tabbarContainer").removeClass("hide");
-                break;case "moveOutFromTop2":
+                break;
+            case "moveOutFromTop2":
                 outClass = 'pt-page-moveToBottom';
                 inClass = 'pt-page-moveFromTop';
-                break;
-            case "moveOutToRight":
-                outClass = 'pt-page-moveToRightFade';
-                inClass = 'pt-page-moveFromLeftFade';
                 break;
 
         }
@@ -485,17 +486,92 @@ var PageTransitions = (function() {
 
     $(function(){
 
-        // Tooltip if there is any
-        $('.ps-tooltip').tooltip();
-        $(".ps-tooltip").click(function() {
-            setTimeout( function(){
-                $('.ps-tooltip').tooltip('hide')}, 2000);
-        });
-
         // Carousel if there is any
         $('.carousel').carousel(
             {interval: 0}
         );
+
+        $('.btn-spinner').on('click', function() {
+          // keep width of button
+          var width = $(this).outerWidth();
+          $(this).css("width", width+"px");
+          // spinner markup
+          var spinner = "<i class=\"fa fa-spinner fa-spin\"></i>";
+          // original button label
+          var tmpContent = $(this).html();
+          // show spinner
+          $(this).html(spinner);
+          // make scope for timeout function
+          var that = $(this);
+            setTimeout(function() {
+               // rollback
+               $(that).html(tmpContent);
+           }, 1000);
+        });
+
+        $(".fakeReload").click(function() {
+            var spinnerMarkup = "<div class=\" align-center\">";
+            spinnerMarkup += "    ";
+            spinnerMarkup += "    <i class=\"fa fa-spinner fa-spin fa-3x\"></i>";
+            spinnerMarkup += "    <br><br><br>";
+            spinnerMarkup += "</div>";
+            var target = $(this).data("target");
+            var tmpContent = $("#"+target).html();
+            $("#"+target).html(spinnerMarkup);
+            setTimeout(function(){
+                $("#"+target).html(tmpContent);
+            },1000);
+        });
+
+        $('.tooltiptrigger').tooltip({trigger: "click"});
+        $(".tooltiptrigger").click(function() {
+            if($(this).data("hide") != undefined){
+                var delay = $(this).data("hide");
+                var that = this;
+                setTimeout( function(){
+                    $(that).tooltip('hide')}, delay);
+            }
+        });
+
+        $(".trigger").click(function() {
+            var group = $(this).data("group");
+            var item = $(this).data("item");
+            $("."+group).addClass("hide");
+            $("."+group+"-" + item).removeClass("hide");
+        });
+
+        function showTooltip(target, text){
+             $(target).attr('data-toggle','tooltip');
+             $(target).attr('data-placement','top');
+             $(target).attr('data-trigger','click');
+             $(target).attr('title', text);
+
+
+            //and finally show the popover
+            $(target).tooltip('show');
+            var that = target;
+            setTimeout( function(){
+                     $(that).tooltip('hide')}, 1500);
+        }
+
+        $(".copyToClipboard").click(function() {
+            var target = $(this).data("target");
+            var text = $("#"+target).html();
+            $('<div style="opacity:0"><textarea id="textarea'+target+'">'+text+'</textarea></div>').appendTo("body");
+            $("#textarea"+target).select();
+            document.execCommand('copy');
+            $("#textarea"+target).remove();
+            showTooltip(this, "Copied to Clipboard");
+        });
+
+        $(".showHide").click(function() {
+            if($("#"+$(this).data("show")).hasClass("hide")){
+                $("#"+$(this).data("show")).css("display", "none").removeClass("hide");
+            }
+            $("#"+$(this).data("show")).toggle("slow");
+            $("#"+$(this).data("hide")).toggle("slow");
+        });
+
 
         // Affix if there is any
         if($('#breadcrumbwrapper').length > 0){
@@ -521,13 +597,13 @@ var PageTransitions = (function() {
 
         // Manage checkbox handling for session data
         $('.sessionCheckbox').click(function(){
-            console.log(this);
+
             if(this.checked){
-                console.log("c");
+
                 $("#hidden" + this.id ).val($(this).attr('data-checked'));
             } else {
 
-                console.log("u");
+
                 $("#hidden" + this.id ).val($(this).attr('data-unchecked'));
 
             }
@@ -577,7 +653,7 @@ var PageTransitions = (function() {
             //show the rows that match.
             jo.show();
             $(".filtersearchCount").html(anzahlRows);
-            //console.log(anzahlRows);
+            //
 
         });
 
@@ -638,8 +714,8 @@ var PageTransitions = (function() {
        $(".stepper .btn-prev").click(function() {
             var prevId = parseInt($(this).attr("data-previd"));
             var thisId = prevId + 1;
-            console.log(prevId);
-            console.log(thisId);
+
+
 
             if(prevId == 1){
                 $(".complete").removeClass("complete");
@@ -692,7 +768,7 @@ var PageTransitions = (function() {
         });
 
         $(".btn-togglePrimary").click(function() {
-            console.log('pip');
+
             $(this).toggleClass("btn-primary");
             var icon = $(this).find("i").first();
             if($(icon).hasClass("fa-heart-o")){
@@ -742,6 +818,25 @@ var PageTransitions = (function() {
                 start = "&";
             }
             window.location.href = url+start+get;
+        });
+
+        $(".showpopover").click(function() {
+
+            $('#popoversuccess').popover('show')
+            setTimeout(function(){
+                $("#popoversuccess").popover("hide");
+            },2000);
+        });
+
+        function countDown(target){
+            var number = Number($("#"+target).html());
+            number = Math.ceil(number*0.89);
+            $("#"+target).html(number);
+        }
+
+        $(".countDown").click(function() {
+            var target = $(this).data("target");
+            countDown(target);
         });
 
     })

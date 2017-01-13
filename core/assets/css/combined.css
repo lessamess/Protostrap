@@ -2455,7 +2455,7 @@ label.radio {
     display: block;
 }
 
-table.table.noTopBorder tr:first-Child td{
+table.table.noTopBorder tr:first-Child td, table.table.noTopBorder tr:first-Child th{
     border-top: none;
 }
 
@@ -2887,4 +2887,7 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
 }
 .tt-menu{
     min-width:400px;
+}
+.bootstrap-switch {
+    max-height: 30px;
 }

@@ -8,7 +8,6 @@ if(empty($tabledata['fields']) OR empty($tabledata['data'])){
     echo("Variable \$tabledata has the wrong format");
     return;
 }
-
 ?>
     <table class="filterTable table table-condensed table-striped table-hover draggable tablesorter">
         <thead>

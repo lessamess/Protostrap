@@ -35,7 +35,7 @@ include('core/protostrap.php');
             <div id="topbar-start" class="flexbox topbar topbar-current">
                 <div class="fix80" >
                     <a href="javascript:void(0);" class="goto btn" data-goto="camera" data-animation="moveInFromBottom">
-                        <i class="icon ion-ios-camera-outline topbar-icon" style="padding: 7px 11px 0;" ></i>
+                        <i class="icon ion-ios-camera-outline topbar-icon"></i>
                     </a>
                 </div>
                 <div class="flex-1 align-center">
@@ -44,7 +44,7 @@ include('core/protostrap.php');
 
                 <div class="fix80 align-right" >
                     <a href="javascript:void(0);" class="goto btn" data-goto="notifications" data-animation="moveInFromRight">
-                        <i class="icon ion-ios-bell-outline topbar-icon" style="padding: 7px 11px 0;" ></i>
+                        <i class="icon ion-ios-bell-outline topbar-icon"></i>
                         <span class="topbar-badge">1</span>
                     </a>
                 </div>
@@ -159,7 +159,7 @@ include('core/protostrap.php');
 
         <!-- P A G E S -->
         <div id="pt-main" class="pt-perspective">
-            <div id="page-start" class="first-page pt-page page-current container">
+            <div id="page-start" class="first-page pt-page container">
                     <h1>Start</h1>
             </div>
             <div id="page-notifications" class="pt-page container ">
