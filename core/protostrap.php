@@ -342,7 +342,6 @@ function getUniqueId($param = "lastUniqueId"){
     return $GLOBALS[$param] = $GLOBALS[$param] + 1;
 }
 
-<<<<<<< HEAD
 function navId(){
     if(empty($GLOBALS["navId"])){
         $GLOBALS["navId"] = 1;
@@ -358,10 +357,7 @@ function label($text, $class){
     echo "<span class=\"label label-{$class}\">{$text}</span>";
 }
 
-function box($text, $class="info",$icon="inherit", $id="", $dismiss = true ){
-=======
 function alert($text, $class="info",$icon="inherit", $id="", $dismiss = true ){
->>>>>>> development
     if ($icon == "inherit") {
         switch ($class) {
             case 'success':
