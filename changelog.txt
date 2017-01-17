@@ -1,5 +1,6 @@
 
 # v3.1
+- added Page Transitions
 - added Bootstrap 4 style cards with responsive flexbox grid support
 - added nouiSlider
 - added ionicons
