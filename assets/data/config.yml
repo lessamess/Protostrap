@@ -34,14 +34,6 @@ config:
       title: Twitter Typeahead Plugin
       load: 1
       init:
-    add2home:
-      title: Add to Home-Screen
-      load: 'false'
-      init: addToHomescreen()
-    fastclick:
-      title: Fastclick extentions
-      load: 'false'
-      init: FastClick.attach(document.body)
     sortable:
       title: jQuery Sortable Plugin
       load: 1
@@ -69,4 +61,16 @@ config:
     pagetransitions:
       title: Pagetransitions
       load: 1
+      init:
+    add2home:
+      title: Add to Home-Screen
+      load: 'false'
+      init: addToHomescreen()
+    fastclick:
+      title: Fastclick extentions
+      load: 'false'
+      init: FastClick.attach(document.body)
+    csv:
+      title: jQuery CSV parser plugin
+      load: 'false'
       init:
