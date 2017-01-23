@@ -61,6 +61,57 @@
         });
     }
 
+    function countDown(target){
+        var number = Number($("#"+target).html());
+        number = Math.ceil(number*0.89);
+        $("#"+target).html(number);
+    }
+
+    function showTooltip(target, text){
+         $(target).attr('data-toggle','tooltip');
+         $(target).attr('data-placement','top');
+         $(target).attr('data-trigger','click');
+         $(target).attr('title', text);
+
+
+        //and finally show the popover
+        $(target).tooltip('show');
+        var that = target;
+        setTimeout( function(){
+                 $(that).tooltip('hide')}, 1500);
+    }
+
+    function getUrlParameter(parameter){
+        var parameter = parameter;
+        var value = false;
+        var pageURL = window.location.search.substring(1);
+        var variables = pageURL.split('&');
+        $.each( variables, function( key, val ) {
+            var parameterName = val.split('=');
+            if(parameterName[0] == parameter){
+                value = parameterName[1];
+            }
+        });
+        return(value);
+    }
+
+    // Read a page's GET URL variables and return them as an associative array.
+    function getAllUrlParameters()
+    {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        if(hashes ==  window.location.href){
+            return false;
+        }
+        for(var i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+
 
     $(function(){
 
@@ -118,19 +169,7 @@
             $("."+group+"-" + item).removeClass("hide");
         });
 
-        function showTooltip(target, text){
-             $(target).attr('data-toggle','tooltip');
-             $(target).attr('data-placement','top');
-             $(target).attr('data-trigger','click');
-             $(target).attr('title', text);
 
-
-            //and finally show the popover
-            $(target).tooltip('show');
-            var that = target;
-            setTimeout( function(){
-                     $(that).tooltip('hide')}, 1500);
-        }
 
         $(".copyToClipboard").click(function() {
             var target = $(this).data("target");
@@ -406,15 +445,28 @@
             },2000);
         });
 
-        function countDown(target){
-            var number = Number($("#"+target).html());
-            number = Math.ceil(number*0.89);
-            $("#"+target).html(number);
-        }
+
 
         $(".countDown").click(function() {
             var target = $(this).data("target");
             countDown(target);
+        });
+
+
+        $(".scrollTo").click(function() {
+            var scrollTo = $(this);
+            var offset = 10;
+
+            if($(this).data("scrollto") != undefined){
+                scrollTo = $("#"+$(this).data("scrollto"));
+            }
+            if($(this).data("offset") != undefined){
+                offset = $(this).data("offset")
+            }
+            $('html, body').animate({
+                scrollTop: $(scrollTo).offset().top-offset
+            }, 600);
+            event.preventDefault();
         });
 
     })

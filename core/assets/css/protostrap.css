@@ -1355,6 +1355,16 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
     flex-direction: column;
 }
 
+
+.flex-row > [class*='col-md-4'] {
+    width:33.2%;
+}
+
+.flex-row > [class*='col-md-3'] {
+    width:24.95%;
+}
+
+
 /*CARD*/
 
 
