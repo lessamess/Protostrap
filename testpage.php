@@ -238,7 +238,14 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
             <br>
             <div class="row">
                 <div class="col-md-12">
-                    <h4>Checkall</h4>
+                    <h4>Smoothly scroll to a specified element</h4>
+                    <button type="button" class="btn btn-default scrollTo">Scroll me to the top!</button>&nbsp;&nbsp;<button type="button" data-scrollto="nextParagraph" class="btn btn-default scrollTo">Scroll the next paragraph to the top!</button> &nbsp;&nbsp;<button type="button" data-scrollto="nextParagraph"  data-offset="70" class="btn btn-default scrollTo">Scroll the next paragraph with a 70px offset!</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 id="nextParagraph">Checkall</h4>
                     <table class="table table-condensed p25">
                         <tr>
                             <th>
@@ -387,6 +394,18 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                 </div>
             </div>
             <br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 id="getparameters">GET Parameters on this page</h4>
+                    <div class="flexbox padded">
+                        <div id="allParams" class="flex-1">All GET Parameters:</div>
+                        <div id="filterParameter" class="flex-1">Check for GET Parameter <b>filter</b>:</div>
+                    </div>
+                    <a href="testpage.php?filter=testpage&food=Pizza&drink=wine#getparameters" class="btn  btn-default">Reload with a bunch of parameters</a>
+
+                </div>
+            </div>
+            <br><br>
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -423,6 +442,22 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                 $(this).val("");
                 $("#reloadInfo").removeClass("hide");
             });
+
+            var filter = getUrlParameter("filter");
+            if(filter === false){
+                filter = " -- No Value -- ";
+            }
+            $("#filterParameter").append("<br><span>"+filter+"</span>");
+
+            var allParams = getAllUrlParameters();
+            if(allParams.length === undefined){
+                $("#allParams").append("<br><span> -- No Parameters -- </span>");
+            }
+            $.each(allParams, function (it, elem) {
+                $("#allParams").append("<br><span>"+elem+"</span>");
+            });
+
+
 
         })
 
