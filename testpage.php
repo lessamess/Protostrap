@@ -88,9 +88,9 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                     <br>
 
 
-                    <h4>Fileupload</h4>
+                    <h4>File Input</h4>
                     <form name="fileupload" action="profil.php" method="POST"  enctype="multipart/form-data">
-                        <input name="image" type="file" capture="camera" accept="image/*" title="Select Image" data-filename-placement="inside">
+                        <input name="image" class="file-input" type="file" capture="camera" accept="image/*" title="Select Image" data-filename-placement="inside">
                     </form>
                     <br>
 

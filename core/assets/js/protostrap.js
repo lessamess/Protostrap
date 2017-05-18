@@ -367,12 +367,14 @@
 
         $("body").on("click",".toggleSinglePrimary .btn", function() {
             var removePrimary = false;
+            var parent = getToggleSinglePrimaryParent($(this));
             if($(this).hasClass("btn-primary")){
+                if($(parent).data("mandatory") == true){
+                    return;
+                }
                 removePrimary = true;
             }
 
-
-            var parent = getToggleSinglePrimaryParent($(this));
             $(parent).find(".btn-primary").removeClass("btn-primary");
             $(this).addClass("btn-primary");
             if(removePrimary == true){

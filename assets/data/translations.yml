@@ -1,3 +1,4 @@
+# The fist language is the default language
 languages:
   en: English
   de: Deutsch

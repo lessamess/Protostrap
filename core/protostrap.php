@@ -2,7 +2,7 @@
 /***********
  *
  * Protostrap
- * v. 3.1
+ * v. 3.2
  *
  ***********/
 
@@ -192,6 +192,20 @@ function setFromGet($var, $default = false){
         $GLOBALS[$var] = $default;
     }
 }
+
+
+function addParameterToLink($parameter){
+    $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    if(strpos($url, $parameter)){
+        return $parameter;
+    }
+    $start = "?";
+    if(strpos($url,"?")) {
+        $start = "&";
+    }
+    return $url.$start.$parameter;
+}
+
 
 function __($key, $language = false){
     $translations = $GLOBALS['translations'];
@@ -392,11 +406,11 @@ function itemOrder($a, $b) {
     // Change 'name'-key to whatever Index your array should be ordered by
     switch ($_SESSION['order_direction'] ) {
         case 'desc':
-            return $a['age'] < $b['age'] ? 1 : -1;
+            return $a[$_SESSION['order_column']] < $b[$_SESSION['order_column']] ? 1 : -1;
             break;
 
         default:
-            return $a['age'] > $b['age'] ? 1 : -1;
+            return $a[$_SESSION['order_column']] > $b[$_SESSION['order_column']] ? 1 : -1;
             break;
     }
 
