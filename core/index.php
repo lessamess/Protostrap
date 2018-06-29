@@ -35,7 +35,7 @@ $activeNavigation = "one";
 ?><!DOCTYPE html>
 <html>
     <head>
-        <title><?php echo $application . " - " . $brand ;?></title>
+        <title><?php echo $application ;?></title>
         <?php
         // this includes all the markup that loads css files and similar stuff,
         // if you have to add more css, that's the place to do it.
