@@ -10,6 +10,8 @@ $tmpType = $_GET['type'];
 $tmpVarname = $_GET['varname'];
 $tmpVal = $_GET['val'];
 
+$tmpReturnVar = $tmpVarname;
+
 if(strpos($tmpVarname, ".") === false && empty($_SESSION[$_GET['varname']])){
     echo "Error: Variable does not exist";
     die();
@@ -20,7 +22,7 @@ switch ($tmpType) {
     case 'set':
         if(strpos($tmpVarname, ".") !== false){
             $el = explode(".", $tmpVarname);
-
+            $tmpReturnVar = $el[0];
             switch(count($el)){
                 case 1:
                     $_SESSION[$el[0]] = $tmpVal;
@@ -55,10 +57,28 @@ switch ($tmpType) {
         break;
     case 'push':
         array_push($_SESSION[$tmpVarname], $tmpVal);
+        $_SESSION[$tmpVarname] = array_unique($_SESSION[$tmpVarname]);
+        $_SESSION[$tmpVarname] = array_values($_SESSION[$tmpVarname]);
         break;
     case 'remove':
+        foreach ($_SESSION[$tmpVarname] as $key => $value) {
+            if($tmpVal == $value){
+                unset($_SESSION[$tmpVarname][$key]);
+            }
+        }
+        $_SESSION[$tmpVarname] = array_unique($_SESSION[$tmpVarname]);
+        $_SESSION[$tmpVarname] = array_values($_SESSION[$tmpVarname]);
+        break;
+    case 'removeKey':
         unset($_SESSION[$tmpVarname][$tmpVal]);
         break;
+    case 'removeValue':
+        unset($_SESSION[$tmpVarname][$tmpVal]);
+        if (($key = array_search($tmpVal, $_SESSION[$tmpVarname])) !== false) {
+            unset($_SESSION[$tmpVarname][$key]);
+        }
+        break;
+
     case 'null':
         if(is_array($_SESSION[$tmpVarname])){
             $_SESSION[$tmpVarname] = array();
@@ -67,4 +87,4 @@ switch ($tmpType) {
         }
         break;
 }
-echo "Done.";
+echo json_encode($_SESSION[$tmpReturnVar]);
