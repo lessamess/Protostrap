@@ -1,3 +1,8 @@
+/**
+ *  PROTOSTRAP CSS
+ *   v. 3.3
+ */
+
 @charset "utf-8";
 
 body {
@@ -801,7 +806,7 @@ td .radio, td .checkbox, th .radio, th .checkbox {
 
 
 /* Phone */
-@media screen and (max-width : 320px) and (orientation:portrait){
+@media screen and (max-width : 375px) and (orientation:portrait){
  h1 {
     font-size: 28px;
  }
@@ -1246,6 +1251,30 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
   display: inline-block;
 }
 
+/* Stepper mobile view */
+
+.stepNumber{
+    display: none;
+}
+
+@media(max-width:375px) {
+    .stepper ul.steps li{
+        display: none;
+    }
+    .stepper ul.steps li.active{
+        display: block;
+        width:100%;
+        padding-left: 20px;
+    }
+    .stepper ul.steps li .chevron {
+        display: none;
+    }
+    .stepNumber{
+        display: inline-block;
+        float: right;
+        color: #333;
+    }
+}
 
 
 .simpleList {
@@ -1310,9 +1339,11 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
 }
 .btn-onCard.topLeft {
     left: 10px;
+    right: auto;
 }
 .btn-onCard.bottomLeft {
     left: 10px;
+    right: auto;
 }
 
 
@@ -1404,4 +1435,153 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
 }
 .bootstrap-switch {
     max-height: 30px;
+}
+
+/* FORM FEEDBACK */
+
+.form-group .form-control-feedback, .form-control-feedback-message {
+    display: none;
+}
+.form-group .has-feedback .form-control-feedback, .form-group.has-feedback .form-control-feedback {
+    display: inline-block;
+}
+.form-group .has-feedback .form-control-feedback-message, .form-group.has-feedback .form-control-feedback-message {
+    display: block;
+}
+
+.has-feedback label~.form-control-feedback {
+    top: 35px;
+}
+
+/* GRID CLASSES */
+
+.grid{
+    display: grid;
+    grid-gap: 10px;
+}
+
+.grid-2, .grid-xs-2{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-3, .grid-xs-3{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-4, .grid-xs-4{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-5, .grid-xs-5{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-6, .grid-xs-6{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-2575, .grid-xs-2575{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr;
+}
+
+.grid-7525, .grid-xs-7525{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 3fr 1fr;
+}
+
+.grid-3366, .grid-xs-3366{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.grid-6633, .grid-xs-6633{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr;
+}
+
+.grid-255025, .grid-xs-255025{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.grid-40n, .grid-60n, .grid-80n, .grid-100n, .grid-120n, .grid-140n, .grid-160n, .grid-180n, .grid-200n, .grid-40n40, .grid-60n60 {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.grid-40n {
+    grid-template-columns: 40px 1fr;
+}
+ .grid-60n {
+    grid-template-columns: 60px 1fr;
+ }
+ .grid-80n {
+    grid-template-columns: 80px 1fr;
+ }
+ .grid-100n {
+    grid-template-columns: 100px 1fr;
+ }
+ .grid-120n {
+    grid-template-columns: 120px 1fr;
+ }
+ .grid-140n {
+    grid-template-columns: 140px 1fr;
+ }
+ .grid-160n {
+    grid-template-columns: 160px 1fr;
+ }
+ .grid-180n {
+    grid-template-columns: 180px 1fr;
+ }
+ .grid-200n {
+    grid-template-columns: 200px 1fr;
+ }
+
+
+.grid-40n40 {
+    grid-template-columns: 40px 1fr 40px;
+}
+.grid-60n60  {
+    grid-template-columns: 60px 1fr 60px;
+ }
+
+
+@media screen and (max-width : 375px) and (orientation:portrait){
+    .grid-2, .grid-3, .grid-4,.grid-5, .grid-6, .grid-2575, .grid-3366, .grid-7525, .grid-6633, .grid-255025  {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gridHasBorder div{
+    border: 1px solid #666;
+}
+
+.gridCentered {
+    align-items: center;
+    justify-content: center;
+}
+.gridPadded div{
+    padding: 10px;
+}
+.gridTable {
+    grid-gap: 0;
+}
+.gridTable div{
+    padding: 10px;
 }
