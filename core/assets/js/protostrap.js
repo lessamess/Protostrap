@@ -1,5 +1,6 @@
     /**
-     *   PROTOSTRAP GOODIES - LEAVE ALONE
+     *   PROTOSTRAP GOODIES - LEAVE ALONE 
+     *   v. 3.3
      */
 
 
@@ -369,7 +370,7 @@
             var removePrimary = false;
             var parent = getToggleSinglePrimaryParent($(this));
             if($(this).hasClass("btn-primary")){
-                if($(parent).data("mandatory") == true){
+                if($(parent).hasClass("mandatory")){
                     return;
                 }
                 removePrimary = true;
@@ -470,5 +471,65 @@
             }, 600);
             event.preventDefault();
         });
+
+        // FORM BEHAVIOR
+        $(".checkform").click(function() {
+            checkform(this);
+        });
+
+        function checkform(el){
+            var container = $(el).parent();
+            var hasErrors = false;
+            // Input fields
+            $(container).find(".required").each(function (it, elem) {
+                if($(elem).val() == ""){
+                    hasErrors = true;
+                    $(elem).closest(".form-group").addClass("has-error has-feedback");
+                } else {
+                    $(elem).closest(".form-group").removeClass("has-error has-feedback");
+                }
+            });
+            // radio boxes
+            $(container).find(".requiredFromGroup").each(function (it, elem) {
+                // console.log('drin');
+                var selected = false ;
+                var radio = $(elem).find("input[type='radio']").first();
+                var group = $(radio).attr("name");
+
+                if (!$("input[name='"+group+"']:checked").val()) {
+                   // console.log('Nothing is checked!');
+                   hasErrors = true;
+                } else {
+                    selected = true;
+                }
+
+                if(selected == false){
+                    $(this).addClass("has-error has-feedback");
+                } else {
+                    $(this).removeClass("has-error has-feedback");
+                }
+            });
+            if(hasErrors == false ){
+
+                formCollapse();
+                setTimeout(function(){
+                    $(".submitfeedback").toggleClass("hide");
+                }, 800);
+                $(".feedback-error-message").addClass("hide");
+            } else {
+                $(".feedback-error-message").removeClass("hide");
+            }
+            return hasErrors;
+        }
+        function formCollapse(){
+            $('.collapseForm').collapse('toggle');
+        }
+
+        $(".formCollapse").click(function() {
+            formCollapse();
+            $(".submitfeedback").toggleClass("hide");
+        });
+
+
 
     })
