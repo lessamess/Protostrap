@@ -10,11 +10,21 @@ include('core/protostrap.php');
 $activeNavigation = "one";
 $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZLZoKAaSvGv5UBKPBzuxtJwmZWgyL0JF-wU/edit?usp=sharing", "names");
 
+function gridmarkup($gridclass, $total = 12){
+    $markup = "<div class=\"gridHasBorder gridPadded ".$gridclass."\">";
+    for ($i=1; $i <= $total; $i++) {
+        $markup .= "<div>{$i}</div>";
+    }
+
+    $markup .= "</div";
+    return $markup;
+}
+
 
 ?><!DOCTYPE html>
 <html >
     <head>
-        <title><?php echo $application . " - " . $brand ;?></title>
+        <title><?php echo $application . " - Testpage"  ;?></title>
         <?php
         // this includes all the markup that loads css files and similar stuff,
         // if you have to add more css, that's the place to do it.
@@ -119,7 +129,22 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                               <input type="password" class="form-control" name="" placeholder="Password">
                               <span class="input-group-addon passwordToggle"><i class="fa fa-square-o"></i> Show</span>
                     </div>
+                    <br><br>
+                    <h4>Set Dropdown-Button Label TO DO</h4>
+                    <div class="input-group">
+                      <input id="onboardingVolume" type="text" class="form-control align-right" name="" placeholder="" value="">
 
+                      <div class="btn-group input-group-addon">
+                          <span type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            CHF <span class="caret"></span>
+                          </span>
+                          <ul class="dropdown-menu">
+                            <li class="setDropdownBtnLabel"><a href="javascript:void(0);">CHF</a></li>
+                            <li class="setDropdownBtnLabel"><a href="javascript:void(0);">EUR</a></li>
+                            <li class="setDropdownBtnLabel"><a href="javascript:void(0);">USD</a></li>
+                          </ul>
+                        </div>
+                    </div>
                     <br>
                     <br>
                     <h4>Collapse</h4>
@@ -348,7 +373,6 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                     <button type="button " class="btn btn-default tooltiptrigger" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Default Tooltip</button>
                     &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-default tooltiptrigger" data-toggle="tooltip" data-hide="1000" data-placement="top" title="Tooltip on top">Tooltip closes with 1 second delay</button>
                     <br><br><br>
-
                 </div>
             </div>
             <div class="row">
@@ -356,10 +380,10 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
                     <h4>Stepper</h4>
                     <div class="stepper">
                         <ul class="steps">
-                            <li id="step-tab-1" data-target="#step1" class="active"><span id="badge1" class="label label-as-badge label-info">1</span> Step 1<span class="chevron"></span></li>
-                            <li id="step-tab-2" data-target="#step2"><span id="badge2" class="label label-default label-as-badge">2</span> Step 2<span class="chevron"></span></li>
-                            <li id="step-tab-3" data-target="#step3"><span id="badge3" class="label label-default label-as-badge">3</span> Step 3<span class="chevron"></span></li>
-                            <li id="step-tab-4" data-target="#step4"><span id="badge4" class="label label-default label-as-badge">4</span> Step 4<span class="chevron"></span></li>
+                            <li id="step-tab-1" data-target="#step1" class="active"><span id="badge1" class="label label-as-badge label-info">1</span> Step 1 <span class="stepNumber">Step 1 of 4</span><span class="chevron"></span></li>
+                            <li id="step-tab-2" data-target="#step2"><span id="badge2" class="label label-default label-as-badge">2</span> Step 2 <span class="stepNumber">Step 2 of 4</span><span class="chevron"></span></li>
+                            <li id="step-tab-3" data-target="#step3"><span id="badge3" class="label label-default label-as-badge">3</span> Step 3 <span class="stepNumber">Step 3 of 4</span><span class="chevron"></span></li>
+                            <li id="step-tab-4" data-target="#step4"><span id="badge4" class="label label-default label-as-badge">4</span> Step 4 <span class="stepNumber">Step 4 of 4</span><span class="chevron"></span></li>
                         </ul>
                         <div class="step-content">
                             <div class="step-pane step-pane-1 active" id="step1">
@@ -427,6 +451,59 @@ $names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZL
               Launchmodal
             </button>
             <br><br><br>
+            <hr>
+            <h4>CSS Grid based grids</h4>
+
+            <b>.grid-2</b>
+            <?php echo gridmarkup("grid-2",4) ;?>
+            <br><br>
+            <b>.grid-3</b>
+            <?php echo gridmarkup("grid-3",6) ;?>
+            <br><br>
+            <b>.grid-4</b>
+            <?php echo gridmarkup("grid-4",8) ;?>
+            <br><br>
+            <b>.grid-5</b>
+            <?php echo gridmarkup("grid-5", 10) ;?>
+            <br><br>
+            <b>.grid-6</b>
+            <?php echo gridmarkup("grid-6") ;?>
+            <br><br>
+            <b>.grid-2575</b>
+            <?php echo gridmarkup("grid-2575", 4) ;?>
+            <br><br>
+            <b>.grid-7525</b>
+            <?php echo gridmarkup("grid-7525", 4) ;?>
+            <br><br>
+            <b>.grid-3366</b>
+            <?php echo gridmarkup("grid-3366", 4) ;?>
+            <br><br>
+            <b>.grid-2575</b>
+            <?php echo gridmarkup("grid-2575", 4) ;?>
+            <br><br>
+            <b>.grid-6633</b>
+            <?php echo gridmarkup("grid-6633", 4) ;?>
+            <br><br>
+            <b>.grid-255025</b>
+            <?php echo gridmarkup("grid-255025", 6) ;?>
+            
+            <?php $ngrids = array(40, 60, 80, 100, 120, 140, 160, 180, 200);
+            foreach ($ngrids as $value):?>
+                <br><br>
+                <b>.grid-<?php echo $value ;?>n</b>
+                <?php echo gridmarkup("grid-".$value."n", 4) ;?>
+            <?php endforeach; ?>
+            <br><br>
+            <b>.grid-40n40</b>
+            <?php echo gridmarkup("grid-40n40", 6) ;?>
+            <br><br>
+            <b>.grid-60n60</b>
+            <?php echo gridmarkup("grid-60n60", 6) ;?>
+            <br><br>
+            <b>.gridTable</b>
+            <?php echo gridmarkup("grid-4 gridTable", 8) ;?>
+
+             ?>
         </div> <!-- /container -->
 
         <?php
