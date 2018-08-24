@@ -32,11 +32,15 @@ if(isset($_SESSION['application'])){
         $parsed['translations'] = get_translations($parsed['translations_url']);
     }
 
-    // if(!empty($parsed['linkedData'])){
-    //     foreach ($parsed['linkedData'] as $key => $link) {
-    //         $parsed[$key] = get_spreadsheetData($link, $key);
-    //     }
-    // }
+    if(!empty($parsed['linkedData'])){
+        foreach ($parsed['linkedData'] as $key => $link) {
+            $sheet = "";
+            if(isset($link['sheet'])){
+                $sheet = $link['sheet'];
+            }
+            $parsed[$key] = get_spreadsheetData($link['url'], $key, $sheet);
+        }
+    }
 
     $_SESSION = $parsed;
     $_SESSION['prototype'] = $csd;
@@ -280,14 +284,13 @@ function get_spreadsheetData($url, $var, $sheet = false){
     $val = Array();
 
 
-    $exportParams = "export?format=csv";
+    $exportParams = "gviz/tq?tqx=out:csv";
     $sheetparam = "";
     if($sheet){
         $sheetparam .= "&sheet=".$sheet;
     }
 
-    $url = preg_replace("|edit\?usp=sharing|", $exportParams, $url);
-    //$url = "https://docs.google.com/spreadsheets/d/" . $url . "/gviz/tq?tqx=out:csv" . $sheetparam;
+    $url = preg_replace("|edit\?usp=sharing|", $exportParams, $url).$sheetparam;
 
     if(!ini_set('default_socket_timeout',    15)) echo "unable to change socket timeout";
 

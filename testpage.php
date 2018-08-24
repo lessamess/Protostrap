@@ -6,9 +6,10 @@
 **/
 include('core/protostrap.php');
 
+
 /** Define VALUES  valid for this file **/
 $activeNavigation = "one";
-$names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZLZoKAaSvGv5UBKPBzuxtJwmZWgyL0JF-wU/edit?usp=sharing", "names");
+$names = get_spreadsheetData("https://docs.google.com/spreadsheets/d/1_WzhyY-_ZLZoKAaSvGv5UBKPBzuxtJwmZWgyL0JF-wU/edit?usp=sharing", "names","Sheet2");
 
 function gridmarkup($gridclass, $total = 12){
     $markup = "<div class=\"gridHasBorder gridPadded ".$gridclass."\">";

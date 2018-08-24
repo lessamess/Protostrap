@@ -33,6 +33,7 @@ if(!empty($_GET['session_renew']) OR !empty($forceLoadData) OR $_SESSION['protot
 include($csd.'/spyc.php');
 include($csd.'/dataParse.php');
 
+
 // Check if the User is authorised
 if(strlen($config['prototypeauth']) > 0){checkAuth($config);};
 
@@ -152,7 +153,10 @@ function makePeriod(){
 
 function makeDateFromString($str, $format = false){
     if($format == false){
-        $format = $GLOBALS['config']['defaultPHPdateFormat'];
+        $format = "d.m.Y";
+        if(isset($GLOBALS['config']['defaultPHPdateFormat'])){
+            $format = $GLOBALS['config']['defaultPHPdateFormat'];
+        }
     }
     return date($format, strtotime($str));
 }
