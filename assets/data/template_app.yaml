@@ -1,0 +1,7 @@
+app_categories:
+    recommended:
+      name: Recommended
+    sale:
+      name: On sale
+    new:
+      name: New Arrivals

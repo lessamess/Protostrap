@@ -357,6 +357,15 @@
             $("#step" + prevId).addClass("active");
        });
 
+       $("body").on("click", ".stepper ul.steps li.complete", function() {
+            $(this).parent().find("li").removeClass("active").find("span.label-info").removeClass("label-info").addClass("label-default");
+            $(this).removeClass("complete");
+            $(this).addClass("active").find("span.label").addClass("label-info").removeClass("label-default").removeClass("label-success");
+            var stepper = $(this).parent().parent();
+            $(stepper).find(".step-pane").removeClass("active");
+            $($(this).data("target")).addClass("active");
+       });
+
 
         var getToggleSinglePrimaryParent = function(el){
             tpmParent = $(el).parent();
