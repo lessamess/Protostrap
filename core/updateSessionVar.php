@@ -10,6 +10,13 @@ $tmpType = $_GET['type'];
 $tmpVarname = $_GET['varname'];
 $tmpVal = $_GET['val'];
 
+// this allows to log in over ajax
+if($tmpVarname == "login"){
+    setcookie("loggedIn", $tmpVal );
+    echo "Login on ".$_SERVER['HTTP_HOST'];
+    die();
+}
+
 $tmpReturnVar = $tmpVarname;
 
 if(strpos($tmpVarname, ".") === false && empty($_SESSION[$_GET['varname']])){
