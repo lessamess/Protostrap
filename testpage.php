@@ -21,7 +21,6 @@ function gridmarkup($gridclass, $total = 12){
     return $markup;
 }
 
-
 ?><!DOCTYPE html>
 <html >
     <head>
@@ -64,6 +63,36 @@ function gridmarkup($gridclass, $total = 12){
                     <br>
                     Ionicons:
                     <div><i class="icon ion-ios-star-outline"></i> Star empty &nbsp;&nbsp;<i class="icon ion-ios-bolt-outline"></i> Bolt outline</div>
+                    <br>
+                    <br>
+                    <h4>Toggling Icons</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    With toggleCaret <br>
+                    <a href="javascript:void(0);" class="toggleCaret" data-toggle="collapse" data-target="#collapse<?php echo getUniqueId();?>">Trigger <i class="fa fa-caret-down"></i></a>
+                    <div id="collapse<?php echo $lastUniqueId;?>" class="collapse">
+                            It's toggled!
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    With toggleIcons <br>
+
+                    <a href="javascript:void(0);" class="toggleIcons" data-icons="fa-glass, fa-minus" data-toggle="collapse" data-target="#collapse<?php echo getUniqueId();?>">Trigger <i class="fa fa-glass"></i></a>
+                    <div id="collapse<?php echo $lastUniqueId;?>" class="collapse">
+                            use random icons!
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Formatting Money</h4>
+                    <pre class="align-right">
+<?php echo moneyFormat(2312.50) ;?>
+
+<?php echo moneyFormat(25) ;?></pre>
                     <br>
 
                     <h4>Typeahead</h4>
@@ -131,7 +160,7 @@ function gridmarkup($gridclass, $total = 12){
                               <span class="input-group-addon passwordToggle"><i class="fa fa-square-o"></i> Show</span>
                     </div>
                     <br><br>
-                    <h4>Set Dropdown-Button Label TO DO</h4>
+                    <h4>Button Label as Dropdown </h4>
                     <div class="input-group">
                       <input id="onboardingVolume" type="text" class="form-control align-right" name="" placeholder="" value="">
 
@@ -163,7 +192,13 @@ function gridmarkup($gridclass, $total = 12){
                 </div>
 
             </div>
-            <br>
+            <br><br>
+            <h4>Popovers and Tooltips</h4>
+            <button type="button" class="btn  btn-default btn-lg autoclose" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+            <br><br>
+            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="A great tip">Show Tooltip</button>
+
+            <br><br>
             <h4>Cards, same height, flexbox, responsive</h4>
             <div class="row flex-row ">
                 <?php
@@ -534,8 +569,6 @@ function gridmarkup($gridclass, $total = 12){
             $.each(allParams, function (it, elem) {
                 $("#allParams").append("<br><span>"+elem+"</span>");
             });
-
-
 
         })
 
