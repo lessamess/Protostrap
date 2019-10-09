@@ -5,7 +5,7 @@ function figureFormat($num, $decimals = 2){
    return number_format($num, $decimals, '.', '&rsquo;');
 }
 
-function money_drop_zero_decimals($n, $n_decimals = 2){
-    return ((floor($n) == round($n, $n_decimals)) ? number_format($n).".—" : number_format($n, $n_decimals));
-}
+function moneyFormat($n, $n_decimals = 2, $digitSeparator = ".", $thousandSeparator = '&rsquo;'){
+        return ((floor($n) == round($n, $n_decimals)) ? number_format($n, 0 , false, $thousandSeparator ).".—-" : number_format($n, $n_decimals, $digitSeparator, $thousandSeparator));
+    }
 
