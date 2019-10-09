@@ -59,11 +59,12 @@ function gridmarkup($gridclass, $total = 12){
 
                     <h4>Icons</h4>
                     Fontawesome:
-                    <div><i class="fa fa-percent"></i> Percent &nbsp;&nbsp;<i class="fa fa-hashtag"></i> Hashtag</div>
+                    <div><i class="fa fa-percent"></i> Percent &nbsp;&nbsp;<i class="fa fa-hashtag"></i> Hashtag &nbsp;&nbsp;<a href="https://fontawesome.com/v4.7.0/icons/">All Fontawesome icons</a></div>
                     <br>
                     Ionicons:
-                    <div><i class="icon ion-ios-star-outline"></i> Star empty &nbsp;&nbsp;<i class="icon ion-ios-bolt-outline"></i> Bolt outline</div>
-                    <br>
+                    <div><i class="icon ion-ios-star-outline"></i> Star empty &nbsp;&nbsp;<i class="icon ion-ios-bolt-outline"></i> Bolt outline
+                    &nbsp;&nbsp;<a href="ionicons.php">All ionicons</a>
+                    <br></div>
                     <br>
                     <h4>Toggling Icons</h4>
                 </div>
