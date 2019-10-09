@@ -1,6 +1,10 @@
 
     $(function(){
-        // PUT YOUR JAVASCRIPT HERE BELOW
+
+        /* 
+            This file initializes a few elements by default 
+            Feel free to remove them if not needed
+        */
 
         // Datepicker
         $('.input-group.date, .date').datepicker({
@@ -11,10 +15,26 @@
             todayHighlight: true
         });
 
-
+        // an example for a mask
         $("#socialsecurity").mask("99-99-9999",{placeholder:"__-__-____"});
 
-        $(".mypopover").popover();
+
+        // initialise Popvers and let them close after 2 seconds if they have the class autoclose
+        $('[data-toggle="popover"]').popover();
+
+        $('.autoclose[data-toggle="popover"]').on('shown.bs.popover', function () {
+          setTimeout(function () {
+                $('.autoclose[data-toggle="popover"]').popover('hide');
+            }, 2000);
+        });
+
+        // initialise tooltips and let them close after 2 seconds
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').on('shown.bs.tooltip', function () {
+          setTimeout(function () {
+                $('[data-toggle="tooltip"]').tooltip('hide');
+            }, 2000);
+        });
 
         $(".htmlpopover").popover({
             container: 'body',
@@ -25,6 +45,12 @@
                 return content;
             }
         });
+
+
+        // PUT YOUR JAVASCRIPT HERE BELOW
+
+
+
 
 
 
