@@ -26,6 +26,7 @@
     // Typeahead source and templates
     {
       source: substringMatcher(sourcedata),
+      display: 'name',
       templates: {
         notFound: '<p class="tt-noentries" ><strong>No entries found</strong></p>',
         footer: '<p class="tt-footer" ><button class="btn btn-default">Show all results</button></p>',
@@ -37,7 +38,8 @@
 
     // Typeahead callback
     .on('typeahead:selected', function (event, selected) {
-        console.log(selected.name);
+        selectedTypeahead = selected.name;
+        $('.typeahead').typeahead('val', selectedTypeahead);
     });
 
 // END OF TYPEAHEAD EXAMPLE
