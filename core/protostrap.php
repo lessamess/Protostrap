@@ -54,13 +54,13 @@ $loggedIn = false ;
 $justLoggedIn = false;
 $showLoginError = false;
 
-if (!empty($_POST['login'])){
-    if(strtolower($_POST['login']) == "fail") {
+if (!empty($_REQUEST['login'])){
+    if(strtolower($_REQUEST['login']) == "fail") {
         $showLoginError = true;
     } else {
 
-        setcookie("loggedIn", $_POST['login']);
-        $loggedIn = trim($_POST['login']);
+        setcookie("loggedIn", $_REQUEST['login']);
+        $loggedIn = trim($_REQUEST['login']);
         $justLoggedIn = true;
     }
 }
