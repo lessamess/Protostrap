@@ -1514,7 +1514,7 @@ body {
 }
 
 .flex-1 {
-    flex: 1  0px;
+    flex: 1 0px;
     -webkit-flex: 1  0px;
 }
 .flex-2 {
@@ -2757,17 +2757,65 @@ a.fl:link, a.fl:visited,.fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b {
     text-overflow: ellipsis;
 }
 
-.nopadding{
+
+.noTop {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.noBottom {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+.noPadding{
     padding: 0;
 }
-
-.nomargin{
+.noPaddingTop{
+    padding-top: 0;
+}
+.noPaddingBottom{
+    padding-bottom: 0;
+}
+.noPaddingVertical{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.noMargin{
     margin: 0;
 }
+.noMarginTop{
+    margin-top: 0;
+}
+.noMarginBottom{
+    margin-bottom: 0;
+}
+.noMarginVertical{
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
-.noborder{
+.noBorder{
     border: none;
 }
+
+.noBorderTop{
+    border-top: none;
+}
+
+.noBorderBottom{
+    border-bottom: none;
+}
+
+/*  padding right, left, top, bottom 
+    AND
+    margin right, left, top, bottom 
+    for the values 0,2,4,8,16,32,5,10,15,20,30
+*/
+
+.pr0{ padding-right:0 ;} .pr2{ padding-right: 2px ;} .pr4{ padding-right: 4px ;} .pr8{ padding-right: 8px ;} .pr16{ padding-right: 16px ;} .pr32{ padding-right: 32px ;} .pr5{ padding-right: 5px ;} .pr10{ padding-right: 10px ;} .pr15{ padding-right: 15px ;} .pr20{ padding-right: 20px ;} .pr30{ padding-right: 30px ;} .pl0{ padding-left:0 ;} .pl2{ padding-left: 2px ;} .pl4{ padding-left: 4px ;} .pl8{ padding-left: 8px ;} .pl16{ padding-left: 16px ;} .pl32{ padding-left: 32px ;} .pl5{ padding-left: 5px ;} .pl10{ padding-left: 10px ;} .pl15{ padding-left: 15px ;} .pl20{ padding-left: 20px ;} .pl30{ padding-left: 30px ;} .pt0{ padding-top:0 ;} .pt2{ padding-top: 2px ;} .pt4{ padding-top: 4px ;} .pt8{ padding-top: 8px ;} .pt16{ padding-top: 16px ;} .pt32{ padding-top: 32px ;} .pt5{ padding-top: 5px ;} .pt10{ padding-top: 10px ;} .pt15{ padding-top: 15px ;} .pt20{ padding-top: 20px ;} .pt30{ padding-top: 30px ;} .pb0{ padding-bottom:0 ;} .pb2{ padding-bottom: 2px ;} .pb4{ padding-bottom: 4px ;} .pb8{ padding-bottom: 8px ;} .pb16{ padding-bottom: 16px ;} .pb32{ padding-bottom: 32px ;} .pb5{ padding-bottom: 5px ;} .pb10{ padding-bottom: 10px ;} .pb15{ padding-bottom: 15px ;} .pb20{ padding-bottom: 20px ;} .pb30{ padding-bottom: 30px ;} .mr0{ margin-right:0 ;} .mr2{ margin-right: 2px ;} .mr4{ margin-right: 4px ;} .mr8{ margin-right: 8px ;} .mr16{ margin-right: 16px ;} .mr32{ margin-right: 32px ;} .mr5{ margin-right: 5px ;} .mr10{ margin-right: 10px ;} .mr15{ margin-right: 15px ;} .mr20{ margin-right: 20px ;} .mr30{ margin-right: 30px ;} .ml0{ margin-left:0 ;} .ml2{ margin-left: 2px ;} .ml4{ margin-left: 4px ;} .ml8{ margin-left: 8px ;} .ml16{ margin-left: 16px ;} .ml32{ margin-left: 32px ;} .ml5{ margin-left: 5px ;} .ml10{ margin-left: 10px ;} .ml15{ margin-left: 15px ;} .ml20{ margin-left: 20px ;} .ml30{ margin-left: 30px ;} .mt0{ margin-top:0 ;} .mt2{ margin-top: 2px ;} .mt4{ margin-top: 4px ;} .mt8{ margin-top: 8px ;} .mt16{ margin-top: 16px ;} .mt32{ margin-top: 32px ;} .mt5{ margin-top: 5px ;} .mt10{ margin-top: 10px ;} .mt15{ margin-top: 15px ;} .mt20{ margin-top: 20px ;} .mt30{ margin-top: 30px ;} .mb0{ margin-bottom:0 ;} .mb2{ margin-bottom: 2px ;} .mb4{ margin-bottom: 4px ;} .mb8{ margin-bottom: 8px ;} .mb16{ margin-bottom: 16px ;} .mb32{ margin-bottom: 32px ;} .mb5{ margin-bottom: 5px ;} .mb10{ margin-bottom: 10px ;} .mb15{ margin-bottom: 15px ;} .mb20{ margin-bottom: 20px ;} .mb30{ margin-bottom: 30px ;}
+.ps-pr0{ padding-right: 0px ;} .ps-pr2{ padding-right: 2px ;} .ps-pr4{ padding-right: 4px ;} .ps-pr8{ padding-right: 8px ;} .ps-pr16{ padding-right: 16px ;} .ps-pr32{ padding-right: 32px ;} .ps-pr5{ padding-right: 5px ;} .ps-pr10{ padding-right: 10px ;} .ps-pr15{ padding-right: 15px ;} .ps-pr20{ padding-right: 20px ;} .ps-pr30{ padding-right: 30px ;} .ps-pl0{ padding-left: 0px ;} .ps-pl2{ padding-left: 2px ;} .ps-pl4{ padding-left: 4px ;} .ps-pl8{ padding-left: 8px ;} .ps-pl16{ padding-left: 16px ;} .ps-pl32{ padding-left: 32px ;} .ps-pl5{ padding-left: 5px ;} .ps-pl10{ padding-left: 10px ;} .ps-pl15{ padding-left: 15px ;} .ps-pl20{ padding-left: 20px ;} .ps-pl30{ padding-left: 30px ;} .ps-pt0{ padding-top: 0px ;} .ps-pt2{ padding-top: 2px ;} .ps-pt4{ padding-top: 4px ;} .ps-pt8{ padding-top: 8px ;} .ps-pt16{ padding-top: 16px ;} .ps-pt32{ padding-top: 32px ;} .ps-pt5{ padding-top: 5px ;} .ps-pt10{ padding-top: 10px ;} .ps-pt15{ padding-top: 15px ;} .ps-pt20{ padding-top: 20px ;} .ps-pt30{ padding-top: 30px ;} .ps-pb0{ padding-bottom: 0px ;} .ps-pb2{ padding-bottom: 2px ;} .ps-pb4{ padding-bottom: 4px ;} .ps-pb8{ padding-bottom: 8px ;} .ps-pb16{ padding-bottom: 16px ;} .ps-pb32{ padding-bottom: 32px ;} .ps-pb5{ padding-bottom: 5px ;} .ps-pb10{ padding-bottom: 10px ;} .ps-pb15{ padding-bottom: 15px ;} .ps-pb20{ padding-bottom: 20px ;} .ps-pb30{ padding-bottom: 30px ;} .ps-mr0{ margin-right: 0px ;} .ps-mr2{ margin-right: 2px ;} .ps-mr4{ margin-right: 4px ;} .ps-mr8{ margin-right: 8px ;} .ps-mr16{ margin-right: 16px ;} .ps-mr32{ margin-right: 32px ;} .ps-mr5{ margin-right: 5px ;} .ps-mr10{ margin-right: 10px ;} .ps-mr15{ margin-right: 15px ;} .ps-mr20{ margin-right: 20px ;} .ps-mr30{ margin-right: 30px ;} .ps-ml0{ margin-left: 0px ;} .ps-ml2{ margin-left: 2px ;} .ps-ml4{ margin-left: 4px ;} .ps-ml8{ margin-left: 8px ;} .ps-ml16{ margin-left: 16px ;} .ps-ml32{ margin-left: 32px ;} .ps-ml5{ margin-left: 5px ;} .ps-ml10{ margin-left: 10px ;} .ps-ml15{ margin-left: 15px ;} .ps-ml20{ margin-left: 20px ;} .ps-ml30{ margin-left: 30px ;} .ps-mt0{ margin-top: 0px ;} .ps-mt2{ margin-top: 2px ;} .ps-mt4{ margin-top: 4px ;} .ps-mt8{ margin-top: 8px ;} .ps-mt16{ margin-top: 16px ;} .ps-mt32{ margin-top: 32px ;} .ps-mt5{ margin-top: 5px ;} .ps-mt10{ margin-top: 10px ;} .ps-mt15{ margin-top: 15px ;} .ps-mt20{ margin-top: 20px ;} .ps-mt30{ margin-top: 30px ;} .ps-mb0{ margin-bottom: 0px ;} .ps-mb2{ margin-bottom: 2px ;} .ps-mb4{ margin-bottom: 4px ;} .ps-mb8{ margin-bottom: 8px ;} .ps-mb16{ margin-bottom: 16px ;} .ps-mb32{ margin-bottom: 32px ;} .ps-mb5{ margin-bottom: 5px ;} .ps-mb10{ margin-bottom: 10px ;} .ps-mb15{ margin-bottom: 15px ;} .ps-mb20{ margin-bottom: 20px ;} .ps-mb30{ margin-bottom: 30px ;}
 
 
 .btn.btn-circle {

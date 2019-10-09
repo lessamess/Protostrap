@@ -1090,6 +1090,7 @@ var PageTransitions = (function() {
             }
             return hasErrors;
         }
+
         function formCollapse(){
             $('.collapseForm').collapse('toggle');
         }
@@ -1099,6 +1100,29 @@ var PageTransitions = (function() {
             $(".submitfeedback").toggleClass("hide");
         });
 
+
+        // Sends a key value pair to be set
+        // Example Usecase is logging in over ajax
+
+        $(".sendval").click(function() {
+            let varname = $(this).data("varname");
+            let val = $(this).data("val");
+            updateSessionVar("set", varname, val);
+        });
+
+        $(".toggleIcons").click(function() {
+            let icons = $(this).data("icons").split(",");
+            $(this).find("i").toggleClass(icons[0]).toggleClass(icons[1]);
+        });
+
+        $(".toggleCaret").click(function() {
+            $(this).find("i").toggleClass("fa-caret-down").toggleClass("fa-caret-up");
+        });
+
+        
+        $(".setDropdownBtnLabel").click(function() {
+            $(this).closest("div.btn-group").find("span.dropdown-toggle").html($(this).find("a").html()+' <span class="caret">');
+        });
 
 
     })
